@@ -217,3 +217,86 @@ h2.content-title{
     font-size: 40px;
     font-style: italic;
 }
+/* our Strength */
+h5#font{
+    margin-top: 2px;
+}
+.body-advantage {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    margin: 0 20px;
+}
+
+#icon {
+    width: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage__item {
+    background-color: #FFE28C;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    border-radius: 10px;
+    height: 230px;
+
+}
+/* About us */
+
+span#color {
+    color: #F24E1E;;
+}
+
+.body-AboutUs {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.AboutUs__item-1 {
+    display: flex;
+    width: 20%;
+    margin-left: 50px;
+}
+
+.AboutUs__item-2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    line-height: 30px;
+    vertical-align: middle;
+    min-width: 200px;
+    height: 300px;
+    margin-right: 0%;
+    margin-top: 2%;
+}
+
+button.aboutus {
+    text-align: center;
+    background-color: #093BBA;
+    color: white;
+    width: 128px;
+    height: 46.81px;
+}
+
+.AboutUs__item-2-1 {
+    margin-right: 0px;
+    margin-left: 80%;
+    margin-top: 20px;
+}
+
+img#abus-image {
+    width: 500px;
+    height: 400px;
+}
+
+p {
+    margin-bottom: 0px;
+    word-spacing: 3px;
+    font-size: 18px;
+}
