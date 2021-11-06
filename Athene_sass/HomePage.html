@@ -41,6 +41,84 @@
         </div>
     </div>
     </div>
+    <!--Banner-->
+    <div class="banner-container ">
+
+    <div class="mySlides fade">
+      <img class="banner-image " src="../Images/HomePage/Banner_Welcome.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img class="banner-image " src="../Images/HomePage/Banner_BlackFriday.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img class="banner-image " src="../Images/HomePage/Banner_MemberDay.jpg" style="width:100%">
+    </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" ></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <!--
+      *Flow của chạy Banner
+      - Xuất hiện đầu tiên với 1 ảnh banner
+      - Ảnh có 2s để hiển thị trên màn hình
+      - Sau 2s sẽ lướt qua ảnh khác
+      - Ảnh cũ sẽ bị ẩn đi
+      - Vòng lặp chạy ảnh thực hiện không điểm dừng
+    -->
+    <script>
+    var slideIndex = 0;
+    showSlides(); 
+    //Khai báo biến
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      //Lấy dữ liệu của các phần tử trong mySlides ( có 3 )
+      var dots = document.getElementsByClassName("dot");
+      // Lấy dữ liệu của dot hiển thị bên dưới banner
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      // Chạy vòng lặp ẩn banner
+      slideIndex++;
+    
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      //nếu số phần tử mySlides ít hơn slideIndex sẽ gán giá trị của slideIndex về ban đầu
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      // Chạy vòng lặp dot hiển thị dưới ảnh
+      // Nếu đến lượt dots[i] được hiển thị thì sẽ đổi màu dots[i] đó
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); 
+      // Thời gian tối đa là 2s
+    }</script>
+     <!-- user manual -->
+     <h2 class="content-title">Tìm gia sư dễ hơn những gì bạn nghĩ</h2>
+     <div class="body-guide">
+         <div class="guide__item guide__item-left">
+            <div id="number">1</div>
+             <h4 id="font">ĐĂNG KÝ, ĐĂNG NHẬP</h4>
+             <P id="font">Truy cập và sử dụng các chức năng của website Athene một cách toàn diện</P>
+         </div>
+         <div class="guide__item guide__item-center">
+             <div id="number">2</div>
+             <h4 id="font"> BỘ LỌC TÌM KIẾM</h4>
+             <P id="font">Sử dụng bộ lọc để tìm kiếm hồ sơ theo nhu cầu nhanh chóng hơn</P>
+         </div>
+         <div class="guide__item guide__item-right">
+             <div id="number">3</div>
+             <h4 id="font">TẠO HỒ SƠ THEO NHU CẦU</h4>
+             <P id="font">Athene cung cấp cho người dùng bộ tiêu chí tạo hồ sơ theo nhu cầu</P>
+         </div>
+     </div>
+    
 </body>
 
 </html>
