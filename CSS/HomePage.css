@@ -1,0 +1,122 @@
+body,
+html {
+    margin: 0;
+    font-family: 'Roboto';
+    word-spacing: 1px;
+}
+
+.header {
+    display: flex;
+    background: rgba(255, 249, 196, 0.7);
+}
+
+.header__item-left {
+    display: flex;
+    flex-basis: 20%;
+}
+
+#logo {
+    width: 100px;
+    height: 80px;
+    display: block;
+}
+
+#athene {
+    font-size: 30px;
+    display: inline;
+    line-height: 80px;
+    color: darkblue;
+    text-shadow: 1px 1px darkblue;
+}
+
+.header__item-middle {
+    overflow: hidden;
+    flex-basis: 55%;
+    font-weight: bold;
+}
+
+.header__item-middle a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header__item-middle .icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header__item-middle a {
+        display: none;
+    }
+    .header__item-middle a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 6768px) {
+    .header__item-middle.responsive {
+        position: relative;
+    }
+    .header__item-middle.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .header__item-middle.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.header__item-right {
+    flex-basis: 25%;
+}
+
+.header__item-right input {
+    margin-right: 10px;
+    height: 45px;
+    width: 120px;
+    border-radius: 13px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#signIn {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+#signUp {
+    background-color: orange;
+    color: white;
+    border-color: orange;
+}
+
+.header__item-right {
+    flex: 2;
+}
+
+.header__item-middle p,
+.header__item-right p {
+    text-align: center;
+    display: inline-block;
+    line-height: 45px;
+}
+
+@media screen and (max-width:768px) {
+    #logo {
+        display: none;
+    }
+    #signUp {
+        display: none;
+    }
+}
