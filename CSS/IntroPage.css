@@ -1,0 +1,100 @@
+                    body,
+                    html {
+                        margin: 0;
+                        font-family: 'Roboto';
+                        word-spacing: 1px;
+                        line-height: 1.7em;
+                        font-size: 1.6vw;
+                    }
+                    
+                    .introPage {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    .banner_header {
+                        flex: 1.5;
+                    }
+                    
+                    .content_top {
+                        flex: 1.5;
+                    }
+                    
+                    .content_forStudent {
+                        flex: 1;
+                        background-color: #6596B6;
+                    }
+                    
+                    .content_forParent {
+                        flex: 1;
+                    }
+                    
+                    .content_forTutor {
+                        flex: 1;
+                        background-color: #6596B6;
+                    }
+                    
+                    .content_bottom {
+                        flex: 1.5;
+                    }
+                    
+                    #images_banner {
+                        width: 100%;
+                        height: 35vw;
+                    }
+                    
+                    #images_forStudent {
+                        width: 27%;
+                        float: left;
+                    }
+                    
+                    #images_forParent {
+                        width: 20%;
+                        float: right;
+                        margin-bottom: 1em;
+                    }
+                    
+                    #images_forTutor {
+                        width: 23%;
+                        float: left;
+                        padding: 1em;
+                    }
+                    
+                    .introPage p {
+                        padding-left: 5rem;
+                        padding-right: 2rem;
+                    }
+                    
+                    .content_bold {
+                        font-weight: bold;
+                    }
+                    
+                    #tieuDe {
+                        font-weight: 900;
+                        text-align: center;
+                    }
+                    
+                    #button_khamPha {
+                        text-align: center;
+                    }
+                    
+                    #khamPha {
+                        background-color: #F24E1E;
+                        color: #FFFFFF;
+                        border: none;
+                        font-size: 1.6vw;
+                        height: 3em;
+                        width: 12em;
+                    }
+                    
+                    @media screen and (max-width: 700px) {
+                        .introPage p {
+                            padding-left: 3rem;
+                            padding-right: 1rem;
+                        }
+                        body,
+                        html,
+                        #khamPha {
+                            font-size: 0.9rem;
+                        }
+                    }
