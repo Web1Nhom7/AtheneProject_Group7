@@ -69,13 +69,13 @@ html,body {
     }
 
     #vision{
-        margin-left: 8rem;
+        margin-left: 7rem;
     }
     #mission{
-        margin-left:18rem;
+        margin-left:17rem;
     }
     #core-value{
-        margin-left:30rem;
+        margin-left:27rem;
     }
     #company-photo{
         height: 16rem;
@@ -89,7 +89,7 @@ html,body {
     }
     @media screen and (max-width: 600px) {
         #company-photo{
-        height: 23rem;
+        height: 21rem;
         margin: 0;
         padding: 0;
         }
@@ -112,7 +112,52 @@ html,body {
         font-size: 2.3rem;
     }
     }
-
+    /* Our Strength */
+    .our-strength{
+    background-color: #0077C0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    }
+    .strength-content{
+        display: flex;
+        padding-bottom: 1rem;
+    }
+    .strength-container{
+        text-align: center;
+        flex: 1;
+        margin: 1rem;
+    }
+    .icon-container{
+        border-radius: 50%;
+        background-color: #A1BCE5;
+        width: 3.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .strength-icon{
+        height: 3rem;
+        margin: auto;
+    }
+    @media screen and (max-width: 600px) {
+        .strength-icon{
+    height: 5rem;
+    margin: auto;
+    }
+    .icon-container{
+        width: 6.2rem;
+    }
+    .our-strength{
+        font-size: 2rem;
+    }
+    .strength-container p{
+    display: none;
+    }
+    .strength__item--inside{
+    flex: 1;
+    }
+    }
 </style>
 <body>
     <h2 class="deco">Tìm gia sư dễ hơn những gì bạn nghĩ</h2>
@@ -147,10 +192,54 @@ html,body {
             </div>
             <div id="core-value">
                 <p class="title-color">&#10025; Giá trị</p>
-                <p>Sáng tạo - Nhiệt huyết - Tiên phong</p>
+                <p>Sáng tạo - Nhiệt huyết - Tiên phong - Trung thực</p>
             </div>     
         </div>  
             <img id="company-photo" src="./Images/HomePage/OurCompany.jpg" alt="">
     </div>
+      <!-- Our strength content -->
+    <div class="our-strength">
+        <h2>Ưu điểm của chúng tôi</h2>
+        <div class="strength-content">
+            <div class="strength__item--inside">
+                <div class="strength-container">
+                    <div class="icon-container">
+                        <img class="strength-icon" src="./Images/HomePage/Easy.png" alt=""> 
+                    </div>
+                    <h4>Tiện lợi</h4>
+                    <p>Người dùng có thể  dễ dàng sử dụng các chức năng của Athene</p>             
+                </div>  
+            </div>
+
+            <div class="strength__item--inside">
+                <div class="strength-container">
+                    <div class="icon-container">
+                        <img class="strength-icon" src="./Images/HomePage/Design.png" alt=""> 
+                    </div>
+                    <h4>Thiết kế thanh lịch</h4>
+                    <p>Giao diện Athene được thiết kế với màu sắc tươi sáng và dễ chịu</p>             
+                </div>  
+            </div>
+            <div class="strength__item--inside">
+                <div class="strength-container">
+                    <div class="icon-container">
+                        <img class="strength-icon" src="./Images/HomePage/Savings.png" alt=""> 
+                    </div>
+                    <h4>Tiết kiệm thời gian, chi phí</h4>
+                    <p>Tìm gia sư/ học viên theo nhu cầu 1 cách nhanh chóng</p>             
+                </div>
+            </div>
+            <div class="strength__item--inside">
+                <div class="strength-container">
+                    <div class="icon-container">
+                        <img class="strength-icon" src="./Images/HomePage/Strength.png" alt=""> 
+                    </div>
+                    <h4>Năng động, sáng tạo</h4>
+                    <p>Athene luôn nỗ lực đem lại những trải nghiệm tốt nhất cho khách hàng.</p>             
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
