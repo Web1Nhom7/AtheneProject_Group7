@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<style>
+html,body {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    font-size: 1.3vw;
+}
+.deco{
+    text-align: center;
+}
+.user-flow{
+    display: flex;
+    text-align: center;
+    color: white;    
+}
+.user__item-left{
+    background-color: #3EB8D7 ;
+    flex: 1;
+}
+.user__item-middle{
+    background-color: #0392CE;
+    flex: 1;
+}
+.user__item-right{
+    background-color: #3065B5;
+    flex: 1;   
+}
+.inner-padding{
+    padding: 0 2rem 1rem 2rem;
+}
+.number{
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 6%;
+    margin: 0.5rem auto 0 auto;
+}
+/* Responsive user-flow */
+@media screen and (max-width: 600px) {
+    .user-flow{
+    text-align: center;
+    font-size: 2rem;
+    }
+    .number{
+    border-radius: 50%;
+    font-size: 2.5rem;
+    width: 10%;
+    margin: 1rem auto 0 auto;
+    }
+    .deco{
+    font-size: 3rem;
+    }
+}
+    /* Our company CSS */
+    .our-company{
+    display: flex;
+    }
+    .company__item--left{
+        flex: 6;
+    }
+
+    #vision{
+        margin-left: 5rem;
+    }
+    #mission{
+        margin-left:15rem;
+    }
+    #core-value{
+        margin-left:27rem;
+    }
+    #company-photo{
+        height: 18rem;
+        padding: 0.5rem 6rem;
+    }
+    .title-color{
+        color: #00008B;
+        font-size: 3rem;
+    }
+    @media screen and (max-width: 600px) {
+        #company-photo{
+        height: 25rem;
+        margin: 0;
+        padding: 0;
+        }
+        .our-company{
+        text-align: left;
+        margin-left: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        }
+        .company__item--left{
+        margin-top: -2.5rem;
+        }
+        #mission, #vision, #core-value{
+            margin: auto;
+        }
+        .company__item--left p{
+        margin: 1.3rem;
+    }
+    }
+
+</style>
+<body>
+    <h2 class="deco">Tìm gia sư dễ hơn những gì bạn nghĩ</h2>
+    <div class="user-flow">
+        <div class="user__item-left inner-padding" >
+            <p class="number">1</p>
+            <h4>ĐĂNG KÝ, ĐĂNG NHẬP</h4>
+            <p>Truy cập và sử dụng các chức năng của website Athene một cách toàn diện</p>
+        </div>
+        <div class="user__item-middle inner-padding">
+            <p class="number">2</p>
+            <h4>BỘ LỌC TÌM KIẾM</h4>
+            <p>Sử dụng bộ lọc để tìm kiếm hồ sơ theo nhu cầu nhanh chóng hơn</p>
+        </div>
+        <div class="user__item-right inner-padding">
+            <p class="number">3</p>
+            <h4>TẠO HỒ SƠ THEO NHU CẦU</h4>
+            <p>Athene cung cấp cho người dùng bộ tiêu chí tạo hồ sơ theo nhu cầu</p>
+        </div>
+    </div>
+    <!-- Our company content -->
+    <h2 class="deco">Văn hóa doanh nghiệp</h2>
+    <div class="our-company">
+        <div class="company__item--left">
+            <div id="vision">
+                <p class="title-color">&#10025; Tầm nhìn</p>
+                <p>Trở thành nơi kết nối đáng tin cậy cho gia sư và học viên</p>
+            </div>
+            <div id="mission">
+                <p class="title-color">&#10025; Sứ mệnh</p>
+                <p>Đem lại cho khách hàng những trải nghiệm tốt nhất</p>
+            </div>
+            <div id="core-value">
+                <p class="title-color">&#10025; Giá trị</p>
+                <p>Sáng tạo - Nhiệt huyết - Tiên phong</p>
+            </div>     
+        </div>  
+            <img id="company-photo" src="./Images/HomePage/OurCompany.jpg" alt="">
+    </div>
+</body>
+</html>

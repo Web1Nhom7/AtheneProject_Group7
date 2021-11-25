@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html,body {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    font-size: 1.3vw;
+}
+.our-company{
+    display: flex;
+}
+.company__item--left{
+    flex: 6;
+}
+
+#vision{
+    margin-left: 5rem;
+}
+#mission{
+    margin-left:15rem;
+}
+#core-value{
+    margin-left:27rem;
+}
+#company-photo{
+    height: 18rem;
+    padding: 0.5rem 6rem;
+}
+.title-color{
+    color: #00008B;
+}
+@media screen and (max-width: 600px) {
+    #company-photo{
+    display: none;
+    }
+    .our-company{
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    }
+    #mission, #vision, #core-value{
+        margin: auto
+    }
+    .company__item--left p {
+        padding: 0 ;
+        margin: 0;
+    }
+ 
+}
+</style>
+</head>
+<body>
+    <h2>Văn hóa doanh nghiệp</h2>
+    <div class="our-company">
+        <div class="company__item--left">
+            <div id="vision">
+                <p class="title-color">Tầm nhìn</p>
+                <p>Trở thành nơi kết nối đáng tin cậy cho gia sư và học viên</p>
+            </div>
+            <div id="mission">
+                <p class="title-color">Sứ mệnh</p>
+                <p>Đem lại cho khách hàng những trải nghiệm tốt nhất</p>
+            </div>
+            <div id="core-value">
+                <p class="title-color">Giá trị</p>
+                <p>Sáng tạo - Nhiệt huyết - Tiên phong</p>
+            </div>     
+        </div>  
+            <img id="company-photo" src="./Images/HomePage/OurCompany.jpg" alt="">
+    </div>
+</body>
+</html>
