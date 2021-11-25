@@ -1,0 +1,40 @@
+.su4tt-container{
+    width: 50%;
+    margin: 0 auto;
+}
+.su4tt-line{
+    margin: 10px 0;
+    /* width: 90%; */
+}
+.ipbox{
+    border: solid black 1.7px;
+    margin-top: 10px;
+    height: 1.5rem;
+    background-color: #D9F1F1;
+    width: 100%;
+}
+.flex-item{
+    display: flex;
+    justify-content: space-between;
+}
+#ngay, #thang,#nam, #phuong,#quan,#tp{
+    width: 30%;
+}
+#sonha,#duong{
+    width: 40%;
+}
+.lb-title{
+    line-height: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+}
+#ngaycap, #cccd{
+    width: 85%;
+}
+label{
+    font-weight: bolder;
+    text-align: left;
+}
+h2{
+    margin-bottom: 10px;
+}
