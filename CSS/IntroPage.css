@@ -14,6 +14,8 @@ html {
 
 .banner_header {
     flex: 1.5;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 .content_top {
@@ -36,6 +38,7 @@ html {
 
 .content_bottom {
     flex: 1.5;
+    margin-top: 1rem;
 }
 
 #images_banner {
@@ -63,6 +66,7 @@ html {
 .introPage p {
     padding-left: 5rem;
     padding-right: 2rem;
+    color: black;
 }
 
 .content_bold {

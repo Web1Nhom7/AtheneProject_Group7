@@ -1,199 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    html,body {
-    font-family: 'Roboto';
-    margin: 0 auto;
-    font-size: 1.3vw;
-    }
-    .header-content{
-    width: 100%;
-    margin: 0 auto;
-    display:flex;
-    background: #0077C0;
-    /*Neo header khi cuộn trang*/
-    position: fixed;
-    top: 0;
-    }
-    .header__item--left {
-    display: flex;
-    flex-basis: 20%;
-    }
-    #logo{
-        height: 3rem;
-        margin: auto 1rem;
-    }
-    .athene{
-        color: white;
-        font-size: 1.5rem;
-        display: inline;
-        line-height: 3rem;
-        /* Responsive 7rem*/
-    }
-    /*Left responsive*/
-    @media screen and (max-width: 600px) {
-        #logo{
+        html,
+        body {
+            font-family: 'Roboto';
+            margin: 0 auto;
+            font-size: 1.3vw;
+        }
+        
+        .header-content {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            background: #0077C0;
+            /*Neo header khi cuộn trang*/
+            position: fixed;
+            top: 0;
+        }
+        
+        .header__item--left {
+            display: flex;
+            flex-basis: 20%;
+        }
+        
+        #logo {
+            height: 3rem;
+            margin: auto 1rem;
+        }
+        
+        .athene {
+            color: white;
+            font-size: 1.5rem;
+            display: inline;
+            line-height: 3rem;
+            /* Responsive 7rem*/
+        }
+        /*Left responsive*/
+        
+        @media screen and (max-width: 600px) {
+            #logo {
+                display: none;
+            }
+        }
+        /*Middle item*/
+        
+        .header__item--middle {
+            overflow: hidden;
+            flex-basis: 60%;
+        }
+        
+        .header__item--middle a {
+            display: block;
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding-right: 1.5rem;
+            display: inline;
+            line-height: 3rem;
+        }
+        
+        .header__item--middle a:hover {
+            color: orange;
+        }
+        
+        .header__item--middle .icon {
             display: none;
         }
-    }
-    /*Middle item*/
-    .header__item--middle {
-    overflow: hidden;
-    flex-basis: 60%;
-
-    }
-    .header__item--middle a {
-    display: block;
-    color: #f2f2f2;
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding-right: 1.5rem;
-    display: inline;
-    line-height: 3rem;
-    }
-    .header__item--middle a:hover{
-      color: orange;
-    }
-    .header__item--middle .icon {
-    display: none;
-    }
-
-@media screen and (max-width: 600px) {
-    
-  .header__item--middle a {
-    display: none;
-   
-  }
-  .header__item--middle a.icon {
-    float: left;
-    display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-  .header__item--middle.responsive {
-    position: relative;
-    padding-top: 25px;}
-  .header__item--middle.responsive .icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .header__item--middle.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-.header__item--right {
-    display: flex;
-   flex-basis: 25%;
-   flex-wrap: nowrap;
-}
-.header__item--right div{
-    line-height: 2.8rem;
-    margin-left: 1rem;   
-}
-.header__item--right input {
-  width: 7rem;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  height: 2rem;
-}
-#signIn-button {
-    background-color: white;
-    color: black;
-}
- 
-#signUp-button {
-    background-color: #FF7E06;
-    color: white;
-}
-@media screen and (max-width: 600px) {
-    #signUp-button {
-    display: none;
-    }
-}
-/**/
-@media screen and (max-width: 600px) {
-    .header__item--left{
-        order: 2;
-        flex-basis: 50%;
-    }
-    .header__item--middle{
-        order: 1;
-    }
-    .header__item--right{
-        order: 3;
-    }
-    .athene{
-        font-size: 3rem;
-    }
-    .header__item--right input {
-    width: 10rem;
-    height: 2.5rem;
-    }
-    .header__item--middle .icon {
-    font-size: 2.5rem;
-    margin-left: 1rem;
-    }
-}
-/* Lưu ý khi thêm nội dung vô phải thêm thuộc tính này dưới header  */
-#content{
-  margin-top: 3rem;
-}
-
+        
+        @media screen and (max-width: 600px) {
+            .header__item--middle a {
+                display: none;
+            }
+            .header__item--middle a.icon {
+                float: left;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .header__item--middle.responsive {
+                position: relative;
+                padding-top: 25px;
+            }
+            .header__item--middle.responsive .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .header__item--middle.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        .header__item--right {
+            display: flex;
+            flex-basis: 25%;
+            flex-wrap: nowrap;
+        }
+        
+        .header__item--right div {
+            line-height: 2.8rem;
+            margin-left: 1rem;
+        }
+        
+        .header__item--right input {
+            width: 7rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            height: 2rem;
+        }
+        
+        #signIn-button {
+            background-color: white;
+            color: black;
+        }
+        
+        #signUp-button {
+            background-color: #FF7E06;
+            color: white;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #signUp-button {
+                display: none;
+            }
+        }
+        /**/
+        
+        @media screen and (max-width: 600px) {
+            .header__item--left {
+                order: 2;
+                flex-basis: 50%;
+            }
+            .header__item--middle {
+                order: 1;
+            }
+            .header__item--right {
+                order: 3;
+            }
+            .athene {
+                font-size: 3rem;
+            }
+            .header__item--right input {
+                width: 10rem;
+                height: 2.5rem;
+            }
+            .header__item--middle .icon {
+                font-size: 2.5rem;
+                margin-left: 1rem;
+            }
+        }
+        /* Lưu ý khi thêm nội dung vô phải thêm thuộc tính này dưới header  */
+        
+        #content {
+            margin-top: 3rem;
+        }
     </style>
 </head>
+
 <body>
     <!--Header content-->
-    <div class="header-content" >
+    <div class="header-content">
         <!--Item left-->
         <div class="header__item--left">
             <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
-            <div class="athene" >ATHENE</div>
+            <div class="athene">ATHENE</div>
         </div>
-          <!--Item middle - Navigation menu-->
+        <!--Item middle - Navigation menu-->
         <div class="header__item--middle" id="myNavigation">
-            <a href="#" >Trang chủ</a>
+            <a href="#">Trang chủ</a>
             <a href="#">Tìm gia sư</a>
             <a href="#">Trở thành gia sư</a>
             <a href="#">Blog</a>
             <a href="#">Giới thiệu</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
-          </div>
-          <script>
-             function myFunction() {
+        </div>
+        <script>
+            function myFunction() {
                 var nav = document.getElementById("myNavigation");
                 if (nav.className === "header__item--middle") {
-                  nav.className += " responsive";
+                    nav.className += " responsive";
                 } else {
-                  nav.className = "header__item--middle";
+                    nav.className = "header__item--middle";
+                }
             }
-          }
-          </script>
-      
-            <!--Item right-->
-<div class="header__item--right">
-    <div><input id="signIn-button" type="button" value="Đăng nhập" />
+        </script>
+
+        <!--Item right-->
+        <div class="header__item--right">
+            <div><input id="signIn-button" type="button" value="Đăng nhập" />
+            </div>
+            <div><input id="signUp-button" type="Button" value="Đăng ký" />
+            </div>
+        </div>
     </div>
-    <div><input id="signUp-button" type="Button" value="Đăng ký" />
-    </div>
-</div>
-</div>
-<!-- <img id="banner" src="../AtheneProject_Group7/Images/HomePage/Banner_Welcome.png" alt=""> -->
-<p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quo, amet dolorem ipsum eos qui totam corporis ea ab sunt veritatis, esse rerum? Illum, quas at recusandae nemo rem voluptatum.
-</p>
+    <!-- <img id="banner" src="../AtheneProject_Group7/Images/HomePage/Banner_Welcome.png" alt=""> -->
 
 </body>
+
 </html>
