@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="../CSS/HomePage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    html,body {
+/* Header */
+html,body {
     font-family: 'Roboto';
     margin: 0 auto;
     font-size: 1.3vw;
-    }
-    .header-content{
+}
+.header-content{
     width: 100%;
     margin: 0 auto;
     display:flex;
@@ -92,6 +93,7 @@
     float: none;
     display: block;
     text-align: left;
+    font-size: 1.5rem;
   }
 }
 .header__item--right {
@@ -109,6 +111,7 @@
   font-size: 1rem;
   border-radius: 0.5rem;
   height: 2rem;
+  line-height: 1rem;
 }
 #signIn-button {
     background-color: white;
@@ -140,59 +143,55 @@
         font-size: 3rem;
     }
     .header__item--right input {
-    width: 10rem;
-    height: 2.5rem;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    line-height: 1rem;
     }
     .header__item--middle .icon {
     font-size: 2.5rem;
     margin-left: 1rem;
     }
 }
-/* Lưu ý khi thêm nội dung vô phải thêm thuộc tính này dưới header  */
-#content{
-  margin-top: 3rem;
-}
-
     </style>
 </head>
 <body>
     <!--Header content-->
     <div class="header-content" >
-        <!--Item left-->
-        <div class="header__item--left">
-            <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
-            <div class="athene" >ATHENE</div>
+      <!--Item left-->
+      <div class="header__item--left">
+          <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
+          <div class="athene" >ATHENE</div>
+      </div>
+        <!--Item middle - Navigation menu-->
+      <div class="header__item--middle" id="myNavigation">
+          <a href="#" >Trang chủ</a>
+          <a href="#">Tìm gia sư</a>
+          <a href="#">Trở thành gia sư</a>
+          <a href="#">Blog</a>
+          <a href="#">Giới thiệu</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-          <!--Item middle - Navigation menu-->
-        <div class="header__item--middle" id="myNavigation">
-            <a href="#" >Trang chủ</a>
-            <a href="#">Tìm gia sư</a>
-            <a href="#">Trở thành gia sư</a>
-            <a href="#">Blog</a>
-            <a href="#">Giới thiệu</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
-          <script>
-             function myFunction() {
-                var nav = document.getElementById("myNavigation");
-                if (nav.className === "header__item--middle") {
-                  nav.className += " responsive";
-                } else {
-                  nav.className = "header__item--middle";
-            }
+        <script>
+           function myFunction() {
+              var nav = document.getElementById("myNavigation");
+              if (nav.className === "header__item--middle") {
+                nav.className += " responsive";
+              } else {
+                nav.className = "header__item--middle";
           }
-          </script>
-      
-            <!--Item right-->
+        }
+        </script>
+    
+          <!--Item right-->
 <div class="header__item--right">
-    <div><input id="signIn-button" type="button" value="Đăng nhập" />
-    </div>
-    <div><input id="signUp-button" type="Button" value="Đăng ký" />
-    </div>
+  <div><input id="signIn-button" type="button" value="Đăng nhập" />
+  </div>
+  <div><input id="signUp-button" type="Button" value="Đăng ký" />
+  </div>
 </div>
 </div>
-<img src="../Images/ForAll/Header/header_ava.jpg" alt="">
 </body>
 </html>

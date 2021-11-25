@@ -1,19 +1,11 @@
-body,
-html {
-    margin: 0;
-    font-family: 'Roboto';
-    word-spacing: 1px;
-}
-
-/* CSS Banner*/
+/* Banner */
 .mySlides {
     display: none;
-    margin-top: 3rem;
 }
 
 .banner-image {
-    width: 100%;
-    height:490px ;
+    height:25rem ;
+    margin-top: 3rem;
 }
 
 .banner-container {
@@ -24,164 +16,215 @@ html {
 
 /* The dots/bullets/indicators */
 .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 1rem;
+  width: 1rem;
+  margin: 0 0.1rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-span.active {
+.active {
   background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 0;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 0;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 0} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 0} 
   to {opacity: 1}
 }
-/* user manual */
-.body-guide{
-    display: flex;
-    justify-content: space-evenly;
-}
-.guide__item{
-    display: flex;
-    flex-direction: column;
-    border-radius: 10PX;
-    width: 22%;
+/* User flow CSS */
+.deco{
     text-align: center;
-    height: 250px
 }
-.guide__item-left{
-    background-color: #FBD974;
-
+.user-flow{
+    display: flex;
+    text-align: center;
+    color: white;    
 }
-.guide__item-center{
-    background-color: #EFAF74;
+.user__item-left{
+    background-color: #3EB8D7 ;
+    flex: 1;
 }
-.guide__item-right{
-    background-color: #CA914D;
+.user__item-middle{
+    background-color: #0392CE;
+    flex: 1;
 }
-#number{
+.user__item-right{
+    background-color: #3065B5;
+    flex: 1;   
+}
+.inner-padding{
+    padding: 0 2rem 1rem 2rem;
+}
+.number{
     border-radius: 50%;
-    color: #333C8D;
-    border: 2px solid #333C8D;
+    border: 3px solid white;
     text-align: center;
-    width: 15%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20PX;
-    font-size: 25PX;
-    font-weight: bolder;
+    font-size: 1.3rem;
+    width: 10%;
+    margin: 0.5rem auto 0 auto;
 }
-#font{
-    font-size: 18px;
-    line-height: 21px;
-}
-p#font{
-    margin: 0 10px;
-}
-h2.content-title{
-    font-family: 'Playfair Display', serif;
+/* Responsive user-flow */
+@media screen and (max-width: 600px) {
+    .user-flow{
     text-align: center;
-    font-size: 40px;
-    font-style: italic;
+    font-size: 2rem;
+    }
+    .number{
+    font-size: 2.5rem;
+    width: 20%;
+    margin: 1rem auto 0 auto;
+    }
+    .deco{
+    font-size: 3rem;
+    }
 }
-/* our Strength */
-h5#font{
-    margin-top: 2px;
-}
-.body-advantage {
+    /* Our company CSS */
+    .our-company{
     display: flex;
-    justify-content: space-evenly;
-    padding-left: 10px;
-    padding-bottom: 40px;
-    margin: 0 20px;
-}
+    font-size: 1.2rem;
+    }
+    .company__item--left{
+        flex: 6;
+    }
 
-#icon {
-    width: 30%;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.advantage__item {
-    background-color: #FFE28C;
+    #vision{
+        margin-left: 7rem;
+    }
+    #mission{
+        margin-left:17rem;
+    }
+    #core-value{
+        margin-left:27rem;
+    }
+    #company-photo{
+        height: 16rem;
+        padding: 0rem 6rem;
+    }
+    .title-color{
+        color: #00008B;
+        font-size: 1.4rem;
+        margin: 0;
+        font-weight: bold;
+    }
+    @media screen and (max-width: 600px) {
+        #company-photo{
+        height: 21rem;
+        margin: 0;
+        padding: 0;
+        }
+        .our-company{
+        text-align: left;
+        margin-left: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        }
+        .company__item--left{
+        margin-top: -2.5rem;
+        }
+        #mission, #vision, #core-value{
+            margin: auto;
+        }
+        .company__item--left p{
+        margin: 1.3rem;
+        }
+        .title-color{
+        font-size: 2.3rem;
+    }
+    }
+    /* Our Strength */
+    .our-strength{
+    background-color: #0077C0;
     display: flex;
     flex-direction: column;
-    width: 20%;
     text-align: center;
-    border-radius: 10px;
-    height: 230px;
-
-}
-/* About us */
-
-span#color {
-    color: #F24E1E;;
-}
-
-.body-AboutUs {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.AboutUs__item-1 {
-    display: flex;
-    width: 20%;
-    margin-left: 50px;
-}
-
-.AboutUs__item-2 {
-    display: flex;
-    flex-direction: column;
-    margin-left: 7%;
-    line-height: 30px;
-    vertical-align: middle;
-    min-width: 200px;
-    height: 300px;
-    margin-right: 0%;
-    margin-top: 2%;
-}
-
-button.aboutus {
-    text-align: center;
-    background-color: #093BBA;
     color: white;
-    width: 128px;
-    height: 46.81px;
-}
-
-.AboutUs__item-2-1 {
-    margin-right: 0px;
-    margin-left: 80%;
-    margin-top: 20px;
-}
-
-img#abus-image {
-    width: 500px;
-    height: 400px;
-}
-
-p {
-    margin-bottom: 0px;
-    word-spacing: 3px;
-    font-size: 18px;
+    }
+    .strength-content{
+        display: flex;
+        padding-bottom: 1rem;
+    }
+    .strength-container{
+        text-align: center;
+        flex: 1;
+        margin: 1rem;
+    }
+    .icon-container{
+        border-radius: 50%;
+        background-color: #A1BCE5;
+        width: 3.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .strength-icon{
+        height: 3rem;
+        margin: auto;
+    }
+    @media screen and (max-width: 600px) {
+        .strength-icon{
+    height: 5rem;
+    margin: auto;
+    }
+    .icon-container{
+        width: 6.2rem;
+    }
+    .our-strength{
+        font-size: 2rem;
+    }
+    .strength-container p{
+    display: none;
+    }
+    .strength__item--inside{
+    flex: 1;
+    }
+    }
+    /* About us CSS */
+    .about-us{
+    display: flex;
+    margin-right: 5rem;
+    line-height: 2rem;
+    }
+    #us-photo{
+        height: 15rem;
+        margin: 0.5rem 3rem;
+    }
+    .about-us span{
+        color: red;
+    }
+    #button-position {
+        text-align: right;
+    }
+    .about-us button{
+        background-color: #093BBA;
+        color: white;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    @media screen and (max-width: 600px) {
+    .about-us{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    }
+    #us-photo{
+    height: 30rem;
+    margin: 1rem 2rem ;
+    }
+    .about-us button{
+        font-size: 1.5rem;
+    }
+    
 }
