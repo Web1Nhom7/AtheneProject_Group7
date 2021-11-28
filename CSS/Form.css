@@ -1,18 +1,21 @@
-.su4tt-container{
-    width: 50%;
+.form-container{
+    width: 55%;
     margin: 0 auto;
 }
-.su4tt-line{
+.form-line{
     margin: 10px 0;
-    /* width: 90%; */
 }
 .ipbox{
     border: solid black 1.7px;
     margin-top: 10px;
     height: 1.5rem;
     background-color: #D9F1F1;
-    width: 100%;
+    width: 98%;
 }
+select.ipbox{
+    height: 1.85rem;
+}
+
 .flex-item{
     display: flex;
     justify-content: space-between;
@@ -52,4 +55,15 @@ a{
 button{
     border: none;
     margin: 10px 0;
+}
+.txt-info{
+    min-height: 70px;
+}
+#luong::placeholder {
+    text-align: right;
+}
+
+ ::placeholder {
+    color: black;
+    padding-left: 10px;
 }
