@@ -1,3 +1,5 @@
+/* Chung  */
+
 body {
     font-family: Roboto;
     margin-top: 5rem;
@@ -21,7 +23,7 @@ body {
 h1,
 h3 {
     text-align: center;
-    margin-bottom: 2px;
+    margin-bottom: 0.06rem;
 }
 
 hr {
@@ -35,4 +37,80 @@ hr {
     float: right;
     padding-right: 0.5rem;
     margin-top: -0.7rem;
+}
+
+
+/* Sign Up */
+
+.button {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.button input {
+    background-color: #FF7E06;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    width: 30%;
+    height: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+
+/* Sign In */
+
+.form label {
+    font-size: 1.2rem;
+}
+
+.nhapSodt,
+.nhapPass,
+.buttonSignIn {
+    border-radius: 30px;
+    margin: 8px 0;
+    width: 100%;
+    height: 2.7rem;
+}
+
+.forgetPass,
+.linkSignUp {
+    font-size: 1rem;
+}
+
+.forgetPass {
+    float: right;
+}
+
+.linkSignUp {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.buttonSignIn {
+    background-color: #093BBA;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.linkSignUp a {
+    color: #FFF9C4;
+    text-decoration: none;
+}
+
+.linkSignUp a:hover {
+    color: orange;
+    font-size: 1.2rem;
+}
+
+.nhapSodt,
+.nhapPass {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border: 4px solid white;
+    outline: none;
 }
