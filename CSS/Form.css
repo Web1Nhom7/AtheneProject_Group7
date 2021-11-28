@@ -23,6 +23,9 @@
 #sonha,#duong{
     width: 40%;
 }
+input{
+    margin-right: 5px;
+}
 .lb-title{
     line-height: 1.5rem;
     text-align: center;
@@ -34,6 +37,8 @@
 label{
     font-weight: bolder;
     text-align: left;
+    white-space: nowrap;
+    margin-right: 5px;
 }
 h2{
     margin-bottom: 10px;
