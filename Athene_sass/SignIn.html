@@ -9,93 +9,58 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="../CSS/SignIn_SignUp.css">
-
     <style>
-        .form label {
-            font-size: 1.2rem;
+        @media screen and (max-width:985px) {
+            .nhapSodt,
+            .nhapPass,
+            .buttonSignIn {
+                margin: 6px 0;
+                width: 100%;
+                height: 2rem;
+                font-size: 0.9rem;
+            }
+            .form {
+                padding-top: 2px;
+            }
+            .form label {
+                font-size: 1.1rem;
+            }
+            .forgetPass,
+            .linkSignUp {
+                font-size: 0.8rem;
+            }
+            .nhapSodt,
+            .nhapPass {
+                border: 3px solid white;
+            }
         }
         
-        .nhapSodt,
-        .row-pass,
-        .buttonSignIn {
-            border: 4px solid white;
-            border-radius: 30px;
-            margin: 8px 0;
-        }
-        
-        .nhapSodt {
-            width: 98%;
-            height: 2.5rem;
-        }
-        
-        .row-pass,
-        .buttonSignIn {
-            width: 100%;
-            height: 3rem;
-        }
-        
-        .forgetPass,
-        .linkSignUp {
-            font-size: 1rem;
-        }
-        
-        .forgetPass {
-            float: right;
-        }
-        
-        .linkSignUp {
-            text-align: center;
-            margin-top: 0px;
-        }
-        
-        .buttonSignIn {
-            background-color: #093BBA;
-            color: white;
-            font-size: 1.2rem;
-            border: none;
-        }
-        
-        .linkSignUp a {
-            color: #FFF9C4;
-            text-decoration: none;
-        }
-        
-        .linkSignUp a:hover {
-            color: orange;
-            font-size: 1.2rem;
-        }
-        
-        .row-pass,
-        .button-eye {
-            display: flex;
-            align-items: center;
-        }
-        
-        .row-pass {
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-        
-        .nhapPass {
-            border: none;
-            flex: 1;
-            flex-shrink: 0;
-            -webkit-filter: none;
-            filter: none;
-        }
-        
-        .button-eye {
-            border: 0;
-            outline: none;
-            padding: 0 0.9rem 0 0.75rem;
-            color: white;
-        }
-        
-        .nhapPass,
-        .button-eye,
-        .nhapSodt,
-        .row-pass {
-            background: transparent;
+        @media screen and (max-width:780px) {
+            .nhapSodt,
+            .nhapPass,
+            .buttonSignIn {
+                margin: 2px 0;
+                width: 100%;
+                height: 1.7rem;
+                font-size: 0.7rem;
+            }
+            .container {
+                background-size: 100% 65%;
+            }
+            .form label {
+                font-size: 1rem;
+            }
+            .forgetPass,
+            .linkSignUp {
+                font-size: 0.8rem;
+            }
+            .nhapSodt,
+            .nhapPass {
+                border: 2px solid white;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
         }
     </style>
 </head>
@@ -113,20 +78,9 @@
         <hr>
         <div class="form">
             <label for="sodt">Số điện thoại</label> <br>
-            <input type="text" name="sodt" id="sodt" class="nhapSodt">
+            <input type="tel" name="sodt" id="sodt" class="nhapSodt">
             <label for="pwd">Mật khẩu</label>
-            <div class="row-pass">
-                <input class="nhapPass" type="password" autocomplete="current-password" name="password" maxlength="16" value>
-                <button class="button-eye">
-
-                    <i class="bi bi-eye-slash"></i> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
-                        <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
-                        <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
-                        <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
-                      </svg></button>
-
-            </div>
+            <input class="nhapPass" type="password" autocomplete="current-password" name="password" maxlength="16" value>
             <span class="forgetPass">Quên mật khẩu?</span> <br>
             <input class="buttonSignIn" type="button" value="Đăng nhập">
             <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng kí</a></p>

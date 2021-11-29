@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Find Student</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="../CSS/Form.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="#">
+            <caption>
+                <h2>HỒ SƠ ĐĂNG KÝ TÌM GIA SƯ</h2>
+                <div> Bạn muốn tìm gia sư như thế nào?</div>
+            </caption>
+            <hr/>
+            <div class="form-line">
+                <label for="jobs">Nghề nghiệp:</label>
+                <span><input type="checkbox" name="jobs"> Giáo viên</span>
+                <span><input type="checkbox" name="jobs"> Sinh viên</span>
+            </div>
+            <div class="form-line flex-item">
+                <label class="lb-title" for="class">Lớp dạy:</label>
+                <input class="ipbox" type="text" name="class">
+                <label class="lb-title" for="subject">Môn dạy:</label>
+                <input class="ipbox " type="text" name="subject">
+            </div>
+            <div class="form-line ">
+                <label for="gender">Giới tính:</label>
+                <span><input type="checkbox" name="gender" value="0"> Nam</span>
+                <span><input type="checkbox" name="gender" value="1"> Nữ</span>
+            </div>
+            <div class="form-line">
+                <div class="flex-item">
+                    <label class="lb-title" for="address">Địa điểm dạy:</label>
+                    <input class="ipbox" type="text" name="address" id="sonha" placeholder="Số nhà">
+                    <input class="ipbox" type="text" id="duong" name="address" placeholder="Đường">
+                </div>
+                <div class="flex-item">
+                    <select name="address" id="phuong" class="ipbox ">
+                        <option value>Phường</option>
+                    </select>
+                    <select class="ipbox" name="address" id="quan">
+                        <option value>Quận/Huyện</option>
+                        <option value="Thành phố Thủ Đức">Thành phố Thủ Đức</option>
+                        <option value="Quận 1">Quận 1</option>
+                        <option value="Quận 3">Quận 3</option>
+                        <option value="Quận 4">Quận 4</option>
+                        <option value="Quận 5">Quận 5</option>
+                        <option value="Quận 6">Quận 6</option>
+                        <option value="Quận 7">Quận 7</option>
+                        <option value="Quận 8">Quận 8</option>
+                        <option value="Quận 10">Quận 10</option>
+                        <option value="Quận 11">Quận 11</option>
+                        <option value="Quận 12">Quận 12</option>
+                        <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                        <option value="Quận Bình Tân">Quận Bình Tân</option>
+                        <option value="Quận Gò Vấp"> Quận Gò Vấp</option>
+                        <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+                        <option value="Quận Tân Bình">Quận Tân Bình</option>
+                        <option value="Quận Tân Phú">Quận Tân Phú</option>
+                        <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
+                        <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
+                        <option value="Huyện Củ Chi">Huyện Củ Chi</option>
+                        <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+                        <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+                    </select>
+                    <input type="text" class="ipbox" name="address" id="tp" value="TP. Hồ Chí Minh" readonly>
+                </div>
+            </div>
+            <div class="form-line flex-item">
+                <label class="lb-title" for="experience">Kinh nghiệm:</label>
+                <input class="ipbox" type="text" name="experience">
+            </div>
+            <div class="form-line flex-item">
+                <label class="lb-title" for="time">Thời gian dạy:</label>
+                <input class="ipbox" type="text" name="time" placeholder="VD: 1h30 phút/1 buổi học">
+            </div>
+            <div class="form-line flex-item">
+                <label class="lb-title" for="salary">Mức lương đề xuất:</label>
+                <input class="ipbox" type="text" id="luong" name="salary" placeholder="VNĐ">
+            </div>
+            <div class="form-line flex-item">
+                <label class="lb-title" for="schedule">Lịch học dự kiến:</label>
+                <input class="ipbox" type="text" name="schedule" placeholder="VD: Thứ 7, Chủ nhật mỗi tuần">
+            </div>
+            <div class="form-line">
+                <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" class="ipbox txt-info"></textarea>
+            </div>
+            <div class="form-line" style="text-align: right;">
+                <button> <a href="#">Hoàn tất</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
