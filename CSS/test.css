@@ -1,0 +1,158 @@
+body,
+html {
+    font-family: 'Roboto';
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Header background blog */
+
+.blog-header {
+    height: 400px;
+}
+
+#image-header {
+    width: 100%;
+    height: 100%;
+    /* max-height: 70vh; */
+}
+
+.title-content {
+    margin-left: 27%;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: -15px;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* List blog item */
+
+.blog-right ul {
+    width: 100%;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: row;
+    background-color: yellowgreen;
+    margin-bottom: 10px;
+}
+
+.blog__item-left {
+    margin-right: 10px;
+    width: 30%;
+}
+
+.blog__item-right {
+    width: 70%;
+}
+
+.blog-item-image {
+    /* width: 15em; */
+    width: 100%;
+    height: 10em;
+}
+
+ul.list-blog-content {
+    list-style: none;
+}
+
+#text-color {
+    color: #8D7676;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+
+/* Container blog */
+
+.blog-body {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+
+/* Blog left column (title blog) */
+
+.blog-left {
+    width: 50%;
+    margin-right: 0px;
+    background-color: #FAF1D6;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 40px;
+    text-align: left;
+}
+
+
+/* Blog right column */
+
+.blog-right {
+    margin-left: -20px;
+}
+
+
+/* Footer next page */
+
+.blog-footer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: right; */
+    margin-left: 50%;
+}
+
+.blog__footer-item {
+    margin: 1em;
+    margin-top: 0px;
+}
+
+
+/* Responsive */
+
+
+/* Mobile: width < 768px */
+
+@media only screen and(max-width: 46.1875em) {}
+
+
+/* Tablet: width>=768px and width<=1024px */
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .blog-left {
+        display: none;
+    }
+    .blog-right {
+        width: 100%;
+        margin-left: -25px;
+        margin-right: 50px;
+    }
+    .blog-body {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .title-content {
+        margin-left: 5%;
+    }
+    .blog-footer {
+        margin-left: 30%;
+    }
+}
