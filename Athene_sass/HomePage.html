@@ -10,51 +10,12 @@
     <link rel="stylesheet" href="../CSS/HomePage.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
-
  <!-- Body -->
 <body>  
     <div w3-include-html="Header.html"></div>
     <script async>
         w3.includeHTML();
-    </script>
-   <!-- Banner -->
-    <!--Header content-->
-    <div class="header-content" >
-        <!--Item left-->
-        <div class="header__item--left">
-            <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
-            <div class="athene" >ATHENE</div>
-        </div>
-          <!--Item middle - Navigation menu-->
-        <div class="header__item--middle" id="myNavigation">
-            <a href="#" >Trang chủ</a>
-            <a href="#">Tìm gia sư</a>
-            <a href="#">Trở thành gia sư</a>
-            <a href="#">Blog</a>
-            <a href="#">Giới thiệu</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
-          <script>
-             function myFunction() {
-                var nav = document.getElementById("myNavigation");
-                if (nav.className === "header__item--middle") {
-                  nav.className += " responsive";
-                } else {
-                  nav.className = "header__item--middle";
-            }
-          }
-          </script>
-      
-            <!--Item right-->
-<div class="header__item--right">
-    <div><input id="signIn-button" type="button" value="Đăng nhập" />
-    </div>
-    <div><input id="signUp-button" type="Button" value="Đăng ký" />
-    </div>
-</div>
-</div>
+    </script>   
    <!-- Banner -->
    <div class="mySlides fade">
     <img class="banner-image " src="../Images/HomePage/Banner_Welcome.png" >
