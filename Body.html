@@ -9,6 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../CSS/HomePage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <style>
 html,body {
@@ -38,8 +39,7 @@ html,body {
         color: white;
         font-size: 1.5rem;
         display: inline;
-        line-height: 3rem;
-        /* Responsive 7rem*/
+        line-height: 3rem;  
     }
     /*Left responsive*/
     @media screen and (max-width: 600px) {
@@ -84,7 +84,8 @@ html,body {
 @media screen and (max-width: 600px) {
   .header__item--middle.responsive {
     position: relative;
-    padding-top: 25px;}
+    padding-top: 4rem;
+}
   .header__item--middle.responsive .icon {
     position: absolute;
     left: 0;
@@ -139,7 +140,7 @@ html,body {
         order: 3;
     }
     .athene{
-        font-size: 5rem;
+        font-size: 3rem;
     }
     .header__item--right input {
     width: 10rem;
@@ -158,12 +159,7 @@ html,body {
 .banner-image {
     height:25rem ;
     margin-top: 3rem;
-}
-
-.banner-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
+    width: 100%;
 }
 
 /* The dots/bullets/indicators */
@@ -199,7 +195,7 @@ html,body {
   to {opacity: 1}
 }
 /* User flow CSS */
-.deco{
+.title{
     text-align: center;
 }
 .user-flow{
@@ -227,7 +223,7 @@ html,body {
     border: 3px solid white;
     text-align: center;
     font-size: 1.3rem;
-    width: 6%;
+    width: 8%;
     margin: 0.5rem auto 0 auto;
 }
 /* Responsive user-flow */
@@ -239,10 +235,10 @@ html,body {
     .number{
     border-radius: 50%;
     font-size: 2.5rem;
-    width: 10%;
+    width: 15%;
     margin: 1rem auto 0 auto;
     }
-    .deco{
+    .title{
     font-size: 3rem;
     }
 }
@@ -388,13 +384,8 @@ html,body {
         background: #0077C0;
         /* position: fixed;
         bottom: 0; */
-    }
-    .athene{
         color: white;
-        font-size: 1.5rem;
-        display: inline;
-        line-height: 3rem;
-    }   
+    }
     .footer__item--left{
         margin-left: 6rem;
         margin-right: 4rem;
@@ -412,13 +403,14 @@ html,body {
         flex-direction: column;
         margin-top: 1rem;
     }
-    #about-us{
+    #our-rules{
         font-size: 1rem;
     }
     .footer__item--middle a{
         text-decoration: none;
         color: white;
-        margin-left: 3rem;      
+        margin-left: 3rem; 
+        margin-bottom: 1rem;     
     }
     .footer__item--middle a:hover{
         text-decoration: underline;   
@@ -502,13 +494,13 @@ html,body {
 </div>
     <!-- Banner -->
     <div class="mySlides fade">
-        <img class="banner-image " src="../Images/HomePage/Banner_Welcome.png" style="width:100%">
+        <img class="banner-image " src="../Images/HomePage/Banner_Welcome.png" >
       </div>
       <div class="mySlides fade">
-        <img class="banner-image " src="../Images/HomePage/Banner_BlackFriday.png" style="width:100%">
+        <img class="banner-image " src="../Images/HomePage/Banner_BlackFriday.png" >
       </div>  
       <div class="mySlides fade">
-        <img class="banner-image " src="../Images/HomePage/Banner_MemberDay.jpg" style="width:100%">
+        <img class="banner-image " src="../Images/HomePage/Banner_MemberDay.jpg" >
       </div>
       </div>
       <br>
@@ -554,7 +546,7 @@ html,body {
       }
       </script>
     <!-- User flow content -->
-    <h2 class="deco">Tìm gia sư dễ hơn những gì bạn nghĩ</h2>
+    <h2 class="title">Tìm gia sư dễ hơn những gì bạn nghĩ</h2>
     <div class="user-flow">
         <div class="user__item-left inner-padding" >
             <p class="number">1</p>
@@ -573,7 +565,7 @@ html,body {
         </div>
     </div>
     <!-- Our company content -->
-    <h2 class="deco">Văn hóa doanh nghiệp</h2>
+    <h2 class="title">Văn hóa doanh nghiệp</h2>
     <div class="our-company">
         <div class="company__item--left">
             <div id="vision">
@@ -648,5 +640,50 @@ html,body {
             <p id="button-position"><button>Xem thêm</button></p>
         </div>
     </div>
+     <!-- Footer -->
+   <div class="footer-content">
+    <!-- Left item -->
+    <div class="footer__item--left">
+        <div class="athene" >ATHENE</div>
+        <p><i class="material-icons">&#xe0c8;</i> 90 Nam Kỳ Khởi Nghĩa, Phường 9, Quận 1, TP.HCM</p>   
+        <p><i class="material-icons">&#xe8a8;</i>  0392737622</p> 
+        <p><i class="material-icons">&#xe0e1;</i> cskh@hotro.athene.vn</p> 
+        <div class="logo-display">
+            <img class="ministry-logo" src="../Images/ForAll/Footer/Blue.png" alt="Chứng nhận của Bộ Công Thương">
+            <img class="ministry-logo" src="../Images/ForAll/Footer/Red.png" alt="Chứng nhận của Bộ Công Thương">
+        </div>
+        <p>@2021 - Bản quyền thuộc về Công ty TNHH Athene</p>
+    </div>
+    <!-- Middle item -->
+    <div class="footer__item--middle">
+        <p id="our-rules" class="text-bold">Về Athene</p>
+        <a href="#" >Trung tâm trợ giúp</a>
+        <a href="#">Điều khoản sử dụng</a>
+        <a href="#">Hướng dẫn thanh toán</a>
+        <a href="#">Chăm sóc khách hàng</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Góc chia sẻ</a>
+    </div>
+    <!-- Right item -->
+    <div class="footer__item--right">
+        <p class="text-bold">Thanh toán</p>
+        <img id="payment-logo" src="../Images/ForAll/Footer/payment.jpg" alt="Payment Method">
+        <p class="text-bold">Liên hệ</p>
+        <div class="logo-display">
+            <img class="contact-logo" style="height:2rem" src="../Images/ForAll/Footer/Logo_Facebook.png" alt="Facebook">
+            <img class="contact-logo"  style="height:1.9rem" src="../Images/ForAll/Footer/Logo_Gmail.png" alt="Gmail">
+            <img class="contact-logo"  style="height:2rem" src="../Images/ForAll/Footer/Logo_Zalo.png" alt="Zalo">
+        </div>
+        <p class="text-bold">Tải app Athene ngay</p>
+        <div id="download">
+                <img class="download-photo" src="../Images/ForAll/Footer/QRCode.png" alt="QR Code">     
+                <img class="download-photo" src="../Images/ForAll/Footer/Download.png" alt="">
+
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="footer-responsive">@2021 - Bản quyền thuộc về Công ty TNHH Athene</div>
+</body>
 </body>
 </html>
