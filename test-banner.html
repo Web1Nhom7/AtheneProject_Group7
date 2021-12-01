@@ -1,90 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../CSS/HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <style>
+html,body {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    font-size: 1.3vw;
+}
+/* Banner CSS */
 .mySlides {
   display: none;
-  
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 .banner-image {
     height:25rem ;
     margin-top: 3rem;
     width: 100%;
 }
-html,body {
-    font-family: 'Roboto';
-    margin: 0 auto;
-    font-size: 1.3vw;
-}
-/* Slideshow container */
-.slideshow-container {
+.banner-container {
   max-width: 100%;
   position: relative;
-  margin: auto;
-
+  margin-top: 3rem;
 }
-
 /* Next & previous buttons */
-.prev, .next {
+.prev-button, .next-button {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
+  padding: 1rem;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.5rem;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  color: white;
 }
-
 /* Position the "next button" to the right */
-.next {
+.next-button {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev-button:hover, .next-button:hover {
+  background-color: yellow;
+  color: black;
 }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.dot-container{
+  display: flex;
+  justify-content: center;
 }
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 1rem;
+  width: 1rem;
+  margin: 0.5rem 0.2rem;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.dot:hover {
+  background-color: rgb(109, 104, 104);
 }
 
 @-webkit-keyframes fade {
@@ -97,38 +83,33 @@ html,body {
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
 </style>
 </head>
 <body>
 
-<div class="slideshow-container">
+<!-- Banner -->
+<div class="banner-container">
+<div class="mySlides">
+  <img class="banner-image" src="./Images/HomePage/Banner_Welcome.png">
+</div>
 
-<div class="mySlides fade">
-  <img class="banner-image" src="./Images/HomePage/Banner_Welcome.png" style="width:100%">
+<div class="mySlides">
+  <img class="banner-image" src="./Images/HomePage/Banner_MemberDay.jpg">
 </div>
 
 <div class="mySlides fade">
-  <img class="banner-image" src="./Images/HomePage/Banner_MemberDay.jpg" style="width:100%">
+  <img class="banner-image" src="./Images/HomePage/Banner_BlackFriday.png">
 </div>
 
-<div class="mySlides fade">
-  <img class="banner-image" src="./Images/HomePage/Banner_BlackFriday.png" style="width:100%">
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<a class="prev-button" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next-button" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
+<div class="dot-container"> 
+  <p class="dot" onclick="currentSlide(1)"></p> 
+  <p class="dot" onclick="currentSlide(2)"></p> 
+  <p class="dot" onclick="currentSlide(3)"></p> 
 </div>
 
 <script>
@@ -144,19 +125,19 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }    
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  
 }
 </script>
 
