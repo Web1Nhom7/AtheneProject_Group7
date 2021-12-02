@@ -10,7 +10,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="../CSS/SignIn_SignUp.css">
     <style>
-        @media screen and (max-width:985px) {
+        @media screen and (max-width:990px) {
             .nhapSodt,
             .nhapPass,
             .buttonSignIn {
@@ -33,19 +33,24 @@
             .nhapPass {
                 border: 3px solid white;
             }
+            .container {
+                background-size: 100% 80%;
+                height: 27rem;
+            }
         }
         
-        @media screen and (max-width:780px) {
+        @media screen and (max-width:699px) {
             .nhapSodt,
             .nhapPass,
             .buttonSignIn {
                 margin: 2px 0;
                 width: 100%;
-                height: 1.7rem;
-                font-size: 0.7rem;
+                height: 1.5rem;
+                font-size: 0.8rem;
             }
             .container {
                 background-size: 100% 65%;
+                height: 27rem;
             }
             .form label {
                 font-size: 1rem;
@@ -60,6 +65,13 @@
             }
             h1 {
                 font-size: 1.7rem;
+            }
+        }
+        
+        @media screen and (max-width:530px) {
+            .linkSignUp {
+                display: flex;
+                flex-direction: column;
             }
         }
     </style>
@@ -81,7 +93,7 @@
             <input type="tel" name="sodt" id="sodt" class="nhapSodt">
             <label for="pwd">Mật khẩu</label>
             <input class="nhapPass" type="password" autocomplete="current-password" name="password" maxlength="16" value>
-            <span class="forgetPass">Quên mật khẩu?</span> <br>
+            <span class="forgetPass"><a href="#">Quên mật khẩu?</a></span> <br>
             <input class="buttonSignIn" type="button" value="Đăng nhập">
             <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng kí</a></p>
 

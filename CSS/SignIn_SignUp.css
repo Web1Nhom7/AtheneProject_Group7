@@ -98,10 +98,19 @@ hr {
 
 .linkSignUp a {
     color: #FFF9C4;
+}
+
+.forgetPass a {
+    color: white;
+}
+
+.forgetPass a,
+.linkSignUp a {
     text-decoration: none;
 }
 
-.linkSignUp a:hover {
+.linkSignUp a:hover,
+.forgetPass a:hover {
     color: orange;
     font-size: 1.2rem;
 }
@@ -113,4 +122,10 @@ hr {
     font-weight: bold;
     border: 4px solid white;
     outline: none;
+}
+
+@media screen and (max-width:1500px) {
+    .container {
+        height: 27rem;
+    }
 }
