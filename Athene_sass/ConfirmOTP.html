@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận mã OTP</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body {
+            font-family: Roboto;
+            margin-top: 5rem;
+        }
+        
+        .container {
+            margin: 0 auto;
+            padding-top: 1rem;
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 27rem;
+            height: 30rem;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+        }
+        
+        h1,
+        h2,
+        p {
+            text-align: center;
+        }
+        
+        h2,
+        .resendOTP {
+            color: #636262;
+        }
+        
+        .resendOTP button {
+            background: none;
+            border: none;
+            color: #FF7E06;
+        }
+        
+        #confirm {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            border: none;
+            background-color: #093BBA;
+            width: 40%;
+            height: 2.7rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .inputOTP {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 4.5rem;
+        }
+        
+        #txtInput {
+            width: 10%;
+            height: 1.8rem;
+            border: 1.5px solid black;
+            background-color: #EAF7F7;
+        }
+        
+        @media screen and (max-width:667px) {
+            .container {
+                width: 20rem;
+                height: 24rem;
+                padding-top: 1px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .inputOTP {
+                padding: 0 3rem;
+            }
+            #txtInput {
+                width: 11%;
+                height: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Xác thực mã OTP</h1>
+        <img src="../Images/ForAll/Header/Logo.png" alt="Lỗi">
+        <h2>Mã xác thực đã được gửi qua SĐT <br/> <span>0123456789</span></h2>
+        <p><b>Nhập mã OTP</b></p>
+        <div class="inputOTP">
+            <input id="txtInput" type="text">
+            <input id="txtInput" type="text">
+            <input id="txtInput" type="text">
+            <input id="txtInput" type="text">
+            <input id="txtInput" type="text">
+            <input id="txtInput" type="text">
+        </div>
+        <p class="resendOTP">Bạn chưa nhận được mã?<button type="button">Gửi lại OTP</button>
+        </p>
+        <button type="button" id="confirm">Xác nhận</button>
+
+
+    </div>
+
+</body>
+
+</html>
