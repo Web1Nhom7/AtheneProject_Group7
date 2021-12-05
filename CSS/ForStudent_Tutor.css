@@ -1,0 +1,134 @@
+    html,
+    body {
+        margin: 0rem;
+        padding: 0rem;
+        font-family: 'Roboto';
+    }
+    /* Dropdown menu item */
+    
+    .home-filter {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem;
+        width: 100vw;
+        margin-left: 12rem;
+    }
+    
+    .search-left {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    
+    .search__left-item {
+        width: 200px;
+        justify-content: space-between;
+        margin-bottom: 1.7rem;
+        margin-top: 0.5rem;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .search-right {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 6rem;
+    }
+    
+    .menu {
+        width: 30rem;
+        margin-right: 0rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn_menu {
+        width: 15rem;
+        background-color: lightskyblue;
+        border: none;
+        height: 3rem;
+    }
+    
+    #search {
+        width: 150px;
+        height: 30px;
+    }
+    
+    li {
+        margin-left: 20px;
+    }
+    /* Frame Tutor */
+    
+    #portrait {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .area {
+        margin-left: 4rem;
+    }
+    
+    .info-detail {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .frame-container {
+        padding: 2rem;
+        background-color: #E0FDFF;
+        width: 40%;
+        height: 30rem;
+        margin-right: 4rem;
+        margin-bottom: 40px;
+    }
+    
+    .frame {
+        margin-left: 20%;
+    }
+    /* .btn_control {
+        text-align: center;
+    } */
+    
+    #btn_signup,
+    #btn_view {
+        text-align: center;
+        margin-left: 15%;
+        width: 30%;
+        height: 3rem;
+        border-radius: 0.7rem;
+        border: none;
+        background-color: #4989D4;
+        color: white;
+        margin-top: 5%;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .frame {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Footer next page */
+    
+    .blog-footer {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: right; */
+        margin-left: 35%;
+    }
+    
+    .blog__footer-item {
+        margin: 1em;
+        margin-top: 0px;
+    }

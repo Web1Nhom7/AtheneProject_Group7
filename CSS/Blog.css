@@ -3,14 +3,16 @@ html {
     font-family: 'Roboto';
     margin: 0px;
     padding: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 /* Header background blog */
 
 .blog-header {
-    height: 40rem;
+    height: 20rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    text-align: center;
 }
 
 #image-header {
@@ -51,7 +53,7 @@ a {
 .blog-item {
     display: flex;
     flex-direction: row;
-    background-color: yellowgreen;
+    background-color: lightgray;
     margin-bottom: 10px;
 }
 
@@ -94,7 +96,7 @@ ul.list-blog-content {
 /* Blog left column (title blog) */
 
 .blog-left {
-    width: 50%;
+    width: 40%;
     margin-right: 0px;
     background-color: #FAF1D6;
     height: fit-content;

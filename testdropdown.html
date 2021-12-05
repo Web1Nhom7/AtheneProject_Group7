@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <!-- Menu Quận huyện -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" style="justify-content: space-between;">
+                        Quận/Huyện<span style="color:#F24E1E"><i class="material-icons" style="font-size: 16px; margin-left: 5px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><input type="checkbox" value="area"> Quận 1</li>
+                <li><input type="checkbox" value="area"> Quận 2</li>
+                <li><input type="checkbox" value="area"> Quận 3</li>
+                <li><input type="checkbox" value="area"> Quận 4</li>
+                <li><input type="checkbox" value="area"> Quận 5</li>
+                <li><input type="checkbox" value="area"> Quận 6</li>
+                <li><input type="checkbox" value="area"> Quận 7</li>
+                <li><input type="checkbox" value="area"> Quận 8</li>
+                <li><input type="checkbox" value="area"> Quận 9</li>
+                <li><input type="checkbox" value="area"> Quận 10</li>
+                <li><input type="checkbox" value="area"> Quận 11</li>
+                <li><input type="checkbox" value="area"> Quận 12</li>
+                <li><input type="checkbox" value="area"> Quận Bình Tân</li>
+                <li><input type="checkbox" value="area"> Quận Tân Bình</li>
+                <li><input type="checkbox" value="area"> Quận Tân Phú</li>
+                <li><input type="checkbox" value="area"> Quận Gò Vấp</li>
+                <li><input type="checkbox" value="area"> Quận Bình Thạnh</li>
+            </ul>
+        </div>
+        <!-- Menu Trình độ -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        Trình độ<span style="color:#F24E1E"><i class="material-icons" style="font-size: 16px; margin-left: 5px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><input type="checkbox" value="level"> Sinh viên </li>
+                <li><input type="checkbox" value="level"> Giáo viên </li>
+            </ul>
+        </div>
+        <!-- Menu Giới tính -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        Giới tính<span style="color:#F24E1E"><i class="material-icons" style="font-size: 16px; margin-left: 5px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><input type="checkbox" value="gender"> Nam </li>
+                <li><input type="checkbox" value="gender"> Nữ </li>
+            </ul>
+        </div>
+        <!-- Menu Lớp học -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        Lớp học<span style="color:#F24E1E"><i class="material-icons" style="font-size: 16px; margin-left: 5px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><input type="checkbox" value="classes"> Lớp 1</li>
+                <li><input type="checkbox" value="classes"> Lớp 2</li>
+                <li><input type="checkbox" value="classes"> Lớp 3</li>
+                <li><input type="checkbox" value="classes"> Lớp 4</li>
+                <li><input type="checkbox" value="classes"> Lớp 5</li>
+                <li><input type="checkbox" value="classes"> Lớp 6</li>
+                <li><input type="checkbox" value="classes"> Lớp 7</li>
+                <li><input type="checkbox" value="classes"> Lớp 8</li>
+                <li><input type="checkbox" value="classes"> Lớp 9</li>
+                <li><input type="checkbox" value="classes"> Lớp 10</li>
+                <li><input type="checkbox" value="classes"> Lớp 11</li>
+                <li><input type="checkbox" value="classes"> Lớp 12</li>
+                <li><input type="checkbox" value="classes"> Luyện thi đại học</li>
+
+            </ul>
+        </div>
+        <!-- Menu Môn học -->
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        Môn học<span style="color:#F24E1E"><i class="material-icons" style="font-size: 16px; margin-left: 5px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><input type="checkbox" value="subject"> Toán </li>
+                <li><input type="checkbox" value="subject"> Lý </li>
+                <li><input type="checkbox" value="subject"> Hóa</li>
+                <li><input type="checkbox" value="subject"> Văn</li>
+                <li><input type="checkbox" value="subject"> Sử </li>
+                <li><input type="checkbox" value="subject"> Địa</li>
+                <li><input type="checkbox" value="subject"> GDCD</li>
+                <li><input type="checkbox" value="subject"> Ngoại ngữ </li>
+            </ul>
+        </div>
+        <!-- Thanh tìm kiếm -->
+        <div class="search-menu">
+            <input type="text" placeholder="Tìm kiếm" style="background-color: #F81530; color: white;">
+            <!-- <i class="material-icons">youtube_searched_for</i> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
