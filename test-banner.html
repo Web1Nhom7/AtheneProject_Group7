@@ -1,145 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../CSS/HomePage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <style>
-html,body {
-    font-family: 'Roboto';
-    margin: 0 auto;
-    font-size: 1.3vw;
-}
-/* Banner CSS */
-.mySlides {
-  display: none;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-.banner-image {
-    height:25rem ;
-    margin-top: 3rem;
+  html,body {
+      font-family: 'Roboto';
+      margin: 0 auto;
+      font-size: 1.3vw;
+  }
+  .intro-page{
+    margin: 0 3rem;
+    line-height: 2rem;
+  }
+  #intro-banner{
+    height: 20rem;
     width: 100%;
-}
-.banner-container {
-  max-width: 100%;
-  position: relative;
-  margin-top: 3rem;
-}
-/* Next & previous buttons */
-.prev-button, .next-button {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-  transition: 0.6s ease;
-  color: white;
-}
-/* Position the "next button" to the right */
-.next-button {
-  right: 0;
-}
+  }
+  #title{
+    text-align: center;
+  }
+  .discover-click {
+      background-color: #F24E1E;
+      color: #FFFFFF;
+      text-align: center;
+      border: none;
+      height: 2.5rem;
+      width: 8rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      font-size: 1rem;
+  }
+  .content-body{
+    display: flex;
+    flex-direction: row;
+    background-color: #6596B6;
+    margin: 0 -3rem;
+  }
+  #images_forParent {
+      height: 12rem;
+      margin-bottom: 1em;
+      padding: 0 2rem;
+  }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev-button:hover, .next-button:hover {
-  background-color: yellow;
-  color: black;
-}
-.dot-container{
-  display: flex;
-  justify-content: center;
-}
-.dot {
-  cursor: pointer;
-  height: 1rem;
-  width: 1rem;
-  margin: 0.5rem 0.2rem;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: background-color 0.6s ease;
-}
-
-.dot:hover {
-  background-color: rgb(109, 104, 104);
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
+  #images_forTutor {
+      width: 13rem;
+      padding: 1.4rem;
+  }
+  .vertical-text{
+   margin: auto 2rem;
+  }
+  .text-bold{
+    font-weight: 500;
+  }
+  .text-color{
+    font-weight: 700;
+    color: red;
+  }
 </style>
-</head>
 <body>
-
-<!-- Banner -->
-<div class="banner-container">
-<div class="mySlides">
-  <img class="banner-image" src="./Images/HomePage/Banner_Welcome.png">
-</div>
-
-<div class="mySlides">
-  <img class="banner-image" src="./Images/HomePage/Banner_MemberDay.jpg">
-</div>
-
-<div class="mySlides fade">
-  <img class="banner-image" src="./Images/HomePage/Banner_BlackFriday.png">
-</div>
-
-<a class="prev-button" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next-button" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-
-<div class="dot-container"> 
-  <p class="dot" onclick="currentSlide(1)"></p> 
-  <p class="dot" onclick="currentSlide(2)"></p> 
-  <p class="dot" onclick="currentSlide(3)"></p> 
-</div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1
-  }    
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  slides[slideIndex-1].style.display = "block";  
-  
-}
-</script>
-
+    <img id="intro-banner" src="../Images/IntroPage/office.jpg" alt="Lỗi">
+    <div class="intro-page">
+        <h3 id="title">Athene là một website hỗ trợ tìm kiếm gia sư trực tuyến trên <br> địa bàn thành phố Hồ Chí Minh.</h3>
+        <p>Chào mừng bạn đến với <span class="text-bold">ATHENE – GIẢI PHÁP TÌM KIẾM GIA SƯ DỄ DÀNG.</span> <br/> Chúng tôi cam kết không ngừng cải thiện, nâng cao chất lượng dịch vụ, lắng nghe và tiếp thu góp ý của quý khách hàng nhằm đem đến cho khách hàng tốt nhất tại <span class="text-bold">Athene.</span></p>
+        <button class="discover-click">Khám phá ngay</button>
+        <p class="text-bold">Ở đây, chúng tôi cung cấp cho bạn:</p>
+ 
+    <div>
+        <div class="content-body">
+            <img id="images_forStudent" src="../Images/IntroPage/student.png" alt="Lỗi ">
+            <p class="vertical-text"><span class="text-bold">Đối với học viên</span>, một lượng lớn gia sư chuyên môn tốt và tận tâm sẵn sàng giúp đỡ học viên trong con đường mở rộng kiến thức.
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="content-body" style="background-color: white;" >
+            <p class="vertical-text"> <span class="text-bold">Đối với phụ huynh</span>, đến với chúng tôi các bậc cha mẹ sẽ dễ dàng hơn trong việc tìm kiếm người gia sư chất lượng cho con em của mình. Gia sư và phụ huynh sẽ luôn có những sự liên kết theo sát quá trình
+                học tập của con em. Đối với gia sư, chúng tôi là cầu nối giúp gia sư tìm kiếm học viên để cải thiện thu nhập của chính bạn.
+            </p>
+            <img id="images_forParent" src="../Images/IntroPage/parent.png " alt="Lỗi ">
+        </div>
+    </div>
+    <div>
+        <div class="content-body">
+            <img id="images_forTutor" src="../Images/IntroPage/tutor.png" alt="Lỗi ">
+            <p class="vertical-text"><span class="text-bold">Đối với gia sư</span>, chúng tôi là cầu nối giúp gia sư tìm kiếm học viên để cải thiện thu nhập của chính bạn.
+            </p>
+        </div>
+    </div>
+    <div >
+        <p><span class="text-color">Athena</span> hy vọng sẽ trở thành nhà tiên phong trong việc giúp đỡ những khó khăn mà phụ huynh gặp phải trong quá trình tìm kiếm gia sư cũng như khi gia sư tìm kiếm học viên.</p>
+        <p>Chúng tôi tin rằng đây sẽ là môi trường để mỗi người dân (phụ huynh và học sinh) có thể tiếp cận kiến thức một cách chủ động nhất có thể, thoải mái dễ dàng.</p>
+        <p>Chúng tôi - <span class="text-color">Athena</span> luôn đặt chất lượng cũng như uy tín lên hàng đầu, tất cả vì sự hài lòng của bạn!</p>
+    </div>
+  </div>
 </body>
-</html> 
+</html>

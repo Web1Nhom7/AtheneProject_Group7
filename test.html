@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<style>
+    .form-container{
+        width: 55%;
+        margin: 0 auto;
+        font-size: 3vh;
+        display: block;
+    }
+    .form-line{
+        display: flex;
+        margin: 1rem 0;
+    }
+    .form__label{
+        min-width: 13rem;
+        font-weight: bold; 
+        text-align: left;
+    }
+    .form__input{
+        background-color: #D9F1F1;
+        height: 1.8rem;
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="form-container">
+        <caption>
+            <h2>HỒ SƠ ĐĂNG KÍ TÌM HỌ VIÊN</h2>
+            <div>Học viên bạn đang tìm kiếm ra sao?</div>
+        </caption>
+        <hr>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label">Cấp học:</label>
+            <input type="checkbox" id="primary">Cấp I
+            <input  type="checkbox" id="secondary">Cấp II
+            <input  type="checkbox" id="highschool">Cấp III
+        </div>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label">Môn học: </label>
+            <input class="form__input"  type="text" id="subject">
+        </div>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label">Giới tính: </label>
+            <input type="checkbox" id="male">Nam
+            <input type="checkbox" id="female">Nữ
+        </div>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label">Địa điểm dạy: </label>
+            <input class="form__input"  type="text">
+            
+        </div>
+        <p>Các quận trên địa bàn TP.HCM</p>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label">Thời gian dạy: </label>
+            <input class="form__input"  type="text" id="teaching-time" placeholder="VD: 1h30p/1 buổi">
+        </div>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label">Mức lương mong muốn: </label>
+            <input class="form__input"  type="number" id="salary">
+        </div>
+        <!--  -->
+        <div class="form-line">
+            <label class="form__label" >Lịch dạy dự kiến:</label>
+            <input class="form__input"  type="text"  id="time-table" placeholder="VD: Thứ 7, Chủ nhật hằng tuần">
+        </div>
+        <div>
+            <input class="form__input"  type="text" placeholder="Mô tả thêm">
+        </div> 
+        <button>Hoàn tất</button>
+    </div>
+    
+</body>
+</html>
