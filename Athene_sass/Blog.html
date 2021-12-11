@@ -8,12 +8,18 @@
     <title>Blog</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="../CSS/Blog.css">
     <link rel="stylesheet" href="../Fontawesome/fontawesome-free-5.15.4-web/css/all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="../CSS/Blog.css">
 </head>
 
 <body>
+    <!-- Header -->
+    <div w3-include-html="./Header.html"></div>
+    <script async>
+        w3.includeHTML();
+    </script>   
     <div class="blog-header">
         <img id="image-header" src="../Images/Blog/banner_blog.jpg" alt="Lỗi">
     </div>
@@ -157,9 +163,11 @@
         </div>
 
     </div>
-
-
-
+    <!-- Footer -->
+    <div w3-include-html="./Footer.html"></div>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>

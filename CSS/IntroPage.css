@@ -1,102 +1,68 @@
-/* body,
-html {
-    margin: 0;
-    font-family: 'Roboto';
-    word-spacing: 1px;
-    line-height: 1.7rem;
-    font-size: 1.6vw;
-} */
-.introPage {
-    display: flex;
-    flex-direction: column;
-}
-
-.banner_header {
-    flex: 1;
-    margin-top: 5rem;
-}
-
-.content_top {
-    flex: 1.5;
-    font-size: 1.3rem;
-}
-
-.content_forStudent {
-    flex: 1;
-    background-color: #6596B6;
-}
-
-.content_forParent {
-    flex: 1;
-}
-
-.content_forTutor {
-    flex: 1;
-    background-color: #6596B6;
-}
-
-.content_bottom {
-    flex: 1.5;
-}
-
-#images_banner {
-    width: 100%;
+/* Introduction */
+.intro-page{
+    margin: 0 3rem;
+    line-height: 2rem;
+  }
+  #intro-banner{
     height: 20rem;
-}
-
-#images_forStudent {
-    width: 27%;
-    float: left;
-}
-
-#images_forParent {
-    width: 20%;
-    float: right;
-    margin-bottom: 1em;
-}
-
-#images_forTutor {
-    width: 23%;
-    float: left;
-    padding: 1em;
-}
-
-.introPage p {
-    padding-left: 5rem;
-    padding-right: 2rem;
-}
-
-.content_bold {
-    font-weight: bold;
-}
-
-.title {
-
+    width: 100%;
+    margin-top: 3rem;
+  }
+  #title{
     text-align: center;
-    /* font-size: 1.7rem; */
-}
+  }
+  .discover-click {
+      background-color: #F24E1E;
+      color: #FFFFFF;
+      text-align: center;
+      border: none;
+      height: 2.5rem;
+      width: 8rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      font-size: 1rem;
+  }
+  .content-body{
+    display: flex;
+    flex-direction: row;
+    background-color: #6596B6;
+    margin: 0 -3rem;
+  }
+  #images_forParent {
+      height: 12rem;
+      margin-bottom: 1em;
+      padding: 0 2rem;
+  }
 
-#button_khamPha {
-    text-align: center;
-}
-
-#khamPha {
-    background-color: #F24E1E;
-    color: #FFFFFF;
-    border: none;
-    font-size: 1.6vw;
-    height: 3em;
-    width: 12em;
-}
-
-@media screen and (max-width: 700px) {
-    .introPage p {
-        padding-left: 3rem;
-        padding-right: 1rem;
-    }
-    body,
-    html,
-    #khamPha {
-        font-size: 0.9rem;
-    }
+  #images_forTutor {
+      width: 13rem;
+      padding: 1.4rem;
+  }
+  .vertical-text{
+   margin: auto 2rem;
+  }
+  .text-bold{
+    font-weight: 500;
+  }
+  .text-color{
+    font-weight: 700;
+    color: red;
+  }
+  @media screen and (max-width: 600px) {
+    .intro-page{
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  #images_forStudent{
+    height: 10rem;
+  }
+  .discover-click{
+      font-size: 2rem;
+      width: 20rem;
+      height: 4rem;
+  }
+  .content-body{
+    margin: 3rem -3rem;
+  }
 }
