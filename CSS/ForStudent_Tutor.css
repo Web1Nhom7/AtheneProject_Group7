@@ -124,7 +124,6 @@
     .blog-footer {
         display: flex;
         flex-direction: row;
-        /* justify-content: right; */
         margin-left: 35%;
     }
     

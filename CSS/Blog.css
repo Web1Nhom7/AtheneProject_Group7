@@ -133,7 +133,7 @@ ul.list-blog-content {
 
 /* Mobile: width < 768px */
 
-@media only screen and(max-width: 46.1875em) {}
+@media only screen and(max-width: 600px) {}
 
 
 /* Tablet: width>=768px and width<=1024px */
@@ -156,5 +156,11 @@ ul.list-blog-content {
     }
     .blog-footer {
         margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .blog-left {
+        display: none;
     }
 }
