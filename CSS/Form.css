@@ -90,3 +90,29 @@ button {
     color: black;
     padding-left: 10px;
 }
+
+@media screen and (max-width:600px) {
+    .flex-item,
+    .txtbox {
+        display: block;
+    }
+    .checkbox {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5rem;
+    }
+    .checkbox span {
+        margin-right: 0.5rem;
+    }
+    #sonha {
+        width: 54%;
+    }
+    #duong,
+    #tp {
+        width: 97%;
+    }
+    #phuong,
+    #quan {
+        width: 100%;
+    }
+}

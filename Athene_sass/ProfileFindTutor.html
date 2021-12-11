@@ -9,6 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="../CSS/Form.css">
+
 </head>
 
 <body>
@@ -21,8 +22,9 @@
             <hr/>
             <div class="form-line">
                 <label for="jobs">Nghề nghiệp:</label>
+                <span class="checkbox">
                 <span><input type="checkbox" name="jobs"> Giáo viên</span>
-                <span><input type="checkbox" name="jobs"> Sinh viên</span>
+                <span><input type="checkbox" name="jobs"> Sinh viên</span> </span>
             </div>
             <div class="form-line flex-item">
                 <label class="lb-title" for="class">Lớp dạy:</label>
@@ -39,13 +41,13 @@
                 <div class="flex-item">
                     <label class="lb-title" for="address">Địa điểm dạy:</label>
                     <input class="ipbox" type="text" name="address" id="sonha" placeholder="Số nhà">
-                    <input class="ipbox" type="text" id="duong" name="address" placeholder="Đường">
+                    <input class="ipbox txtbox" type="text" id="duong" name="address" placeholder="Đường">
                 </div>
                 <div class="flex-item">
-                    <select name="address" id="phuong" class="ipbox ">
+                    <select name="address" id="phuong" class="ipbox txtbox">
                         <option value>Phường</option>
                     </select>
-                    <select class="ipbox" name="address" id="quan">
+                    <select class="ipbox txtbox" name="address" id="quan">
                         <option value>Quận/Huyện</option>
                         <option value="Thành phố Thủ Đức">Thành phố Thủ Đức</option>
                         <option value="Quận 1">Quận 1</option>
@@ -70,7 +72,7 @@
                         <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
                         <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
                     </select>
-                    <input type="text" class="ipbox" name="address" id="tp" value="TP. Hồ Chí Minh" readonly>
+                    <input type="text" class="ipbox txtbox" name="address" id="tp" value="TP. Hồ Chí Minh" readonly>
                 </div>
             </div>
             <div class="form-line flex-item">
