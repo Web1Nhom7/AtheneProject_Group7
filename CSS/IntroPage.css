@@ -29,6 +29,9 @@
     background-color: #6596B6;
     margin: 0 -3rem;
   }
+  #images_forStudent{
+      height: 10rem;
+  }
   #images_forParent {
       height: 12rem;
       margin-bottom: 1em;
