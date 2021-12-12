@@ -1,85 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Student</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <style>
-    .form-container{
-        width: 55%;
-        margin: 0 auto;
-        font-size: 3vh;
-        display: block;
-    }
-    .form-line{
+  html,body {
+    font-family: 'Roboto';
+    margin: 0 auto;
+    font-size: 1.3vw;
+}
+    /* Dropdown menu item */
+    
+    .profile {
         display: flex;
-        margin: 1rem 0;
+        flex-direction: row;
+        margin: 2rem;
+        width: 100vw;
+        margin-left: 12rem;
     }
-    .form__label{
-        min-width: 13rem;
-        font-weight: bold; 
-        text-align: left;
+    
+    .search-left {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
     }
-    .form__input{
-        background-color: #D9F1F1;
-        height: 1.8rem;
-        width: 100%;
+    
+    .search__left-item {
+        width: 200px;
+        justify-content: space-between;
+        margin-bottom: 1.7rem;
+        margin-top: 0.5rem;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .search-right {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 6rem;
+    }
+    
+    .menu {
+        width: 30rem;
+        margin-right: 0rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn_menu {
+        width: 15rem;
+        background-color: lightskyblue;
+        border: none;
+        height: 3rem;
+    }
+    
+    #search {
+        width: 150px;
+        height: 30px;
+    }
+    
+    li {
+        margin-left: 20px;
+    }
+    /* Frame Tutor */
+    
+    #portrait {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .area {
+        margin-left: 4rem;
+    }
+    
+    .info-detail {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+    .frame-container {
+        padding: 2rem;
+        background-color: #E0FDFF;
+        width: 40%;
+        height: 30rem;
+        margin-right: 4rem;
+        margin-bottom: 40px;
+    }
+    
+    .frame {
+        margin-left: 20%;
+    }
+    /* .btn_control {
+        text-align: center;
+    } */
+    
+    #btn_signup,
+    #btn_view {
+        text-align: center;
+        margin-left: 15%;
+        width: 30%;
+        height: 3rem;
+        border-radius: 0.7rem;
+        border: none;
+        background-color: #4989D4;
+        color: white;
+        margin-top: 5%;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .frame {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Footer next page */
+    
+    .blog-footer {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: right; */
+        margin-left: 35%;
+    }
+    
+    .blog__footer-item {
+        margin: 1em;
+        margin-top: 0px;
     }
 </style>
 <body>
-    <div class="form-container">
-        <caption>
-            <h2>HỒ SƠ ĐĂNG KÍ TÌM HỌ VIÊN</h2>
-            <div>Học viên bạn đang tìm kiếm ra sao?</div>
-        </caption>
-        <hr>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label">Cấp học:</label>
-            <input type="checkbox" id="primary">Cấp I
-            <input  type="checkbox" id="secondary">Cấp II
-            <input  type="checkbox" id="highschool">Cấp III
+    <div class="profile">
+        <div class="search-left">
+            <div class="search__left-item">
+                <i class="material-icons" style="font-size: 20px;color:#F24E1E;">border_color</i>
+                <span style="vertical-align: top;">Đăng ký tìm gia sư</span>
+            </div>
+            <div class="search__left-item">
+                <i class="material-icons" style="font-size: 20px;color:#F24E1E;">format_list_bulleted</i>
+                <span style="vertical-align: top;">Bảng giá tham khảo</span>
+            </div>
         </div>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label">Môn học: </label>
-            <input class="form__input"  type="text" id="subject">
+        <div class="search-right">
+            <div class="container">
+                <!-- Menu Quận huyện -->
+                <div class="dropdown menu">
+                    <button class="dropdown-toggle btn_menu" type="button" data-toggle="dropdown" style="justify-content: space-between;">
+                                Quận/Huyện<span style="color:#F24E1E"><i class="material-icons" style="font-size: 18px; margin-left: 20px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><input type="checkbox" value="area"> Quận 1</li>
+                        <li><input type="checkbox" value="area"> Quận 2</li>
+                        <li><input type="checkbox" value="area"> Quận 3</li>
+                        <li><input type="checkbox" value="area"> Quận 4</li>
+                        <li><input type="checkbox" value="area"> Quận 5</li>
+                        <li><input type="checkbox" value="area"> Quận 6</li>
+                        <li><input type="checkbox" value="area"> Quận 7</li>
+                        <li><input type="checkbox" value="area"> Quận 8</li>
+                        <li><input type="checkbox" value="area"> Quận 9</li>
+                        <li><input type="checkbox" value="area"> Quận 10</li>
+                        <li><input type="checkbox" value="area"> Quận 11</li>
+                        <li><input type="checkbox" value="area"> Quận 12</li>
+                        <li><input type="checkbox" value="area"> Quận Bình Tân</li>
+                        <li><input type="checkbox" value="area"> Quận Tân Bình</li>
+                        <li><input type="checkbox" value="area"> Quận Tân Phú</li>
+                        <li><input type="checkbox" value="area"> Quận Gò Vấp</li>
+                        <li><input type="checkbox" value="area"> Quận Bình Thạnh</li>
+                    </ul>
+                </div>
+                <!-- Menu Trình độ -->
+                <div class="dropdown menu">
+                    <button class="dropdown-toggle btn_menu" type="button" data-toggle="dropdown">
+                                Trình độ<span style="color:#F24E1E"><i class="material-icons" style="font-size: 18px; margin-left: 20px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><input type="checkbox" value="level"> Sinh viên </li>
+                        <li><input type="checkbox" value="level"> Giáo viên </li>
+                    </ul>
+                </div>
+                <!-- Menu Giới tính -->
+                <div class="dropdown menu">
+                    <button class="dropdown-toggle btn_menu" type="button" data-toggle="dropdown">
+                                Giới tính<span style="color:#F24E1E"><i class="material-icons" style="font-size: 18px; margin-left: 20px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><input type="checkbox" value="gender"> Nam </li>
+                        <li><input type="checkbox" value="gender"> Nữ </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <!-- Menu Lớp học -->
+                <div class="dropdown menu">
+                    <button class="dropdown-toggle btn_menu" type="button" data-toggle="dropdown">
+                                Lớp học<span style="color:#F24E1E"><i class="material-icons" style="font-size: 18px; margin-left: 20px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><input type="checkbox" value="classes"> Lớp 1</li>
+                        <li><input type="checkbox" value="classes"> Lớp 2</li>
+                        <li><input type="checkbox" value="classes"> Lớp 3</li>
+                        <li><input type="checkbox" value="classes"> Lớp 4</li>
+                        <li><input type="checkbox" value="classes"> Lớp 5</li>
+                        <li><input type="checkbox" value="classes"> Lớp 6</li>
+                        <li><input type="checkbox" value="classes"> Lớp 7</li>
+                        <li><input type="checkbox" value="classes"> Lớp 8</li>
+                        <li><input type="checkbox" value="classes"> Lớp 9</li>
+                        <li><input type="checkbox" value="classes"> Lớp 10</li>
+                        <li><input type="checkbox" value="classes"> Lớp 11</li>
+                        <li><input type="checkbox" value="classes"> Lớp 12</li>
+                        <li><input type="checkbox" value="classes"> Luyện thi đại học</li>
+
+                    </ul>
+                </div>
+                <!-- Menu Môn học -->
+                <div class="dropdown menu">
+                    <button class="dropdown-toggle btn_menu" type="button" data-toggle="dropdown">
+                                Môn học<span style="color:#F24E1E"><i class="material-icons" style="font-size: 18px; margin-left: 20px;vertical-align: middle;">arrow_drop_down_circle</i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><input type="checkbox" value="subject"> Toán </li>
+                        <li><input type="checkbox" value="subject"> Lý </li>
+                        <li><input type="checkbox" value="subject"> Hóa</li>
+                        <li><input type="checkbox" value="subject"> Văn</li>
+                        <li><input type="checkbox" value="subject"> Sử </li>
+                        <li><input type="checkbox" value="subject"> Địa</li>
+                        <li><input type="checkbox" value="subject"> GDCD</li>
+                        <li><input type="checkbox" value="subject"> Ngoại ngữ </li>
+                    </ul>
+                </div>
+                <!-- Thanh tìm kiếm -->
+                <div class="search-menu menu">
+                    <input id="search" type="text" placeholder="Tìm kiếm" style="background-color: #F81530; color: white;">
+                    <!-- <i class="material-icons">youtube_searched_for</i> -->
+                </div>
+            </div>
         </div>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label">Giới tính: </label>
-            <input type="checkbox" id="male">Nam
-            <input type="checkbox" id="female">Nữ
-        </div>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label">Địa điểm dạy: </label>
-            <input class="form__input"  type="text">
-            
-        </div>
-        <p>Các quận trên địa bàn TP.HCM</p>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label">Thời gian dạy: </label>
-            <input class="form__input"  type="text" id="teaching-time" placeholder="VD: 1h30p/1 buổi">
-        </div>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label">Mức lương mong muốn: </label>
-            <input class="form__input"  type="number" id="salary">
-        </div>
-        <!--  -->
-        <div class="form-line">
-            <label class="form__label" >Lịch dạy dự kiến:</label>
-            <input class="form__input"  type="text"  id="time-table" placeholder="VD: Thứ 7, Chủ nhật hằng tuần">
-        </div>
-        <div>
-            <input class="form__input"  type="text" placeholder="Mô tả thêm">
-        </div> 
-        <button>Hoàn tất</button>
     </div>
-    
+    <!-- Frame Tutor -->
+    <div class="frame">
+        <div class="row">
+            <!-- Frame 1 -->
+            <div class="frame-container">
+                <div class="info">
+                    <div class="portrait">
+                        <img id="portrait" src="../Images/ForStudent/user_ava.jpg" alt="Image of Tutor">
+                    </div>
+                    <div class="area">
+                        <div>
+                            <h4>HƯỚNG HÀM CHI</h4>
+                        </div>
+                        <div>
+                            <i class="material-icons">place</i>
+                            <label for="area" id="area"></label>
+                        </div>
+                        <div>
+                            <i class="material-icons">face</i>
+                            <label for="gender" id="gender"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-detail">
+                    <div>
+                        <label>Môn học: </label>
+                        <label for="subject"></label>
+                    </div>
+                    <div>
+                        <label>Học phí: </label>
+                        <label for="fee"></label>
+                    </div>
+                    <div>
+                        <label>Học vấn: </label>
+                        <label for="level"></label>
+                    </div>
+                </div>
+                <div class="btn_control">
+                    <button id="btn_signup">Đăng ký</button>
+                    <button id="btn_view">Xem Profile</button>
+                </div>
+            </div>
+            <!-- frame 2 -->
+            <div class="frame-container">
+                <div class="info">
+                    <div class="portrait">
+                        <img id="portrait" src="../Images/ForStudent/user_ava.jpg" alt="Image of Tutor">
+                    </div>
+                    <div class="area">
+                        <div>
+                            <h4>HƯỚNG HÀM CHI</h4>
+                        </div>
+                        <div>
+                            <i class="material-icons">place</i>
+                            <label for="area" id="area"></label>
+                        </div>
+                        <div>
+                            <i class="material-icons">face</i>
+                            <label for="gender" id="gender"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-detail">
+                    <div>
+                        <label>Môn học: </label>
+                        <label for="subject"></label>
+                    </div>
+                    <div>
+                        <label>Học phí: </label>
+                        <label for="fee"></label>
+                    </div>
+                    <div>
+                        <label>Học vấn: </label>
+                        <label for="level"></label>
+                    </div>
+                </div>
+                <div class="btn_control">
+                    <button id="btn_signup">Đăng ký</button>
+                    <button id="btn_view">Xem Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Frame 3-->
+            <div class="frame-container">
+                <div class="info">
+                    <div class="portrait">
+                        <img id="portrait" src="../Images/ForStudent/user_ava.jpg" alt="Image of Tutor">
+                    </div>
+                    <div class="area">
+                        <div>
+                            <h4>HƯỚNG HÀM CHI</h4>
+                        </div>
+                        <div>
+                            <i class="material-icons">place</i>
+                            <label for="area" id="area"></label>
+                        </div>
+                        <div>
+                            <i class="material-icons">face</i>
+                            <label for="gender" id="gender"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-detail">
+                    <div>
+                        <label>Môn học: </label>
+                        <label for="subject"></label>
+                    </div>
+                    <div>
+                        <label>Học phí: </label>
+                        <label for="fee"></label>
+                    </div>
+                    <div>
+                        <label>Học vấn: </label>
+                        <label for="level"></label>
+                    </div>
+                </div>
+                <div class="btn_control">
+                    <button id="btn_signup">Đăng ký</button>
+                    <button id="btn_view">Xem Profile</button>
+                </div>
+            </div>
+            <!-- frame 4 -->
+            <div class="frame-container">
+                <div class="info">
+                    <div class="portrait">
+                        <img id="portrait" src="../Images/ForStudent/user_ava.jpg" alt="Image of Tutor">
+                    </div>
+                    <div class="area">
+                        <div>
+                            <h4>HƯỚNG HÀM CHI</h4>
+                        </div>
+                        <div>
+                            <i class="material-icons">place</i>
+                            <label for="area" id="area"></label>
+                        </div>
+                        <div>
+                            <i class="material-icons">face</i>
+                            <label for="gender" id="gender"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-detail">
+                    <div>
+                        <label>Môn học: </label>
+                        <label for="subject"></label>
+                    </div>
+                    <div>
+                        <label>Học phí: </label>
+                        <label for="fee"></label>
+                    </div>
+                    <div>
+                        <label>Học vấn: </label>
+                        <label for="level"></label>
+                    </div>
+                </div>
+                <div class="btn_control">
+                    <button id="btn_signup">Đăng ký</button>
+                    <button id="btn_view">Xem Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Frame 5 -->
+            <div class="frame-container">
+                <div class="info">
+                    <div class="portrait">
+                        <img id="portrait" src="../Images/ForStudent/user_ava.jpg" alt="Image of Tutor">
+                    </div>
+                    <div class="area">
+                        <div>
+                            <h4>HƯỚNG HÀM CHI</h4>
+                        </div>
+                        <div>
+                            <i class="material-icons">place</i>
+                            <label for="area" id="area"></label>
+                        </div>
+                        <div>
+                            <i class="material-icons">face</i>
+                            <label for="gender" id="gender"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-detail">
+                    <div>
+                        <label>Môn học: </label>
+                        <label for="subject"></label>
+                    </div>
+                    <div>
+                        <label>Học phí: </label>
+                        <label for="fee"></label>
+                    </div>
+                    <div>
+                        <label>Học vấn: </label>
+                        <label for="level"></label>
+                    </div>
+                </div>
+                <div class="btn_control">
+                    <button id="btn_signup">Đăng ký</button>
+                    <button id="btn_view">Xem Profile</button>
+                </div>
+            </div>
+            <!-- Frame 6 -->
+            <div class="frame-container">
+                <div class="info">
+                    <div class="portrait">
+                        <img id="portrait" src="../Images/ForStudent/user_ava.jpg" alt="Image of Tutor">
+                    </div>
+                    <div class="area">
+                        <div>
+                            <h4>HƯỚNG HÀM CHI</h4>
+                        </div>
+                        <div>
+                            <i class="material-icons">place</i>
+                            <label for="area" id="area"></label>
+                        </div>
+                        <div>
+                            <i class="material-icons">face</i>
+                            <label for="gender" id="gender"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-detail">
+                    <div>
+                        <label>Môn học: </label>
+                        <label for="subject"></label>
+                    </div>
+                    <div>
+                        <label>Học phí: </label>
+                        <label for="fee"></label>
+                    </div>
+                    <div>
+                        <label>Học vấn: </label>
+                        <label for="level"></label>
+                    </div>
+                </div>
+                <div class="btn_control">
+                    <button id="btn_signup">Đăng ký</button>
+                    <button id="btn_view">Xem Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chuyển trang -->
+    <div class="blog-footer">
+        <div class="blog__footer-item">
+            <p><i class="material-icons">arrow_back</i></p>
+        </div>
+
+        <div class="blog__footer-item">
+            <p><i class="material-icons">arrow_back</i></p>
+        </div>
+
+        <div class="blog__footer-item">
+            <a href="#">
+                <p>Trang trước</p>
+            </a>
+        </div>
+        <div class="blog__footer-item">
+            <a href="#">
+                <p>Trang sau</p>
+            </a>
+        </div>
+        <div class="blog__footer-item">
+            <p><i class="material-icons">arrow_forward</i></p>
+        </div>
+        <div class="blog__footer-item">
+            <p><i class="material-icons">keyboard_tab</i></p>
+        </div>
 </body>
+<!-- <script>
+    /* Thêm hoặc xóa class show ra khỏi phần tử */
+    function Click_menu() {
+
+
+        //lấy tất cả các button menu
+        var buttons = document.getElementsByClassName('dropbtn');
+        //lấy tất cả các thẻ chứa menu con
+        var contents = document.getElementsByClassName('dropdown-menu');
+        //lặp qua tất cả các button menu và gán sự kiện
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function() {
+                //lấy value của button
+                var id = this.value;
+                //ẩn tất cả các menu con đang được hiển thị
+                for (var i = 0; i < contents.length; i++) {
+                    contents[i].classList.remove("show");
+                }
+                //hiển thị menu vừa được click
+               
+            });
+        }
+        //nếu click ra ngoài các button thì ẩn tất cả các menu con
+        window.addEventListener("click", function() {
+            if (!event.target.matches('.dropbtn')) {
+                for (var i = 0; i < contents.length; i++) {
+                    contents[i].classList.remove("show");
+                }
+            }
+        });
+    }
+</script> -->
+
 </html>
