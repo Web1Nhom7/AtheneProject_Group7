@@ -1,5 +1,5 @@
 .form-container {
-    width: 55%;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -64,14 +64,16 @@ h2 {
     margin-bottom: 10px;
 }
 
-a {
+a,
+.submit {
     font-weight: bold;
     color: black;
     text-decoration: none;
     font-size: 1rem;
 }
 
-button {
+button,
+.submit {
     border: none;
     margin: 10px 0;
     background: none;
@@ -108,10 +110,10 @@ button {
         width: 54%;
     }
     #duong,
+    #phuong,
     #tp {
         width: 97%;
     }
-    #phuong,
     #quan {
         width: 100%;
     }
