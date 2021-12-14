@@ -77,6 +77,10 @@ h3 {
     text-align: center;
 }
 
+h2 {
+    color: #0077C0;
+}
+
 .btn {
     width: 100%;
 }
@@ -114,7 +118,7 @@ h3 {
 }
 
 .colorbg {
-    background-color: blue;
+    background-color: #0077C0;
     width: 80%;
     color: white;
     border-radius: 2rem;
@@ -132,12 +136,12 @@ h3 {
 .btn-follow {
     margin-bottom: 2rem;
     height: 2rem;
-    background-color: blue;
+    background-color: #0077C0;
     color: white;
 }
 
 .btn-signin {
     height: 2rem;
-    background-color: blue;
+    background-color: #0077C0;
     color: white;
 }
