@@ -9,12 +9,14 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="../CSS/Form.css">
+    <script src="../Js/ProfileFind.js"></script>
+
 
 </head>
 
 <body>
     <div class="form-container">
-        <form action="#">
+        <form onsubmit="return valLevel(), valGender()" action="#" id="form" name="forms">
             <caption>
                 <h2>HỒ SƠ ĐĂNG KÝ TÌM HỌC VIÊN</h2>
                 <div> Học viên bạn đang tìm kiếm ra sao?</div>
@@ -22,45 +24,46 @@
             <hr/>
             <div class="form-line">
                 <label for="level">Cấp học:</label>
-                <span class="checkbox"> <span><input type="checkbox" name="level"> Cấp I</span>
-                <span> <input type="checkbox" name="level"> Cấp II</span>
-                <span> <input type="checkbox" name="level"> Cấp III</span> </span>
+                <span class="checkbox"> <span><input type="checkbox" name="level" id="level" value="cap1"> Cấp I</span>
+                <span> <input type="checkbox" name="level" id="level" value="cap2"> Cấp II</span>
+                <span> <input type="checkbox" name="level" id="level" value="cap3"> Cấp III</span> </span>
             </div>
             <div class="form-line flex-item">
                 <label class="lb-title" for="subject">Môn dạy:</label>
-                <input class="ipbox " type="text" name="subject">
+                <input class="ipbox " type="text" name="subject" id="subject" required>
             </div>
             <div class="form-line ">
                 <label for="gender">Giới tính:</label>
-                <span><input type="checkbox" name="gender" value="0"> Nam</span>
-                <span><input type="checkbox" name="gender" value="1"> Nữ</span>
+                <span><input type="checkbox" name="gender" id="gender nam" value="0"> Nam</span>
+                <span><input type="checkbox" name="gender"  id="gender nu"  value="1"> Nữ</span>
             </div>
             <div class="form-line">
                 <div class="flex-item">
                     <label class="lb-title" for="address">Địa điểm dạy:</label>
-                    <input class="ipbox" type="text" name="address" id="khuvuc" placeholder="Khu vực bạn có thể dạy">
+                    <input class="ipbox" type="text" name="address" id="khuvuc" placeholder="Khu vực bạn có thể dạy" required>
                     <input class="ipbox" type="text" id="thanhpho" name="address" placeholder="TP. Hồ Chí Minh" readonly>
                 </div>
                 <div class="form-line flex-item">
                     <label class="lb-title" for="time">Thời gian dạy:</label>
-                    <input class="ipbox" type="text" name="time" placeholder="VD: 1h30 phút/1 buổi học">
+                    <input class="ipbox" type="text" name="time" id="time" placeholder="VD: 1h30 phút/1 buổi học" required>
                 </div>
                 <div class="form-line flex-item">
                     <label class="lb-title" for="salary">Mức lương đề xuất:</label>
-                    <input class="ipbox" type="text" id="luong" name="salary" placeholder="VNĐ">
+                    <input class="ipbox" type="text" id="luong" name="salary" placeholder="VNĐ" onkeypress="return isNumber(event)" required>
                 </div>
                 <div class="form-line flex-item">
                     <label class="lb-title" for="schedule">Lịch học dự kiến:</label>
-                    <input class="ipbox" type="text" name="schedule" placeholder="VD: Thứ 7, Chủ nhật mỗi tuần">
+                    <input class="ipbox" type="text" name="schedule" id="schedule" placeholder="VD: Thứ 7, Chủ nhật mỗi tuần" required>
                 </div>
                 <div class="form-line">
-                    <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" class="ipbox txt-info"></textarea>
+                    <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" itemid="mota" class="ipbox txt-info"></textarea>
                 </div>
                 <div class="form-line" style="text-align: right;">
-                    <button> <a href="#">Hoàn tất</a></button>
+                    <input type="submit" value="Hoàn tất" class="submit">
                 </div>
         </form>
         </div>
+
 </body>
 
 </html>
