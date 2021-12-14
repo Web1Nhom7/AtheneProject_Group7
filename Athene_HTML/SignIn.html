@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐĂNG NHẬP</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="../CSS/SignIn_SignUp.css">
+    <style>
+        @media screen and (max-width:990px) {
+            .nhapSodt,
+            .nhapPass,
+            .buttonSignIn {
+                margin: 6px 0;
+                width: 100%;
+                height: 2rem;
+                font-size: 0.9rem;
+            }
+            .form {
+                padding-top: 2px;
+            }
+            .form label {
+                font-size: 1.1rem;
+            }
+            .forgetPass,
+            .linkSignUp {
+                font-size: 0.8rem;
+            }
+            .nhapSodt,
+            .nhapPass {
+                border: 3px solid white;
+            }
+            .container {
+                background-size: 100% 80%;
+                height: 27rem;
+            }
+        }
+        
+        @media screen and (max-width:699px) {
+            .nhapSodt,
+            .nhapPass,
+            .buttonSignIn {
+                margin: 2px 0;
+                width: 100%;
+                height: 1.5rem;
+                font-size: 0.8rem;
+            }
+            .container {
+                background-size: 100% 65%;
+                height: 27rem;
+            }
+            .form label {
+                font-size: 1rem;
+            }
+            .forgetPass,
+            .linkSignUp {
+                font-size: 0.8rem;
+            }
+            .nhapSodt,
+            .nhapPass {
+                border: 2px solid white;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media screen and (max-width:530px) {
+            .linkSignUp {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="bi bi-x-lg"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+              </svg>
+        </div>
+        <h1>ĐĂNG NHẬP</h1>
+        <hr>
+        <div class="form">
+            <label for="sodt">Số điện thoại</label> <br>
+            <input type="tel" name="sodt" id="sodt" class="nhapSodt">
+            <label for="pwd">Mật khẩu</label>
+            <input class="nhapPass" type="password" autocomplete="current-password" name="password" maxlength="16" value>
+            <span class="forgetPass"><a href="#">Quên mật khẩu?</a></span> <br>
+            <input class="buttonSignIn" type="button" value="Đăng nhập">
+            <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng kí</a></p>
+
+        </div>
+    </div>
+</body>
+
+</html>
