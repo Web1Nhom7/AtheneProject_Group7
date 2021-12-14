@@ -152,76 +152,126 @@ html,body {
     }
 }
 /* Introduction */
-.intro-page{
-    margin: 0 3rem;
-    line-height: 2rem;
-    font-size: 1.3rem;
-  }
-  #intro-banner{
-    height: 20rem;
-    width: 100%;
-    margin-top: 3rem;
-  }
-  #title{
-    text-align: center;
-  }
-  .discover-click {
-      background-color: #F24E1E;
-      color: #FFFFFF;
-      text-align: center;
-      border: none;
-      height: 2.5rem;
-      width: 8rem;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      font-size: 1rem;
-  }
-  .content-body{
+.filter-container{
+    font-size: 1rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    }
+    .filter__item{
     flex-direction: row;
-    background-color: #6596B6;
-    margin: 0 -3rem;
-  }
-  #images_forStudent{
-      height: 10rem;
-  }
-  #images_forParent {
-      height: 12rem;
-      margin-bottom: 1em;
-      padding: 0 2rem;
-  }
+    }
+    .filter-icon{
+        color:#F24E1E;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+    .filter-selection{
+        background-color:#D9F1F1 ;
+        border: none;
+        border-radius: 0.6rem;
+        padding: 0.3rem;
+        width: 10rem;
+    }
+    .filter-spacing{
+        margin: 1rem 0;
+    }
+    .search-container{
+        border: none;
+        background-color: #F81530;
+        color: white;
+        padding: 0.15rem;
+        border-radius: 0.5rem;
+    }
+    .filter-search{
+        width: 8.5rem;
+        border: none;
+        background-color: #F81530;  
+        border-radius: 0.4rem; 
+    }
+    ::placeholder{
+        color: white;
+        padding-left: 0.2rem;
+    }
+    .profile-container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        flex-grow: 2;
+        justify-content: center;
+    }
+    .profile__item{
+      flex-basis: 30%;
+      background-color: #E0FDFF;
+      padding-top: 1rem;
+      margin: 2rem;
+    }
+    .avatar{
+        height: 6rem;
+        float: left;
+        border-radius: 50%;
+        margin: 0 1rem;
+    }
+    .profile__item--right{
+      margin-left: 10rem;
+    }
+    
+   .profile-name{
+     font-size: 1.5rem;
+     color: #692E0D;
+     font-weight: bold;
+     margin-bottom: 1rem;
+   }
+   .profile__item--center{
+    margin:  2rem;
+   }
+   .text-spacing{
+     margin-left: 2rem;
+   }
+   .profile__item--below{
+       display: flex;
+       justify-content: space-around;
+       padding-bottom: 1rem;
+   }
+   .profile__button{
+       width: 8rem;
+       color: white;
+       background-color: #4989D4;
+       border: none;
+       border-radius: 0.2rem;
+       font-size: 1rem;
+       height: 1.8rem;
+   }
+   .profile-icon{
+       font-size: 1rem;
+   }
+   @media screen and (max-width: 600px) {
+    .filter-container{
+    font-size: 1.5rem;
+    }
+    .filter-selection{
+        padding: 0rem;
+        width: 12rem;
+        height: 2.8rem;
+    }
+    .filter-spacing{
+        margin-top: 3rem;
+        
+    }
+    .profile__item{
+        flex-basis: 40%;
+    }
+    .profile-container{
+        font-size: 1.2rem;
+    }
+    .profile-name{
+     font-size: 2rem;
+   }
+   .text-padding{
+       padding-top: -100rem;
+   }
 
-  #images_forTutor {
-      width: 13rem;
-      padding: 1.4rem;
-  }
-  .vertical-text{
-   margin: auto 2rem;
-  }
-  .text-bold{
-    font-weight: 500;
-  }
-  .text-color{
-    font-weight: 700;
-    color: red;
-  }
-  @media screen and (max-width: 600px) {
-    .intro-page{
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-  #images_forStudent{
-    height: 14rem;
-  }
-  .discover-click{
-      font-size: 2rem;
-      width: 20rem;
-      height: 4rem;
-  }
-  .content-body{
-    margin: 3rem -3rem;
-  }
 }
 /* Footer */
 .footer-content{
@@ -339,40 +389,169 @@ html,body {
 </div>
 </div>
 <!-- Intro content -->
-<img id="intro-banner" src="../Images/IntroPage/office.jpg" alt="Lỗi">
-<div class="intro-page">
-    <h3 id="title">Athene là một website hỗ trợ tìm kiếm gia sư trực tuyến trên <br> địa bàn thành phố Hồ Chí Minh.</h3>
-    <p>Chào mừng bạn đến với <span class="text-bold">ATHENE – GIẢI PHÁP TÌM KIẾM GIA SƯ DỄ DÀNG.</span> <br/> Chúng tôi cam kết không ngừng cải thiện, nâng cao chất lượng dịch vụ, lắng nghe và tiếp thu góp ý của quý khách hàng nhằm đem đến cho khách hàng tốt nhất tại <span class="text-bold">Athene.</span></p>
-    <button class="discover-click">Khám phá ngay</button>
-    <p class="text-bold">Ở đây, chúng tôi cung cấp cho bạn:</p>
-
-<div>
-    <div class="content-body">
-        <img id="images_forStudent" src="../Images/IntroPage/student.png" alt="Lỗi ">
-        <p class="vertical-text"><span class="text-bold">Đối với học viên</span>, một lượng lớn gia sư chuyên môn tốt và tận tâm sẵn sàng giúp đỡ học viên trong con đường mở rộng kiến thức.
-        </p>
+<div class="filter-container">
+    <div class="filter__item">
+        <div class="filter-spacing"><i class="material-icons filter-icon">border_color</i> Đăng ký tìm gia sư</div> 
+        <div><i class="material-icons filter-icon">format_list_bulleted</i> Bảng giá tham khảo</div>
+    </div>
+    <div class="filter__item">
+        <div class="filter-spacing"><select class="filter-selection" id="district" name="district">
+            <option >Quận/Huyện</option>
+            <option value="quan1">Quận 1</option>
+            <option value="quan2">Quận 2</option>
+            <option value="quan3">Quận 3</option>
+            <option value="quan4">Quận 4</option>
+            <option value="quan5">Quận 5</option>
+            <option value="quan6">Quận 6</option>
+            <option value="quan7">Quận 7</option>
+            <option value="quan8">Quận 8</option>
+            <option value="quan9">Quận 9</option>
+            <option value="quan10">Quận 10</option>
+            <option value="quan11">Quận 11</option>
+            <option value="quan12">Quận 12</option>
+            <option value="quanbtan">Quận Bình Tân</option>
+            <option value="quantb">Quận Tân Bình</option>
+            <option value="quantp">Quận Tân Phú</option>
+            <option value="quangv">Quận Gò Vấp</option>
+            <option value="quanbt">Quận Bình Thạnh</option>
+            <option value="quanpn">Quận Phú Nhuận</option>
+            <option value="huyenbc">Huyện Bình Chánh</option>
+            <option value="huyencg">Huyện Cần Giờ</option>
+            <option value="huyencc">Huyện Củ Chi</option>
+            <option value="huyenhm">Huyện Hóc Môn</option>
+            <option value="huyenhm">Huyện Nhà Bè</option>
+          </select>
+        </div>
+        <div><select class="filter-selection" id="class" name="class">
+            <option >Lớp học</option>
+            <option value="lop1">Lớp 1</option>
+            <option value="lop2">Lớp 2</option>
+            <option value="lop3">Lớp 3</option>
+            <option value="lop4">Lớp 4</option>
+            <option value="lop5">Lớp 5</option>
+            <option value="lop6">Lớp 6</option>
+            <option value="lop7">Lớp 7</option>
+            <option value="lop8">Lớp 8</option>
+            <option value="lop9">Lớp 9</option>
+            <option value="lop10">Lớp 10</option>
+            <option value="lop11">Lớp 11</option>
+            <option value="lop12">Lớp 12</option>
+            <option value="ltdh">Luyện thi đại học</option>
+          </select>
+        </div>
+    </div>          
+    <div class="filter__item">
+        <div class="filter-spacing"><select class="filter-selection" id="level" name="level">
+            <option >Trình độ</option>
+            <option value="sinhvien">Sinh viên</option>
+            <option value="giaovien">Giáo viên</option>
+          </select>
+        </div>
+        <div><select class="filter-selection" id="subject" name="subject">
+            <option >Môn học</option>
+            <option value="toan">Toán</option>
+            <option value="ly">Lý</option>
+            <option value="hoa">Hóa</option>
+            <option value="van">Văn</option>
+            <option value="su">Sử</option>
+            <option value="dia">Địa</option>
+            <option value="ngoaingu">Ngoại ngữ</option>
+            <option value="baobai">Báo bài</option>
+            <option value="khac">Khác</option>
+          </select>
+        </div>
+    </div>
+    <div class="filter__item">
+        <div class="filter-spacing"><select class="filter-selection" id="gender" name="gender">
+        <option>Giới tính</option>
+        <option value="nam">Nam</option>
+        <option value="nu">Nữ</option>
+        <option value="cahai">Cả hai</option>
+      </select>
+    </div>
+    <div class="search-container">
+        <input class="filter-search" type="text"ng-model="name" placeholder="Tìm kiếm"> 
+        <i class="fa fa-search"></i>
+    </div>
     </div>
 </div>
-<div>
-    <div class="content-body" style="background-color: white;" >
-        <p class="vertical-text"> <span class="text-bold">Đối với phụ huynh</span>, đến với chúng tôi các bậc cha mẹ sẽ dễ dàng hơn trong việc tìm kiếm người gia sư chất lượng cho con em của mình. Gia sư và phụ huynh sẽ luôn có những sự liên kết theo sát quá trình
-            học tập của con em. Đối với gia sư, chúng tôi là cầu nối giúp gia sư tìm kiếm học viên để cải thiện thu nhập của chính bạn.
-        </p>
-        <img id="images_forParent" src="../Images/IntroPage/parent.png " alt="Lỗi ">
+<div class="profile-container">
+    <div class="profile__item">
+        <div>
+            <img class="avatar" src="./Images/ForTutor/HuongHamChi.jpg">
+            <div class="profile__item--right">
+                <div class="profile-name">Hướng Hàm Chi</div>
+                <div><i class="material-icons profile-icon">place</i> Quận Bình Thạnh</div>
+                <p><i class="material-icons profile-icon">perm_identity</i> Nữ</p>
+            </div>
+            <div class="profile__item--center" >
+              <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
+              <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
+              <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
+            </div>
+            <div class="profile__item--below" >
+                <button class="profile__button">Đăng ký</button>
+                <button class="profile__button">Xem profile</button>
+              </div>
+        </div>
     </div>
-</div>
-<div>
-    <div class="content-body">
-        <img id="images_forTutor" src="../Images/IntroPage/tutor.png" alt="Lỗi ">
-        <p class="vertical-text"><span class="text-bold">Đối với gia sư</span>, chúng tôi là cầu nối giúp gia sư tìm kiếm học viên để cải thiện thu nhập của chính bạn.
-        </p>
+    <div class="profile__item">
+        <div>
+            <img class="avatar" src="./Images/ForTutor/HuongHamChi.jpg">
+            <div class="profile__item--right">
+                <div class="profile-name">Hướng Hàm Chi</div>
+                <div><i class="material-icons profile-icon">place</i> Quận Bình Thạnh</div>
+                <p><i class="material-icons profile-icon">perm_identity</i> Nữ</p>
+            </div>
+            <div class="profile__item--center" >
+              <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
+              <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
+              <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
+            </div>
+            <div class="profile__item--below" >
+                <button class="profile__button">Đăng ký</button>
+                <button class="profile__button">Xem profile</button>
+              </div>
+        </div>
     </div>
-</div>
-<div >
-    <p><span class="text-color">Athena</span> hy vọng sẽ trở thành nhà tiên phong trong việc giúp đỡ những khó khăn mà phụ huynh gặp phải trong quá trình tìm kiếm gia sư cũng như khi gia sư tìm kiếm học viên.</p>
-    <p>Chúng tôi tin rằng đây sẽ là môi trường để mỗi người dân (phụ huynh và học sinh) có thể tiếp cận kiến thức một cách chủ động nhất có thể, thoải mái dễ dàng.</p>
-    <p>Chúng tôi - <span class="text-color">Athena</span> luôn đặt chất lượng cũng như uy tín lên hàng đầu, tất cả vì sự hài lòng của bạn!</p>
-</div>
+    <div class="profile__item">
+        <div>
+            <img class="avatar" src="./Images/ForTutor/HuongHamChi.jpg">
+            <div class="profile__item--right">
+                <div class="profile-name">Hướng Hàm Chi</div>
+                <div><i class="material-icons profile-icon">place</i> Quận Bình Thạnh</div>
+                <p><i class="material-icons profile-icon">perm_identity</i> Nữ</p>
+            </div>
+            <div class="profile__item--center" >
+              <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
+              <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
+              <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
+            </div>
+            <div class="profile__item--below" >
+                <button class="profile__button">Đăng ký</button>
+                <button class="profile__button">Xem profile</button>
+              </div>
+        </div>
+    </div>
+    <div class="profile__item">
+        <div>
+            <img class="avatar" src="./Images/ForTutor/HuongHamChi.jpg">
+            <div class="profile__item--right">
+                <div class="profile-name">Hướng Hàm Chi</div>
+                <div><i class="material-icons profile-icon">place</i> Quận Bình Thạnh</div>
+                <p><i class="material-icons profile-icon">perm_identity</i> Nữ</p>
+            </div>
+            <div class="profile__item--center" >
+              <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
+              <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
+              <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
+            </div>
+            <div class="profile__item--below" >
+                <button class="profile__button">Đăng ký</button>
+                <button class="profile__button">Xem profile</button>
+              </div>
+        </div>
+    </div>
 </div>
      <!-- Footer -->
    <div class="footer-content">
