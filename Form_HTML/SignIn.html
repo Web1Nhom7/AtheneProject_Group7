@@ -37,6 +37,10 @@
                 background-size: 100% 80%;
                 height: 27rem;
             }
+            #phoneError {
+                font-size: 0.9rem;
+                color: red;
+            }
         }
         
         @media screen and (max-width:699px) {
@@ -49,7 +53,7 @@
                 font-size: 0.8rem;
             }
             .container {
-                background-size: 100% 65%;
+                background-size: 100% 70%;
                 height: 27rem;
             }
             .form label {
@@ -66,6 +70,10 @@
             h1 {
                 font-size: 1.7rem;
             }
+            #phoneError {
+                font-size: 0.8rem;
+                color: red;
+            }
         }
         
         @media screen and (max-width:530px) {
@@ -75,10 +83,28 @@
             }
         }
     </style>
+    <script>
+        function checkPhone() {
+            var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
+            var phone = document.getElementById("sodt");
+
+            if (phone.value !== '') {
+                if (vnRegex.test(phone.value) == false) {
+                    document.getElementById("phoneError").innerHTML = "Số điện thoại không đúng định dạng!";
+
+
+                } else {
+                    document.getElementById("phoneError").innerHTML = " ";
+                    return true;
+                }
+            }
+
+        }
+    </script>
 </head>
 
 <body>
-    <div class="container">
+    <form class="container">
         <div class="header">
             <i class="bi bi-x-lg"></i>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -90,15 +116,16 @@
         <hr>
         <div class="form">
             <label for="sodt">Số điện thoại</label> <br>
-            <input type="tel" name="sodt" id="sodt" class="nhapSodt">
+            <input type="tel" name="sodt" id="sodt" class="nhapSodt" value="" required oninput="checkPhone()">
+            <div id="phoneError"></div>
             <label for="pwd">Mật khẩu</label>
-            <input class="nhapPass" type="password" autocomplete="current-password" name="password" maxlength="8" value>
-            <span class="forgetPass"><a href="#">Quên mật khẩu?</a></span> <br>
-            <input class="buttonSignIn" type="button" value="Đăng nhập">
+            <input class="nhapPass" type="password" id="pass" autocomplete="current-password" name="password" minlength="8" value="" required>
+            <span class="forgetPass"><a href="./ConfirmOTP.html">Quên mật khẩu?</a></span> <br>
+            <input class="buttonSignIn" type="submit" value="Đăng nhập">
             <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng kí</a></p>
 
         </div>
-    </div>
+    </form>
 </body>
 
 </html>
