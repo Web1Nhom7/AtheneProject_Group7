@@ -151,7 +151,7 @@ html,body {
     margin-left: 1rem;
     }
 }
-/* Introduction */
+/* Profile */
 .filter-container{
     font-size: 1rem;
     display: flex;
@@ -246,6 +246,17 @@ html,body {
    .profile-icon{
        font-size: 1rem;
    }
+   .transfer-page{
+       text-align: center;
+       margin-bottom: 1.5rem;
+   }
+   .transfer-page a{
+       text-decoration: none;
+       color: black;
+   }
+   .transfer-page a:hover{
+       color: blue;
+   }
    @media screen and (max-width: 600px) {
     .filter-container{
     font-size: 1.5rem;
@@ -272,10 +283,15 @@ html,body {
     .profile-name{
      font-size: 2rem;
    }
-   .text-padding{
-       padding-top: -100rem;
-   }
 
+   .transfer-page a{
+      font-size: 1.5rem;
+   }
+   #footer-responsive{
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+    }
 }
 /* Footer */
 .footer-content{
@@ -350,9 +366,8 @@ html,body {
         display: block; 
         background-color: #0077C0;
         text-align: center;
-        font-size: 2rem;
-        bottom: 0;
-       
+        font-size: 2.5rem;
+        bottom: 0;  
     }
     }
 </style>
@@ -397,8 +412,9 @@ html,body {
 <!-- Intro content -->
 <div class="filter-container">
     <div class="filter__item">
-        <div class="filter-spacing"><i class="material-icons filter-icon">border_color</i> Đăng ký tìm gia sư</div> 
+        <div class="filter-spacing"><i class="fa fa-edit filter-icon"></i> Đăng ký tìm gia sư</div> 
         <div><i class="material-icons filter-icon">format_list_bulleted</i> Bảng giá tham khảo</div>
+        
     </div>
     <div class="filter__item">
         <div class="filter-spacing"><select class="filter-selection" id="district" name="district">
@@ -559,6 +575,12 @@ html,body {
         </div>
     </div>
 </div>
+<!-- Previous, Next page-->
+<div class="transfer-page">
+    <a href="#"><i class="material-icons profile-icon">arrow_back</i>&ensp;Trang trước</a><a href="#">&emsp;&emsp;Trang sau&ensp;<i class="material-icons profile-icon">arrow_forward</i></a>
+</div>
+
+    
      <!-- Footer -->
    <div class="footer-content">
     <!-- Left item -->
@@ -597,7 +619,6 @@ html,body {
         <div id="download">
                 <img class="download-photo" src="../Images/ForAll/Footer/QRCode.png" alt="QR Code">     
                 <img class="download-photo" src="../Images/ForAll/Footer/Download.png" alt="">
-
             </div>
         </div>
     </div>
