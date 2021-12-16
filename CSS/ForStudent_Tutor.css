@@ -24,6 +24,9 @@
     .filter-spacing{
         margin: 1rem 0;
     }
+    .filter-spacingleft{
+        margin-bottom: 0.5rem;
+    }
     .search-container{
         border: none;
         background-color: #F81530;
@@ -136,9 +139,9 @@
    .transfer-page a{
       font-size: 1.5rem;
    }
-   #footer-responsive{
+   /* #footer-responsive{
         bottom: 0;
         position: fixed;
         width: 100%;
-    }
+    } */
 }
