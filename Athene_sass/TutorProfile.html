@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Profile</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/TutorProfile.css">
+</head>
+
+<body>
+    <div class="container-background">
+        <div class="background">
+            <img width="100%" height="300px" src="../Images/ProfileTutor/background.png">
+        </div>
+        <div class="frame-edit">
+
+            <input accept="image/*,image/heif,image/heic" class="button_edit-background" type="file">
+            <div aria-label="Chỉnh sửa ảnh bìa" class="" role="button">
+                <div class="frame-edit-photo">
+                    <div id="camera">
+                        <i style="font-size: 24px; line-height: 30px;" class="material-icons">photo_camera</i>
+                    </div>
+                    <div id="text">
+                        <span>Chỉnh sửa ảnh bìa</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="ava">
+                <div>
+                    <img src="../Images/ProfileTutor/user_ava.jpg" width="15%" alt="This is my ava" style="border-radius: 50%;">
+                    <span style="border-radius: 50%; background-color: white;"><i style="margin-left:-3.5rem; background-color: white; border-radius: 50%; padding: 0.5rem;" class="material-icons">photo_camera</i></span>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 250px; margin-left: -110%; margin-top: 50px;">
+                    <h1>Hướng Hàm Chi</h1>
+                    <p>300 người theo dõi</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="body-content">
+        <div class="body-left">
+            <div class="body__left-content">
+                <div>
+                    <h2>Giới thiệu</h2>
+                    <label for="intro"></label>
+                </div>
+                <div>
+                    <button class="btn-edit btn">Chỉnh sửa</button>
+                </div>
+                <div>
+                    <h2>Thông tin cá nhân</h2>
+                    <h5>Giới tính: </h5>
+                    <label for="gender"></label>
+                    <h5>Ngày sinh: </h5>
+                    <label for="birthday"></label>
+                    <h5>Đã học tại: </h5>
+                    <label for="oldschool"></label>
+                    <h5>Sinh viên trường: </h5>
+                    <label for="school"></label>
+                    <h5>Chuyên ngành: </h5>
+                    <label for="major"></label>
+                </div>
+                <div>
+                    <button class="btn_editprivate btn">Chỉnh sửa thông tin cá nhân</button>
+                </div>
+                <div id="space-btn">
+                    <button class="btn_addinfo btn">Thêm thông tin chú ý</button>
+                </div>
+            </div>
+        </div>
+        <div class="body-right">
+            <div class="body__right-content-class">
+                <div class="colorbg">
+                    <h3>Lớp đang đăng kí</h3>
+                </div>
+                <div>
+                    <h5>Cấp học: </h5>
+                    <label for="grade"></label>
+                    <h5>Môn học: </h5>
+                    <label for="subject"></label>
+                    <h5>Giới tính học viên: </h5>
+                    <label for="gender"></label>
+                    <h5>Địa điểm dạy: </h5>
+                    <label for="address"></label>
+                    <h5>Thời gian dạy: </h5>
+                    <label for="timeteach"></label>
+                    <h5>Mức lương mong muốn: </h5>
+                    <label for="salary"></label>
+                    <h5>Lịch học dự kiến: </h5>
+                    <label for="routine"></label>
+                    <h5>Mô tả thêm: </h5>
+                    <label for="description"></label>
+                </div>
+                <div>
+                    <button class="btn-edit-class btn-right">Chỉnh sửa</button>
+                </div>
+            </div>
+            <div class="body__right-content-experience">
+                <div class="colorbg">
+                    <h3>Kinh nghiệm làm việc</h3>
+                </div>
+                <div>
+                    <label for="experience"></label>
+                </div>
+                <div>
+                    <button class="btn-edit-experience btn-right">Chỉnh sửa</button>
+                </div>
+            </div>
+            <div class="body__right-content-award">
+                <div class="colorbg">
+                    <h3>Thành tích đạt được</h3>
+                </div>
+                <div>
+                    <label for="award"></label>
+                </div>
+                <div>
+                    <button class="btn-edit-award btn-right">Chỉnh sửa</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

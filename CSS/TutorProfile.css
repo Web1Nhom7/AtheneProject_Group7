@@ -1,0 +1,147 @@
+body,
+html {
+    margin: 20px;
+    padding: 0px;
+    font-family: 'Roboto';
+}
+
+.frame-edit-photo {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    line-height: 30px;
+}
+
+.button_edit-background {
+    display: none;
+}
+
+#text,
+#camera {
+    margin-left: 1rem;
+}
+
+.frame-edit {
+    width: 12rem;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    margin-top: -4rem;
+    margin-left: 70%;
+}
+
+.background {
+    position: relative;
+    z-index: -1;
+    height: 10%;
+}
+
+.container-background {
+    width: 100vw;
+}
+
+.ava {
+    width: 60rem;
+    margin-left: 100px;
+    margin-top: -20px;
+    display: flex;
+}
+
+
+/* body */
+
+.body-content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem;
+}
+
+.body-left {
+    width: 35%;
+    margin-right: 2rem;
+}
+
+.body-right {
+    width: 65%;
+}
+
+.body__left-content {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0rem 2rem 2rem 2rem;
+    /* width: fit-content; */
+}
+
+h2,
+h3 {
+    text-align: center;
+}
+
+h2 {
+    color: #0077C0;
+}
+
+.btn {
+    width: 100%;
+}
+
+#space-btn {
+    margin-top: 20px;
+}
+
+.body__right-content-class {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    padding: 0rem 4rem 2rem 4rem;
+}
+
+.body__right-content-experience {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    padding: 0rem 4rem 2rem 4rem;
+}
+
+.body__right-content-award {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0rem 4rem 2rem 4rem;
+}
+
+.btn-right {
+    justify-content: right;
+    width: 8rem;
+    float: right;
+}
+
+.colorbg {
+    background-color: #0077C0;
+    width: 80%;
+    color: white;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* CSS Show Tutor Profile */
+
+.frame-button {
+    margin: 20px;
+}
+
+.btn-follow {
+    margin-bottom: 2rem;
+    height: 2rem;
+    background-color: #0077C0;
+    color: white;
+}
+
+.btn-signin {
+    height: 2rem;
+    background-color: #0077C0;
+    color: white;
+}
