@@ -116,7 +116,7 @@
         <hr>
         <div class="form">
             <label for="sodt">Số điện thoại</label> <br>
-            <input type="tel" name="sodt" id="sodt" class="nhapSodt" value="" required oninput="checkPhone()">
+            <input type="tel" name="sodt" id="sodt" class="nhapSodt" value="" required onblur="checkPhone()">
             <div id="phoneError"></div>
             <label for="pwd">Mật khẩu</label>
             <input class="nhapPass" type="password" id="pass" autocomplete="current-password" name="password" minlength="8" value="" required>
