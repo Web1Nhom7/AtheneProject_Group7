@@ -90,16 +90,16 @@ p{
 
 /* Footer next page */
 
-.blog-footer {
-    display: flex;
-    flex-direction: row;
-    /* justify-content: right; */
-    margin-left: 50%;
+.transfer-page{
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
-
-.blog__footer-item {
-    margin: 1em;
-    margin-top: 0px;
+.transfer-page a{
+    text-decoration: none;
+    color: black;
+}
+.transfer-page a:hover{
+    color: blue;
 }
 
 /* Responsive */
