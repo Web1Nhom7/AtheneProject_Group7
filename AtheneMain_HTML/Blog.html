@@ -13,8 +13,10 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" href="../CSS/Blog.css">
     <script>
-        function LoadBlog() {
-            var loads = inner
+        function LoadDataBlog() {
+            var loadData = document.getElementById("blog1").innerText;
+            document.getElementsByClassName("blog-right").innerHTML = loadData;
+
         }
     </script>
 </head>
@@ -31,7 +33,7 @@
         <div class="blog-left">
             <h4 class="left-title">Bài viết mới nhất</h4>
             <ul>
-                <li><a href="#" target="iframe_blog1">Lợi ích của việc trở thành gia sư</a></li>
+                <li><a id="blog1" onclick="LoadDataBlog();" href="../Data/Blog_1.html">Lợi ích của việc trở thành gia sư</a></li>
                 <br>
                 <li><a href="#">Một số phương pháp học tập hiểu quả</a></li>
                 <br>
@@ -44,13 +46,14 @@
         </div>
         <!-- Right Content -->
         <div class="blog-right">
+            <iframe name="iframe_blog1">
             <h2 style="margin-left: 2em;">Tin tức</h2>
             <ul class="list-blog-content">
                 <!-- Blog 1 -->
                 <li class="blog-item">
-                        <a href="#" title="Đây là 1 bản tin vui" class="blog__image" >
-                            <img class="blog-item-image" src="../Images/Blog/blog1.jpg" alt="Đây là 1 bản tin vui ">
-                        </a>
+                    <a href="#" title="Đây là 1 bản tin vui" class="blog__image">
+                        <img class="blog-item-image" src="../Images/Blog/blog1.jpg" alt="Đây là 1 bản tin vui ">
+                    </a>
                     <div class="blog__item-right">
                         <h3 class="title-blog" style="display: flex; justify-content: space-between;"><a href="#">Lợi ích của việc trở thành gia sư</a></h3>
                         <p id="author">Hoàng T.T Thanh 20:05:03 01/11/2021</p>
@@ -84,7 +87,7 @@
                                 </p>
                             </div>
                         </li>
-                        <!-- Blog 2 -->
+                        <!-- Blog 4 -->
                         <li>
                             <li class="blog-item">
                                 <a href="#" title="Đây là 1 bản tin vui" class="blog__image">
@@ -97,7 +100,7 @@
                                         tìm giúp cho con mình một hoặc nhiều gia sư cho “con nó” học giỏi hơn. Thế nhưng mong muốn này không phải lúc nào cũng thành toàn... </p>
                                 </div>
                             </li>
-                            <!-- Blog 3 -->
+                            <!-- Blog 5 -->
                             <li>
                                 <li class="blog-item">
                                     <a href="#" title="Đây là 1 bản tin vui" class="blog__image">
@@ -110,7 +113,7 @@
                                             rất nhiều lý do, tuy nhiên chủ yếu là bởi học sinh lười học, dẫn tới học kém. Vậy làm thế nào để có thể giảng dạy tốt cho những học sinh lười học này?...</p>
                                     </div>
                                 </li>
-                                <!-- Blog 4 -->
+                                <!-- Blog 6 -->
                                 <li>
                                     <li class="blog-item">
                                         <a href="#" title="Đây là 1 bản tin vui" class="blog__image">
@@ -124,22 +127,20 @@
                                         </div>
                                     </li>
             </ul>
-            <div class="transfer-page" style="text-align: center;">
-                <a href="#"><i class="material-icons profile-icon">arrow_back</i>&ensp;Trang trước</a><a href="#">&emsp;&emsp;Trang sau&ensp;<i class="material-icons profile-icon">arrow_forward</i></a>
-            </div>
+        </iframe>
         </div>
-    </iframe>
-            </section>
-            <!-- Chuyển trang -->
-            <!-- <div class="blog-footer">
+
+    </div>
+    <!-- Chuyển trang -->
+    <!-- <div class="blog-footer">
         <div class="blog__footer-item">
             <p><i class="material-icons">arrow_back</i></p>
         </div>
-
+ 
         <div class="blog__footer-item">
             <p><i class="material-icons">arrow_back</i></p>
         </div>
-
+ 
         <div class="blog__footer-item">
             <a href="#">
                 <p>Trang trước</p>
@@ -156,12 +157,13 @@
         <div class="blog__footer-item">
             <p><i class="material-icons">keyboard_tab</i></p>
         </div>
-
+ 
     </div> -->
-            <!-- Footer -->
-            <!-- <div w3-include-html="./Footer.html"></div>
-            <script>
-                w3.includeHTML();
-            </script> -->
+    <!-- Footer -->
+    <div w3-include-html="./Footer.html"></div>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
+
 </html>
