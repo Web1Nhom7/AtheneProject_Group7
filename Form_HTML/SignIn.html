@@ -9,8 +9,9 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="../CSS/SignIn_SignUp.css">
+    <script src="../Js/SignUp.js"></script>
     <style>
-        @media screen and (max-width:990px) {
+        @media screen and (max-width: 990px) {
             .nhapSodt,
             .nhapPass,
             .buttonSignIn {
@@ -37,7 +38,9 @@
                 background-size: 100% 80%;
                 height: 27rem;
             }
-            #phoneError {
+            #phoneError,
+            #passError,
+            #phoneError1 {
                 font-size: 0.9rem;
                 color: red;
             }
@@ -53,7 +56,7 @@
                 font-size: 0.8rem;
             }
             .container {
-                background-size: 100% 70%;
+                background-size: 120% 75%;
                 height: 27rem;
             }
             .form label {
@@ -70,7 +73,9 @@
             h1 {
                 font-size: 1.7rem;
             }
-            #phoneError {
+            #phoneError,
+            #passError,
+            #phoneError1 {
                 font-size: 0.8rem;
                 color: red;
             }
@@ -83,28 +88,10 @@
             }
         }
     </style>
-    <script>
-        function checkPhone() {
-            var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
-            var phone = document.getElementById("sodt");
-
-            if (phone.value !== '') {
-                if (vnRegex.test(phone.value) == false) {
-                    document.getElementById("phoneError").innerHTML = "Số điện thoại không đúng định dạng!";
-
-
-                } else {
-                    document.getElementById("phoneError").innerHTML = " ";
-                    return true;
-                }
-            }
-
-        }
-    </script>
 </head>
 
 <body>
-    <form class="container">
+    <div class="container">
         <div class="header">
             <i class="bi bi-x-lg"></i>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -114,18 +101,20 @@
         </div>
         <h1>ĐĂNG NHẬP</h1>
         <hr>
-        <div class="form">
+        <form class="form" name="form">
             <label for="sodt">Số điện thoại</label> <br>
-            <input type="tel" name="sodt" id="sodt" class="nhapSodt" value="" required onblur="checkPhone()">
-            <div id="phoneError"></div>
+            <input autocomplete="off" type="text" name="sodt" id="sodt" class="nhapSodt" value="" oninput="checkPhoneVal()" onblur="checkVal()">
+            <div id="phoneError">Số điện thoại không đúng định dạng!</div>
+            <div id="phoneError1">Hãy nhập số điện thoại!</div>
             <label for="pwd">Mật khẩu</label>
-            <input class="nhapPass" type="password" id="pass" autocomplete="current-password" name="password" minlength="8" value="" required>
+            <input class="nhapPass" type="password" id="pass" name="password" value="" required oninput="checkPassVal()" onblur="checkVal()">
+            <div id="passError">Mật khẩu tối thiểu 8 ký tự!</div>
             <span class="forgetPass"><a href="./ConfirmOTP.html">Quên mật khẩu?</a></span> <br>
             <input class="buttonSignIn" type="submit" value="Đăng nhập">
             <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng kí</a></p>
 
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 
 </html>

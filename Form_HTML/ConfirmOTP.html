@@ -11,31 +11,25 @@
     <style>
         body {
             font-family: Roboto;
-            margin-top: 5rem;
+            font-size: 1.3vw;
+            margin-top: 3rem;
         }
         
         .container {
             margin: 0 auto;
-            padding-top: 1rem;
+            padding: 1rem;
             border: 1px solid black;
-            border-radius: 15px;
+            border-radius: 1rem;
             width: 27rem;
             height: 30rem;
-        }
-        
-        img {
+            text-align: center;
+        }   
+        img { 
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 20%;
         }
-        
-        h1,
-        h2,
-        p {
-            text-align: center;
-        }
-        
         h2,
         .resendOTP {
             color: #636262;
@@ -48,49 +42,40 @@
         }
         
         #confirm {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
             color: white;
             border: none;
             background-color: #093BBA;
             width: 40%;
             height: 2.7rem;
-            border-radius: 10px;
+            border-radius: 0.5rem;
             font-size: 1.1rem;
-        }
-        
-        .inputOTP {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 4.5rem;
-        }
-        
-        #txtInput {
-            width: 10%;
-            height: 1.8rem;
+        }              
+        .number {
+            width: 3rem;
+            height: 2.5rem;
+            margin: 0 1rem;
             border: 1.5px solid black;
             background-color: #EAF7F7;
         }
         
-        @media screen and (max-width:667px) {
+        @media screen and (max-width:600px) {
             .container {
-                width: 20rem;
-                height: 24rem;
+                width: 18rem;
+                height: 22rem;
                 padding-top: 1px;
             }
             h1 {
                 font-size: 1.5rem;
             }
             h2 {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
-            .inputOTP {
-                padding: 0 3rem;
+            .number  {
+                width: 2rem;
+                height: 2rem;
             }
-            #txtInput {
-                width: 11%;
-                height: 1.5rem;
+            p,.resendOTP{
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -99,17 +84,60 @@
 <body>
     <div class="container">
         <h1>Xác thực mã OTP</h1>
-        <img src="../Images/ForAll/Header/Logo.png" alt="Lỗi">
+        <img  src="../Images/ForAll/Header/Logo.png" >
         <h2>Mã xác thực đã được gửi qua SĐT <br/> <span>0123456789</span></h2>
         <p><b>Nhập mã OTP</b></p>
-        <div class="inputOTP">
-            <input id="txtInput" type="text">
-            <input id="txtInput" type="text">
-            <input id="txtInput" type="text">
-            <input id="txtInput" type="text">
-            <input id="txtInput" type="text">
-            <input id="txtInput" type="text">
+        <div>
+            <input class="number" id="1" type="number" maxlength="1" min="0" max="9" oninput="number_check()">
+            <input class="number" id="2" type="number" maxlength="1" min="0" max="9"oninput="number_check()">
+            <input class="number" id="3" type="number" maxlength="1" min="0" max="9" oninput="number_check()">
+            <input class="number" id="4" type="number" maxlength="1" min="0" max="9" oninput="number_check()" >
+            <p id="number-error"></p>
         </div>
+        <script>
+           function number_check(){                      
+                        var first= document.getElementById("1").value;   
+                        var second= document.getElementById("2").value; 
+                        var third= document.getElementById("3").value; 
+                        var fourth= document.getElementById("4").value;   
+                        // Kiểm tra số đầu tiên  
+                            var check = first;                 
+                            if(check >=0 && check<=9){
+                                document.getElementById("number-error").innerHTML= "";
+                            }
+                            else{
+                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
+                                document.getElementById("1").value="";
+                            }
+                            // Kiểm tra số thứ hai
+                           check = second;                 
+                            if(check >=0 && check<=9){
+                                document.getElementById("number-error").innerHTML= "";
+                            }
+                            else{
+                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
+                                document.getElementById("2").value="";
+                            }
+                            // Kiểm tra số thứ ba
+                           check = third;                 
+                            if(check >=0 && check<=9){
+                                document.getElementById("number-error").innerHTML= "";
+                            }
+                            else{
+                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
+                                document.getElementById("3").value="";
+                            }
+                            // Kiểm tra số thứ tư
+                           check = fourth;                 
+                            if(check >=0 && check<=9){
+                                document.getElementById("number-error").innerHTML= "";
+                            }
+                            else{
+                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
+                                document.getElementById("4").value="";
+                            }
+                        }                            
+                </script>
         <p class="resendOTP">Bạn chưa nhận được mã?<button type="button">Gửi lại OTP</button>
         </p>
         <button type="button" id="confirm">Xác nhận</button>
