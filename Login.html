@@ -166,9 +166,33 @@
     <script>
         function checkVal() {
             var phone = document.getElementById("sodt");
+            var phone_error = document.getElementById("phoneError");
+            var phone_error1 = document.getElementById("phoneError1");
 
-    }
-    function checkPhoneVal() {
+            var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
+
+            if (phone.value !== '') {
+                if (vnRegex.test(phone.value) == false) {
+                    phone.style.border = "2px solid red";
+                    phone_error.style.display = 'block';
+                    phone_error1.style.display = 'none';
+                    phone.focus();
+                    return false;
+
+                }
+            } else {
+
+                phone.style.border = "2px solid red";
+                phone_error.style.display = 'none';
+                phone_error1.style.display = 'block';
+                phone.focus();
+                return false;
+
+            }
+
+        }
+
+        function checkPhoneVal() {
             var phone = document.getElementById("sodt");
             var phone_error = document.getElementById("phoneError");
             var phone_error1 = document.getElementById("phoneError1");
@@ -197,7 +221,7 @@
                 return true;
             }
         }
-</script>
+    </script>
 </head>
 
 <body>
