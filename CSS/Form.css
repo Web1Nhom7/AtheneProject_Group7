@@ -24,6 +24,26 @@ select.ipbox {
     justify-content: space-between;
 }
 
+.flex-item-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#edit-item {
+    display: flex;
+}
+
+#phoneError,
+#passError,
+#passError1,
+#cccdError {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    display: none;
+}
+
 #ngay,
 #thang,
 #nam,

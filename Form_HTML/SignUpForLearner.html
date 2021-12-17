@@ -7,107 +7,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up For Learner</title>
     <link rel="stylesheet" href="../CSS/Form.css">
+    <script src="../Js/ProfileFind.js"></script>
     <script src="../Js/SignUp.js"></script>
+
 </head>
 
 <body>
-    <form name="myForm" onsubmit="return valGender()" method="post" id="forms">
-        <div class="form-container">
+
+    <div class="form-container">
+        <form name="contactForm" action="" onsubmit="return checkVal(), checkPassVal(), checkPhoneVal(),confirmPass(),checkCCCD()">
             <h2>Chào mừng bạn đến với Athene</h2>
             <div>Thông tin cá nhân của bạn luôn được bảo mật an toàn</div>
             <hr style="border: 1px black solid;  margin: 10px 0;">
             <div class="form-line">
                 <div class="flex-item">
-                    <input type="text" class="ipbox" placeholder="Họ và tên lót">
-                    <input type="text" class="ipbox" placeholder="Tên">
+                    <input type="text" name="fname" class="ipbox" placeholder="Họ và tên lót" required>
+                    <input type="text" name="sname" class="ipbox" placeholder="Tên" required>
                 </div>
             </div>
             <div class="form-line">
-                <input type="number" class="ipbox" placeholder="Số điện thoại (bắt buộc)">
-            </div>
-<<<<<<< HEAD
-            <div class="form-line">
-                <div class="flex-item">
-                    <input type="text" class="ipbox" placeholder="Mật khẩu">
-                    <input type="text" class="ipbox" placeholder="Xác nhận">
+                <input autocomplete="off" type="number" class="ipbox" name="sodt" id="sodt" placeholder="Số điện thoại (bắt buộc)" oninput="checkPhoneVal()" onblur="checkVal()" required>
+                <div id="phoneError">Số điện thoại không đúng định dạng!</div>
+
+                <div class="form-line">
+                    <div class="flex-item">
+
+                        <input type="password" placeholder="Mật khẩu" id="pass" name="password" required oninput="checkPassVal()" onblur="checkVal()" class="ipbox">
+                        <div id="passError">Mật khẩu tối thiểu 8 ký tự!</div>
+                    </div>
+                    <div>
+                        <input type="password" class="ipbox" placeholder="Xác nhận" name="repass" id="repass" required oninput="confirmPass()" onblur="checkVal()">
+                        <div id="passError1">Mật khẩu chưa khớp!</div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="form-line">
-                <label for="DOB" class="su4tt-title">Ngày sinh của bạn</label><br>
-                <div class="flex-item">
-                    <input class="ipbox" type="number" name="day" id="ngay" placeholder="Ngày">
-                    <input class="ipbox" type="number" name="month" id="thang" placeholder="Tháng">
-                    <input class="ipbox" type="number" name="year" id="nam" placeholder="Năm">
+                <div class="form-line">
+                    <label for="DOB" class="su4tt-title">Ngày sinh của bạn</label><br>
+                    <div class="flex-item">
+                        <input class="ipbox" type="number" name="day" id="ngay" placeholder="Ngày" required>
+                        <input class="ipbox" type="number" name="month" id="thang" placeholder="Tháng" required>
+                        <input class="ipbox" type="number" name="year" id="nam" placeholder="Năm" required>
+                    </div>
                 </div>
-=======
-        </div>
-        <div class="form-line">
-            <label for="DOB" class="su4tt-title">Ngày sinh của bạn</label><br>
-            <div class="flex-item">
-                <input class="ipbox" type="number" name="day" id="ngay" placeholder="Ngày">
-                <input class="ipbox" type="number" name="month" id="thang" placeholder="Tháng">
-                <input class="ipbox" type="number" name="year" id="nam" placeholder="Năm">
-            </div>
-        </div>
-        <div class="form-line">
-            <label for="gender">Giới tính: </label>
-            <span><input type="radio" name="male" id="male">Nam</span>
-            <span><input type="radio" name="female" id="female">Nữ</span>
-        </div>
-        <div class="form-line">
-            <div class="flex-item">
-                <label for="direct" class="lb-title">Địa chỉ: </label>
-                <input class="ipbox" type="text" name="sonha" id="sonha" placeholder="Số nhà">
-                <input class="ipbox" type="text" name="duong" id="duong" placeholder="Đường">
->>>>>>> 693c4e949f26c1c0a50e9b012e509acb6e18230f
-            </div>
-            <div class="form-line">
-                <label for="gender">Giới tính: </label>
-                <span><input type="radio" name="male" id="male" value="0">Nam</span>
-                <span><input type="radio" name="female" id="female" value="1">Nữ</span>
-            </div>
-            <div class="form-line">
-                <div class="flex-item">
-                    <label for="direct" class="lb-title">Địa chỉ: </label>
-                    <input class="ipbox" type="text" name="sonha" id="sonha" placeholder="Số nhà">
-                    <input class="ipbox" type="text" name="duong" id="duong" placeholder="Đường">
+                <div class="form-line">
+                    <label for="gender">Giới tính: </label>
+                    <span><input type="radio" name="gender" id="gender nam" value="0" required>Nam</span>
+                    <span><input type="radio" name="gender" id="gender nu" value="1" required>Nữ</span>
                 </div>
-                <div class="flex-item">
-                    <input class="ipbox" type="text" name="phuong" id="phuong" placeholder="Phường">
-                    <input class="ipbox" type="text" name="quan" id="quan" placeholder="Quận/huyện">
-                    <input class="ipbox" type="text" name="tp" id="tp" placeholder="TPHCM">
+                <div class="form-line">
+                    <div class="flex-item">
+                        <label for="direct" class="lb-title">Địa chỉ: </label>
+                        <input class="ipbox" type="text" name="sonha" id="sonha" placeholder="Số nhà" required>
+                        <input class="ipbox" type="text" name="duong" id="duong" placeholder="Đường" required>
+                    </div>
+                    <div class="flex-item">
+                        <input class="ipbox" type="text" name="phuong" id="phuong" placeholder="Phường" required>
+
+                        <select class="ipbox txtbox" name="address" id="quan" required>
+                        <option value>Quận/Huyện</option>
+                        <option value="Thành phố Thủ Đức">Thành phố Thủ Đức</option>
+                        <option value="Quận 1">Quận 1</option>
+                        <option value="Quận 3">Quận 3</option>
+                        <option value="Quận 4">Quận 4</option>
+                        <option value="Quận 5">Quận 5</option>
+                        <option value="Quận 6">Quận 6</option>
+                        <option value="Quận 7">Quận 7</option>
+                        <option value="Quận 8">Quận 8</option>
+                        <option value="Quận 10">Quận 10</option>
+                        <option value="Quận 11">Quận 11</option>
+                        <option value="Quận 12">Quận 12</option>
+                        <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                        <option value="Quận Bình Tân">Quận Bình Tân</option>
+                        <option value="Quận Gò Vấp"> Quận Gò Vấp</option>
+                        <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+                        <option value="Quận Tân Bình">Quận Tân Bình</option>
+                        <option value="Quận Tân Phú">Quận Tân Phú</option>
+                        <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
+                        <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
+                        <option value="Huyện Củ Chi">Huyện Củ Chi</option>
+                        <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+                        <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+                    </select>
+                        <input class="ipbox" type="text" name="tp" id="tp" placeholder="TPHCM">
+                    </div>
                 </div>
-            </div>
-            <div class="form-line flex-item">
-                <label for="cccd" class="lb-title">Số CCCD: </label>
-                <input class="ipbox" type="number" name="cccd" id="cccd">
-            </div>
-            <div class="form-line flex-item">
-                <label for="ngaycap" class="lb-title">Ngày cấp:</label>
-                <input class="ipbox" type="date" name="ngaycap" id="ngaycap">
-            </div>
-            <div class="form-line flex-item">
-                <button><a href="#">Quay lại</a></button>
-                <button><a href="#">Tiếp theo</a></button>
-            </div>
+                <div class="form-line flex-item-add">
+                    <div id="edit-item">
+                        <label for="cccd" class="lb-title">Số CCCD: </label>
+                        <input class="ipbox" type="number" name="cccd" id="cccd" required oninput="checkCCCD()" onblur="checkVal()">
+                    </div>
+                    <div id="cccdError"> Số CCCD không hợp lệ</div>
+                </div>
+                <div class="form-line flex-item">
+                    <label for="ngaycap" class="lb-title">Ngày cấp:</label>
+                    <input class="ipbox" type="date" name="ngaycap" id="ngaycap" required>
+                </div>
+                <div class="form-line flex-item">
+                    <!-- <button value="Quay về" class="Return"><a href="#">Quay lại</a></button>
+                <button class="Next" value="Tiếp theo" type="submit" name="submit"><a href="#">Tiếp theo</a></button> -->
+                    <input type="reset" value="Trở về" class="submit"><span><a href="../AtheneMain_HTML/HomePage.html" target="blank"></a></span>
+                    <input type="submit" value="Hoàn tất" class="submit">
+                </div>
+        </form>
         </div>
-<<<<<<< HEAD
-    </form>
-=======
-        <div class="form-line flex-item">
-            <label for="cccd" class="lb-title">Số CCCD: </label>
-            <input class="ipbox" type="number" name="cccd" id="cccd">
-        </div>
-        <div class="form-line flex-item">
-            <label for="ngaycap" class="lb-title">Ngày cấp:</label>
-            <input class="ipbox" type="date" name="ngaycap" id="ngaycap">
-        </div>
-        <div class="form-line flex-item">
-            <button><a href="./SignUp.html">Quay lại</a></button>
-            <button><a href="#">Tiếp theo</a></button>
-        </div>
-    </div>
->>>>>>> 693c4e949f26c1c0a50e9b012e509acb6e18230f
+
 </body>
 
 </html>
