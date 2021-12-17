@@ -10,9 +10,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/TutorProfile.css">
     <script src="../Js/Header.js"></script>
+    <script src="../Js/angular.min.js"></script>
+    <script>
+        var app = angular.module("AngularApp", [])
+        app.controller("ProfilesController", function($scope, $http) {
+            $http({
+                method: "GET",
+                url: "../Data/profile.json"
+            }).then(function mySucces(respone) {
+                $scope.profiles = respone.data
+            }, function myError(respone) {
+                $scope.dataError = respone.statusText
+            })
+        })
+    </script>
 </head>
 
-<body>
+<body ng-app="AngularApp" ng-controller="ProfilesController">
     <div class="container-background">
         <div class="background">
             <img width="100%" height="300px" src="../Images/ProfileTutor/background.png">
@@ -32,15 +46,15 @@
             </div>
 
         </div>
-        <div>
+        <div ng-repeat="x in profiles">
             <div class="ava">
                 <div>
                     <img src="../Images/ProfileTutor/user_ava.jpg" width="15%" alt="This is my ava" style="border-radius: 50%;">
                     <span style="border-radius: 50%; background-color: white;"><i style="margin-left:-3.5rem; background-color: white; border-radius: 50%; padding: 0.5rem;" class="material-icons">photo_camera</i></span>
                 </div>
                 <div style="display: flex; flex-direction: column; width: 250px; margin-left: -110%; margin-top: 50px;">
-                    <h1>Hướng Hàm Chi</h1>
-                    <p>300 người theo dõi</p>
+                    <h1>{{x.Name}}</h1>
+                    <p>{{x.Followers}}</p>
                 </div>
             </div>
 
@@ -59,16 +73,16 @@
                 </div>
                 <div>
                     <h2>Thông tin cá nhân</h2>
-                    <h5>Giới tính: </h5>
-                    <label for="gender"></label>
+                    <h5>Giới tính:</h5>
+                    <label for="gender">{{x.Gender}}</label>
                     <h5>Ngày sinh: </h5>
-                    <label for="birthday"></label>
+                    <label for="birthday">{{x.dob}}</label>
                     <h5>Đã học tại: </h5>
-                    <label for="oldschool"></label>
+                    <label for="oldschool">{{x.c3}}</label>
                     <h5>Sinh viên trường: </h5>
-                    <label for="school"></label>
+                    <label for="school">{{x.Education}}</label>
                     <h5>Chuyên ngành: </h5>
-                    <label for="major"></label>
+                    <label for="major">{{x.major}}</label>
                 </div>
                 <div>
                     <button class="btn_editprivate btn">Chỉnh sửa thông tin cá nhân</button>
@@ -87,15 +101,15 @@
                     <h5>Cấp học: </h5>
                     <label for="grade"></label>
                     <h5>Môn học: </h5>
-                    <label for="subject"></label>
+                    <label for="subject">{{x.Subject}}</label>
                     <h5>Giới tính học viên: </h5>
-                    <label for="gender"></label>
+                    <label for="gender">{{x.Gender}}</label>
                     <h5>Địa điểm dạy: </h5>
-                    <label for="address"></label>
+                    <label for="address">{{x.Direct}}</label>
                     <h5>Thời gian dạy: </h5>
                     <label for="timeteach"></label>
                     <h5>Mức lương mong muốn: </h5>
-                    <label for="salary"></label>
+                    <label for="salary">{{x.Fee}}</label>
                     <h5>Lịch học dự kiến: </h5>
                     <label for="routine"></label>
                     <h5>Mô tả thêm: </h5>

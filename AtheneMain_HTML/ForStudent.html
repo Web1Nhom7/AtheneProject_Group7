@@ -10,22 +10,38 @@
     <link rel="stylesheet" href="../CSS/ForStudent_Tutor.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="../Js/Header.js"></script>
+    <script src="../Js/angular.min.js"></script>
+
+    <script>
+        var app = angular.module("AngularApp", [])
+        app.controller("LearnerController", function($scope, $http) {
+            $http({
+                method: "GET",
+                url: "../Data/tutor.json"
+            }).then(function mySucces(respone) {
+                $scope.learners = respone.data
+            }, function myError(respone) {
+                $scope.dataError = respone.statusText
+            })
+        })
+    </script>
 </head>
-<body>
-     <!-- Header -->
-     <div w3-include-html="./Header.html"></div>
-     <script async>
-         w3.includeHTML();
-     </script>   
-   <!-- Intro content -->
-        <div class="filter-container">
-            <div class="filter__item">
-                <div class="filter-spacing"><i class="fa fa-edit filter-icon"></i> Đăng ký tìm gia sư</div> 
-                <div><i class='fa fa-tasks filter-icon'></i> Bảng giá tham khảo</div>
-                
-            </div>
-            <div class="filter__item">
-                <div class="filter-spacing"><select class="filter-selection" id="district" name="district">
+
+<body ng-app="AngularApp" ng-controller="LearnerController">
+    <!-- Header -->
+    <div w3-include-html="./Header.html"></div>
+    <script async>
+        w3.includeHTML();
+    </script>
+    <!-- Intro content -->
+    <div class="filter-container">
+        <div class="filter__item">
+            <div class="filter-spacing"><i class="fa fa-edit filter-icon"></i> Đăng ký tìm gia sư</div>
+            <div><i class='fa fa-tasks filter-icon'></i> Bảng giá tham khảo</div>
+
+        </div>
+        <div class="filter__item">
+            <div class="filter-spacing"><select class="filter-selection" id="district" name="district">
                     <option >Quận/Huyện</option>
                     <option value="quan1">Quận 1</option>
                     <option value="quan2">Quận 2</option>
@@ -51,8 +67,8 @@
                     <option value="huyenhm">Huyện Hóc Môn</option>
                     <option value="huyenhm">Huyện Nhà Bè</option>
                 </select>
-                </div>
-                <div><select class="filter-selection" id="class" name="class">
+            </div>
+            <div><select class="filter-selection" id="class" name="class">
                     <option >Lớp học</option>
                     <option value="lop1">Lớp 1</option>
                     <option value="lop2">Lớp 2</option>
@@ -68,16 +84,16 @@
                     <option value="lop12">Lớp 12</option>
                     <option value="ltdh">Luyện thi đại học</option>
                 </select>
-                </div>
-            </div>          
-            <div class="filter__item">
-                <div class="filter-spacing"><select class="filter-selection" id="level" name="level">
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter-spacing"><select class="filter-selection" id="level" name="level">
                     <option >Trình độ</option>
                     <option value="sinhvien">Sinh viên</option>
                     <option value="giaovien">Giáo viên</option>
                 </select>
-                </div>
-                <div><select class="filter-selection" id="subject" name="subject">
+            </div>
+            <div><select class="filter-selection" id="subject" name="subject">
                     <option >Môn học</option>
                     <option value="toan">Toán</option>
                     <option value="ly">Lý</option>
@@ -89,142 +105,164 @@
                     <option value="baobai">Báo bài</option>
                     <option value="khac">Khác</option>
                 </select>
-                </div>
             </div>
-            <div class="filter__item">
-                <div class="filter-spacing"><select class="filter-selection" id="gender" name="gender">
+        </div>
+        <div class="filter__item">
+            <div class="filter-spacing"><select class="filter-selection" id="gender" name="gender">
                 <option>Giới tính</option>
                 <option value="nam">Nam</option>
                 <option value="nu">Nữ</option>
             </select>
             </div>
             <div class="search-container">
-                <input class="filter-search" type="text"ng-model="name" placeholder="Tìm kiếm"> 
+                <input class="filter-search" type="text" ng-model="name" placeholder="Tìm kiếm">
                 <i class="fa fa-search"></i>
             </div>
-            </div>
         </div>
-        <div class="profile-container">
-            <div class="profile__item">
-                <div>
-                    <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
-                    <div class="profile__item--right">
-                        <div class="profile-name">Hướng Hàm Chi</div>
-                        <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
-                        <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
-                    </div>
-                    <div class="profile__item--center" >
-                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
-                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
-                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
-                    </div>
-                    <div class="profile__item--below" >
-                        <button class="profile__button">Đăng ký</button>
-                        <button class="profile__button">Xem profile</button>
-                    </div>
+    </div>
+    <!-- <div class="profile-container">
+        <div class="profile__item">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">Hướng Hàm Chi</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
+                    <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
                 </div>
-            </div>
-            <div class="profile__item">
-                <div>
-                    <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
-                    <div class="profile__item--right">
-                        <div class="profile-name">Hướng Hàm Chi</div>
-                        <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
-                        <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
-                    </div>
-                    <div class="profile__item--center" >
-                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
-                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
-                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
-                    </div>
-                    <div class="profile__item--below" >
-                        <button class="profile__button">Đăng ký</button>
-                        <button class="profile__button">Xem profile</button>
-                    </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p>
+                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p>
+                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p>
                 </div>
-            </div>
-            <div class="profile__item">
-                <div>
-                    <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
-                    <div class="profile__item--right">
-                        <div class="profile-name">Hướng Hàm Chi</div>
-                        <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
-                        <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
-                    </div>
-                    <div class="profile__item--center" >
-                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
-                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
-                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
-                    </div>
-                    <div class="profile__item--below" >
-                        <button class="profile__button">Đăng ký</button>
-                        <button class="profile__button">Xem profile</button>
-                    </div>
-                </div>
-            </div>
-            <div class="profile__item">
-                <div>
-                    <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
-                    <div class="profile__item--right">
-                        <div class="profile-name">Hướng Hàm Chi</div>
-                        <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
-                        <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
-                    </div>
-                    <div class="profile__item--center" >
-                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
-                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
-                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
-                    </div>
-                    <div class="profile__item--below" >
-                        <button class="profile__button">Đăng ký</button>
-                        <button class="profile__button">Xem profile</button>
-                    </div>
-                </div>
-            </div>
-            <div class="profile__item">
-                <div>
-                    <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
-                    <div class="profile__item--right">
-                        <div class="profile-name">Hướng Hàm Chi</div>
-                        <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
-                        <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
-                    </div>
-                    <div class="profile__item--center" >
-                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
-                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
-                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
-                    </div>
-                    <div class="profile__item--below" >
-                        <button class="profile__button">Đăng ký</button>
-                        <button class="profile__button">Xem profile</button>
-                    </div>
-                </div>
-            </div>
-            <div class="profile__item">
-                <div>
-                    <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
-                    <div class="profile__item--right">
-                        <div class="profile-name">Hướng Hàm Chi</div>
-                        <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
-                        <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
-                    </div>
-                    <div class="profile__item--center" >
-                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p> 
-                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p> 
-                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p> 
-                    </div>
-                    <div class="profile__item--below" >
-                        <button class="profile__button">Đăng ký</button>
-                        <button class="profile__button">Xem profile</button>
-                    </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
                 </div>
             </div>
         </div>
-        <!-- Previous, Next page-->
-        <div class="transfer-page">
-            <a href="#"><i class="material-icons profile-icon">arrow_back</i>&ensp;Trang trước</a><a href="#">&emsp;&emsp;Trang sau&ensp;<i class="material-icons profile-icon">arrow_forward</i></a>
+        <div class="profile__item">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">Hướng Hàm Chi</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
+                    <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
+                </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p>
+                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p>
+                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p>
+                </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
+                </div>
+            </div>
         </div>
-         <!-- Footer -->
+        <div class="profile__item">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">Hướng Hàm Chi</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
+                    <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
+                </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p>
+                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p>
+                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p>
+                </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="profile__item">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">Hướng Hàm Chi</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
+                    <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
+                </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p>
+                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p>
+                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p>
+                </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="profile__item">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">Hướng Hàm Chi</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
+                    <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
+                </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p>
+                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p>
+                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p>
+                </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="profile__item">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">Hướng Hàm Chi</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> Quận Bình Thạnh</div>
+                    <p><i class="fa fa-user  profile-icon"></i> Nữ</p>
+                </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">Anh văn giao tiếp</span></p>
+                    <p>Học phí: <span class="text-spacing"> 3 triệu/ 1 khóa (3 tháng)</span></p>
+                    <p>Học vấn: <span class="text-spacing">Trường Đại học Kinh tế- Luật</span></p>
+                </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="profile-container">
+        <div class="profile__item" ng-repeat="x in learners">
+            <div>
+                <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
+                <div class="profile__item--right">
+                    <div class="profile-name">{{x.Name}}</div>
+                    <div><i class="fa fa-map-marker profile-icon"></i> {{x.Direct}}</div>
+                    <p><i class="fa fa-user  profile-icon"></i>{{x.Gender}}</p>
+                </div>
+                <div class="profile__item--center">
+                    <p>Môn học: <span class="text-spacing">{{x.Subject}}</span></p>
+                    <p>Học phí: <span class="text-spacing">{{x.Fee}}</span></p>
+                    <p>Học vấn: <span class="text-spacing">{{x.Education}}</span></p>
+                </div>
+                <div class="profile__item--below">
+                    <button class="profile__button">Đăng ký</button>
+                    <button class="profile__button">Xem profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Previous, Next page-->
+    <div class="transfer-page">
+        <a href="#"><i class="material-icons profile-icon">arrow_back</i>&ensp;Trang trước</a><a href="#">&emsp;&emsp;Trang sau&ensp;<i class="material-icons profile-icon">arrow_forward</i></a>
+    </div>
+    <!-- Footer -->
     <div w3-include-html="./Footer.html"></div>
     <script>
         w3.includeHTML();
