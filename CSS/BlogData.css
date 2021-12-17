@@ -1,0 +1,29 @@
+
+.blog-right {
+    margin: 0 1.5rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.blog-right h3 {
+    color: orangered;
+}
+
+.blog-right h4 {
+    color: royalblue;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.blog-left {
+    margin-top: 1rem;
+    background-color: lightgoldenrodyellow;
+}
+li {
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
