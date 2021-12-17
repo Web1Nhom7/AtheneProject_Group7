@@ -1,75 +1,71 @@
-body,
-html {
-    margin: 20px;
-    padding: 0px;
-    font-family: 'Roboto';
+/* Profile header */
+.background {
+    position: relative;
+    z-index: -1;
+    width: 90%;
+    height: 20em;
+    margin-left: 5%;
+    border-radius: 20px; 
+}
+
+.frame-edit {
+    width: fit-content;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    margin-top: -4em;
+    margin-left: 80%;
 }
 
 .frame-edit-photo {
     display: flex;
-    flex-direction: row;
-    height: 30px;
-    line-height: 30px;
+    
 }
 
-.button_edit-background {
+/* .button_edit-background {
     display: none;
+} */
+#text{
+    height: 2em;
 }
-
-#text,
 #camera {
-    margin-left: 1rem;
-}
-
-.frame-edit {
-    width: 12rem;
-    background-color: white;
-    z-index: 1;
-    position: relative;
-    margin-top: -4rem;
-    margin-left: 70%;
-}
-
-.background {
-    position: relative;
-    z-index: -1;
-    height: 10%;
-}
-
-.container-background {
-    width: 100vw;
+    margin: 0 1rem;
 }
 
 .ava {
     width: 60rem;
-    margin-left: 100px;
+    /* margin-left: 100px;
     margin-top: -20px;
-    display: flex;
+    display: flex; */
+    margin: 0;
 }
 
-
 /* body */
-
 .body-content {
     display: flex;
     flex-direction: row;
-    padding-top: 2rem;
+    font-size: 1.2em;
 }
+.btn {
+    width: 100%;
+}
+
+/* body left */
 
 .body-left {
-    width: 35%;
-    margin-right: 2rem;
+    width: 33%;
+    margin: 2rem;
 }
-
-.body-right {
-    width: 65%;
-}
-
 .body__left-content {
     border: 1px solid black;
     border-radius: 20px;
     padding: 0rem 2rem 2rem 2rem;
     /* width: fit-content; */
+}
+
+
+.body-right {
+    width: 65%;
 }
 
 h2,
@@ -81,8 +77,9 @@ h2 {
     color: #0077C0;
 }
 
-.btn {
-    width: 100%;
+.btn-edit{
+    margin: 2rem 0;
+    padding: 0.3rem;
 }
 
 #space-btn {
