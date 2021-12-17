@@ -4,7 +4,7 @@
     z-index: -1;
     width: 90%;
     height: 20em;
-    margin-left: 5%;
+    margin: 5% 5% 0 5%;
     border-radius: 20px; 
 }
 
@@ -19,12 +19,8 @@
 
 .frame-edit-photo {
     display: flex;
-    
 }
 
-/* .button_edit-background {
-    display: none;
-} */
 #text{
     height: 2em;
 }
@@ -49,25 +45,13 @@
 .btn {
     width: 100%;
 }
-
-/* body left */
-
-.body-left {
-    width: 33%;
-    margin: 2rem;
+.info-line{
+    margin: 1rem 0;
+    font-weight: bold;
 }
-.body__left-content {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 0rem 2rem 2rem 2rem;
-    /* width: fit-content; */
+label{
+    font-weight: normal;
 }
-
-
-.body-right {
-    width: 65%;
-}
-
 h2,
 h3 {
     text-align: center;
@@ -77,42 +61,52 @@ h2 {
     color: #0077C0;
 }
 
-.btn-edit{
+
+/* body left */
+
+.body-left {
+    width: 30%;
+    margin: 2rem;
+}
+.body__left-content {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0rem 2rem 2rem 2rem;
+}
+
+/* body rigth */
+.body-right {
+    width: 65%;
+    margin: 2rem;
+}
+
+.body__right-content {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    padding: 0rem 4rem 2rem 4rem;
+}
+
+
+
+
+
+/* .btn-edit{
     margin: 2rem 0;
     padding: 0.3rem;
-}
+} */
 
-#space-btn {
+/* #space-btn {
     margin-top: 20px;
-}
+} */
 
-.body__right-content-class {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 4rem;
-    margin-bottom: 2rem;
-    padding: 0rem 4rem 2rem 4rem;
-}
 
-.body__right-content-experience {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 4rem;
-    margin-bottom: 2rem;
-    padding: 0rem 4rem 2rem 4rem;
-}
-
-.body__right-content-award {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 0rem 4rem 2rem 4rem;
-}
-
-.btn-right {
+/* .btn-right {
     justify-content: right;
     width: 8rem;
-    float: right;
-}
+    float: inline-end;
+} */
 
 .colorbg {
     background-color: #0077C0;
@@ -121,16 +115,17 @@ h2 {
     border-radius: 2rem;
     margin-left: auto;
     margin-right: auto;
+    padding: 2px;
 }
 
 
 /* CSS Show Tutor Profile */
 
-.frame-button {
+/* .frame-button {
     margin: 20px;
-}
+} */
 
-.btn-follow {
+/* .btn-follow {
     margin-bottom: 2rem;
     height: 2rem;
     background-color: #0077C0;
@@ -141,4 +136,4 @@ h2 {
     height: 2rem;
     background-color: #0077C0;
     color: white;
-}
+} */
