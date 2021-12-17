@@ -54,7 +54,6 @@ function checkVal() {
         if (vnRegex1.test(cccd.value) == false) {
             cccd.style.border = "2px solid red";
             cccdError.style.display = 'block';
-            //phone_error1.style.display = 'none';
             cccd.focus();
             return false;
 
@@ -63,7 +62,6 @@ function checkVal() {
 
         cccd.style.border = "2px solid red";
         cccdError.style.display = 'none';
-        //  phone_error1.style.display = 'block';
         cccd.focus();
         return false;
 
