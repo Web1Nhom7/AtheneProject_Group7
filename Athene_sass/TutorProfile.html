@@ -6,75 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutor Profile</title>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/TutorProfile.css">
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="../Js/Header.js"></script>
-    <script src="../Js/angular.min.js"></script>
-    <script src="../Js/ProfileRender.js"></script>
 </head>
 
-<body ng-app="AngularApp" ng-controller="ProfileController">
-     <!-- Header -->
-     <div w3-include-html="./Header.html"></div>
-     <script>
-         w3.includeHTML();
-     </script> 
-     <!-- Body  -->
-        <img class="background" width="100%" height="300px" src="../Images/ProfileTutor/background.png">
-        <!-- <div class="frame-edit">
-            <button>
-                <input accept="image/*,image/heif,image/heic" class="button_edit-background" type="file" style="display:none" >
-                <div aria-label="Chỉnh sửa ảnh bìa" role="button">
-                    <div class="frame-edit-photo">
-                        <div id="camera">
-                            <i class="material-icons">photo_camera</i>
-                        </div>
-                            <span id="text">Chỉnh sửa ảnh bìa</span>
+<body>
+    <div class="container-background">
+        <div class="background">
+            <img width="100%" height="300px" src="../Images/ProfileTutor/background.png">
+        </div>
+        <div class="frame-edit">
+            <input accept="image/*,image/heif,image/heic" class="button_edit-background" type="file">
+            <div aria-label="Chỉnh sửa ảnh bìa" class="" role="button">
+                <div class="frame-edit-photo">
+                    <div id="camera">
+                        <i style="font-size: 24px; line-height: 30px;" class="material-icons">photo_camera</i>
+                    </div>
+                    <div id="text">
+                        <span>Chỉnh sửa ảnh bìa</span>
                     </div>
                 </div>
-            </button>
-        </div> -->
+            </div>
+
+        </div>
         <div>
-            <div class="ava" ng-repeat="x in profiles">
+            <div class="ava">
                 <div>
                     <img src="../Images/ProfileTutor/user_ava.jpg" width="15%" alt="This is my ava" style="border-radius: 50%;">
-                <i style="font-size: 2.3em;
-                margin-left: -3%;" class="material-icons">photo_camera</i>
+                    <span style="border-radius: 50%; background-color: white;"><i style="margin-left:-3.5rem; background-color: white; border-radius: 50%; padding: 0.5rem;" class="material-icons">photo_camera</i></span>
                 </div>
-                <div>
-                    <h1>{{x.Name}}</h1>
-                    <p>{{x.Followers}}</p>
+                <div style="display: flex; flex-direction: column; width: 250px; margin-left: -110%; margin-top: 50px;">
+                    <h1>Hướng Hàm Chi</h1>
+                    <p>300 người theo dõi</p>
                 </div>
             </div>
+
         </div>
     </div>
     <hr>
-
-    <!-- Body-content -->
-    <div class="body-content" ng-repeat="x in profiles">
+    <div class="body-content">
         <div class="body-left">
             <div class="body__left-content">
                 <div>
                     <h2>Giới thiệu</h2>
-                    <label for="intro">{{x.Bio}}</label>
+                    <label for="intro"></label>
                 </div>
                 <div>
                     <button class="btn-edit btn">Chỉnh sửa</button>
                 </div>
                 <div>
                     <h2>Thông tin cá nhân</h2>
-                    <h5>Giới tính:</h5>
-                    <label for="gender">{{x.Gender}}</label>
+                    <h5>Giới tính: </h5>
+                    <label for="gender"></label>
                     <h5>Ngày sinh: </h5>
-                    <label for="birthday">{{x.dob}}</label>
+                    <label for="birthday"></label>
                     <h5>Đã học tại: </h5>
-                    <label for="oldschool">{{x.c3}}</label>
+                    <label for="oldschool"></label>
                     <h5>Sinh viên trường: </h5>
-                    <label for="school">{{x.Education}}</label>
+                    <label for="school"></label>
                     <h5>Chuyên ngành: </h5>
-                    <label for="major">{{x.major}}</label>
+                    <label for="major"></label>
                 </div>
                 <div>
                     <button class="btn_editprivate btn">Chỉnh sửa thông tin cá nhân</button>
@@ -91,21 +83,21 @@
                 </div>
                 <div>
                     <h5>Cấp học: </h5>
-                    <label for="grade">{{x.class}}</label>
+                    <label for="grade"></label>
                     <h5>Môn học: </h5>
-                    <label for="subject">{{x.Subject}}</label>
+                    <label for="subject"></label>
                     <h5>Giới tính học viên: </h5>
-                    <label for="gender">{{x.LearnerGender}}</label>
+                    <label for="gender"></label>
                     <h5>Địa điểm dạy: </h5>
-                    <label for="address">{{x.TeachDi}}</label>
+                    <label for="address"></label>
                     <h5>Thời gian dạy: </h5>
-                    <label for="timeteach">{{x.TeachingTime}}</label>
+                    <label for="timeteach"></label>
                     <h5>Mức lương mong muốn: </h5>
-                    <label for="salary">{{x.Fee}}</label>
+                    <label for="salary"></label>
                     <h5>Lịch học dự kiến: </h5>
-                    <label for="routine">{{x.TimeTable}}</label>
+                    <label for="routine"></label>
                     <h5>Mô tả thêm: </h5>
-                    <label for="description">{{x.More}}</label>
+                    <label for="description"></label>
                 </div>
                 <div>
                     <button class="btn-edit-class btn-right">Chỉnh sửa</button>
@@ -116,7 +108,7 @@
                     <h3>Kinh nghiệm làm việc</h3>
                 </div>
                 <div>
-                    <label for="experience">{{x.Exps[0].Exp1}} <br> {{x.Exps[0].Exp2}}</label>
+                    <label for="experience"></label>
                 </div>
                 <div>
                     <button class="btn-edit-experience btn-right">Chỉnh sửa</button>
@@ -127,17 +119,15 @@
                     <h3>Thành tích đạt được</h3>
                 </div>
                 <div>
-                    <label for="award">{{x.Achievements[0].Achievements1}} <br>{{x.Achievements[0].Achievements2}} <br>{{x.Achievements[0].Achievements3}}  </label>
+                    <label for="award"></label>
                 </div>
                 <div>
                     <button class="btn-edit-award btn-right">Chỉnh sửa</button>
                 </div>
             </div>
         </div>
-    <!-- Footer -->
-    <div w3-include-html="./Footer.html"></div>
-    <script>
-        w3.includeHTML();
-    </script>
+
+    </div>
 </body>
+
 </html>
