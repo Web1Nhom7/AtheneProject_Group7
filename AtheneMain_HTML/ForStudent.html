@@ -36,8 +36,12 @@
     <!-- Intro content -->
     <div class="filter-container">
         <div class="filter__item">
-            <div class="filter-spacing"><i class="fa fa-edit filter-icon"></i> Đăng ký tìm gia sư</div>
-            <div><i class='fa fa-tasks filter-icon'></i> Bảng giá tham khảo</div>
+            <div class="filter-spacing"><i class="fa fa-edit filter-icon"></i>
+                <a href="../Form_HTML/ProfileFindTutor.html" target="_blank">Đăng ký tìm gia sư</a>
+            </div>
+            <div><i class='fa fa-tasks filter-icon'></i>
+                <a href="#" target="_blank"> Bảng giá tham khảo</a>
+            </div>
 
         </div>
         <div class="filter__item">
@@ -244,12 +248,12 @@
                 <div class="profile__item--right">
                     <div class="profile-name">{{x.Name}}</div>
                     <div><i class="fa fa-map-marker profile-icon"></i> {{x.Direct}}</div>
-                    <p><i class="fa fa-user  profile-icon"></i>{{x.Gender}}</p>
+                    <p><i class="fa fa-user  profile-icon"></i> {{x.Gender}}</p>
                 </div>
                 <div class="profile__item--center">
-                    <p>Môn học: <span class="text-spacing">{{x.Subject}}</span></p>
-                    <p>Học phí: <span class="text-spacing">{{x.Fee}}</span></p>
-                    <p>Học vấn: <span class="text-spacing">{{x.Education}}</span></p>
+                    <p>Môn học: <span class="text-spacing"> {{x.Subject}}</span></p>
+                    <p>Học phí: <span class="text-spacing"> {{x.Fee}}</span></p>
+                    <p>Học vấn: <span class="text-spacing"> {{x.Education}}</span></p>
                 </div>
                 <div class="profile__item--below">
                     <a href="../Form_HTML/ProfileFindTutor.html"><button class="profile__button">Đăng ký</button></a>
