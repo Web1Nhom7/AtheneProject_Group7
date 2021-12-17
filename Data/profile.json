@@ -1,0 +1,28 @@
+[{
+    "Name": "Hướng Hàm Chi",
+    "Followers": "300 người theo dõi",
+    "Direct": "Quận Bình Thạnh",
+    "Gender": "Nữ",
+    "Subject": "Anh văn giao tiếp",
+    "Fee": "3 triệu/1 khóa (3 tháng)",
+    "Education": "Trường Đại học Kinh tế - Luật",
+    "Bio": "Better to light one candle better than to curse the darkess",
+    "dob": "1/1/2000",
+    "c3": "THPT Gia Định",
+    "major": "Hệ thống thông tin quản lý",
+    "class":"Cấp 1",
+    "LearnerGender":"Nữ",
+    "TeachDi":"Quận Tân Bình, TPHCM",
+    "TeachingTime":"1 tiếng/ 1 buổi học",
+    "TimeTable":"Thứ 7, Chủ nhật hàng tuần",
+    "More":"Có sự kiên trì và nhẫn nại trong việc giúp học viên hiểu rõ bài giảng",
+    "Exps":[{
+        "Exp1": "Từng làm trợ giảng cho trung tâm tiếng Anh xxx",
+        "Exp2": "Có kinh nghiệm làm việc với trẻ nhỏ"
+    }],
+    "Achievements":[{
+        "Achievements1":"Học sinh giỏi tiếng Anh cấp tỉnh lớp 11",
+        "Achievements2":"Điểm thi đại học năm 2018 khối D: 30 điểm",
+        "Achievements3":"Giải 2 cuộc thi hùng biện tiếng Anh"
+    }]
+}]

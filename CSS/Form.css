@@ -103,9 +103,6 @@ button,
         flex-direction: row;
         margin-top: 0.5rem;
     }
-    .checkbox span {
-        margin-right: 0.5rem;
-    }
     #sonha {
         width: 54%;
     }

@@ -85,8 +85,6 @@
        padding-bottom: 1rem;
    }
    .profile__button{
-       min-width: 30%;
-       width: fit-content;
        color: white;
        background-color: #4989D4;
        border: none;

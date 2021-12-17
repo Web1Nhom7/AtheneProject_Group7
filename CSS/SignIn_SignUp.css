@@ -130,7 +130,10 @@ hr {
     }
 }
 
-#phoneError {
+#phoneError,
+#passError,
+#phoneError1 {
     font-size: 1.1rem;
     color: red;
+    display: none;
 }
