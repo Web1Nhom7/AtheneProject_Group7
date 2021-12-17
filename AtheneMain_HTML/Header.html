@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../CSS/HomePage.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../Js/Header.js"></script>
 </head>
 <style>
  /* Header */
@@ -168,21 +169,10 @@
           <a href="./ForTutor.html">Trở thành gia sư</a>
           <a href="./Blog.html">Blog</a>
           <a href="./IntroPage.html">Giới thiệu</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <a class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
         </div>
-        <script>
-           function myFunction() {
-              var nav = document.getElementById("myNavigation");
-              if (nav.className === "header__item--middle") {
-                nav.className += " responsive";
-              } else {
-                nav.className = "header__item--middle";
-          }
-        }
-        </script>
-    
           <!--Item right-->
 <div class="header__item--right">
   
