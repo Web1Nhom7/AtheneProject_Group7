@@ -28,27 +28,32 @@ function checkVal() {
     var pass = document.getElementById("pass");
     var pass_error = document.getElementById("passError");
 
+    var repass = document.getElementById("repass");
+    var pass_error1 = document.getElementById("passError1");
+
     if (pass.value.length < 8) {
         pass.style.border = "2px solid red";
         pass_error.style.display = "block";
         pass.focus();
         return false;
-    }
-
-    var pass = document.getElementById("pass");
-    var repass = document.getElementById("repass");
-    var pass_error1 = document.getElementById("passError1");
-    if (repass.value != pass.value) {
+    } else if (repass.value !== pass.value) {
         repass.style.border = "2px solid red";
         pass_error1.style.display = "block";
         repass.focus();
         return false;
     }
+}
 
+<<<<<<< HEAD
+//     //Số chứng minh nhân dân phải đủ 12 số
+var cccd = document.getElementById("cccd");
+var cccdError = document.getElementById("cccdError");
+var vnRegex1 = /((00)+[0-9]{12}\b)/g;
+=======
     //Số chứng minh nhân dân phải đủ 12 số
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
-    var vnRegex1 = /((00)+[0-9]{12}\b)/g;
+    var vnRegex1 = /((0)+[0-9]{11}\b)/g;
 
     if (cccd.value !== '') {
         if (vnRegex1.test(cccd.value) == false) {
@@ -59,15 +64,26 @@ function checkVal() {
 
         }
     } else {
+>>>>>>> a93c88a4067c60c2ef10c5642ae85375cafd1be5
 
+if (cccd.value !== '') {
+    if (vnRegex1.test(cccd.value) == false) {
         cccd.style.border = "2px solid red";
-        cccdError.style.display = 'none';
+        cccdError.style.display = 'block';
         cccd.focus();
         return false;
 
     }
+} else {
+
+    cccd.style.border = "2px solid red";
+    cccdError.style.display = 'none';
+    cccd.focus();
+    return false;
 
 }
+
+// }
 
 function checkPhoneVal() {
     var phone = document.getElementById("sodt");
@@ -113,19 +129,18 @@ function confirmPass() {
 function checkCCCD() {
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
-    var vnRegex1 = /(00)+[0-9]{12}\b)/g;
+    var vnRegex1 = /(0)+[0-9]{11}\b)/g;
 
     if (cccd.value !== '') {
         if (vnRegex1.test(cccd.value) == true) {
             cccd.style.border = "2px solid green";
             cccdError.style.display = "none";
-            //phone_error1.style.display = "none";
             cccd.focus();
             return true;
         }
     }
 }
-//Kiểm tra ngày cấp
+
 
 
 // function validateForm() {
