@@ -31,7 +31,6 @@
 
                 <div class="form-line">
                     <div class="flex-item">
-
                         <input type="password" placeholder="Mật khẩu" id="pass" name="password" required oninput="checkPassVal()" onblur="checkVal()" class="ipbox">
                         <div id="passError">Mật khẩu tối thiểu 8 ký tự!</div>
                     </div>
@@ -44,9 +43,9 @@
                 <div class="form-line">
                     <label for="DOB" class="su4tt-title">Ngày sinh của bạn</label><br>
                     <div class="flex-item">
-                        <input class="ipbox" type="number" name="day" id="ngay" placeholder="Ngày" required>
-                        <input class="ipbox" type="number" name="month" id="thang" placeholder="Tháng" required>
-                        <input class="ipbox" type="number" name="year" id="nam" placeholder="Năm" required>
+                        <input class="ipbox" type="number" name="day" id="ngay" placeholder="Ngày" maxlength="2" required>
+                        <input class="ipbox" type="number" name="month" id="thang" placeholder="Tháng" maxlength="2" required>
+                        <input class="ipbox" type="number" name="year" id="nam" placeholder="Năm" maxlength="4" required>
                     </div>
                 </div>
                 <div class="form-line">
@@ -111,9 +110,9 @@
         </form>
         </div>
 
-            </div>
-        </div>
-            </div>
+    </div>
+    </div>
+    </div>
     </form>
     </div>
 </body>
