@@ -8,7 +8,8 @@
     <title>Sign Up For Learner</title>
     <link rel="stylesheet" href="../CSS/Form.css">
     <script src="../Js/ProfileFind.js"></script>
-    <script src="../Js/SignUp.js"></script>
+    <script src="../Js/Validation.js"></script>
+
 
 </head>
 
@@ -26,17 +27,18 @@
                 </div>
             </div>
             <div class="form-line">
-                <input autocomplete="off" type="number" class="ipbox" name="sodt" id="sodt" placeholder="Số điện thoại (bắt buộc)" oninput="checkPhoneVal()" onblur="checkVal()" required>
+                <input autocomplete="off" type="number" class="ipbox" name="sodt" id="sodt" placeholder="Số điện thoại (bắt buộc)" onblur="checkVal()" oninput="checkPhoneVal()" required>
                 <div id="phoneError">Số điện thoại không đúng định dạng!</div>
+                <div id="phoneError1">Hãy điền số điện thoại!</div>
 
                 <div class="form-line">
                     <div class="flex-item">
 
-                        <input type="password" placeholder="Mật khẩu" id="pass" name="password" required oninput="checkPassVal()" onblur="checkVal()" class="ipbox">
+                        <input type="password" placeholder="Mật khẩu" id="pass" name="password" required class="ipbox" onblur="checkVal()" oninput="checkPassVal()">
                         <div id="passError">Mật khẩu tối thiểu 8 ký tự!</div>
                     </div>
                     <div>
-                        <input type="password" class="ipbox" placeholder="Xác nhận" name="repass" id="repass" required oninput="confirmPass()" onblur="checkVal()">
+                        <input type="password" class="ipbox" placeholder="Xác nhận" name="repass" id="repass" required onblur="checkVal()" oninput="confirmPass()">
                         <div id="passError1">Mật khẩu chưa khớp!</div>
                     </div>
 
@@ -94,9 +96,10 @@
                 <div class="form-line flex-item-add">
                     <div id="edit-item">
                         <label for="cccd" class="lb-title">Số CCCD: </label>
-                        <input class="ipbox" type="number" name="cccd" id="cccd" required oninput="checkCCCD()" onblur="checkVal()">
+                        <input class="ipbox" type="number" name="cccd" id="cccd" required onblur="checkVal()" oninput="checkCCCD()">
                     </div>
                     <div id="cccdError"> Số CCCD không hợp lệ</div>
+                    <div id="cccdError1"> Hãy điền số CCCD </div>
                 </div>
                 <div class="form-line flex-item">
                     <label for="ngaycap" class="lb-title">Ngày cấp:</label>
@@ -105,16 +108,12 @@
                 <div class="form-line flex-item">
                     <!-- <button value="Quay về" class="Return"><a href="#">Quay lại</a></button>
                 <button class="Next" value="Tiếp theo" type="submit" name="submit"><a href="#">Tiếp theo</a></button> -->
-                    <input type="reset" value="Trở về" class="submit"><span><a href="../AtheneMain_HTML/HomePage.html" target="blank"></a></span>
+                    <input type="reset" value="Quay lại" class="submit"><span><a href="../AtheneMain_HTML/HomePage.html" target="blank"></a></span>
                     <input type="submit" value="Hoàn tất" class="submit">
                 </div>
-        </form>
-        </div>
 
             </div>
-        </div>
-            </div>
-    </form>
+        </form>
     </div>
 </body>
 
