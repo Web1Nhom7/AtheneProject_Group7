@@ -51,7 +51,7 @@ function checkVal() {
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
     var cccdError1 = document.getElementById("cccdError1");
-    var vnRegex1 = /((00)+[0-9]{10}\b)/g;
+    var vnRegex1 = /((00|01|02|03|04|05|06|07|08|09)+[0-9]{10}\b)/g;
 
     if (cccd.value !== '') {
         if (vnRegex1.test(cccd.value) == false) {
@@ -118,7 +118,7 @@ function checkCCCD() {
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
     var cccdError1 = document.getElementById("cccdError1");
-    var vnRegex1 = /((00)+[0-9]{10}\b)/g;
+    var vnRegex1 = /((00|01|02|03|04|05|06|07|08|09)+[0-9]{10}\b)/g;
 
     if (cccd.value !== '') {
         if (vnRegex1.test(cccd.value) == true) {
