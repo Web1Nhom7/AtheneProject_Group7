@@ -48,7 +48,7 @@ function checkVal() {
     //Số chứng minh nhân dân phải đủ 12 số
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
-    var vnRegex1 = /((00)+[0-9]{12}\b)/g;
+    var vnRegex1 = /((0)+[0-9]{11}\b)/g;
 
     if (cccd.value !== '') {
         if (vnRegex1.test(cccd.value) == false) {
@@ -113,19 +113,18 @@ function confirmPass() {
 function checkCCCD() {
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
-    var vnRegex1 = /(00)+[0-9]{12}\b)/g;
+    var vnRegex1 = /(0)+[0-9]{11}\b)/g;
 
     if (cccd.value !== '') {
         if (vnRegex1.test(cccd.value) == true) {
             cccd.style.border = "2px solid green";
             cccdError.style.display = "none";
-            //phone_error1.style.display = "none";
             cccd.focus();
             return true;
         }
     }
 }
-//Kiểm tra ngày cấp
+
 
 
 // function validateForm() {
