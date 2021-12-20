@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../CSS/HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./Js/angular.min.js"></script>
+    <script src="./Js/ProfileRender.js"></script>
+</head>
+<style>
+    html,
+    body {
+        font-family: 'Roboto';
+        margin: 0 auto;
+        font-size: 1.3vw;
+    }
+    /* Header */
+    
+    .header-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        background: #0077C0;
+        /*Neo header khi cuộn trang*/
+        position: fixed;
+        top: 0;
+        z-index: 3;
+    }
+    
+    .header__item--left {
+        display: flex;
+        flex-basis: 20%;
+    }
+    
+    #logo {
+        height: 3rem;
+        margin: auto 1rem;
+    }
+    
+    .athene {
+        color: white;
+        font-size: 1.5rem;
+        display: inline;
+        line-height: 3rem;
+    }
+    /*Left responsive*/
+    
+    @media screen and (max-width: 600px) {
+        #logo {
+            display: none;
+        }
+    }
+    /*Middle item*/
+    
+    .header__item--middle {
+        overflow: hidden;
+        flex-basis: 60%;
+    }
+    
+    .header__item--middle a {
+        display: block;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding-right: 1.5rem;
+        display: inline;
+        line-height: 3rem;
+    }
+    
+    .header__item--middle a:hover {
+        color: orange;
+    }
+    
+    .header__item--middle .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .header__item--middle a {
+            display: none;
+        }
+        .header__item--middle a.icon {
+            float: left;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .header__item--middle.responsive {
+            position: relative;
+            padding-top: 4rem;
+        }
+        .header__item--middle.responsive .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .header__item--middle.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    .header__item--right {
+        display: flex;
+        flex-basis: 25%;
+        flex-wrap: nowrap;
+    }
+    
+    .header__item--right div {
+        line-height: 2.8rem;
+        margin-left: 1rem;
+    }
+    
+    .header__item--right input {
+        width: 7rem;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        height: 2rem;
+    }
+    
+    #signIn-button {
+        background-color: white;
+        color: black;
+    }
+    
+    #signUp-button {
+        background-color: #FF7E06;
+        color: white;
+    }
+    
+    @media screen and (max-width: 600px) {
+        #signUp-button {
+            display: none;
+        }
+    }
+    /**/
+    
+    @media screen and (max-width: 600px) {
+        .header__item--left {
+            order: 2;
+            flex-basis: 50%;
+        }
+        .header__item--middle {
+            order: 1;
+        }
+        .header__item--right {
+            order: 3;
+        }
+        .athene {
+            font-size: 3rem;
+        }
+        .header__item--right input {
+            width: 10rem;
+            height: 2.5rem;
+        }
+        .header__item--middle .icon {
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+    }
+    /* Introduction */
+    
+    .profile {
+        display: block;
+        margin-top: 3rem;
+    }
+    
+    .cover-image {
+        width: 90%;
+        height: 15rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        z-index: 1;
+    }
+    
+    .user-info {
+        display: flex;
+        width: 8rem;
+        height: 10rem;
+        position: absolute;
+        left: 7rem;
+        /* bottom: 50px; */
+        top: 13rem;
+        z-index: 2;
+    }
+    
+    .user-avatar {
+        border-radius: 50%;
+        margin-right: 2rem;
+        width: 10rem;
+    }
+    
+    .user-name {
+        padding-top: -1rem;
+    }
+    /* Upload cover image */
+    
+    .btn-cover {
+        position: absolute;
+        overflow: hidden;
+        display: inline-block;
+        ;
+        left: 60rem;
+        top: 14rem;
+        z-index: 2;
+    }
+    
+    .btn-cover input {
+        position: absolute;
+        opacity: 0;
+        z-index: 0;
+    }
+    
+    .btn-cover button {
+        height: 2rem;
+        font-size: 1rem;
+    }
+    /* Upload avatar image */
+    
+    .btn-avatar {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        ;
+        right: 5rem;
+        top: 7rem;
+        z-index: 3;
+    }
+    
+    .btn-avatar input {
+        position: absolute;
+        opacity: 0;
+        z-index: 0;
+    }
+    
+    .btn-avatar button {
+        border: none;
+        background: white;
+        font-size: 1.4rem;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+    }
+    /* Body */
+    
+    .user-container {
+        display: flex;
+        position: absolute;
+        top: 25rem;
+        left: 6rem;
+        width: 100%;
+    }
+    
+    .user__item--intro {
+        flex-basis: 25%;
+        border: 1px solid grey;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 3rem;
+        height: 33rem;
+    }
+    
+    #user-bio {
+        text-align: center;
+    }
+    
+    .btn-editinfo {
+        width: 20rem;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        margin: 1rem;
+        font-size: 1rem;
+    }
+    
+    .information {
+        text-align: left;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    
+    .title {
+        font-weight: bold;
+        width: max-content;
+    }
+    
+    .info-line {
+        display: flex;
+        margin: 1rem;
+    }
+    
+    .intro__input {
+        border: none;
+        font-size: 1rem;
+        width: max-content;
+    }
+    
+    .user__item--content {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    
+    .content__item--class,
+    .content__item--exp,
+    .content__item--achieve {
+        border: 1px solid gray;
+        margin-bottom: 3rem;
+        border-radius: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .btn-editcontent {
+        font-size: 1rem;
+        width: 8rem;
+        margin: 1rem;
+        margin-left: 25rem;
+    }
+    /* Footer */
+    
+    .footer-content {
+        width: 100%;
+        display: flex;
+        background: #0077C0;
+        /* position: fixed;
+        bottom: 0; */
+        color: white;
+    }
+    
+    .footer__item--left {
+        margin-left: 6rem;
+        margin-right: 4rem;
+    }
+    
+    .logo-display {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .ministry-logo {
+        width: 6rem;
+    }
+    
+    .footer__item--middle {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    #our-rules {
+        font-size: 1.3rem;
+    }
+    
+    .footer__item--middle a {
+        text-decoration: none;
+        color: white;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer__item--middle a:hover {
+        text-decoration: underline;
+    }
+    
+    .footer__item--right {
+        margin-top: 1rem;
+        margin-left: 6rem;
+    }
+    
+    .text-bold {
+        font-weight: bold;
+    }
+    
+    #payment-logo {
+        width: 13rem;
+        padding-left: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-logo {
+        margin: 0.5rem;
+    }
+    
+    #download {
+        display: flex;
+    }
+    /* QR code - GG store - IOS store */
+    
+    .download-photo {
+        height: 4rem;
+        margin: 0 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    #footer-responsive {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .footer-content {
+            display: none;
+        }
+        #footer-responsive {
+            display: block;
+            background-color: #0077C0;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<body ng-app="AngularApp" ng-controller="ProfileController">
+    <!--Header content-->
+    <div class="header-content">
+        <!--Item left-->
+        <div class="header__item--left">
+            <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
+            <div class="athene">ATHENE</div>
+        </div>
+        <!--Item middle - Navigation menu-->
+        <div class="header__item--middle" id="myNavigation">
+            <a href="#">Trang chủ</a>
+            <a href="#">Tìm gia sư</a>
+            <a href="#">Trở thành gia sư</a>
+            <a href="#">Blog</a>
+            <a href="#">Giới thiệu</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            function myFunction() {
+                var nav = document.getElementById("myNavigation");
+                if (nav.className === "header__item--middle") {
+                    nav.className += " responsive";
+                } else {
+                    nav.className = "header__item--middle";
+                }
+            }
+        </script>
+
+        <!--Item right-->
+        <div class="header__item--right">
+            <div><input id="signIn-button" type="button" value="Đăng nhập" />
+            </div>
+            <div><input id="signUp-button" type="Button" value="Đăng ký" />
+            </div>
+        </div>
+    </div>
+    <!-- Intro content -->
+    <div class="profile">
+        <img class="cover-image" src="../Images/ProfileTutor/background.png" id="cover-image">
+        <div class="user-info">
+            <img class="user-avatar" src="./Images/ProfileTutor/user_ava.jpg" id="user-avatar">
+            <div class="user-name" ng-repeat="x in profiles">
+                <label class="btn-avatar">
+                <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
+                <button><i class='fa fa-camera'></i> </button>
+            </label>
+                <h1>{{x.Name}}</h1>
+                <p>{{x.Followers}}</p>
+            </div>
+        </div>
+        <label class="btn-cover">
+        <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
+        <button> <i class='fa fa-camera'></i> Chỉnh sửa ảnh bìa</button>
+    </label>
+        <!-- User content -->
+        <div class="user-container" ng-repeat="x in profiles">
+            <!-- Left item -->
+            <div class="user__item--intro">
+                <h2>Giới thiệu</h2>
+                <input id="user-bio" readonly class="intro__input" type="text" value="{{x.Bio}}">
+                <br>
+                <button class="btn-editinfo">Chỉnh sửa</button>
+                <h2>Thông tin cá nhân</h2>
+                <div class="information">
+                    <div class="info-line">
+                        <div class="title">Giới tính: &nbsp</div>
+                        <input readonly class="intro__input" for="gender" value="{{x.major}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Ngày sinh: &nbsp</div>
+                        <input readonly class="intro__input" for="birthday" value="{{x.dob}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Sinh viên trường:&nbsp</div>
+                        <input readonly class="intro__input" for="school" value="{{x.Education}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Chuyên ngành:&nbsp </div>
+                        <input class="intro__input" readonly for="major" value="{{x.major}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Đã học tại:&nbsp </div>
+                        <input readonly class="intro__input" for="oldschool" value="{{x.c3}}">
+                    </div>
+                </div>
+                <button class="btn-editinfo">Chỉnh sửa thông tin cá nhân</button>
+                <button class="btn-editinfo">Thêm thông tin chú ý</button>
+            </div>
+            <!-- Right item -->
+            <div class="user__item--content">
+                <!-- Register class -->
+                <div class="content__item--class">
+                    <h3>Lớp đang đăng kí</h3>
+                    <div class="info-line">
+                        <div class="title">Cấp học:&nbsp </div>
+                        <input readonly class="intro__input" value="{{x.class}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Môn học: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.Subject}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Giới tính học viên: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.LearnerGender}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Địa điểm dạy: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.TeachDi}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Thời gian dạy: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.TeachingTime}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Mức lương mong muốn: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.Fee}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Lịch học dự kiến: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.TimeTable}}">
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Mô tả thêm: &nbsp </div>
+                        <input readonly class="intro__input" value="{{x.More}}">
+                    </div>
+                    <button class="btn-editcontent">Chỉnh sửa</button>
+                </div>
+                <!-- Experience -->
+                <div class="content__item--exp">
+                    <h3>Kinh nghiệm làm việc</h3>
+                    <input readonly class="intro__input" value="{{x.Exps[0].Exp1}}">
+                    <br>
+                    <input readonly class="intro__input" value="{{x.Exps[0].Exp2}}">
+                    <br>
+                    <button class="btn-editcontent">Chỉnh sửa</button>
+                </div>
+                <!-- Achievement -->
+                <div class="content__item--achieve">
+                    <h3>Thành tích đạt được</h3>
+                    <input readonly class="intro__input" value="{{x.Achievements[0].Achievements1}}">
+                    <br>
+                    <input readonly class="intro__input" value="{{x.Achievements[0].Achievements2}}">
+                    <br>
+                    <input readonly class="intro__input" value="{{x.Achievements[0].Achievements3}}">
+                    <br>
+                    <button class="btn-editcontent">Chỉnh sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

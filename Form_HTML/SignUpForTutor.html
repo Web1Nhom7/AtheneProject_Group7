@@ -8,12 +8,12 @@
     <title>Sign Up For Tutor</title>
     <link rel="stylesheet" href="../CSS/Form.css">
     <script src="../Js/ProfileFind.js"></script>
-    <script src="../Js/SignUp.js"></script>
+    <script src="../Js/Validation.js"></script>
 </head>
 
 <body>
     <div class="form-container">
-        <form name="contactForm" action="" onsubmit="return checkVal(), checkPassVal(), checkPhoneVal(),confirmPass(),checkCCCD()" method="post">
+        <form name="contactForm" action="#">
             <h2>Chào mừng bạn đến với Athene</h2>
             <div>Thông tin cá nhân của bạn luôn được bảo mật an toàn</div>
             <hr style="border: 1px black solid;  margin: 10px 0;">
@@ -25,6 +25,8 @@
             </div>
             <div class="form-line">
                 <input autocomplete="off" type="number" class="ipbox" name="sodt" id="sodt" placeholder="Số điện thoại (bắt buộc)" oninput="checkPhoneVal()" onblur="checkVal()" required>
+                <div id="phoneError">Số điện thoại không đúng định dạng!</div>
+                <div id="phoneError1">Hãy điền số điện thoại!</div>
             </div>
             <div class="form-line">
                 <div class="flex-item">
@@ -91,6 +93,7 @@
                 </div>
                 <div>
                     <div id="cccdError"> Số CCCD không hợp lệ</div>
+                    <div id="cccdError1"> Hãy điền số CCCD </div>
                 </div>
             </div>
             <div class="form-line flex-item">
@@ -110,8 +113,8 @@
                 <input class="ipbox" type="text" name="degree" placeholder="Bằng cấp khác" id="degree">
             </div>
             <div class="form-line flex-item">
-                <button><a href="./SignUp.html">Quay lại</a></button>
-                <button><a href="#">Tiếp theo</a></button>
+                <input type="reset" value="Quay lại" class="submit"><span><a href="../AtheneMain_HTML/HomePage.html" target="blank"></a></span>
+                <input type="submit" value="Hoàn tất" class="submit">
             </div>
         </form>
     </div>

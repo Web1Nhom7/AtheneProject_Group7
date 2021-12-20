@@ -36,9 +36,11 @@ select.ipbox {
 }
 
 #phoneError,
+#phoneError1,
 #passError,
 #passError1,
-#cccdError {
+#cccdError,
+#cccdError1 {
     color: red;
     font-size: 12px;
     font-style: italic;
