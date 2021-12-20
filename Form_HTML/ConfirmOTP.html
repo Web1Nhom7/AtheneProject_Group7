@@ -23,13 +23,15 @@
             width: 27rem;
             height: 30rem;
             text-align: center;
-        }   
-        img { 
+        }
+        
+        img {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 20%;
         }
+        
         h2,
         .resendOTP {
             color: #636262;
@@ -49,7 +51,8 @@
             height: 2.7rem;
             border-radius: 0.5rem;
             font-size: 1.1rem;
-        }              
+        }
+        
         .number {
             width: 3rem;
             height: 2.5rem;
@@ -58,6 +61,11 @@
             background-color: #EAF7F7;
             text-align: center;
             font-size: 2rem;
+        }
+        
+        #number-error {
+            color: red;
+            display: none;
         }
         
         @media screen and (max-width:600px) {
@@ -72,12 +80,13 @@
             h2 {
                 font-size: 1rem;
             }
-            .number  {
+            .number {
                 width: 2rem;
                 height: 2rem;
                 font-size: 1.3rem;
             }
-            p,.resendOTP{
+            p,
+            .resendOTP {
                 font-size: 0.9rem;
             }
         }
@@ -87,67 +96,130 @@
 <body>
     <div class="container">
         <h1>Xác thực mã OTP</h1>
-        <img  src="../Images/ForAll/Header/Logo.png" >
+        <img src="../Images/ForAll/Header/Logo.png">
         <h2>Mã xác thực đã được gửi qua SĐT <br/> <span>0123456789</span></h2>
         <p><b>Nhập mã OTP</b></p>
         <div>
-            <input class="number" id="1" type="number" maxlength="1" min="0" max="9" oninput="number_check()">
-            <input class="number" id="2" type="number" maxlength="1" min="0" max="9"oninput="number_check()">
-            <input class="number" id="3" type="number" maxlength="1" min="0" max="9" oninput="number_check()">
-            <input class="number" id="4" type="number" maxlength="1" min="0" max="9" oninput="number_check()" >
-            <p id="number-error"></p>
+            <input class="number" id="number1" type="number" name="number" oninput="number_check()">
+            <input class="number" id="number2" type="number" name="number" oninput="number_check()">
+            <input class="number" id="number3" type="number" name="number" oninput="number_check()">
+            <input class="number" id="number4" type="number" name="number" oninput="number_check()">
+            <p id="number-error">Mời bạn nhập giá trị từ 0-9</p>
         </div>
         <script>
-           function number_check(){                      
-                        var first= document.getElementById("1").value;   
-                        var second= document.getElementById("2").value; 
-                        var third= document.getElementById("3").value; 
-                        var fourth= document.getElementById("4").value;   
-                        // Kiểm tra số đầu tiên  
-                            var check = first;                 
-                            if(check >=0 && check<=9){
-                                document.getElementById("number-error").innerHTML= "";
-                            }
-                            else{
-                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
-                                document.getElementById("1").value="";
-                            }
-                            // Kiểm tra số thứ hai
-                           check = second;                 
-                            if(check >=0 && check<=9){
-                                document.getElementById("number-error").innerHTML= "";
-                            }
-                            else{
-                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
-                                document.getElementById("2").value="";
-                            }
-                            // Kiểm tra số thứ ba
-                           check = third;                 
-                            if(check >=0 && check<=9){
-                                document.getElementById("number-error").innerHTML= "";
-                            }
-                            else{
-                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
-                                document.getElementById("3").value="";
-                            }
-                            // Kiểm tra số thứ tư
-                           check = fourth;                 
-                            if(check >=0 && check<=9){
-                                document.getElementById("number-error").innerHTML= "";
-                            }
-                            else{
-                                document.getElementById("number-error").innerHTML= "Mời bạn nhập lại giá trị từ 0-9";
-                                document.getElementById("4").value="";
-                            }
-                        }                            
-                </script>
+            function number_check() {
+                var so1 = document.getElementById("number1").value;
+                var so2 = document.getElementById("number2").value;
+                var so3 = document.getElementById("number3").value;
+                var so4 = document.getElementById("number4").value;
+
+                var error = document.getElementById("number-error");
+
+                if (so1 >= 0 && so1 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number1") = "";
+                    so1.focus();
+
+                }
+
+                if (so2 >= 0 && so2 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number2") = "";
+                    so2.focus();
+
+                }
+                if (so3 >= 0 && so3 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number3") = "";
+                    so3.focus();
+
+                }
+
+                if (so4 >= 0 && so4 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number4") = "";
+                    so4.focus();
+
+                }
+            }
+
+
+
+
+
+            //     var first = document.getElementById("1").value;
+            //     var second = document.getElementById("2").value;
+            //     var third = document.getElementById("3").value;
+            //     var fourth = document.getElementById("4").value;
+            //     // Kiểm tra số đầu tiên  
+            //     var check = first;
+            //     if (check >= 0 && check <= 9) {
+            //         document.getElementById("number-error").innerHTML = "";
+            //     } else {
+            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
+            //         document.getElementById("1").value = "";
+            //     }
+            //     // Kiểm tra số thứ hai
+            //     check = second;
+            //     if (check >= 0 && check <= 9) {
+            //         document.getElementById("number-error").innerHTML = "";
+            //     } else {
+            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
+            //         document.getElementById("2").value = "";
+            //     }
+            //     // Kiểm tra số thứ ba
+            //     check = third;
+            //     if (check >= 0 && check <= 9) {
+            //         document.getElementById("number-error").innerHTML = "";
+            //     } else {
+            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
+            //         document.getElementById("3").value = "";
+            //     }
+            //     // Kiểm tra số thứ tư
+            //     check = fourth;
+            //     if (check >= 0 && check <= 9) {
+            //         document.getElementById("number-error").innerHTML = "";
+            //     } else {
+            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
+            //         document.getElementById("4").value = "";
+            //     }
+            // }
+        </script>
         <p class="resendOTP">Bạn chưa nhận được mã?<button type="button">Gửi lại OTP</button>
         </p>
-        <button type="button" id="confirm">Xác nhận</button>
+        <button type="submit" id="confirm" onclick="Submit()">Xác nhận</button>
+
 
 
     </div>
+    <script>
+        function Submit() {
+            if (typeof(Storage) !== undefined) {
+                var so1 = document.getElementById("number1").value;
+                var so2 = document.getElementById("number2").value;
+                var so3 = document.getElementById("number3").value;
+                var so4 = document.getElementById("number4").value;
+                if (so1 === "1" && so2 === "2" && so3 === "3" && so4 === "4") {
+                    window.location.href = "../Login.html";
 
+                    sessionStorage.setItem("number1", so1);
+                    sessionStorage.setItem("number2", so2);
+                    sessionStorage.setItem("number3", so3);
+                    sessionStorage.setItem("number4", so4);
+
+
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
