@@ -44,27 +44,10 @@ function checkVal() {
     }
 }
 
-<<<<<<< HEAD
 //     //Số chứng minh nhân dân phải đủ 12 số
 var cccd = document.getElementById("cccd");
 var cccdError = document.getElementById("cccdError");
 var vnRegex1 = /((00)+[0-9]{12}\b)/g;
-=======
-    //Số chứng minh nhân dân phải đủ 12 số
-    var cccd = document.getElementById("cccd");
-    var cccdError = document.getElementById("cccdError");
-    var vnRegex1 = /((0)+[0-9]{11}\b)/g;
-
-    if (cccd.value !== '') {
-        if (vnRegex1.test(cccd.value) == false) {
-            cccd.style.border = "2px solid red";
-            cccdError.style.display = 'block';
-            cccd.focus();
-            return false;
-
-        }
-    } else {
->>>>>>> a93c88a4067c60c2ef10c5642ae85375cafd1be5
 
 if (cccd.value !== '') {
     if (vnRegex1.test(cccd.value) == false) {
