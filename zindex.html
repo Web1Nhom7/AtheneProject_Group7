@@ -130,7 +130,7 @@
         .user__item--intro {
             flex-basis: 25%;
             border: 1px solid grey;
-            padding: 1rem;
+            padding: 0.5rem;
             text-align: center;
             border-radius: 3rem;
             height: 33rem;
@@ -168,6 +168,9 @@
         .intro__textarea {
             border: none;
             font-size: 1rem;
+            font-family: 'Roboto';
+            line-height: 1rem;
+            resize: none;
         }
         
         .user__item--content {
@@ -218,7 +221,7 @@
             <!-- Left item -->
             <div class="user__item--intro">
                 <h2>Giới thiệu</h2>
-                   <textarea class="intro__textarea" readonly cols="30" rows="2" maxlength="100">{{x.Bio}}</textarea>
+                   <textarea class="intro__textarea" readonly cols="30" rows="2" maxlength="100" style="text-align: center;">{{x.Bio}}</textarea>
                 <br>
                 <button class="btn-editinfo">Chỉnh sửa</button>
                 <h2>Thông tin cá nhân</h2>
@@ -229,19 +232,20 @@
                     </div>
                     <div class="info-line">
                         <div class="title">Ngày sinh: &nbsp</div>
-                        <input readonly class="intro__input" for="birthday" value="{{x.dob}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.dob}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title"> Sinh viên trường:&nbsp</div>
-                        <input readonly class="intro__input" for="school" value="{{x.Education}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.Education}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title"> Chuyên ngành:&nbsp </div>
-                        <input class="intro__input" readonly for="major" value="{{x.major}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.major}}</textarea>
+                        
                     </div>
                     <div class="info-line">
                         <div class="title">Đã học tại:&nbsp </div>
-                        <input readonly class="intro__input" for="oldschool" value="{{x.c3}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.c3}}</textarea>
                     </div>
                 </div>
                 <button class="btn-editinfo">Chỉnh sửa thông tin cá nhân</button>
@@ -253,63 +257,60 @@
                 <div class="content__item--class">
                     <h3>Lớp đang đăng kí</h3>
                     <div class="info-line">
-                        <div class="title">Cấp học:&nbsp </div>
-                        <input readonly class="intro__input" value="{{x.class}}">
+                        <div class="title">Cấp dạy:&nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.class}}</textarea>
+                        
                     </div>
                     <div class="info-line">
-                        <div class="title">Môn học: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.Subject}}">
+                        <div class="title">Môn dạy: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.Subject}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title">Giới tính học viên: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.LearnerGender}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.LearnerGender}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title">Địa điểm dạy: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.TeachDi}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TeachDi}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title">Thời gian dạy: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.TeachingTime}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TeachingTime}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title">Mức lương mong muốn: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.Fee}}">
+                        <textarea class="intro__textarea" readonly cols="40" rows="1">{{x.Subject}}{{x.Fee}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title"> Lịch học dự kiến: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.TimeTable}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TimeTable}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title"> Mô tả thêm: &nbsp </div>
-                        <input readonly class="intro__input" value="{{x.More}}">
+                        <textarea class="intro__textarea" readonly cols="40" rows="4" maxlength="200">{{x.More}}</textarea>
                     </div>
                     <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
                 <!-- Experience -->
                 <div class="content__item--exp">
                     <h3>Kinh nghiệm làm việc</h3>
-                    <input readonly class="intro__input" value="{{x.Exps[0].Exp1}}">
+                    <textarea class="intro__textarea" readonly cols="45" rows="2">{{x.Exps[0].Exp1}} </textarea>
                     <br>
-                    <input readonly class="intro__input" value="{{x.Exps[0].Exp2}}">
+                    <textarea class="intro__textarea" readonly cols="45" rows="2">{{x.Exps[0].Exp2}}</textarea>
                     <br>
                     <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
                 <!-- Achievement -->
                 <div class="content__item--achieve">
                     <h3>Thành tích đạt được</h3>
-                    <input readonly class="intro__input" value="{{x.Achievements[0].Achievements1}}">
-                    <br>
-                    <input readonly class="intro__input" value="{{x.Achievements[0].Achievements2}}">
-                    <br>
-                    <input readonly class="intro__input" value="{{x.Achievements[0].Achievements3}}">
-                    <br>
+                    <textarea class="intro__textarea" readonly cols="40" rows="1" maxlength="100">{{x.Achievements[0].Achievements1}}</textarea>
+                    <textarea class="intro__textarea" readonly cols="40" rows="1" maxlength="100">{{x.Achievements[0].Achievements2}}</textarea>
+                    <textarea class="intro__textarea" readonly cols="30" rows="1" maxlength="100">{{x.Achievements[0].Achievements3}}</textarea>
                     <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
             </div>
         </div>
     </div>
-
 
 </body>
 
