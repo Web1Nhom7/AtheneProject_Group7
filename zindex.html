@@ -50,7 +50,7 @@
         
         .user-info {
             display: flex;
-            width: 8rem;
+            width: max-content;
             height: 10rem;
             position: absolute;
             left: 7rem;
@@ -67,6 +67,7 @@
         
         .user-name {
             padding-top: -1rem;
+            
         }
         /* Upload cover image */
         
@@ -164,10 +165,9 @@
             margin: 1rem;
         }
         
-        .intro__input {
+        .intro__textarea {
             border: none;
             font-size: 1rem;
-            width: max-content;
         }
         
         .user__item--content {
@@ -218,14 +218,14 @@
             <!-- Left item -->
             <div class="user__item--intro">
                 <h2>Giới thiệu</h2>
-                <input id="user-bio" readonly class="intro__input" type="text" value="{{x.Bio}}">
+                   <textarea class="intro__textarea" readonly cols="30" rows="2" maxlength="100">{{x.Bio}}</textarea>
                 <br>
                 <button class="btn-editinfo">Chỉnh sửa</button>
                 <h2>Thông tin cá nhân</h2>
                 <div class="information">
                     <div class="info-line">
                         <div class="title">Giới tính: &nbsp</div>
-                        <input readonly class="intro__input" for="gender" value="{{x.major}}">
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.major}}</textarea>
                     </div>
                     <div class="info-line">
                         <div class="title">Ngày sinh: &nbsp</div>
