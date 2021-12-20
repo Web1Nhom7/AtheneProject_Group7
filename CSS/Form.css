@@ -1,6 +1,7 @@
 .form-container {
     width: 40%;
     margin: 0 auto;
+    min-width: 350px;
 }
 
 .form-line {
@@ -44,9 +45,6 @@ select.ipbox {
     display: none;
 }
 
-#ngay,
-#thang,
-#nam,
 #phuong,
 #quan,
 #tp {
@@ -69,8 +67,8 @@ input {
 }
 
 #ngaycap,
-#cccd {
-    width: 85%;
+#cccd, #pass {
+    width: 100%;
 }
 
 label {
@@ -123,15 +121,10 @@ button,
         flex-direction: row;
         margin-top: 0.5rem;
     }
-    #sonha {
-        width: 54%;
-    }
+    #sonha,
     #duong,
     #phuong,
-    #tp {
-        width: 97%;
-    }
-    #quan {
+    #tp, #quan 
+    {
         width: 100%;
-    }
-}
+    }}
