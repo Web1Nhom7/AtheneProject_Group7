@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="./Js/Account.js"></script>
+
 
     <style>
         /* Button deco */
@@ -122,7 +122,8 @@
         }
         
         #phoneError,
-        #phoneError1 {
+        #phoneError1,
+        #passError {
             font-size: 1.1rem;
             color: red;
             display: none;
@@ -192,7 +193,6 @@
                 return false;
 
             }
-
         }
 
         function checkPhoneVal() {
@@ -222,12 +222,14 @@
                 pass.style.border = "2px solid green";
                 pass_error.style.display = "none";
                 return true;
+            } else {
+                pass.style.border = "2px solid white";
             }
         }
     </script>
 </head>
 
-<body ng-app="AngularApp" ng-controller="AccountController">
+<body>
 
     <!-- <script ng-repeat="user in accounts">
         if (typeof(Storage) !== undefined) {
@@ -247,7 +249,7 @@
 </button>
         <!-- Modal -->
         <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
-            <form class="modal-dialog" role="document" action="./AtheneMain_HTML/HomePage.html">
+            <form class="modal-dialog" role="document">
                 <div class="modal-content clearfix">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     <div class="modal-body">
@@ -255,29 +257,78 @@
                         <hr>
                         <div class="content">
                             <label class="form__label">Số điện thoại:</label> <br>
-                            <input type="tel" name="sodt" id="sodt" class="form__input" maxlength="10" required onblur="checkVal()" oninput="checkPhoneVal()">
+                            <input type="tel" name="sodt" id="sodt" class="form__input" required onblur="checkVal()" oninput="checkPhoneVal()">
                             <div id="phoneError">Số điện thoại không đúng định dạng!</div>
                             <div id="phoneError1">Hãy nhập số điện thoại!</div>
                             <label class="form__label">Mật khẩu:</label>
-                            <input class="form__input" type="password" id="pass" autocomplete="current-password" name="password" minlength="8" required oninput="checkPassVal()">
+                            <input class="form__input" type="password" id="pass" required autocomplete="current-password" name="password" minlength="8" oninput="checkPassVal()">
+                            <div id="passError">Hãy nhập mật khẩu!</div>
                             <div class="forgotten"><a href="./ConfirmOTP.html">Quên mật khẩu?</a></div>
                             <button type="submit" class="btnLogin" onclick="Login()">Đăng nhập</button>
                             <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng ký</a></p>
+
                         </div>
                     </div>
                 </div>
-            </form>
-            <script ng-repeat="user in accounts">
-                function Login() {
-                    if (typeof(Storage) !== undefined) {
-                        var username = document.getElementById("sodt").value;
-                        var password = document.getElementById("pass").value;
-                        if (username === "{{user.username}}" && password === "{{user.password}}") {
 
-                            localStorage.setItem("username", username);
-                            localStorage.setItem("password", password);
+            </form>
+            <script>
+                function Login() {
+                    var sodt = document.getElementById("sodt").value;
+                    var pass = document.getElementById("pass").value;
+
+                    var danhSachKhachHang = JSON.parse(localStorage.getItem('danhSachKhachHang'));
+
+                    if (typeof(Storage) !== undefined) {
+
+                        for (var i = 0; i < danhSachKhachHang.length; i++) {
+                            if (sodt == danhSachKhachHang[i].phone && pass == danhSachKhachHang[i].password) {
+                                window.location.href = "./AtheneMain_HTML/HomePage.html"
+
+                                var userLogin = "userName: " +
+                                    JSON.stringify(sodt) + "; " + "password: " +
+                                    JSON.stringify(pass);
+                                sessionStorage.setItem("userLogin", userLogin);
+
+                                sessionLogin(sodt, pass);
+                                return true;
+                            } else {
+                                alert("Tên đăng nhập hoặc mật khẩu chưa đúng." + "\n" + "Vui lòng nhập lại thông tin!");
+
+                                document.getElementById("sodt").value = "";
+                                document.getElementById("pass").value = "";
+                                return false;
+
+                            }
+
                         }
                     }
+                }
+
+                function sessionLogin() {
+                    var sodt = document.getElementById("sodt").value;
+                    var pass = document.getElementById("pass").value;
+
+                    var user = new Object();
+                    user.phone = sodt;
+                    user.password = pass;
+
+                    var danhSachKhachHang = JSON.parse(localStorage.getItem('danhSachKhachHang'));
+                    for (var i = 0; i < danhSachKhachHang.length; i++) {
+                        if (user.phone == danhSachKhachHang[i].phone && user.password == danhSachKhachHang[i].password) {
+                            user.name = danhSachKhachHang[i].name;
+                            user.phone = danhSachKhachHang[i].phone;
+                            user.password = danhSachKhachHang[i].password;
+                            user.birthday = danhSachKhachHang[i].birthday;
+                            user.gender = danhSachKhachHang[i].gender;
+                            user.address = danhSachKhachHang[i].address;
+                            user.CCCD = danhSachKhachHang[i].CCCD;
+                            user.ngayCapCCCD = danhSachKhachHang[i].ngayCapCCCD;
+                            user.id = danhSachKhachHang[i].id;
+                            break;
+                        }
+                    }
+                    localStorage.setItem('sessionLogin', JSON.stringify(user));
                 }
             </script>
             <script type="text/javascript " src="https://code.jquery.com/jquery-1.12.0.min.js "></script>
