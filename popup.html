@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Pop up -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="../Js/Header.js"></script>
 </head>
 <style>
@@ -119,7 +120,6 @@
     }
     
     .header__item--right div {
-   
         margin-left: 1rem;
     }
     
@@ -143,6 +143,9 @@
     
     @media screen and (max-width: 600px) {
         #signUp-button {
+            display: none;
+        }
+        .modal{
             display: none;
         }
     }
@@ -172,7 +175,7 @@
         }
     }
     /* Pop up sign up */
-    .modal-content .close{
+     .modal-content .close{
     color: rgb(29, 24, 24);
     font-size: 3rem;
     font-weight: 400;
@@ -181,57 +184,60 @@
     right: 1rem;
     top: 1rem;
     z-index: 1;
-}
-    .modal-body{
-    font-family: Roboto;
+    }
+
+    .modal-dialog{
+        width: 50%;
+        text-align: center;
+        margin-left: auto;
+        left: 16rem;
+        top: 5rem;
+    }
+    .modal-content{
     color: white;
     background-image: url(../Images/SignIn_SignUp/Background_SignIn.png);
-    background-size: 100%;
+    background-size:100%;
     background-repeat: no-repeat;
-    text-align: center;
-    height: 40rem;
-}
-    .btnCategory{
-    margin-top: 3rem;
-}
+    height: 25rem;  
+    padding: 2rem 0;
+    }
+    .modal-body h1{
+        font-size: 2rem;
+    }
+    .modal-body p{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
     .btnCategory input {
-                background-color: #FF7E06;
-                border: none;
-                border-radius: 1rem;
-                color: white;
-                font-weight: bold;
-                width: 30%;
-                height:6rem;
-                margin: 1rem;
-                font-size: 2rem;
-}
-    hr {
-            width: 12rem;
-            height: 0.5rem;
-            background-color: #093BBA;
-            border: none;
-            margin-top: 0;
-}
-@media screen and (max-width:600px){
-    .modal-content{
-    height: 30rem;
-    width: 90%;
-}
-.btnCategory{
-    margin-top: 1rem;
-}
-h1{
-    font-size: 3rem;
-}
-h3{
-    font-size: 2rem;
-}
-.btnCategory input {
-    height:5rem;
-    margin: 1.2rem;
+    background-color: #FF7E06;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    width: 30%;
+    height:3rem;
+    margin: 0.5rem;
     font-size: 1.5rem;
 }
+    hr {
+    width: 12rem;
+    height: 0.5rem;
+    background-color: #093BBA;
+    border: none;
+    margin-top: 0;
 }
+@media screen and (max-width: 600px) {
+    .modal-content{
+    padding: 0;
+    }
+    hr {
+    margin-top: -1rem;
+}
+    .modal-body p{
+        font-size: 1.5rem;
+        margin-top: -2rem;
+    }
+    }
 </style>
 </head>
 
@@ -261,24 +267,25 @@ h3{
                 <a href="../Form_HTML/SignIn.html"><input id="signIn-button" type="button" value="Đăng nhập" /></a>
             </div>
             <div>
-                <input id="signIn-button" type="button" data-toggle="modal" data-target="#myLogin" value="Đăng nhập">
+                <input id="signUp-button" type="button" data-toggle="modal" data-target="#myLogin" value="Đăng ký">
             </div>
+            <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content clearfix">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>   
+                        <div class="modal-body">
+                        <h1 >ĐĂNG KÝ</h1>
+                    <hr>
+                        <p>Chọn loại tài khoản phù hợp với nhu cầu của bạn</p>
+                    <div class="btnCategory">
+                        <a href="./SignUpForLearner.html" target="_blank"><input type="button" value="Học viên"></a> <br>
+                        <a href="./SignUpForTutor.html" target="_blank"> <input type="button" value="Gia sư "></a>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
             <!-- Modal -->
-<div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content clearfix">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="modal-body">
-                <h1 >ĐĂNG KÝ</h1>
-        <hr>
-        <h3>Chọn loại tài khoản phù hợp với nhu cầu của bạn</h3>
-        <div class="btnCategory">
-            <a href="./SignUpForLearner.html" target="_blank"><input type="button" value="Học viên"></a> <br>
-            <a href="./SignUpForTutor.html" target="_blank"> <input type="button" value="Gia sư "></a>
-        </div>
-    </div>
-</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
         </div>
     </div>
 </body>
