@@ -162,6 +162,9 @@
     .user__item--intro h2 {
         font-size: 1.5rem;
     }
+    .user-name h1{
+        margin-top: -0.01rem;
+    }
 }
 @media screen and (max-width: 600px) {
     #footer-responsive {
@@ -169,4 +172,5 @@
        position: fixed;
        width: 100%;
     }
+   
 }
