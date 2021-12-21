@@ -1,5 +1,6 @@
 [{
         "Name": "Hướng Hàm Chi",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
         "Direct": "Quận Bình Thạnh",
         "Gender": "Nữ",
         "Subject": "Anh văn giao tiếp",
@@ -7,27 +8,30 @@
         "Education": "Trường Đại học Kinh tế - Luật"
     },
     {
-        "Name": "Hướng Hàm Chi",
-        "Direct": "Quận Bình Thạnh",
+        "Name": "Trương Vy Á",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận 6",
         "Gender": "Nam",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Subject": "Báo bài",
+        "Fee": "2.8 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Kinh tế "
     },
     {
-        "Name": "Hướng Hàm Chi",
-        "Direct": "Quận Bình Thạnh",
+        "Name": "Trương Hằng",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận Tân Bình",
         "Gender": "Nữ",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Subject": "Luyện thi đại học",
+        "Fee": "3.2 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Bách Khoa"
     },
     {
-        "Name": "Hướng Hàm Chi",
-        "Direct": "Quận Bình Thạnh",
-        "Gender": "Nữ",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Name": "Trịnh Phàm",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận Bình Chánh",
+        "Gender": "Nam",
+        "Subject": "Văn - Hóa",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Văn Lang"
     }
 ]
