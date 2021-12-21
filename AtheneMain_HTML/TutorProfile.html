@@ -13,6 +13,24 @@
     <script src="../Js/Header.js"></script>
     <script src="../Js/angular.min.js"></script>
     <script src="../Js/ProfileRender.js"></script>
+    <script>
+        var loadCover = function(event) {
+            var cover = document.getElementById('cover-image');
+            cover.src = URL.createObjectURL(event.target.files[0]);
+            cover.onload = function() {
+                URL.revokeObjectURL(cover.src)
+            }
+        };
+    </script>
+    <script>
+        var loadAvatar = function(event) {
+            var avatar = document.getElementById('user-avatar');
+            avatar.src = URL.createObjectURL(event.target.files[0]);
+            avatar.onload = function() {
+                URL.revokeObjectURL(avatar.src)
+            }
+        };
+    </script>
 </head>
 
 <body ng-app="AngularApp" ng-controller="ProfileController">
@@ -22,158 +40,122 @@
          w3.includeHTML();
      </script> 
      <!-- Body  -->
-        <img class="background" width="100%" height="300px" src="../Images/ProfileTutor/background.png">
-        <div class="frame-edit">
-            <button>
-                <input accept="image/*,image/heif,image/heic" class="button_edit-background" type="file"  >
-                <div aria-label="Chỉnh sửa ảnh bìa" role="button"> <i class="material-icons">photo_camera</i>
-                    <div class="frame-edit-photo">
-                        <div id="camera">
-                            <i class="material-icons">photo_camera</i>
-                        </div>
-                            <span id="text">Chỉnh sửa ảnh bìa</span>
-                    </div>
-                </div>
-            </button>
-        </div>
-        <div>
-            <div class="ava" ng-repeat="x in profiles">
-                <div>
-                    <img src="../Images/ProfileTutor/user_ava.jpg" width="15%" alt="This is my ava" style="border-radius: 50%;">
-                <i style="font-size: 2.3em;
-                margin-left: -3%;" class="material-icons">photo_camera</i>
-                </div>
-                <div>
-                    <h1>{{x.Name}}</h1>
-                    <p>{{x.Followers}}</p>
-                </div>
+     <div class="profile">
+        <img class="cover-image" src="../Images/ProfileTutor/background.png" id="cover-image">
+        <div class="user-info">
+            <img class="user-avatar" src="../Images/ProfileTutor/user_ava.jpg" id="user-avatar">
+            <div class="user-name" ng-repeat="x in profiles">
+                <label class="btn-avatar">
+                    <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
+                    <button><i class='fa fa-camera'></i> </button>
+                </label>
+                <h1>{{x.Name}}</h1>
+                <p>{{x.Followers}}</p>
             </div>
         </div>
-    </div>
-    <hr>
-
-    <!-- Body-content -->
-    <div class="body-content" ng-repeat="x in profiles">
-        <div class="body-left">
-            <div class="body__left-content">
-                <div>
-                    <h2>Giới thiệu</h2>
-                    <label for="intro">{{x.Bio}}</label>
+        <label class="btn-cover">
+            <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
+            <button> <i class='fa fa-camera'></i> Chỉnh sửa ảnh bìa</button>
+        </label>
+        <!-- User content -->
+        <div class="user-container" ng-repeat="x in profiles">
+            <!-- Left item -->
+            <div class="user__item--intro">
+                <h2>Giới thiệu</h2>
+                   <textarea class="intro__textarea" readonly cols="30" rows="2" maxlength="100" style="text-align: center;">{{x.Bio}}</textarea>
+                <br>
+                <button class="btn-editinfo">Chỉnh sửa</button>
+                <h2>Thông tin cá nhân</h2>
+                <div class="information">
+                    <div class="info-line">
+                        <div class="title">Giới tính: &nbsp</div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.major}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Ngày sinh: &nbsp</div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.dob}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Sinh viên trường:&nbsp</div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.Education}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Chuyên ngành:&nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.major}}</textarea>
+                        
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Đã học tại:&nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.c3}}</textarea>
+                    </div>
                 </div>
-                <div>
-                    <button class="btn-edit btn">Chỉnh sửa</button>
+                <button class="btn-editinfo">Chỉnh sửa thông tin cá nhân</button>
+                <button class="btn-editinfo">Thêm thông tin chú ý</button>
+            </div>
+            <!-- Right item -->
+            <div class="user__item--content">
+                <!-- Register class -->
+                <div class="content__item--class">
+                    <h3>Lớp đang đăng kí</h3>
+                    <div class="info-line">
+                        <div class="title">Cấp dạy:&nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.class}}</textarea>
+                        
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Môn dạy: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.Subject}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Giới tính học viên: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.LearnerGender}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Địa điểm dạy: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TeachDi}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Thời gian dạy: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TeachingTime}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title">Mức lương mong muốn: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="40" rows="1">{{x.Subject}}{{x.Fee}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Lịch học dự kiến: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TimeTable}}</textarea>
+                    </div>
+                    <div class="info-line">
+                        <div class="title"> Mô tả thêm: &nbsp </div>
+                        <textarea class="intro__textarea" readonly cols="40" rows="4" maxlength="200">{{x.More}}</textarea>
+                    </div>
+                    <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
-                <div>
-                    <h2>Thông tin cá nhân</h2>
-                    <div class="info-line">
-                        Giới tính:
-                        <label for="gender">{{x.Gender}}</label>
-                    </div>
-                    <div class="info-line">
-                        Ngày sinh: 
-                        <label for="birthday">{{x.dob}}</label>
-                    </div>
-                    <div class="info-line">
-                        Đã học tại: 
-                        <label for="oldschool">{{x.c3}}</label>
-                    </div>
-                    <div class="info-line">
-                    Sinh viên trường: 
-                    <label for="school">{{x.Education}}</label>
-                    </div>
-                    <div class="info-line">
-                        Chuyên ngành: 
-                        <label for="major">{{x.major}}</label>
-                    </div>
+                <!-- Experience -->
+                <div class="content__item--exp">
+                    <h3>Kinh nghiệm làm việc</h3>
+                    <textarea class="intro__textarea" readonly cols="45" rows="2">{{x.Exps[0].Exp1}} </textarea>
+                    <br>
+                    <textarea class="intro__textarea" readonly cols="45" rows="2">{{x.Exps[0].Exp2}}</textarea>
+                    <br>
+                    <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
-                <div>
-                    <button class="btn_editprivate btn">Chỉnh sửa thông tin cá nhân</button>
-                </div>
-                <div id="space-btn">
-                    <button class="btn_addinfo btn">Thêm thông tin chú ý</button>
+                <!-- Achievement -->
+                <div class="content__item--achieve">
+                    <h3>Thành tích đạt được</h3>
+                    <textarea class="intro__textarea" readonly cols="40" rows="1" maxlength="100">{{x.Achievements[0].Achievements1}}</textarea>
+                    <textarea class="intro__textarea" readonly cols="40" rows="1" maxlength="100">{{x.Achievements[0].Achievements2}}</textarea>
+                    <textarea class="intro__textarea" readonly cols="30" rows="1" maxlength="100">{{x.Achievements[0].Achievements3}}</textarea>
+                    <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
             </div>
-        </div>
-
-        
-        <div class="body-right">
-            <div class="body__right-content">
-                <div>
-                    <h3 class="colorbg">Lớp đang đăng kí</h3>
-                <div>
-                    <div class="info-line">
-                     Cấp học: 
-                    <label for="grade">{{x.class}}</label>
-                    </div>
-                    <div class="info-line">
-                    Môn học: 
-                    <label for="subject">{{x.Subject}}</label>
-                    </div>
-                    <div class="info-line">
-                       Giới tính học viên:
-                        <label for="gender">{{x.LearnerGender}}</label>
-                    </div>
-                    <div class="info-line">
-                        Địa điểm dạy: 
-                        <label for="address">{{x.TeachDi}}</label>
-                    </div>
-                    <div class="info-line">
-                        Thời gian dạy: 
-                        <label for="timeteach">{{x.TeachingTime}}</label>
-                    </div>
-                    <div class="info-line">
-                        Mức lương mong muốn:
-                        <label for="salary">{{x.Fee}}</label>
-                    </div>
-                    <div class="info-line">
-                        Lịch học dự kiến:
-                        <label for="routine">{{x.TimeTable}}</label>
-                    </div>
-                    <div class="info-line">
-                       Mô tả thêm: 
-                        <label for="description">{{x.More}}</label>
-                    </div>
-                    <button class="btn-edit-class btn-right">Chỉnh sửa</button>
-                </div>
-            </div></div>
-            <div class="body__right-content">
-                <h3 class="colorbg">Kinh nghiệm làm việc</h3>
-                <div>
-                    <div class="info-line">
-                        <label for="experience">{{x.Exps[0].Exp1}} </label>
-                     </div>
-                     <div class="info-line">
-                        <label for="experience"> {{x.Exps[0].Exp2}}</label>
-                     </div>
-                </div>
-                <div>
-                    <button class="btn-edit-experience btn-right">Chỉnh sửa</button>
-                </div>
-            </div>
-            
-<div class="body__right-content">
-    <div >
-        <h3 class="colorbg">Thành tích đạt được</h3>
-    </div>
-        <div class="info-line">
-            <label for="award">{{x.Achievements[0].Achievements1}}  </label>
-         </div>
-         <div class="info-line">
-            <label for="award">{{x.Achievements[0].Achievements2}} </label>
-         </div>
-         <div class="info-line">
-            <label for="award">{{x.Achievements[0].Achievements3}}  </label>
-         </div>
-    <div>
-        <button class="btn-edit-award btn-right">Chỉnh sửa</button>
-    </div>
-</div>
         </div>
     </div>
     <!-- Footer -->
-    <div w3-include-html="./Footer.html"></div>
+    <!-- <div w3-include-html="./Footer.html"></div>
     <script>
         w3.includeHTML();
-    </script>
+    </script> -->
 </body>
 </html>

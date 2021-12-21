@@ -1,139 +1,161 @@
 /* Profile header */
-.background {
-    position: relative;
-    z-index: -1;
+.profile {
+    display: block;
+}
+
+.cover-image {
     width: 90%;
-    height: 20em;
-    margin: 5% 5% 0 5%;
-    border-radius: 20px; 
-}
-
-.frame-edit {
-    width: fit-content;
-    background-color: white;
+    height: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     z-index: 1;
+    margin-top: 2rem;
+}
+
+.user-info {
+    display: flex;
+    width: max-content;
+    height: 10rem;
+    position: absolute;
+    left: 7rem;
+    /* bottom: 50px; */
+    top: 13rem;
+    z-index: 2;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    margin-right: 2rem;
+    width: 10rem;
+}
+
+.user-name {
+    padding-top: -1rem;
+    
+}
+/* Upload cover image */
+
+.btn-cover {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    ;
+    left: 60rem;
+    top: 14rem;
+    z-index: 2;
+}
+
+.btn-cover input {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+
+.btn-cover button {
+    height: 2rem;
+    font-size: 1rem;
+}
+/* Upload avatar image */
+
+.btn-avatar {
     position: relative;
-    margin-top: -4em;
-    margin-left: 80%;
+    overflow: hidden;
+    display: inline-block;
+    ;
+    right: 5rem;
+    top: 7rem;
+    z-index: 3;
 }
 
-.frame-edit-photo {
+.btn-avatar input {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+
+.btn-avatar button {
+    border: none;
+    background: white;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+/* Body */
+
+.user-container {
     display: flex;
+    position: absolute;
+    top: 25rem;
+    left: 6rem;
 }
 
-#text{
-    height: 2em;
-}
-#camera {
-    margin: 0 1rem;
-}
-
-.ava {
-    width: 60rem;
-    /* margin-left: 100px;
-    margin-top: -20px;
-    display: flex; */
-    margin: 0;
+.user__item--intro {
+    flex-basis: 25%;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 3rem;
+    height: 33rem;
 }
 
-/* body */
-.body-content {
-    display: flex;
-    flex-direction: row;
-    font-size: 1.2em;
-}
-.btn {
-    width: 100%;
-}
-.info-line{
-    margin: 1rem 0;
-    font-weight: bold;
-}
-label{
-    font-weight: normal;
-}
-h2,
-h3 {
+#user-bio {
     text-align: center;
 }
 
-h2 {
-    color: #0077C0;
-}
-
-
-/* body left */
-
-.body-left {
-    width: 30%;
-    margin: 2rem;
-}
-.body__left-content {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 0rem 2rem 2rem 2rem;
-}
-
-/* body rigth */
-.body-right {
-    width: 65%;
-    margin: 2rem;
-}
-
-.body__right-content {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 4rem;
-    margin-bottom: 2rem;
-    padding: 0rem 4rem 2rem 4rem;
-}
-
-
-
-
-
-/* .btn-edit{
-    margin: 2rem 0;
-    padding: 0.3rem;
-} */
-
-/* #space-btn {
-    margin-top: 20px;
-} */
-
-
-/* .btn-right {
-    justify-content: right;
-    width: 8rem;
-    float: inline-end;
-} */
-
-.colorbg {
-    background-color: #0077C0;
-    width: 80%;
-    color: white;
-    border-radius: 2rem;
-    margin-left: auto;
+.btn-editinfo {
+    width: 20rem;
     margin-right: auto;
-    padding: 2px;
+    margin-left: auto;
+    display: block;
+    margin: 1rem;
+    font-size: 1rem;
 }
 
-
-/* CSS Show Tutor Profile */
-
-/* .frame-button {
-    margin: 20px;
-} */
-
-/* .btn-follow {
+.information {
+    text-align: left;
     margin-bottom: 2rem;
-    height: 2rem;
-    background-color: #0077C0;
-    color: white;
+    font-size: 1rem;
 }
 
-.btn-signin {
-    height: 2rem;
-    background-color: #0077C0;
-    color: white;
-} */
+.title {
+    font-weight: bold;
+    width: max-content;
+}
+
+.info-line {
+    display: flex;
+    margin: 1rem;
+}
+
+.intro__textarea {
+    border: none;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    line-height: 1rem;
+    resize: none;
+}
+
+.user__item--content {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.content__item--class,
+.content__item--exp,
+.content__item--achieve {
+    border: 1px solid gray;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+    padding-left: 2rem;
+}
+
+.btn-editcontent {
+    font-size: 1rem;
+    width: 8rem;
+    margin: 1rem;
+    margin-left: 25rem;
+}
