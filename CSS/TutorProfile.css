@@ -16,7 +16,7 @@
     display: flex;
     height: 10rem;
     position: relative;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
 }
 
 .user-avatar {
@@ -27,7 +27,9 @@
 
 .user-name {
     padding-top: -1rem;
-    
+}
+.user-name h1{
+    font-size: 2rem;
 }
 /* Upload cover image */
 
@@ -78,6 +80,7 @@
 .user-container {
     display: flex;
     position: relative;
+    margin: -1rem 4rem;
 }
 
 .user__item--intro {
@@ -88,7 +91,10 @@
     border-radius: 3rem;
     height: fit-content;
 }
-
+.user__item--intro h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 #user-bio {
     text-align: center;
 }
@@ -98,7 +104,7 @@
     margin-right: auto;
     margin-left: auto;
     display: block;
-    margin: 1rem;
+
     font-size: 1rem;
 }
 
@@ -108,7 +114,7 @@
     /* font-size: 1rem; */
 }
 
-.title {
+.info-line .title {
     font-weight: bold;
     /* width: max-content; */
 }
@@ -132,7 +138,10 @@
     flex-direction: column;
     margin-left: 3rem;
 }
-
+.user__item--content h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 .content__item--class,
 .content__item--exp,
 .content__item--achieve {
@@ -147,4 +156,20 @@
     width: 8rem;
     margin: 1rem;
     margin-left: 25rem;
+}
+@media screen and (max-width: 1024px) {
+    .user__item--intro h2 {
+        font-size: 1.5rem;
+    }
+    .user-name h1{
+        margin-top: -0.01rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    #footer-responsive {
+       bottom: 0;
+       position: fixed;
+       width: 100%;
+    }
+   
 }
