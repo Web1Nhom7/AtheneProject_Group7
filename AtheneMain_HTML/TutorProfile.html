@@ -33,9 +33,9 @@
     </script>
 </head>
 
-<body ng-app="AngularApp" ng-controller="ProfileController">
+<body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; ">
      <!-- Header -->
-     <div w3-include-html="./Header.html"></div>
+     <div w3-include-html="./Header.html" style="position: fixed; z-index: 1;"></div>
      <script>
          w3.includeHTML();
      </script> 
@@ -52,11 +52,11 @@
                 <h1>{{x.Name}}</h1>
                 <p>{{x.Followers}}</p>
             </div>
+            <label class="btn-cover">
+                <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
+                <button> <i class='fa fa-camera'></i> Chỉnh sửa ảnh bìa</button>
+            </label>
         </div>
-        <label class="btn-cover">
-            <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
-            <button> <i class='fa fa-camera'></i> Chỉnh sửa ảnh bìa</button>
-        </label>
         <!-- User content -->
         <div class="user-container" ng-repeat="x in profiles">
             <!-- Left item -->
@@ -153,9 +153,9 @@
         </div>
     </div>
     <!-- Footer -->
-    <!-- <div w3-include-html="./Footer.html"></div>
+    <div w3-include-html="./Footer.html"></div>
     <script>
         w3.includeHTML();
-    </script> -->
+    </script>
 </body>
 </html>

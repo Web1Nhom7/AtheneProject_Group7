@@ -5,29 +5,24 @@
 
 .cover-image {
     width: 90%;
-    height: 15rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    z-index: 1;
     margin-top: 2rem;
+    max-height: 20vw;
 }
 
 .user-info {
     display: flex;
-    width: max-content;
     height: 10rem;
-    position: absolute;
-    left: 7rem;
-    /* bottom: 50px; */
-    top: 13rem;
-    z-index: 2;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 .user-avatar {
+    margin-left: 10%;
     border-radius: 50%;
     margin-right: 2rem;
-    width: 10rem;
 }
 
 .user-name {
@@ -37,13 +32,10 @@
 /* Upload cover image */
 
 .btn-cover {
-    position: absolute;
+    position: relative;
     overflow: hidden;
     display: inline-block;
-    ;
-    left: 60rem;
-    top: 14rem;
-    z-index: 2;
+    left: 33%;
 }
 
 .btn-cover input {
@@ -62,7 +54,6 @@
     position: relative;
     overflow: hidden;
     display: inline-block;
-    ;
     right: 5rem;
     top: 7rem;
     z-index: 3;
@@ -86,18 +77,16 @@
 
 .user-container {
     display: flex;
-    position: absolute;
-    top: 25rem;
-    left: 6rem;
+    position: relative;
 }
 
 .user__item--intro {
-    flex-basis: 25%;
+    /* flex-basis: 25%; */
     border: 1px solid grey;
     padding: 0.5rem;
     text-align: center;
     border-radius: 3rem;
-    height: 33rem;
+    height: fit-content;
 }
 
 #user-bio {
