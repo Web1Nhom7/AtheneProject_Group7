@@ -1,33 +1,37 @@
 [{
         "Name": "Hướng Hàm Chi",
-        "Direct": "Quận 1",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận Bình Thạnh",
         "Gender": "Nữ",
         "Subject": "Toán",
         "Fee": "2 triệu/1 khóa (3 tháng)",
         "Education": "Trường Đại học Tài chính Marketing "
     },
     {
-        "Name": "Vương Khải",
-        "Direct": "Quận Bình Thạnh",
-        "Gender": "Nam",
-        "Subject": "Hóa học",
-        "Fee": "2.5 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Hoa Sen"
-    },
-    {
-        "Name": "Địch Lệ Nhiệt Ba",
-        "Direct": "Quận Bình Tân",
-        "Gender": "Nữ",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "2 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Khoa học Tự Nhiên"
-    },
-    {
-        "Name": "Châu Tấn",
+        "Name": "Trương Vy Á",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
         "Direct": "Quận 6",
         "Gender": "Nam",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "3.5 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Tôn Đức Thắng"
+        "Subject": "Báo bài",
+        "Fee": "2.8 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Kinh tế "
+    },
+    {
+        "Name": "Trương Hằng",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận Tân Bình",
+        "Gender": "Nữ",
+        "Subject": "Luyện thi đại học",
+        "Fee": "3.2 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Bách Khoa"
+    },
+    {
+        "Name": "Trịnh Phàm",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận Bình Chánh",
+        "Gender": "Nam",
+        "Subject": "Văn - Hóa",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Văn Lang"
     }
 ]
