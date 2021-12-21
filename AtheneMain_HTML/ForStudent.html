@@ -119,7 +119,7 @@
             </select>
             </div>
             <div class="search-container">
-                <input class="filter-search" type="text" ng-model="name" placeholder="Tìm kiếm">
+                <input class="filter-search" type="text" ng-model="Name" placeholder="Tìm kiếm">
                 <i class="fa fa-search"></i>
             </div>
         </div>
@@ -242,7 +242,7 @@
     </div> -->
 
     <div class="profile-container">
-        <div class="profile__item" ng-repeat="x in learners">
+        <div class="profile__item" ng-repeat="x in learners|filter:Name| orderBy:sortType:sortReverse">
             <div>
                 <img class="avatar" src="../Images/ForStudent/user_ava.jpg">
                 <div class="profile__item--right">

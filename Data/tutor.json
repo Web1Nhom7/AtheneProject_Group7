@@ -1,33 +1,33 @@
 [{
         "Name": "Hướng Hàm Chi",
-        "Direct": "Quận Bình Thạnh",
+        "Direct": "Quận 1",
         "Gender": "Nữ",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Subject": "Toán",
+        "Fee": "2 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Tài chính Marketing "
     },
     {
-        "Name": "Hướng Hàm Chi",
+        "Name": "Vương Khải",
         "Direct": "Quận Bình Thạnh",
         "Gender": "Nam",
-        "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Subject": "Hóa học",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Hoa Sen"
     },
     {
-        "Name": "Hướng Hàm Chi",
-        "Direct": "Quận Bình Thạnh",
+        "Name": "Địch Lệ Nhiệt Ba",
+        "Direct": "Quận Bình Tân",
         "Gender": "Nữ",
         "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Fee": "2 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Khoa học Tự Nhiên"
     },
     {
-        "Name": "Hướng Hàm Chi",
-        "Direct": "Quận Bình Thạnh",
-        "Gender": "Nữ",
+        "Name": "Châu Tấn",
+        "Direct": "Quận 6",
+        "Gender": "Nam",
         "Subject": "Anh văn giao tiếp",
-        "Fee": "3 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế - Luật"
+        "Fee": "3.5 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Tôn Đức Thắng"
     }
 ]
