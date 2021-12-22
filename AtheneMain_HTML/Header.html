@@ -232,7 +232,7 @@ font-weight: 500;
     color: white;
     text-decoration: none;
 }
-.forgotten a:hover, .linkSignUp a:hover{
+.forgotten a:hover, .btn-register:hover{
     color: orange;
 }
 
@@ -251,10 +251,15 @@ font-weight: 500;
     margin-top: 1rem;
     font-size: 1rem;
 }
-.linkSignUp a {
+
+.btn-register{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
     color: #FFF9C4;
-    text-decoration: none;
-    
 }
 #phoneError {
     font-size: 1.1rem;
@@ -347,7 +352,7 @@ font-weight: 500;
         <input class="form__input" type="password" id="pass" autocomplete="current-password" name="password" minlength="8"  required>
         <div class="forgotten"><a href="./ConfirmOTP.html">Quên mật khẩu?</a></div>
         <button type="submit" class="btnLogin">Đăng nhập</button>
-        <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng kí</a></p>
+        <p class="linkSignUp"> Bạn chưa có tài khoản? <button class="btn-register" id="btn-signup"  onclick="openPopup();">Đăng kí</button></p>
     </div>
 </div>
 <!-- Sign up -->
