@@ -6,26 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hướng dẫn nhận lớp</title>
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-
+    <script src="../Js/Header.js"></script>
     <style>
+        body {
+            font-family: 'Roboto';
+        }
+        
         .instruct-container {
-            font-size: 1rem;
+            font-size: 1.1rem;
             padding-left: 3rem;
-            padding-top: 3rem;
-            line-height: 1.5rem;
+            padding-top: 4rem;
+            line-height: 2rem;
             margin-bottom: 1rem;
         }
         
-        h1 {
+        .instruct-container h2 {
             color: orangered;
+            text-align: center;
+            font-size: 2rem;
         }
         
-        hr {
-            border: 0.5px solid black;
+        .instruct-container hr {
+            background-color: black;
+            height: 0.1rem;
         }
         
         a {
@@ -37,19 +45,32 @@
         a:visited {
             color: forestgreen
         }
+        
+        @media screen and (max-width: 860px) {
+            .instruct-container {
+                font-size: 2rem;
+                padding-left: 3rem;
+                padding-top: 3rem;
+                line-height: 3rem;
+                margin-bottom: 1rem;
+            }
+            .instruct-container h2 {
+            font-size: 3rem;
+        }
+        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
-    <div w3-include-html="../AtheneMain_HTML/Header.html"></div>
+    <div w3-include-html="../Athene_header_footer/Header.html"></div>
     <script async>
         w3.includeHTML();
     </script>
     <!-- Intro content -->
     <div class="instruct-container">
 
-        <h1>Quy trình đăng kí và nhận lớp dạy</h1>
+        <h2>Quy trình đăng kí và nhận lớp dạy</h2>
         <hr>
         <p>Trung Tâm Gia Sư Athene hướng dẫn Cách đăng ký làm gia sư, Quy trình giao và nhận lớp của trung tâm, Cách báo sự cố và báo nhận lớp thành công, Cách in giấy giới thiệu Online, Phí và cách thanh toán phí nhận lớp, Điều kiện hoàn trả lại phí, để
             các bạn giáo viên, sinh viên nắm rõ </p>
@@ -77,7 +98,7 @@
         <p><i>Lưu ý: để tránh gặp phải sai sót bạn nên xem kỹ video hướng dẫn.</i></p>
     </div>
     <!-- Footer -->
-    <div w3-include-html="../AtheneMain_HTML/Footer.html"></div>
+    <div w3-include-html="../Athene_header_footer/Footer.html"></div>
     <script>
         w3.includeHTML();
     </script>

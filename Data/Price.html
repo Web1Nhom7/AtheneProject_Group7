@@ -6,23 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reference Price</title>
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="../Js/Header.js"></script>
     <style>
         .price-container {
             font-size: 1rem;
             padding: 3rem 5rem;
-            line-height: 1.5rem;
+            line-height: 2rem;
             margin-bottom: 1rem;
         }
         
-        h1 {
+        .beginning {
             margin-top: 3rem;
             color: orangered;
+            text-align: center;
+            font-size: 2rem;
         }
-        
+        .price-container hr{
+            width: 15rem;
+            background-color: black;
+            height: 0.1rem;
+
+        }
         strong {
             color: lightseagreen;
             font-size: 1.5rem;
@@ -35,38 +44,59 @@
             border: black 0.1rem solid;
             border-collapse: collapse;
             text-align: center;
+            padding: 1rem;
         }
         
         table {
             width: 95%;
-            padding: 1rem;
+            padding: 4rem;
+            margin-bottom: 1rem;
         }
         
         td {
-            padding: 1rem;
+            padding: 2rem;
         }
         
         th {
             background-color: rgb(166, 206, 231);
+            text-align: center;
         }
+        
         @media screen and (max-width: 860px) {
             .price-container {
-            font-size: 2rem;
-            line-height: 4rem;
-            padding: 4rem;
-        }}
+                font-size: 1.5rem;
+                line-height: 4rem;
+                padding: 4rem;
+            }
+            .price-container hr{
+           margin-top: -1rem;
+
+        }
+            strong {
+                font-size: 2rem;
+            }
+            table {
+                padding: 0.5rem;
+            }
+            table,
+            td,
+            tr,
+            th {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
-    <div w3-include-html="../AtheneMain_HTML/Header.html"></div>
+    <div w3-include-html="../Athene_header_footer/Header.html"></div>
     <script async>
         w3.includeHTML();
     </script>
     <!-- Intro content -->
     <div class="price-container">
-        <h1>Bảng Giá Gia Sư Dạy Kèm Tại Nhà TPHCM (Học phí gia sư 2021)</h1>
+        <p class="beginning">Bảng Giá Gia Sư Dạy Kèm Tại Nhà TPHCM (Học phí gia sư 2021)</p>
         <hr>
         <p> Việc tham khảo bảng giá gia sư tại nhà cũng rất quan trọng không kém so với việc phải làm sao có được gia sư dạy kèm chất lượng mà giá cả phải chăng. Do đúng, Trung Tâm Gia Sư Athene xin giới thiệu đến quý phụ huynh, học sinh học phí tìm sinh
             viên, giáo viên dạy kèm tại nhà TPHCM</p>
@@ -286,7 +316,7 @@
 
 
     <!-- Footer -->
-    <div w3-include-html="../AtheneMain_HTML/Footer.html"></div>
+    <div w3-include-html="../Athene_header_footer/Footer.html"></div>
     <script>
         w3.includeHTML();
     </script>
