@@ -1,71 +1,93 @@
 /* Banner */
+
 .mySlides {
     display: none;
 }
 
 .banner-image {
-    height:25rem ;
+    height: 25rem;
     margin-top: 3rem;
     width: 100%;
 }
 
+
 /* The dots/bullets/indicators */
+
 .dot {
-  height: 1rem;
-  width: 1rem;
-  margin: 0 0.1rem;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0.1rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+    background-color: #717171;
 }
 
+
 /* Fading animation */
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0;
-  animation-name: fade;
-  animation-duration: 0;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0;
+    animation-name: fade;
+    animation-duration: 0;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: 0} 
-  to {opacity: 1}
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {opacity: 0} 
-  to {opacity: 1}
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
 }
+
+
 /* User flow CSS */
-.title{
+
+.title {
     text-align: center;
 }
-.user-flow{
+
+.user-flow {
     display: flex;
     text-align: center;
-    color: white;    
+    color: white;
 }
-.user__item-left{
-    background-color: #3EB8D7 ;
+
+.user__item-left {
+    background-color: #3EB8D7;
     flex: 1;
 }
-.user__item-middle{
+
+.user__item-middle {
     background-color: #0392CE;
     flex: 1;
 }
-.user__item-right{
+
+.user__item-right {
     background-color: #3065B5;
-    flex: 1;   
+    flex: 1;
 }
-.inner-padding{
+
+.inner-padding {
     padding: 0 2rem 1rem 2rem;
 }
-.number{
+
+.number {
     border-radius: 50%;
     border: 3px solid white;
     text-align: center;
@@ -73,154 +95,183 @@
     width: 8%;
     margin: 0.5rem auto 0 auto;
 }
+
+
 /* Responsive user-flow */
+
 @media screen and (max-width: 600px) {
-    .user-flow{
-    text-align: center;
-    font-size: 2rem;
+    .user-flow {
+        text-align: center;
+        font-size: 2rem;
     }
-    .number{
-    border-radius: 50%;
-    font-size: 2.5rem;
-    width: 15%;
-    margin: 1rem auto 0 auto;
+    .number {
+        border-radius: 50%;
+        font-size: 2.5rem;
+        width: 15%;
+        margin: 1rem auto 0 auto;
     }
-    .title{
-    font-size: 3rem;
+    .title {
+        font-size: 3rem;
     }
 }
-    /* Our company CSS */
-    .our-company{
+
+
+/* Our company CSS */
+
+.our-company {
     display: flex;
     font-size: 1.2rem;
-    }
-    .company__item--left{
-        flex: 6;
-    }
+}
 
-    #vision{
-        margin-left: 7rem;
-    }
-    #mission{
-        margin-left:17rem;
-    }
-    #core-value{
-        margin-left:27rem;
-    }
-    #company-photo{
-        height: 16rem;
-        padding: 0rem 6rem;
-    }
-    .title-color{
-        color: #00008B;
-        font-size: 1.4rem;
-        margin: 0;
-        font-weight: bold;
-    }
-    @media screen and (max-width: 600px) {
-        #company-photo{
+.company__item--left {
+    flex: 6;
+}
+
+#vision {
+    margin-left: 7rem;
+}
+
+#mission {
+    margin-left: 17rem;
+}
+
+#core-value {
+    margin-left: 27rem;
+}
+
+#company-photo {
+    height: 16rem;
+    padding: 0rem 6rem;
+}
+
+.title-color {
+    color: #00008B;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    #company-photo {
         height: 21rem;
         margin: 0;
         padding: 0;
-        }
-        .our-company{
+    }
+    .our-company {
         text-align: left;
         margin-left: 1rem;
         font-size: 2rem;
         font-weight: bold;
-        }
-        .company__item--left{
+    }
+    .company__item--left {
         margin-top: -2.5rem;
-        }
-        #mission, #vision, #core-value{
-            margin: auto;
-        }
-        .company__item--left p{
+    }
+    #mission,
+    #vision,
+    #core-value {
+        margin: auto;
+    }
+    .company__item--left p {
         margin: 1.3rem;
-        }
-        .title-color{
+    }
+    .title-color {
         font-size: 2.3rem;
     }
-    }
-    /* Our Strength */
-    .our-strength{
+}
+
+
+/* Our Strength */
+
+.our-strength {
     background-color: #0077C0;
     display: flex;
     flex-direction: column;
     text-align: center;
     color: white;
-    }
-    .strength-content{
-        display: flex;
-        padding-bottom: 1rem;
-    }
-    .strength-container{
-        text-align: center;
-        flex: 1;
-        margin: 1rem;
-    }
-    .icon-container{
-        border-radius: 50%;
-        background-color: #A1BCE5;
-        width: 3.5rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .strength-icon{
-        height: 3rem;
+}
+
+.strength-content {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.strength-container {
+    text-align: center;
+    flex: 1;
+    margin: 1rem;
+}
+
+.icon-container {
+    border-radius: 50%;
+    background-color: #A1BCE5;
+    width: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.strength-icon {
+    height: 3rem;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .strength-icon {
+        height: 5rem;
         margin: auto;
     }
-    @media screen and (max-width: 600px) {
-        .strength-icon{
-    height: 5rem;
-    margin: auto;
-    }
-    .icon-container{
+    .icon-container {
         width: 6.2rem;
     }
-    .our-strength{
+    .our-strength {
         font-size: 2rem;
     }
-    .strength-container p{
-    display: none;
+    .strength-container p {
+        display: none;
     }
-    .strength__item--inside{
-    flex: 1;
+    .strength__item--inside {
+        flex: 1;
     }
-    }
-    /* About us CSS */
-    .about-us{
+}
+
+
+/* About us CSS */
+
+.about-us {
     display: flex;
     margin-right: 5rem;
     line-height: 2rem;
+}
+
+#us-photo {
+    height: 15rem;
+    margin: 0.5rem 3rem;
+}
+
+.about-us span {
+    color: red;
+}
+
+#button-position {
+    text-align: right;
+}
+
+.about-us button {
+    background-color: #093BBA;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .about-us {
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
-    #us-photo{
-        height: 15rem;
-        margin: 0.5rem 3rem;
+    #us-photo {
+        height: 30rem;
+        margin: 1rem 2rem;
     }
-    .about-us span{
-        color: red;
-    }
-    #button-position {
-        text-align: right;
-    }
-    .about-us button{
-        background-color: #093BBA;
-        color: white;
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-    @media screen and (max-width: 600px) {
-    .about-us{
-    font-size: 2rem;
-    line-height: 2.5rem;
-    }
-    #us-photo{
-    height: 30rem;
-    margin: 1rem 2rem ;
-    }
-    .about-us button{
+    .about-us button {
         font-size: 1.5rem;
     }
-    
 }
