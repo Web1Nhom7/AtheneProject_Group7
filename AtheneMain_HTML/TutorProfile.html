@@ -31,6 +31,23 @@
             }
         };
     </script>
+    <script>
+        let app=angular.module('Edit',[]);
+        app.controller('myCtrl', function($scope,$rootScope){
+            class Tutor{
+                constructor(Bio,Gender,dob,Education,majoy,c1,c2,c3){
+                    this.Bio=Bio;
+                    this.Gender=Gender;
+                    this.dob=dob;
+                    this.Education=Education;
+                    this.majoy=majoy;
+                    this.c1=c1;
+                    this.c2=c2;
+                    this.c3=c3;
+                }
+            }
+        })
+    </script>
 </head>
 
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
@@ -104,43 +121,43 @@
                 <div class="content__item--class">
                     <h3>Lớp đang đăng kí</h3>
                     <div class="info-line">
-                        <div class="title">Cấp dạy:&nbsp </div>
+                        <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.class}}</textarea> -->
                         
                     </div>
                     <div class="info-line">
-                        <div class="title">Môn dạy: &nbsp </div>
+                        <div class="title">Môn dạy: &nbsp </div>{{x.Subject}}
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.Subject}}</textarea> -->
                     </div>
                     <div class="info-line">
-                        <div class="title">Giới tính học viên: &nbsp </div>
+                        <div class="title">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.LearnerGender}}</textarea> -->
                     </div>
                     <div class="info-line">
-                        <div class="title">Địa điểm dạy: &nbsp </div>
+                        <div class="title">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TeachDi}}</textarea> -->
                     </div>
                     <div class="info-line">
-                        <div class="title">Thời gian dạy: &nbsp </div>
+                        <div class="title">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TeachingTime}}</textarea> -->
                     </div>
                     <div class="info-line">
-                        <div class="title">Mức lương mong muốn: &nbsp </div>
+                        <div class="title">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
                         <!-- <textarea class="intro__textarea" readonly cols="40" rows="1">{{x.Subject}}{{x.Fee}}</textarea> -->
                     </div>
                     <div class="info-line">
-                        <div class="title"> Lịch học dự kiến: &nbsp </div>
+                        <div class="title"> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.TimeTable}}</textarea> -->
                     </div>
                     <div class="info-line">
-                        <div class="title"> Mô tả thêm: &nbsp </div>
+                        <div class="title"> Mô tả thêm: &nbsp </div>{{x.More}}
                         <!-- <textarea class="intro__textarea" readonly cols="40" rows="4" maxlength="200">{{x.More}}</textarea> -->
                     </div>
                     <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
                 <!-- Experience -->
                 <div class="content__item--exp">
-                    <h3>Kinh nghiệm làm việc</h3>
+                    <h3>Kinh nghiệm làm việc</h3>{{x.Exps[0].Exp1}} <br>{{x.Exps[0].Exp2}}
                     <!-- <textarea class="intro__textarea" readonly cols="45" rows="2">{{x.Exps[0].Exp1}} </textarea>
                     <br>
                     <textarea class="intro__textarea" readonly cols="45" rows="2">{{x.Exps[0].Exp2}}</textarea>
@@ -149,7 +166,7 @@
                 </div>
                 <!-- Achievement -->
                 <div class="content__item--achieve">
-                    <h3>Thành tích đạt được</h3>
+                    <h3>Thành tích đạt được</h3>{{x.Achievements[0].Achievements1}} <br> {{x.Achievements[0].Achievements2}} <br>{{x.Achievements[0].Achievements3}}
                     <!-- <textarea class="intro__textarea" readonly cols="40" rows="1" maxlength="100">{{x.Achievements[0].Achievements1}}</textarea>
                     <textarea class="intro__textarea" readonly cols="40" rows="1" maxlength="100">{{x.Achievements[0].Achievements2}}</textarea>
                     <textarea class="intro__textarea" readonly cols="30" rows="1" maxlength="100">{{x.Achievements[0].Achievements3}}</textarea> -->
