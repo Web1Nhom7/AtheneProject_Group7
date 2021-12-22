@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Pop up -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="../Js/Header.js"></script>
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Logo.png">
+    <script src="../Js/SignUp.js"></script>
+    <script src="../Js/Login.js"></script>
+
 </head>
 <style>
     /* Header */
@@ -175,139 +179,168 @@
         }
     }
     /* Pop up log in */
-.login,.signup {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  /* padding-top: 100px; Location of the box */
-  left: 18rem;
-  top: 4rem;
-  width: 50%;
-  color: white;
-  background-image: url(../Images/SignIn_SignUp/Background_SignIn.png);background-size: 100%;background-repeat: no-repeat;
-  height: 25rem;
-  box-shadow: rgba(0, 0, 0, 0.6) 10rem 15rem 20rem 40rem;
-}
- .login-content {
-    margin: 0 auto;
-    padding: 0.5rem 4rem;
-}
-
-.popup-title{
-    text-align: center;
-    margin-bottom: -1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    padding-top: 2rem;
-    padding-left: 3rem;
-}
-hr {
-    width: 10rem;
-    height: 0.3rem;
-    background-color: #093BBA;
-    border: none;
-}
-/* Sign In */
-.form__label{
-font-size: 1.2rem;
-font-weight: 500;
-}
-.login-content .form__input {
-    border-radius: 2rem;
-    border: none;
-    margin: 0.5rem 0;
-    height: 2rem;
-    background-color: white;
-    color: black;
-    padding-left: 1.3rem;
-    font-size: 1rem;
-    width: 100%;
-    margin-top: -0.5rem;
-}
-.forgotten{
-    text-align: right;
-}
-.forgotten a{
-    font-size: 1rem; 
-    color: white;
-    text-decoration: none;
-}
-.forgotten a:hover, .btn-register:hover{
-    color: orange;
-}
-
-.btnLogin {
-    margin-top: 1rem;
-    width: 100%;
-    background-color: #093BBA;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    height: 2.3rem;
-    border-radius: 2rem;
-}
-.linkSignUp{
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-
-.register{
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    color: #FFF9C4;
-}
-#phoneError {
-    font-size: 1.1rem;
-    color: yellow;
-}
-
-/* The Close Button */
-.close-login,.close-signup {
-  color: #aaaaaa;
-  float: right;
-  font-size: 2rem;
-  margin: 0 1rem;
-}
-
-.close-login:hover,
-.close-login:focus,.close-signup:hover,.close-signup:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Pop up sign up */
-.signup h3{
-    font-size: 1.3rem;
-    text-align: center;
-}
-.btnCategory{
-   text-align: center;
-    margin: 2rem 1rem;
-}
+    
+    .login,
+    .signup {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        /* padding-top: 100px; Location of the box */
+        left: 18rem;
+        top: 4rem;
+        width: 50%;
+        color: white;
+        background-image: url(../Images/SignIn_SignUp/Background_SignIn.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 25rem;
+        box-shadow: rgba(0, 0, 0, 0.6) 10rem 15rem 20rem 40rem;
+    }
+    
+    .login-content {
+        margin: 0 auto;
+        padding: 0.5rem 4rem;
+    }
+    
+    .popup-title {
+        text-align: center;
+        margin-bottom: -1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        padding-top: 2rem;
+        padding-left: 3rem;
+    }
+    
+    hr {
+        width: 10rem;
+        height: 0.3rem;
+        background-color: #093BBA;
+        border: none;
+    }
+    /* Sign In */
+    
+    .form__label {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .login-content .form__input {
+        border-radius: 2rem;
+        border: 2px solid white;
+        margin: 0.5rem 0 0;
+        height: 2.5rem;
+        background-color: transparent;
+        color: white;
+        padding-left: 1.3rem;
+        font-size: 1.2rem;
+        width: 100%;
+        margin-top: -0.5rem;
+        outline: none;
+        font-weight: bold;
+    }
+    
+    .forgotten {
+        text-align: right;
+    }
+    
+    .forgotten a {
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .forgotten a:hover,
+    .btn-register:hover {
+        color: orange;
+    }
+    
+    .btnLogin {
+        margin-top: 1rem;
+        width: 100%;
+        background-color: #093BBA;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        height: 2.3rem;
+        border-radius: 2rem;
+    }
+    
+    .linkSignUp {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    
+    .register {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        color: #FFF9C4;
+    }
+    
+    #phoneError,
+    #phoneError1,
+    #passError {
+        font-size: 1.1rem;
+        color: red;
+        display: none;
+    }
+    /* The Close Button */
+    
+    .close-login,
+    .close-signup {
+        color: #aaaaaa;
+        float: right;
+        font-size: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .close-login:hover,
+    .close-login:focus,
+    .close-signup:hover,
+    .close-signup:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* Pop up sign up */
+    
+    .signup h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    .btnCategory {
+        text-align: center;
+        margin: 2rem 1rem;
+    }
+    
     .btnCategory input {
-    background-color: #FF7E06;
-    border: none;
-    border-radius: 1rem;
-    color: white;
-    font-weight: bold;
-    width: 30%;
-    height:3rem;
-    margin: 1rem;
-    font-size: 1.3rem;
-}
-@media screen and (max-width: 860px) {
+        background-color: #FF7E06;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        font-weight: bold;
+        width: 30%;
+        height: 3rem;
+        margin: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    @media screen and (max-width: 860px) {
         .signUp-button {
             display: none;
         }
-        .log-in{
+        .log-in {
             margin-bottom: -3rem;
         }
-        .login .login-content{
+        .login .login-content {
             margin-top: -2rem;
         }
     }
@@ -315,6 +348,7 @@ font-weight: 500;
 </head>
 
 <body>
+
     <!--Header content-->
     <div class="header-content">
         <!--Item left-->
@@ -337,45 +371,45 @@ font-weight: 500;
         <div class="header__item--right">
 
             <div>
-                <input class="signIn-button" type="button" value="Đăng nhập" id="btn-login" onclick="openPopup()" >
+                <input class="signIn-button" type="button" value="Đăng nhập" id="btn-login" onclick="openPopup()">
             </div>
-          <!-- The Modal -->
-<div id="myLogin" class="login">
-    <span class="close-login">&times;</span>
-    <p class="popup-title log-in">ĐĂNG NHẬP</p>
-    <hr> 
-    <div class="login-content">
-        <label class="form__label">Số điện thoại:</label> <br>
-        <input  type="tel"name="sodt" id="sodt" class="form__input"  required onblur="checkPhone()">
-        <div  id="phoneError"></div>
-        <label class="form__label">Mật khẩu:</label><br>
-        <input class="form__input" type="password" id="pass" autocomplete="current-password" name="password" minlength="8"  required>
-        <div class="forgotten"><a href="../Form_HTML/ConfirmOTP.html">Quên mật khẩu?</a></div>
-        <button type="submit" class="btnLogin">Đăng nhập</button>
-        <p class="linkSignUp"> Bạn chưa có tài khoản? <button class="register" type="button" id="btn-register" onclick="openPopup()">Đăng kí</button></p>
-    </div>
-</div>
-<!-- Sign up -->
-<div>
-    <input class="signUp-button" type="button" value="Đăng ký" id="btn-signup" onclick="openPopup();">
-</div>
-<!-- The Modal -->
-<div id="mySignup" class="signup">
-    <span class="close-signup">&times;</span>
-    <div>
-        <p class="popup-title">ĐĂNG KÝ</p>
-        <hr>
-        <h3>Chọn loại tài khoản phù hợp với nhu cầu của bạn</h3>
-        <div class="btnCategory">
-            <a href="../Form_HTML/SignUpForLearner.html" target="_blank"><input type="button" value="Học viên"></a> <br>
-            <a href="../Form_HTML/SignUpForTutor.html" target="_blank"> <input type="button" value="Gia sư "></a>
+            <!-- The Modal -->
+            <div id="myLogin" class="login">
+                <span class="close-login">&times;</span>
+                <p class="popup-title log-in">ĐĂNG NHẬP</p>
+                <hr>
+                <div class="login-content">
+                    <label class="form__label">Số điện thoại:</label> <br>
+                    <input type="tel" name="sodt" id="sodt" class="form__input" required onblur="checkVal()" oninput="checkPhoneVal()">
+                    <div id="phoneError">Số điện thoại không đúng định dạng!</div>
+                    <div id="phoneError1">Hãy nhập số điện thoại!</div>
+                    <label class="form__label">Mật khẩu:</label><br>
+                    <input class="form__input" type="password" id="pass" autocomplete="current-password" name="password" minlength="8" oninput="checkPassVal()" required>
+                    <div id="passError">Hãy nhập mật khẩu!</div>
+                    <div class="forgotten"><a href="../Form_HTML/ConfirmOTP.html">Quên mật khẩu?</a></div>
+                    <button type="submit" class="btnLogin" onclick="Login()">Đăng nhập</button>
+                    <p class="linkSignUp"> Bạn chưa có tài khoản? <button class="register" type="button" id="btn-register" onclick="openPopup()">Đăng kí</button></p>
+                </div>
+            </div>
+            <!-- Sign up -->
+            <div>
+                <input class="signUp-button" type="button" value="Đăng ký" id="btn-signup" onclick="openPopup();">
+            </div>
+            <!-- The Modal -->
+            <div id="mySignup" class="signup">
+                <span class="close-signup">&times;</span>
+                <div>
+                    <p class="popup-title">ĐĂNG KÝ</p>
+                    <hr>
+                    <h3>Chọn loại tài khoản phù hợp với nhu cầu của bạn</h3>
+                    <div class="btnCategory">
+                        <a href="../Form_HTML/SignUpForLearner.html" target="_blank"><input type="button" value="Học viên"></a> <br>
+                        <a href="../Form_HTML/SignUpForTutor.html" target="_blank"> <input type="button" value="Gia sư "></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-    
-</div>
-</div>
 </body>
 
 </html>

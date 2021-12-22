@@ -43,3 +43,85 @@ function isNumber(evt) {
     }
     return true;
 }
+//------ProfileFindStudent-----------------
+function submitForm(level, monhoc, gender, diachi, time, salary, schedule, mota) {
+
+    level = document.getElementById("level").value;
+    monhoc = document.getElementById("subject").value;
+    diachi = document.getElementById("khuvuc").value;
+    time = document.getElementById("time").value;
+    salary = document.getElementById("luong").value;
+    schedule = document.getElementById("schedule").value;
+    mota = document.getElementById("descrip").value;
+
+    var user = new Object();
+
+
+    user.level = level;
+    user.subject = monhoc;
+    user.gender = gender == "0" ? "Nam" : "Nữ";
+
+    user.address = diachi + ";" + "TP.HCM";
+    user.time = time;
+    user.salary = salary;
+    user.schedule = schedule;
+    user.mota = mota;
+
+    if (typeof(Storage) !== undefined) {
+
+        window.location.href = "./AtheneMain_HTML/HomePage.html";
+
+        localStorage.setItem('listFindStudent', JSON.stringify(user));
+        alert("Đăng ký thành công!");
+        return true;
+
+    } else {
+        alert("Bạn chưa đăng nhập!");
+        return false;
+    }
+}
+
+
+//----------------ProfileFindTutor--------------------------
+function Submit(jobs, lop, monhoc, gender, sonha, duong, phuong, quan, kinhnghiem, time, salary, schedule, mota) {
+
+    lop = document.getElementById("class").value;
+    monhoc = document.getElementById("subject").value;
+    sonha = document.getElementById("sonha").value;
+    duong = document.getElementById("duong").value;
+    phuong = document.getElementById("phuong").value;
+    quan = document.getElementById("quan").value;
+    kinhnghiem = document.getElementById("exp").value;
+    time = document.getElementById("time").value;
+    salary = document.getElementById("luong").value;
+    schedule = document.getElementById("schedule").value;
+    mota = document.getElementById("descrip").value;
+    // gender = document.getElementById("gender").value;
+
+    var user = new Object();
+    user.jobs = jobs == "giaovien" ? "Giáo viên" : "Sinh viên";
+
+    user.class = lop;
+    user.subject = monhoc;
+    user.gender = gender == "0" ? "Nam" : "Nữ";
+
+    user.address = sonha + ";" + duong + ";" + phuong + ";" + quan + ";" + "TP.HCM";
+    user.experience = kinhnghiem;
+    user.time = time;
+    user.salary = salary;
+    user.schedule = schedule;
+    user.mota = mota;
+
+    if (typeof(Storage) !== undefined) {
+
+        window.location.href = "./AtheneMain_HTML/HomePage.html";
+
+        localStorage.setItem('listFindTutor', JSON.stringify(user));
+        alert("Đăng ký thành công!");
+        return true;
+
+    } else {
+        alert("Bạn chưa đăng nhập!");
+        return false;
+    }
+}

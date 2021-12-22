@@ -10,9 +10,13 @@ function Login(sodt, pass) {
     if (typeof(Storage) !== undefined) {
         for (var i = 0; i < listCustomer.length; i++) {
             if (user.phone == listCustomer[i].phone && user.password == listCustomer[i].password) {
-                window.location.href = "./AtheneMain_HTML/HomePage.html";
+                window.location.href = "../AtheneMain_HTML/HomePage.html";
+
+                // window.location.href = "./Form_HTML/ProfileFindStudent.html";
 
                 sessionStorage.setItem("userLogin", JSON.stringify(user));
+                // sessionStorage.setItem("usename", user.phone);
+                // sessionStorage.setItem("password", user.password);
                 sessionLogin(sodt, pass);
                 alert("Đăng nhập thành công!");
                 return true;
@@ -24,7 +28,7 @@ function Login(sodt, pass) {
                 return false;
             }
         }
-    }
+    } else { alert("Bạn chưa có tài khoản!"); }
 
 }
 
