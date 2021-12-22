@@ -1,11 +1,12 @@
-function Login() {
-    var sodt = document.getElementById("sodt").value;
-    var pass = document.getElementById("pass").value;
+function Login(sodt, pass) {
+    sodt = document.getElementById("sodt").value;
+    pass = document.getElementById("pass").value;
 
     var user = new Object();
     user.phone = sodt;
     user.password = pass;
     var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
+
     if (typeof(Storage) !== undefined) {
         for (var i = 0; i < listCustomer.length; i++) {
             if (user.phone == listCustomer[i].phone && user.password == listCustomer[i].password) {
