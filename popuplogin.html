@@ -185,7 +185,8 @@
   width: 50%;
   color: white;
   background-image: url(../Images/SignIn_SignUp/Background_SignIn.png);background-size: 100%;background-repeat: no-repeat;
-  height: 30rem;
+  height: 25rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 10rem 15rem 20rem 40rem;
 }
  .login-content {
     margin: 0 auto;
@@ -214,13 +215,13 @@ font-weight: 500;
 .login-content .form__input {
     border-radius: 2rem;
     border: none;
-    margin: 0.5rem 0;
     height: 2rem;
     background-color: white;
     color: black;
     padding-left: 1.3rem;
     font-size: 1rem;
-    width: 100%
+    width: 100%;
+    margin-top: -0.5rem;
 }
 .forgotten{
     text-align: right;
@@ -376,7 +377,8 @@ font-weight: 500;
     var span = document.getElementsByClassName("close-login")[0];
     
     // When the user clicks the button, open the modal 
-    btn_li.onclick = function() {
+    btn_li.onclick = function() { 
+        if(signup.style.display = "none")
         login.style.display = "block";
     }
     
@@ -384,13 +386,7 @@ font-weight: 500;
     span.onclick = function() {
         login.style.display = "none";
     }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == login) {
-        login.style.display = "none";
-    }
-    }
+
     // Sign up
     var signup = document.getElementById("mySignup");
     
@@ -402,20 +398,17 @@ font-weight: 500;
     
     // When the user clicks the button, open the modal 
     btn_su.onclick = function() {
-        signup.style.display = "block";
+        if  (login.style.display = "none"){
+            signup.style.display = "block";
+        }
+    
     }
     
     // When the user clicks on <span> (x), close the modal
         close.onclick = function() {
         signup.style.display = "none";
     }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == signup) {
-        signup.style.display = "none";
-      }
-    }
+
     </script>
     
         </div>
