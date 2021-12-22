@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Logo.png">
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" href="../CSS/HomePage.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="../Js/Header.js"></script>
+
 </head>
 <!-- Body -->
 
 <body>
 
-    <!-- Header -->
-    <div w3-include-html="../Athene_header_footer/Header.html"></div>
-    <script async>
-        w3.includeHTML();
-    </script>
+
+
+
 
     <!-- Banner -->
+
     <div class="mySlides fade">
-        <img class="banner-image " src="../Images/HomePage/Banner_Welcome.png">
-    </div>
-    <div class="mySlides fade">
-        <img class="banner-image " src="../Images/HomePage/Banner_BlackFriday.png">
+        <img class="banner-image" src="../Images/HomePage/Banner_Welcome.png">
     </div>
     <div class="mySlides fade">
-        <img class="banner-image " src="../Images/HomePage/Banner_MemberDay.jpg">
+        <img class="banner-image" src="../Images/HomePage/Banner_BlackFriday.png">
     </div>
+    <div class="mySlides fade">
+        <img class="banner-image" src="../Images/HomePage/Banner_MemberDay.jpg">
     </div>
+
     <br>
     <div style="text-align:center">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
+
+
+
     <!--
     *Flow của chạy Banner
     - Xuất hiện đầu tiên với 1 ảnh banner
@@ -47,6 +49,7 @@
     - Vòng lặp chạy ảnh thực hiện không điểm dừng
   -->
     <script>
+        var i;
         var slideIndex = 0;
         showSlides();
         //Khai báo biến
@@ -76,6 +79,14 @@
             // Thời gian tối đa là 5s
         }
     </script>
+
+    <!-- Header -->
+    <div w3-include-html="../Athene_header_footer/Header.html"></div>
+    <script async>
+        w3.includeHTML();
+    </script>
+
+
     <!-- User flow content -->
     <h2 class="title">Tìm gia sư dễ hơn những gì bạn nghĩ</h2>
     <div class="user-flow">
