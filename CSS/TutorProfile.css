@@ -34,10 +34,10 @@
 /* Upload cover image */
 
 .btn-cover {
-    position: relative;
+    position: absolute;
     overflow: hidden;
     display: inline-block;
-    left: 33%;
+    right: 10%;
 }
 
 .btn-cover input {
@@ -111,13 +111,12 @@
 .information {
     text-align: left;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .info-line .title {
     font-weight: bold;
-    width: max-content;
-    font-size: 1rem;
+    /* width: max-content; */
 }
 
 .info-line {
