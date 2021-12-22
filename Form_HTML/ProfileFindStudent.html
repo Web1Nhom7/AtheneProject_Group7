@@ -59,11 +59,70 @@
                     <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" itemid="mota" class="ipbox txt-info"></textarea>
                 </div>
                 <div class="form-line" style="text-align: right;">
-                    <input type="submit" value="Hoàn tất" class="submit">
+                    <input type="submit" value="Hoàn tất" class="submit" onclick="submitFormProfile()">
                 </div>
         </form>
         </div>
+        <script>
+            function submitFormProfile(level, subject, gender, khuvuc, time, salary, schedule, mota) {
 
+                level = document.getElementById("level");
+                subject = document.getElementById("subject").value;
+                khuvuc = document.getElementById("khuvuc").value;
+                time = document.getElementById("time").value;
+                salary = document.getElementById("luong").value;
+                schedule = document.getElementById("schedule").value;
+                mota = document.getElementById("mota").value;
+
+                var profileFinds = new Object();
+                profileFinds.level = "cấp1";
+                profileFinds.subject = subject;
+                profileFinds.address = khuvuc + "; " + "TP. Hồ Chí Minh";
+                profileFinds.time = time;
+                profileFinds.salary = salary;
+                profileFinds.schedule = schedule;
+                profileFinds.mota = mota;
+                // profileFinds.gender = gender == "0" ? "nam" : "1" ?
+                //     "nữ" : "nam, nữ";
+                profileFinds.gender = gender == "0" ? "nam" : "nữ";
+
+                var listProfiles = JSON.parse(localStorage.getItem('listProfiles'));
+                if (listProfiles == null) {
+                    listProfiles = new Array();
+                }
+
+                //     listProfiles.push(profileFinds);
+
+
+                //     localStorage.setItem('profileFinds', JSON.stringify(profileFinds));
+                // }
+
+                if (checkLogin(sodt, matkhau) == true) {
+                    listProfiles.push(profileFinds);
+
+
+                    localStorage.setItem('profileFinds', JSON.stringify(profileFinds));
+
+                    alert("Đăng ký thành công!");
+                    return true;
+                } else {
+                    alert("Bạn chưa đăng nhập!");
+                    return false;
+                }
+
+            }
+
+            function checkLogin(sodt, matkhau) {
+                var userLogin = JSON.parse(sessionStorage.getItem('userLogin'));
+                var kq = false;
+                if (sodt == userLogin.JSON.stringify(sodt) && matkhau == userLogin.JSON.stringify(pass)) {
+                    kq = true;
+                    break;
+                }
+
+                return kq;
+            }
+        </script>
 </body>
 
 </html>

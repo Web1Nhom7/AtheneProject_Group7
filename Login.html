@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
+
     <style>
         /* Button deco */
         
@@ -244,9 +245,7 @@
 
     <div class="container">
         <!-- Button trigger modal -->
-        <button type="button" class=" show-modal" data-toggle="modal" data-target="#myLogin">
-Đăng nhập
-</button>
+        <button type="button" class=" show-modal" data-toggle="modal" data-target="#myLogin">Đăng nhập</button>
         <!-- Modal -->
         <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
             <form class="modal-dialog" role="document">
@@ -266,73 +265,14 @@
                             <div class="forgotten"><a href="./ConfirmOTP.html">Quên mật khẩu?</a></div>
                             <button type="submit" class="btnLogin" onclick="Login()">Đăng nhập</button>
                             <p class="linkSignUp"> Bạn chưa có tài khoản? <a href="SignIn.html">Đăng ký</a></p>
-
                         </div>
                     </div>
                 </div>
-
             </form>
-            <script>
-                function Login() {
-                    var sodt = document.getElementById("sodt").value;
-                    var pass = document.getElementById("pass").value;
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-                    var danhSachKhachHang = JSON.parse(localStorage.getItem('danhSachKhachHang'));
-
-                    if (typeof(Storage) !== undefined) {
-
-                        for (var i = 0; i < danhSachKhachHang.length; i++) {
-                            if (sodt == danhSachKhachHang[i].phone && pass == danhSachKhachHang[i].password) {
-                                window.location.href = "./AtheneMain_HTML/HomePage.html"
-
-                                var userLogin = "userName: " +
-                                    JSON.stringify(sodt) + "; " + "password: " +
-                                    JSON.stringify(pass);
-                                sessionStorage.setItem("userLogin", userLogin);
-
-                                sessionLogin(sodt, pass);
-                                return true;
-                            } else {
-                                alert("Tên đăng nhập hoặc mật khẩu chưa đúng." + "\n" + "Vui lòng nhập lại thông tin!");
-
-                                document.getElementById("sodt").value = "";
-                                document.getElementById("pass").value = "";
-                                return false;
-
-                            }
-
-                        }
-                    }
-                }
-
-                function sessionLogin() {
-                    var sodt = document.getElementById("sodt").value;
-                    var pass = document.getElementById("pass").value;
-
-                    var user = new Object();
-                    user.phone = sodt;
-                    user.password = pass;
-
-                    var danhSachKhachHang = JSON.parse(localStorage.getItem('danhSachKhachHang'));
-                    for (var i = 0; i < danhSachKhachHang.length; i++) {
-                        if (user.phone == danhSachKhachHang[i].phone && user.password == danhSachKhachHang[i].password) {
-                            user.name = danhSachKhachHang[i].name;
-                            user.phone = danhSachKhachHang[i].phone;
-                            user.password = danhSachKhachHang[i].password;
-                            user.birthday = danhSachKhachHang[i].birthday;
-                            user.gender = danhSachKhachHang[i].gender;
-                            user.address = danhSachKhachHang[i].address;
-                            user.CCCD = danhSachKhachHang[i].CCCD;
-                            user.ngayCapCCCD = danhSachKhachHang[i].ngayCapCCCD;
-                            user.id = danhSachKhachHang[i].id;
-                            break;
-                        }
-                    }
-                    localStorage.setItem('sessionLogin', JSON.stringify(user));
-                }
-            </script>
-            <script type="text/javascript " src="https://code.jquery.com/jquery-1.12.0.min.js "></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 

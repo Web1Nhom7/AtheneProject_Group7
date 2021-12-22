@@ -1,15 +1,3 @@
-// var level = document.getElementById('level').value;
-// var subject = document.getElementById('subject').value;
-// var gender = document.getElementById('gender').value;
-// var address = document.getElementById('khuvuc').value;
-// var time = document.getElementById('time').value;
-// var salary = document.getElementById('luong').value;
-// var schedule = document.getElementById('schedule').value;
-// var decrip = document.getElementById('mota').value;
-
-
-
-
 function valLevel() {
     var capHoc = document.forms.level;
     for (i = 0; i < capHoc.length; i++) {
