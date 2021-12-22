@@ -30,10 +30,10 @@ function openPopup(){
 
    // Sign up
    var signup = document.getElementById("mySignup");
-   
+  
    // Get the button that opens the modal
    var btn_su = document.getElementById("btn-signup");
-   
+   var register= document.getElementById("btn-register");
    // Get the <span> element that closes the modal
    var close = document.getElementsByClassName("close-signup")[0];
    
@@ -43,6 +43,11 @@ function openPopup(){
            signup.style.display = "block";
        } 
    }
+   register.onclick = function() {
+    if  (login.style.display = "none"){
+        signup.style.display = "block";
+    } 
+}
    // When the user clicks on <span> (x), close the modal
        close.onclick = function() {
        signup.style.display = "none";
