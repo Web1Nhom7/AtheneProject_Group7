@@ -47,3 +47,4 @@ function openPopup(){
        close.onclick = function() {
        signup.style.display = "none";
    }}
+  
