@@ -79,12 +79,13 @@
 
 .user-container {
     display: flex;
-    position: relative;
-    margin: -1rem 4rem;
+    /* position: relative;
+    margin: -1rem 4rem; */
+    margin: 0 7.5%;
 }
 
 .user__item--intro {
-    /* flex-basis: 25%; */
+    /* flex-basis: 30%; */
     border: 1px solid grey;
     padding: 0.5rem;
     text-align: center;
@@ -116,6 +117,7 @@
 
 .info-line .title {
     font-weight: bold;
+    white-space: nowrap;
     /* width: max-content; */
 }
 
@@ -133,7 +135,7 @@
 }
 
 .user__item--content {
-    flex-basis: 50%;
+    flex-basis: 60%;
     display: flex;
     flex-direction: column;
     margin-left: 3rem;
@@ -156,6 +158,12 @@
     width: 8rem;
     margin: 1rem;
     margin-left: 25rem;
+}
+button{
+    background-color: #E0FDFF;}
+
+#bio{
+    padding: 0 15%;
 }
 
 /* Edit pop-up */
@@ -208,19 +216,19 @@
   }
 
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .user__item--intro h2 {
         font-size: 1.5rem;
     }
     .user-name h1{
         margin-top: -0.01rem;
     }
-}
-@media screen and (max-width: 600px) {
+} */
+/* @media screen and (max-width: 600px) {
     #footer-responsive {
        bottom: 0;
        position: fixed;
        width: 100%;
     }
    
-}
+} */
