@@ -12,6 +12,8 @@ function openPopup(){
     
    // Get the button that opens the modal
    var btn_li = document.getElementById("btn-login");
+   
+   
    // Get the <span> element that closes the modal
    var span = document.getElementsByClassName("close-login")[0];
    
@@ -39,12 +41,12 @@ function openPopup(){
    btn_su.onclick = function() {
        if  (login.style.display = "none"){
            signup.style.display = "block";
-       }
-   
+       } 
    }
-   
    // When the user clicks on <span> (x), close the modal
        close.onclick = function() {
        signup.style.display = "none";
-   }}
-  
+   }
+   
+}
+
