@@ -49,7 +49,46 @@
         })
     </script>
 </head>
+<style>
+    .profile-edit {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content */
+.edit-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
      <!-- Header -->
      <div w3-include-html="./Header.html" style="position: fixed; z-index: 1;"></div>
@@ -87,7 +126,7 @@
                 <div class="information">
                     <div class="info-line">
                         <div class="title">Giới tính: &nbsp</div>
-                        <div>{{x.major}}</div>
+                        <div>{{x.Gender}}</div>
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.major}}</textarea> -->
                     </div>
                     <div class="info-line">
@@ -110,8 +149,65 @@
                         <!-- <textarea class="intro__textarea" readonly cols="30" rows="1">{{x.c3}}</textarea> -->
                     </div>
                 </div>
-                <button class="btn-editinfo">Chỉnh sửa thông tin cá nhân</button>
+                
+                <button class="btn-editinfo" id="btn-edit">Chỉnh sửa thông tin cá nhân</button>
                 <p></p>
+                <!-- Test -->
+                <div id="myProfile" class="profile-edit">
+                    <div class="edit-content">
+                      <div class="info-line">
+                          <div class="title">Giới tính:&nbsp </div>
+                          <input type="text" id="oldschool" value="{{x.Gender}}">
+                      </div>
+                      <div class="info-line">
+                          <div class="title">Ngày sinh:&nbsp </div>
+                          <input type="text" id="dob" value="{{x.dob}}">
+                      </div>
+                      <div class="info-line">
+                          <div class="title">Đã học tại:&nbsp </div>
+                          <input type="text" id="oldschool" value="{{x.c3}}">
+                      </div>
+                      <div class="info-line">
+                          <div class="title"> Sinh viên trường: </div>
+                          <input type="text" id="school" value="{{x.Education}}">
+                      </div>
+                      <div class="info-line">
+                          <div class="title"> Chuyên ngành:&nbsp </div>
+                          <input type="text" id="major" value="{{x.major}}">
+                      </div>
+                
+                  <button class="btn-editinfo">Lưu</button>
+                  <p></p>
+                  </div>
+                  </div>
+                  <script>
+                  // Get the modal
+                  var profile = document.getElementById("myProfile");
+                  
+                  // Get the button that opens the modal
+                  var edit = document.getElementById("btn-edit");
+                  
+                  // Get the <span> element that closes the modal
+                  var span = document.getElementsByClassName("close")[0];
+                  
+                  // When the user clicks the button, open the modal 
+                  edit.onclick = function() {
+                      profile.style.display = "block";
+                  }
+                  
+                  // When the user clicks on <span> (x), close the modal
+                  span.onclick = function() {
+                      profile.style.display = "none";
+                  }
+                  
+                  // When the user clicks anywhere outside of the modal, close it
+                  window.onclick = function(event) {
+                    if (event.target == profile) {
+                      profile.style.display = "none";
+                    }
+                  }
+                  </script>
+                <!--  -->
                 <button class="btn-editinfo">Thêm thông tin chú ý</button>
                 <p></p>
             </div>
