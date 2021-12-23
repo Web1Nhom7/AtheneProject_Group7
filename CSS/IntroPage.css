@@ -1,37 +1,46 @@
-.intro-page{
-  margin: 0 3rem;
-  line-height: 2rem;
-  font-size: 1.3rem;
+.intro-page {
+    margin: 0 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
 }
-#intro-banner{
-  height: 20rem;
-  width: 100%;
-  margin-top: 3rem;
+
+#intro-banner {
+    height: 20rem;
+    width: 100%;
+    margin-top: 3rem;
 }
-#title{
-  text-align: center;
+
+#title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    margin-bottom: 0.5rem;
 }
+
 .discover-click {
     background-color: #F24E1E;
     color: #FFFFFF;
     text-align: center;
     border: none;
-    height: 2.5rem;
-    width: 8rem;
+    height: 3rem;
+    width: 15rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
-.content-body{
-  display: flex;
-  flex-direction: row;
-  background-color: #6596B6;
-  margin: 0 -3rem;
+
+.content-body {
+    display: flex;
+    flex-direction: row;
+    background-color: #6596B6;
+    margin: 0 -3rem;
 }
-#images_forStudent{
+
+#images_forStudent {
     height: 10rem;
 }
+
 #images_forParent {
     height: 12rem;
     margin-bottom: 1em;
@@ -42,30 +51,41 @@
     width: 13rem;
     padding: 1.4rem;
 }
-.vertical-text{
- margin: auto 2rem;
+
+.vertical-text {
+    margin: auto 2rem;
 }
-.text-bold{
-  font-weight: 500;
+
+.text-bold {
+    font-weight: 500;
 }
-.text-color{
-  font-weight: 700;
-  color: red;
+
+.text-color {
+    font-weight: 700;
+    color: red;
 }
+
 @media screen and (max-width: 600px) {
-  .intro-page{
-  font-size: 2rem;
-  line-height: 3rem;
-}
-#images_forStudent{
-  height: 14rem;
-}
-.discover-click{
-    font-size: 2rem;
-    width: 20rem;
-    height: 4rem;
-}
-.content-body{
-  margin: 3rem -3rem;
-}
+    .intro-page {
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+    }
+    #images_forStudent {
+        height: 14rem;
+    }
+    .discover-click {
+        font-size: 1.5rem;
+        width: 15rem;
+        height: 4rem;
+    }
+    .content-body {
+        margin: 3rem -3rem;
+    }
+    #title {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 4rem;
+        margin-bottom: 0.8rem;
+        font-weight: bold;
+    }
 }

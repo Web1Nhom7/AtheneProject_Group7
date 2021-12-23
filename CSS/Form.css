@@ -13,7 +13,7 @@
     margin-top: 10px;
     height: 1.5rem;
     background-color: #D9F1F1;
-    width: 98%;
+    width: 99%;
 }
 
 select.ipbox {
@@ -67,11 +67,14 @@ input {
     text-align: center;
     margin-top: 10px;
 }
-#level{
+
+#level {
     margin-left: 10px;
 }
+
 #ngaycap,
-#cccd, #pass {
+#cccd,
+#pass {
     width: 100%;
 }
 
@@ -128,7 +131,8 @@ button,
     #sonha,
     #duong,
     #phuong,
-    #tp, #quan 
-    {
+    #tp,
+    #quan {
         width: 100%;
-    }}
+    }
+}
