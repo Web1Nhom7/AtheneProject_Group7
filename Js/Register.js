@@ -1,4 +1,4 @@
-   function submitFormLearner(ho, ten, sodt, pass, dob, gender, sonha, duong, phuong, quan, tp, cccd, date) {
+   function submitFormLearner(ho, ten, sodt, pass, dob, gender, sonha, duong, phuong, quan, cccd, date) {
 
        ho = document.getElementById("ho").value;
        ten = document.getElementById("ten").value;
@@ -43,6 +43,7 @@
            alert("Khách hàng đã tồn tại!");
            return false;
        }
+
 
 
 

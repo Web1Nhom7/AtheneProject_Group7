@@ -48,6 +48,8 @@ function checkVal() {
         return false;
     }
 
+
+
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
     var cccdError1 = document.getElementById("cccdError1");
@@ -72,6 +74,7 @@ function checkVal() {
 
     }
 }
+
 
 function checkPhoneVal() {
     var phone = document.getElementById("sodt");
@@ -127,6 +130,22 @@ function checkCCCD() {
             cccdError1.style.display = "none";
             cccd.focus();
             return true;
+        } else
+        if (vnRegex1.test(cccd.value) == false) {
+            cccd.style.border = "2px solid red";
+            cccd.style.outline = "none";
+            cccdError.style.display = 'block';
+            cccdError1.style.display = 'none';
+            return false;
+
         }
+    } else {
+
+        cccd.style.border = "2px solid red";
+        cccd.style.outline = "none";
+        cccdError.style.display = 'none';
+        cccdError1.style.display = 'block';
+        return false;
+
     }
 }

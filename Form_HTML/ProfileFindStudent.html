@@ -18,7 +18,7 @@
 
 <body>
     <div class="form-container">
-        <form onsubmit="return valLevel(), valGender()" id="form" name="forms">
+        <form id="form" name="forms">
             <caption>
                 <h2>HỒ SƠ ĐĂNG KÝ TÌM HỌC VIÊN</h2>
                 <div> Học viên bạn đang tìm kiếm ra sao?</div>
@@ -26,7 +26,7 @@
             <hr/>
             <div class="form-line">
                 <label for="level">Cấp học:</label>
-                <span class="checkbox"> <span><input type="checkbox" name="level" id="level" value="cap1"> Cấp I</span>
+                <span class="checkbox"> <span ><input type="checkbox" name="level" id="level" value="cap1"> Cấp I</span>
                 <span> <input type="checkbox" name="level" id="level" value="cap2"> Cấp II</span>
                 <span> <input type="checkbox" name="level" id="level" value="cap3"> Cấp III</span> </span>
             </div>
@@ -61,12 +61,49 @@
                     <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" itemid="mota" class="ipbox txt-info"></textarea>
                 </div>
                 <div class="form-line" style="text-align: right;">
-                    <input type="submit" value="Hoàn tất" class="submit" onclick="submitForm()">
+                    <input type="submit" value="Hoàn tất" class="submit" onclick="return valLevel(), valGender(),submitForm()">
                 </div>
             </div>
         </form>
     </div>
+    <!-- <script>
+        function submitForm(level, monhoc, gender, diachi, time, salary, schedule, mota) {
 
+            level = document.getElementById("level").value;
+            monhoc = document.getElementById("subject").value;
+            diachi = document.getElementById("khuvuc").value;
+            time = document.getElementById("time").value;
+            salary = document.getElementById("luong").value;
+            schedule = document.getElementById("schedule").value;
+            mota = document.getElementById("descrip").value;
+
+            var user = new Object();
+
+
+            user.level = level;
+            user.subject = monhoc;
+            user.gender = gender == "0" ? "Nam" : "Nữ";
+
+            user.address = diachi + ";" + "TP.HCM";
+            user.time = time;
+            user.salary = salary;
+            user.schedule = schedule;
+            user.mota = mota;
+
+            if (typeof(Storage) !== undefined) {
+
+                // window.location.href = "./AtheneMain_HTML/HomePage.html";
+
+                localStorage.setItem('listFindStudent', JSON.stringify(user));
+                alert("Đăng ký thành công!");
+                return true;
+
+            } else {
+                alert("Bạn chưa đăng nhập!");
+                return false;
+            }
+        }
+    </script> -->
 </body>
 
 </html>

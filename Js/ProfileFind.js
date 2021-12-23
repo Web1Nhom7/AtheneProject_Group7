@@ -10,6 +10,18 @@ function valLevel() {
 
 }
 
+function valJobs() {
+    var job = document.forms.jobs;
+    for (i = 0; i < job.length; i++) {
+        if (job[i].checked == true)
+            return true;
+    }
+    alert("Vui lòng lựa chọn nghề nghiệp của bạn!");
+    forms.jobs.focus();
+    return false;
+
+}
+
 function valGender() {
     var gioiTinh = document.forms.gender;
     for (i = 0; i < gioiTinh.length; i++) {
@@ -22,16 +34,17 @@ function valGender() {
 
 }
 
-function valJobs() {
-    var job = document.forms.jobs;
-    for (i = 0; i < job.length; i++) {
-        if (job[i].checked == true)
-            return true;
+function checkFill() {
+    var monhoc = document.getElementById("subject").value;
+    if (monhoc === null || monhoc === " ") {
+        monhoc.style.border = "1.7px solid red";
+        monhoc.focus();
+        alert("Vui lòng điền đầy đủ thông tin!");
+        return false;
+    } else {
+        monhoc.style.border = "1.7px solid black";
+        return false;
     }
-    alert("Vui lòng lựa chọn nghề nghiệp của bạn!");
-    forms.jobs.focus();
-    return false;
-
 }
 
 function isNumber(evt) {
@@ -69,7 +82,7 @@ function submitForm(level, monhoc, gender, diachi, time, salary, schedule, mota)
 
     if (typeof(Storage) !== undefined) {
 
-        window.location.href = "./AtheneMain_HTML/HomePage.html";
+        // window.location.href = "./AtheneMain_HTML/HomePage.html";
 
         localStorage.setItem('listFindStudent', JSON.stringify(user));
         alert("Đăng ký thành công!");
@@ -114,7 +127,7 @@ function Submit(jobs, lop, monhoc, gender, sonha, duong, phuong, quan, kinhnghie
 
     if (typeof(Storage) !== undefined) {
 
-        window.location.href = "./AtheneMain_HTML/HomePage.html";
+        // window.location.href = "./AtheneMain_HTML/HomePage.html";
 
         localStorage.setItem('listFindTutor', JSON.stringify(user));
         alert("Đăng ký thành công!");
