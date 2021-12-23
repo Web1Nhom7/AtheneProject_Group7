@@ -21,7 +21,7 @@
             padding: 1rem;
             border: 1px solid black;
             border-radius: 1rem;
-            width: 27rem;
+            width: 26rem;
             height: 30rem;
             text-align: center;
         }
@@ -62,11 +62,36 @@
             background-color: #EAF7F7;
             text-align: center;
             font-size: 2rem;
+            white-space: nowrap;
+            justify-content: space-between;
         }
         
         #number-error {
             color: red;
             display: none;
+        }
+        
+        @media screen and (max-width:992px) {
+            .container {
+                width: 22rem;
+                height: 25rem;
+                padding-top: 2.5px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .number {
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.3rem;
+            }
+            p,
+            .resendOTP {
+                font-size: 1rem;
+            }
         }
         
         @media screen and (max-width:600px) {
@@ -82,8 +107,8 @@
                 font-size: 1rem;
             }
             .number {
-                width: 2rem;
-                height: 2rem;
+                width: 1.8rem;
+                height: 1.8rem;
                 font-size: 1.3rem;
             }
             p,
@@ -98,7 +123,7 @@
     <div class="container">
         <h1>Xác thực mã OTP</h1>
         <img src="../Images/ForAll/Header/Logo.png">
-        <h2>Mã xác thực đã được gửi qua SĐT <br/> <span>0123456789</span></h2>
+        <h2>Mã xác thực đã được gửi qua SĐT <br/> <span>03********</span></h2>
         <p><b>Nhập mã OTP</b></p>
 
         <div>
@@ -152,48 +177,6 @@
 
                 }
             }
-
-
-
-
-
-            //     var first = document.getElementById("1").value;
-            //     var second = document.getElementById("2").value;
-            //     var third = document.getElementById("3").value;
-            //     var fourth = document.getElementById("4").value;
-            //     // Kiểm tra số đầu tiên  
-            //     var check = first;
-            //     if (check >= 0 && check <= 9) {
-            //         document.getElementById("number-error").innerHTML = "";
-            //     } else {
-            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
-            //         document.getElementById("1").value = "";
-            //     }
-            //     // Kiểm tra số thứ hai
-            //     check = second;
-            //     if (check >= 0 && check <= 9) {
-            //         document.getElementById("number-error").innerHTML = "";
-            //     } else {
-            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
-            //         document.getElementById("2").value = "";
-            //     }
-            //     // Kiểm tra số thứ ba
-            //     check = third;
-            //     if (check >= 0 && check <= 9) {
-            //         document.getElementById("number-error").innerHTML = "";
-            //     } else {
-            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
-            //         document.getElementById("3").value = "";
-            //     }
-            //     // Kiểm tra số thứ tư
-            //     check = fourth;
-            //     if (check >= 0 && check <= 9) {
-            //         document.getElementById("number-error").innerHTML = "";
-            //     } else {
-            //         document.getElementById("number-error").innerHTML = "Mời bạn nhập lại giá trị từ 0-9";
-            //         document.getElementById("4").value = "";
-            //     }
-            // }
         </script>
         <p class="resendOTP">Bạn chưa nhận được mã?<button type="button">Gửi lại OTP</button>
         </p>
