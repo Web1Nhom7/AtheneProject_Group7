@@ -93,8 +93,8 @@
                     <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
                     <button><i class='fa fa-camera'></i> </button>
                 </label>
-                <h1>{{x.Name}}</h1>
-                <p>{{x.Followers}}</p>
+                <div class="name">{{x.Name}}</div>
+                <div>{{x.Followers}}</div>
             </div>
             <label class="btn-cover">
                 <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
@@ -105,11 +105,14 @@
         <div class="user-container" ng-repeat="x in profiles">
             <!-- Left item -->
             <div class="user__item--intro">
-                <h2>Giới thiệu</h2>
+                <div class="tieude">
+                    Giới thiệu
+                </div>
                 <div id="bio">{{x.Bio}}</div>
-                <br>
                 <!-- <button class="btn-editinfo">Chỉnh sửa</button> -->
-                <h2>Thông tin cá nhân</h2>
+                <div class="tieude">
+                    Thông tin cá nhân
+                </div>
                 <div class="information">
                     <div class="info-line">
                         <div class="title">Giới tính: &nbsp</div>
@@ -164,7 +167,9 @@
             <div class="user__item--content">
                 <!-- Register class -->
                 <div class="content__item--class">
-                    <h3>Lớp đang đăng kí</h3>
+                    <div class="tieude">
+                        Lớp đang đăng kí
+                    </div>
                     <div class="info-line">
                         <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
                     </div>
@@ -193,12 +198,31 @@
                 </div>
                 <!-- Experience -->
                 <div class="content__item--exp">
-                    <h3>Kinh nghiệm làm việc</h3>{{x.Exps[0].Exp1}} <br>{{x.Exps[0].Exp2}}
+                    <div class="tieude">
+                        Kinh nghiệm làm việc
+                    </div>
+                    <div class="info-line">
+                        {{x.Exps[0].Exp1}}
+                    </div>
+                    <div class="info-line">
+                        {{x.Exps[0].Exp2}}
+                    </div>
                     <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
                 <!-- Achievement -->
                 <div class="content__item--achieve">
-                    <h3>Thành tích đạt được</h3>{{x.Achievements[0].Achievements1}} <br> {{x.Achievements[0].Achievements2}} <br>{{x.Achievements[0].Achievements3}}
+                    <div class="tieude">
+                        Thành tích đạt được
+                    </div>
+                    <div class="info-line">
+                        {{x.Achievements[0].Achievements1}}
+                    </div>
+                    <div class="info-line">
+                        {{x.Achievements[0].Achievements2}}
+                    </div>
+                    <div class="info-line">
+                        {{x.Achievements[0].Achievements3}}
+                    </div>
                     <button class="btn-editcontent">Chỉnh sửa</button>
                 </div>
             </div>

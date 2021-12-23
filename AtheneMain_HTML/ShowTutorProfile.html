@@ -35,10 +35,14 @@
         <div class="user-container" ng-repeat="x in profiles">
             <!-- Left item -->
             <div class="user__item--intro">
-                <h2>Giới thiệu</h2>
-                <div>{{x.Bio}}</div>
-                <br>
-                <h2>Thông tin cá nhân</h2>
+                <div class="tieude">
+                    Giới thiệu
+                </div>
+                <div id="bio">{{x.Bio}}</div>
+                <!-- <button class="btn-editinfo">Chỉnh sửa</button> -->
+                <div class="tieude">
+                    Thông tin cá nhân
+                </div>
                 <div class="information">
                     <div class="info-line">
                         <div class="title">Giới tính: &nbsp</div>
@@ -58,13 +62,14 @@
                         <div class="title">Đã học tại:&nbsp </div>{{x.c3}}
                     </div>
                 </div>
-                <br>
             </div>
             <!-- Right item -->
             <div class="user__item--content">
                 <!-- Register class -->
                 <div class="content__item--class">
-                    <h3>Lớp đang đăng kí</h3>
+                    <div class="tieude">
+                        Lớp đang đăng kí
+                    </div>
                     <div class="info-line">
                         <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
                     </div>
@@ -92,15 +97,33 @@
                 </div>
                 <!-- Experience -->
                 <div class="content__item--exp">
-                    <h3>Kinh nghiệm làm việc</h3>{{x.Exps[0].Exp1}} <br>{{x.Exps[0].Exp2}}
+                    <div class="tieude">
+                        Kinh nghiệm làm việc
+                    </div>
+                    <div class="info-line">
+                        {{x.Exps[0].Exp1}}
+                    </div>
+                    <div class="info-line">
+                        {{x.Exps[0].Exp2}}
+                    </div>
                 </div>
                 <!-- Achievement -->
                 <div class="content__item--achieve">
-                    <h3>Thành tích đạt được</h3>{{x.Achievements[0].Achievements1}} <br> {{x.Achievements[0].Achievements2}} <br>{{x.Achievements[0].Achievements3}}
+                    <div class="tieude">
+                        Thành tích đạt được
+                    </div>
+                    <div class="info-line">
+                        {{x.Achievements[0].Achievements1}}
+                    </div>
+                    <div class="info-line">
+                        {{x.Achievements[0].Achievements2}}
+                    </div>
+                    <div class="info-line">
+                        {{x.Achievements[0].Achievements3}}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- Footer -->
     <div w3-include-html="../Athene_header_footer/Footer.html"></div>
     <script>
