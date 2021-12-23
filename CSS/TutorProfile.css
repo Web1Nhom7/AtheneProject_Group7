@@ -33,9 +33,7 @@
     border-radius: 10px;
     color: white;
 }
-/* .user-name {
-    top: -1rem
-} */
+
 .user-name h1{
     font-size: 2rem;
 }
@@ -90,13 +88,10 @@
 
 .user-container {
     display: flex;
-    /* position: relative;
-    margin: -1rem 4rem; */
     margin: 0 7.5%;
 }
 
 .user__item--intro {
-    /* flex-basis: 30%; */
     border: 1px solid grey;
     padding: 0.5rem;
     text-align: center;
@@ -116,20 +111,17 @@
     margin-right: auto;
     margin-left: auto;
     display: block;
-
     font-size: 1rem;
 }
 
 .information {
     text-align: left;
     margin-bottom: 2rem;
-    /* font-size: 1rem; */
 }
 
 .info-line .title {
     font-weight: bold;
     white-space: nowrap;
-    /* width: max-content; */
 }
 
 .info-line {
@@ -185,7 +177,6 @@ button{
     /* Stay in place */
     position: fixed; 
     /* Sit on top */
-    /* z-index: 6; */
     /* Location of the box */
     padding-top: 100px; 
     left: 0;
@@ -225,21 +216,3 @@ button{
     text-decoration: none;
     cursor: pointer;
   }
-
-
-/* @media screen and (max-width: 1024px) {
-    .user__item--intro h2 {
-        font-size: 1.5rem;
-    }
-    .user-name h1{
-        margin-top: -0.01rem;
-    }
-} */
-/* @media screen and (max-width: 600px) {
-    #footer-responsive {
-       bottom: 0;
-       position: fixed;
-       width: 100%;
-    }
-   
-} */
