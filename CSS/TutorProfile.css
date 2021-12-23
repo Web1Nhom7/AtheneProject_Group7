@@ -37,6 +37,9 @@
 .user-name h1{
     font-size: 2rem;
 }
+.user-name{
+padding-top: 3rem;
+}
 .name{
     font-weight: bold;
 }
@@ -216,3 +219,22 @@ button{
     text-decoration: none;
     cursor: pointer;
   }
+  .user-click{
+      position: relative;
+      top: -4rem;
+      left: 20rem;
+  }
+  .btn-follow, .btn-register{
+      width: 10rem;
+      font-size: 1rem;
+      margin-right: 7rem;
+  }
+  @media screen and (max-width: 600px) {
+    .user-name{
+        padding-top: 2rem;
+        }
+    .user-click{
+        top: -1rem;
+        left: 20rem;
+    }
+}
