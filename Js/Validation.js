@@ -12,7 +12,7 @@ function checkVal() {
             phone.style.outline = "none";
             phone_error.style.display = 'block';
             phone_error1.style.display = 'none';
-            phone.focus();
+            // phone.focus();
             return false;
 
         }
@@ -22,7 +22,7 @@ function checkVal() {
         phone.style.outline = "none";
         phone_error.style.display = 'none';
         phone_error1.style.display = 'block';
-        phone.focus();
+        // phone.focus();
         return false;
 
     }
@@ -34,7 +34,7 @@ function checkVal() {
         pass.style.border = "2px solid red";
         pass.style.outline = "none";
         pass_error.style.display = "block";
-        pass.focus();
+        // pass.focus();
         return false;
     }
 
