@@ -1,25 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../CSS/HomePage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Pop up -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="../Js/Header.js"></script>
-    <script src="./Js/Login.js"></script>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    /* Header */
-    
-    html,
+  html,
     body {
         font-family: 'Roboto';
         margin: 0 auto;
@@ -27,398 +11,109 @@
         height: fit-content;
     }
     
-    .header-content {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        background: #0077C0;
-        /*Neo header khi cuộn trang*/
-        position: fixed;
-        top: 0;
-    }
-    
-    .header__item--left {
-        display: flex;
-        flex-basis: 20%;
-    }
-    
-    #logo {
-        height: 3rem;
-        margin: auto 1rem;
-    }
-    
-    .athene {
-        color: white;
-        font-size: 1.5rem;
-        display: inline;
-        line-height: 3rem;
-    }
-    /*Left responsive*/
-    
-    @media screen and (max-width: 600px) {
-        #logo {
-            display: none;
-        }
-    }
-    /*Middle item*/
-    
-    .header__item--middle {
-        overflow: hidden;
-        flex-basis: 60%;
-    }
-    
-    .header__item--middle a {
-        display: block;
-        color: #f2f2f2;
-        text-decoration: none;
-        font-size: 1.3rem;
-        font-weight: 500;
-        padding-right: 1.5rem;
-        display: inline;
-        line-height: 3rem;
-    }
-    
-    .header__item--middle a:hover {
-        color: orange;
-    }
-    
-    .header__item--middle .icon {
-        display: none;
-    }
-    
-    @media screen and (max-width: 600px) {
-        .header__item--middle a {
-            display: none;
-        }
-        .header__item--middle a.icon {
-            float: left;
-            display: block;
-        }
-    }
-    
-    @media screen and (max-width: 600px) {
-        .header__item--middle.responsive {
-            position: relative;
-            padding-top: 4rem;
-        }
-        .header__item--middle.responsive .icon {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .header__item--middle.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
-    }
-    
-    .header__item--right {
-        display: flex;
-        flex-basis: 25%;
-        flex-wrap: nowrap;
-    }
-    
-    .header__item--right div {
-        margin-left: 1rem;
-        margin-top: 0.5rem;
-    }
-    
-    .header__item--right input {
-        width: 7rem;
-        font-weight: 600;
-        font-size: 1rem;
-        border-radius: 0.5rem;
-        height: 2rem;
-    }
-    
-    .signIn-button {
-        background-color: white;
-        color: black;
-    }
-    
-    .signUp-button {
-        background-color: #FF7E06;
-        color: white;
-    }
-    
-    @media screen and (max-width: 600px) {
-        .signUp-button {
-            display: none;
-        }
-    }
-    /**/
-    
-    @media screen and (max-width: 600px) {
-        .header__item--left {
-            order: 2;
-            flex-basis: 50%;
-        }
-        .header__item--middle {
-            order: 1;
-        }
-        .header__item--right {
-            order: 3;
-        }
-        .athene {
-            font-size: 3rem;
-        }
-        .header__item--right div {
-            margin-top: 0.1rem;
-        }
-        .header__item--right input {
-            width: 10rem;
-            height: 2.5rem;
-        }
-        .header__item--middle .icon {
-            font-size: 2.5rem;
-            margin-left: 1rem;
-        }
-    }
-    /* Pop up log in */
-.login,.signup {
+
+/* The Modal (background) */
+.confirmation {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  /* padding-top: 100px; Location of the box */
-  left: 18rem;
-  top: 4rem;
-  width: 50%;
-  color: white;
-  background-image: url(../Images/SignIn_SignUp/Background_SignIn.png);background-size: 100%;background-repeat: no-repeat;
-  height: 25rem;
-  box-shadow: rgba(0, 0, 0, 0.56) 10rem 15rem 20rem 40rem;
-}
- .login-content {
-    margin: 0 auto;
-    padding: 0.5rem 4rem;
+  z-index: 21; /* Sit on top */
+  padding-top: 3rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.popup-title{
-    text-align: center;
-    margin-bottom: -1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    padding-top: 2rem;
-    padding-left: 3rem;
+/* Modal Content */
+.confirmation-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-hr {
-    width: 10rem;
-    height: 0.3rem;
-    background-color: #093BBA;
-    border: none;
+.confirm-container{
+    display: flex;
+    justify-content: space-around;
 }
-/* Sign In */
-.form__label{
-font-size: 1.2rem;
-font-weight: 500;
-}
-.login-content .form__input {
-    border-radius: 2rem;
-    border: none;
+.confirm-btn{
+    width: 6rem;
     height: 2rem;
-    background-color: white;
-    color: black;
-    padding-left: 1.3rem;
-    font-size: 1rem;
-    width: 100%;
-    margin-top: -0.5rem;
-}
-.forgotten{
-    text-align: right;
-}
-.forgotten a{
-    font-size: 1rem; 
+    background-color: #0077C0;
     color: white;
-    text-decoration: none;
-}
-.forgotten a:hover, .btn-register:hover{
-    color: orange;
-}
-
-.btnLogin {
-    margin-top: 1rem;
-    width: 100%;
-    background-color: #093BBA;
-    color: white;
-    font-size: 1rem;
     border: none;
-    height: 2.3rem;
-    border-radius: 2rem;
-}
-.linkSignUp{
-    text-align: center;
-    margin-top: 1rem;
     font-size: 1rem;
 }
-
-.btn-register{
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    color: #FFF9C4;
-}
-#phoneError {
-    font-size: 1.1rem;
-    color: yellow;
-}
-
 /* The Close Button */
-.close-login,.close-signup {
+.close {
   color: #aaaaaa;
   float: right;
   font-size: 2rem;
-  margin: 0 1rem;
+  margin: -1rem 0 ;
+  font-weight: bold;
 }
 
-.close-login:hover,
-.close-login:focus,.close-signup:hover,.close-signup:focus {
+.close:hover,
+.close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-/* Pop up sign up */
-.signup h3{
-    font-size: 1.3rem;
-    text-align: center;
-}
-.btnCategory{
-   text-align: center;
-    margin: 2rem 1rem;
-}
-    .btnCategory input {
-        background-color: #FF7E06;
-        border: none;
-        border-radius: 1rem;
-        color: white;
-        font-weight: bold;
-        width: 30%;
-        height: 3rem;
-        margin: 1rem;
-        font-size: 1.3rem;
-    }
-    
-    @media screen and (max-width: 860px) {
-        .signUp-button {
-            display: none;
-        }
-        .log-in {
-            margin-bottom: -3rem;
-        }
-        .login .login-content {
-            margin-top: -2rem;
-        }
-    }
 </style>
 </head>
-
 <body>
-    <!--Header content-->
-    <div class="header-content">
-        <!--Item left-->
-        <div class="header__item--left">
-            <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
-            <div class="athene">ATHENE</div>
-        </div>
-        <!--Item middle - Navigation menu-->
-        <div class="header__item--middle" id="myNavigation">
-            <a href="./HomePage.html">Trang chủ</a>
-            <a href="./ForStudent.html">Tìm gia sư</a>
-            <a href="./ForTutor.html">Trở thành gia sư</a>
-            <a href="./Blog.html">Blog</a>
-            <a href="./IntroPage.html">Giới thiệu</a>
-            <a class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-        <!--Item right-->
-        <div class="header__item--right">
+    
+<!-- Trigger/Open The Modal -->
+<button id="btn-confirm">Open Modal</button>
 
-            <div>
-                <input class="signIn-button" type="button" value="Đăng nhập" id="btn-login">
-            </div>
-          <!-- The Modal -->
-<div id="myLogin" class="login">
-    <span class="close-login">&times;</span>
-    <p class="popup-title log-in">ĐĂNG NHẬP</p>
-    <hr> 
-    <div class="login-content">
-        <label class="form__label">Số điện thoại:</label> <br>
-        <input  type="tel"name="sodt" id="sodt" class="form__input"  required onblur="checkPhone()">
-        <div  id="phoneError"></div>
-        <label class="form__label">Mật khẩu:</label><br>
-        <input class="form__input" type="password" id="pass" autocomplete="current-password" name="password" minlength="8"  required>
-        <div class="forgotten"><a href="./ConfirmOTP.html">Quên mật khẩu?</a></div>
-        <button type="submit" class="btnLogin">Đăng nhập</button>
-        <p class="linkSignUp"> Bạn chưa có tài khoản? <button class="btn-register">Đăng kí</button></p>
-    </div>
-</div>
-<!-- Sign up -->
-<div>
-    <input class="signUp-button" type="button" value="Đăng ký" id="btn-signup">
-</div>
 <!-- The Modal -->
-<div id="mySignup" class="signup">
-    <span class="close-signup">&times;</span>
-    <div>
-        <p class="popup-title">ĐĂNG KÝ</p>
-        <hr>
-        <h3>Chọn loại tài khoản phù hợp với nhu cầu của bạn</h3>
-        <div class="btnCategory">
-            <a href="./SignUpForLearner.html" target="_blank"><input type="button" value="Học viên"></a> <br>
-            <a href="./SignUpForTutor.html" target="_blank"> <input type="button" value="Gia sư "></a>
-        </div>
+<div id="myConfirmation" class="confirmation">
+
+  <!-- Modal content -->
+  <div class="confirmation-content">
+    <span class="close">&times;</span>
+    <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>
+    <div class="confirm-container">
+        <button class="confirm-btn">Có</button>
+        <button class="confirm-btn">Không</button>
     </div>
+  </div>
+
 </div>
 
-            <script>
-                // Login
-                var login = document.getElementById("myLogin");
+<script>
+// Get the modal
+var confirmation = document.getElementById("myConfirmation");
 
-                // Get the button that opens the modal
-                var btn_li = document.getElementById("btn-login");
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close-login")[0];
+// Get the button that opens the modal
+var confirm = document.getElementById("btn-confirm");
 
-                // When the user clicks the button, open the modal 
-                btn_li.onclick = function() {
-                    if (signup.style.display = "none")
-                        login.style.display = "block";
-                }
+// Get the <span> element that closes the modal
+var shut_down = document.getElementsByClassName("close")[0];
 
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                    login.style.display = "none";
-                }
+// When the user clicks the button, open the modal 
+confirm.onclick = function() {
+    confirmation.style.display = "block";
+}
 
-                // Sign up
-                var signup = document.getElementById("mySignup");
+// When the user clicks on <span> (x), close the modal
+    shut_down.onclick = function() {
+    confirmation.style.display = "none";
+}
 
-                // Get the button that opens the modal
-                var btn_su = document.getElementById("btn-signup");
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == confirmation) {
+    confirmation.style.display = "none";
+  }
+}
+</script>
 
-                // Get the <span> element that closes the modal
-                var close = document.getElementsByClassName("close-signup")[0];
-
-                // When the user clicks the button, open the modal 
-                btn_su.onclick = function() {
-                    if (login.style.display = "none") {
-                        signup.style.display = "block";
-                    }
-
-                }
-
-                // When the user clicks on <span> (x), close the modal
-                close.onclick = function() {
-                    signup.style.display = "none";
-                }
-            </script>
-
-        </div>
-    </div>
 </body>
-
 </html>

@@ -12,7 +12,7 @@ function checkVal() {
             phone.style.outline = "none";
             phone_error.style.display = 'block';
             phone_error1.style.display = 'none';
-            phone.focus();
+            // phone.focus();
             return false;
 
         }
@@ -22,7 +22,7 @@ function checkVal() {
         phone.style.outline = "none";
         phone_error.style.display = 'none';
         phone_error1.style.display = 'block';
-        phone.focus();
+        // phone.focus();
         return false;
 
     }
@@ -34,7 +34,7 @@ function checkVal() {
         pass.style.border = "2px solid red";
         pass.style.outline = "none";
         pass_error.style.display = "block";
-        pass.focus();
+        // pass.focus();
         return false;
     }
 
@@ -47,6 +47,8 @@ function checkVal() {
         pass_error1.style.display = "block";
         return false;
     }
+
+
 
     var cccd = document.getElementById("cccd");
     var cccdError = document.getElementById("cccdError");
@@ -72,6 +74,7 @@ function checkVal() {
 
     }
 }
+
 
 function checkPhoneVal() {
     var phone = document.getElementById("sodt");
@@ -127,6 +130,22 @@ function checkCCCD() {
             cccdError1.style.display = "none";
             cccd.focus();
             return true;
+        } else
+        if (vnRegex1.test(cccd.value) == false) {
+            cccd.style.border = "2px solid red";
+            cccd.style.outline = "none";
+            cccdError.style.display = 'block';
+            cccdError1.style.display = 'none';
+            return false;
+
         }
+    } else {
+
+        cccd.style.border = "2px solid red";
+        cccd.style.outline = "none";
+        cccdError.style.display = 'none';
+        cccdError1.style.display = 'block';
+        return false;
+
     }
 }
