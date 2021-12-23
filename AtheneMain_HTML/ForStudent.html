@@ -26,6 +26,29 @@
             })
         })
     </script>
+    <script>
+        function openConfirmation(){
+    var confirmation = document.getElementById("myConfirmation");
+    var confirm = document.getElementById("btn-confirm");
+    var shut_down = document.getElementsByClassName("close")[0];
+    confirm.onclick = function() {
+        confirmation.style.display = "block";
+    }
+        shut_down.onclick = function() {
+        confirmation.style.display = "none";
+    }
+    
+        }
+    function clickYes(){
+      var confirmation = document.getElementById("myConfirmation");
+      confirmation.style.display = "none";  
+      alert("Bạn đã đăng ký thành công");
+    }
+    function clickNo(){
+      var confirmation = document.getElementById("myConfirmation");
+      confirmation.style.display = "none";  
+    }
+    </script>
 </head>
 
 <body ng-app="AngularApp" ng-controller="LearnerController">
@@ -141,7 +164,21 @@
                     <p>Học vấn: <span class="text-spacing"> {{x.Education}}</span></p>
                 </div>
                 <div class="profile__item--below">
-                    <a href="../Form_HTML/ProfileFindTutor.html"><button class="profile__button btn-profile">Đăng ký</button></a>
+                    <button class="profile__button btn-profile" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>
+                    <!-- The Modal -->
+<div id="myConfirmation" class="confirmation">
+
+    <!-- Modal content -->
+    <div class="confirmation-content">
+      <span class="close">&times;</span>
+      <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>
+      <div class="confirm-container">
+          <button id="btn-yes" onclick="clickYes()" class="confirm-btn">Có</button>
+          <button onclick="clickNo()" class="confirm-btn">Không</button>
+      </div>
+    </div>
+  
+  </div>
                     <a href="./ShowTutorProfile.html"><button class="profile__button btn-profile">Xem profile</button></a>
                 </div>
             </div>

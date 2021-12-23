@@ -207,32 +207,6 @@
 }
 
 @media screen and (max-width: 600px) {
-    /* Responsive user-flow */
-    /* .user-flow {
-        text-align: center;
-        font-size: 2rem;
-    } */
-
-    /* .number {
-        border-radius: 50%;
-        font-size: 15px;
-        width: 15%;
-        margin: 1rem auto 0 auto;
-    } */
-    /* #company-photo {
-        height: 21rem;
-        margin: 0;
-        padding: 0;
-    } */
-    /* .our-company {
-        text-align: left;
-        margin-left: 1rem;
-        font-size: 2rem;
-        font-weight: bold;
-    } */
-    /* .company__item--left {
-        margin-top: -2.5rem;
-    } */
     #mission,
     #vision,
     #core-value {
@@ -241,34 +215,7 @@
     .company__item--left p {
         margin: 1rem 1rem 1rem 0;
     }
-    /* .title-color {
-        font-size: 2.3rem;
-    } */
-    /* .strength-icon {
-        height: 5rem;
-        margin: auto;
-    } */
-    /* .icon-container {
-        width: 6.2rem;
-    } */
-    /* .our-strength {
-        font-size: 2rem;
-    } */
     .strength-container p {
         display: none;
     }
-    /* .strength__item--inside {
-        flex: 1;
-    } */
-    /* .about-us {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    } */
-    /* #us-photo {
-        height: 30rem;
-        margin: 1rem 2rem;
-    } */
-    /* .about-us button {
-        font-size: 1.5rem;
-    } */
 }
