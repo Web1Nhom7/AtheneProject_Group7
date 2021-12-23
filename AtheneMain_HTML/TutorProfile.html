@@ -49,9 +49,10 @@
         })
     </script> -->
 
-    <!-- <script>
-        // Get the modal
-        var profile = document.getElementById("myProfile");
+    <script>
+        function openEdit(){
+// Get the modal
+var profile = document.getElementById("myProfile");
         
         // Get the button that opens the modal
         var edit = document.getElementById("btn-edit");
@@ -75,7 +76,9 @@
             profile.style.display = "none";
           }
         }
-        </script> -->
+        }
+        
+        </script> 
 </head>
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
      <!-- Header -->
@@ -132,10 +135,11 @@
                     </div>
                 </div>
                 
-                <button class="btn-editinfo" id="btn-edit">Chỉnh sửa thông tin cá nhân</button><br>
+                <button class="btn-editinfo" id="btn-edit" onclick="openEdit();">Chỉnh sửa thông tin cá nhân</button><br>
                 <!-- Test Edit Pop-up -->
-                <!-- <div id="myProfile" class="profile-edit">
-                    <div class="edit-content">
+                <div id="myProfile" class="profile-edit">
+                   
+                    <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
                             <div class="title">Giới tính:&nbsp </div>
                             <input type="text" id="oldschool" value="{{x.Gender}}">
@@ -158,7 +162,7 @@
                         </div>
                         <button class="btn-editinfo">Lưu</button>
                     </div>
-                </div> -->
+                </div> 
                 <button class="btn-editinfo">Thêm thông tin chú ý</button>
                 <br>
             </div>
