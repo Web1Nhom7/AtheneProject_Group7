@@ -25,16 +25,24 @@
         <img class="cover-image" src="../Images/ProfileTutor/background.png" id="cover-image">
         <div class="user-info">
             <img class="user-avatar" src="../Images/ProfileTutor/user_ava.jpg" id="user-avatar">
-            <div class="user-name" ng-repeat="x in profiles">
-                <h1>{{x.Name}}</h1>
-                <p>{{x.Followers}}</p>
+            <div ng-repeat="x in profiles">
+                <label class="btn-avatar">
+                    <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
+                    <button><i class='fa fa-camera'></i> </button>
+                </label>
+                <div class="user-name">
+                    <h1>{{x.Name}}</h1>
+                    <p style="margin-top: -5px;">{{x.Followers}}</p>
+                </div>
             </div>
         </div>
         <div class="user-click">
             <button class="btn-follow">Theo dõi</button>
             <button class="btn-register">Đăng ký</button>
         </div>
+        <hr class="line" />
     </div>
+
     <!-- User content -->
     <div class="user-container" ng-repeat="x in profiles">
         <!-- Left item -->
@@ -65,8 +73,9 @@
                     <div class="title">Đã học tại:&nbsp </div>{{x.c3}}
                 </div>
             </div>
-            
+
         </div>
+
         <!-- Right item -->
         <div class="user__item--content">
             <!-- Register class -->
