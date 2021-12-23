@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Student</title>
-    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Logo.png">
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Favicon_Nobackgr.png">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" href="../CSS/ForStudent_Tutor.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -27,27 +27,29 @@
         })
     </script>
     <script>
-        function openConfirmation(){
-    var confirmation = document.getElementById("myConfirmation");
-    var confirm = document.getElementById("btn-confirm");
-    var shut_down = document.getElementsByClassName("close")[0];
-    confirm.onclick = function() {
-        confirmation.style.display = "block";
-    }
-        shut_down.onclick = function() {
-        confirmation.style.display = "none";
-    }
-    
+        function openConfirmation() {
+            var confirmation = document.getElementById("myConfirmation");
+            var confirm = document.getElementById("btn-confirm");
+            var shut_down = document.getElementsByClassName("close")[0];
+            confirm.onclick = function() {
+                confirmation.style.display = "block";
+            }
+            shut_down.onclick = function() {
+                confirmation.style.display = "none";
+            }
+
         }
-    function clickYes(){
-      var confirmation = document.getElementById("myConfirmation");
-      confirmation.style.display = "none";  
-      alert("Bạn đã đăng ký thành công");
-    }
-    function clickNo(){
-      var confirmation = document.getElementById("myConfirmation");
-      confirmation.style.display = "none";  
-    }
+
+        function clickYes() {
+            var confirmation = document.getElementById("myConfirmation");
+            confirmation.style.display = "none";
+            alert("Bạn đã đăng ký thành công");
+        }
+
+        function clickNo() {
+            var confirmation = document.getElementById("myConfirmation");
+            confirmation.style.display = "none";
+        }
     </script>
 </head>
 
@@ -166,19 +168,19 @@
                 <div class="profile__item--below">
                     <button class="profile__button btn-profile" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>
                     <!-- The Modal -->
-<div id="myConfirmation" class="confirmation">
+                    <div id="myConfirmation" class="confirmation">
 
-    <!-- Modal content -->
-    <div class="confirmation-content">
-      <span class="close">&times;</span>
-      <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>
-      <div class="confirm-container">
-          <button id="btn-yes" onclick="clickYes()" class="confirm-btn">Có</button>
-          <button onclick="clickNo()" class="confirm-btn">Không</button>
-      </div>
-    </div>
-  
-  </div>
+                        <!-- Modal content -->
+                        <div class="confirmation-content">
+                            <span class="close">&times;</span>
+                            <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>
+                            <div class="confirm-container">
+                                <button id="btn-yes" onclick="clickYes()" class="confirm-btn">Có</button>
+                                <button onclick="clickNo()" class="confirm-btn">Không</button>
+                            </div>
+                        </div>
+
+                    </div>
                     <a href="./ShowTutorProfile.html"><button class="profile__button btn-profile">Xem profile</button></a>
                 </div>
             </div>
