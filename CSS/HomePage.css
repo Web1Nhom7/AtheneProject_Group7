@@ -30,7 +30,7 @@
 
 /* Fading animation */
 
-.fade {
+.disappear {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 0;
     animation-name: fade;
