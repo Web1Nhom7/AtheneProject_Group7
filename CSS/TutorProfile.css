@@ -1,240 +1,291 @@
-/* Profile header */
-.profile {
-    display: block;
-}
-
-.cover-image {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 2rem;
-    max-height: 20vw;
-}
-
-.user-info {
-    display: flex;
-    height: 10rem;
-    position: relative;
-    transform: translateY(-40%);
-}
-
-.user-avatar {
-    margin-left: 10%;
-    border-radius: 50%;
-    margin-right: 2rem;
-}
-.tieude{
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 1rem;
-    background-color: #0077C0;
-    border-radius: 10px;
-    color: white;
-}
-
-.user-name h1{
-    font-size: 2rem;
-}
-.user-name{
-padding-top: 3rem;
-}
-.name{
-    font-weight: bold;
-}
-/* Upload cover image */
-
-.btn-cover {
-    position: absolute;
-    overflow: hidden;
-    display: inline-block;
-    right: 10%;
-}
-
-.btn-cover input {
-    position: absolute;
-    opacity: 0;
-    z-index: 0;
-}
-
-.btn-cover button {
-    height: 2rem;
-    font-size: 1rem;
-}
-/* Upload avatar image */
-
-.btn-avatar {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    right: 5rem;
-    top: 7rem;
-    z-index: 3;
-}
-
-.btn-avatar input {
-    position: absolute;
-    opacity: 0;
-    z-index: 0;
-}
-
-.btn-avatar button {
-    border: none;
-    background: white;
-    font-size: 1.4rem;
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-}
-/* Body */
-
-.user-container {
-    display: flex;
-    margin: 0 7.5%;
-}
-
-.user__item--intro {
-    border: 1px solid grey;
-    padding: 0.5rem;
-    text-align: center;
-    border-radius: 3rem;
-    height: fit-content;
-}
-.user__item--intro h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-#user-bio {
-    text-align: center;
-}
-
-.btn-editinfo {
-    width: 20rem;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    font-size: 1rem;
-}
-
-.information {
-    text-align: left;
-    margin-bottom: 2rem;
-}
-
-.info-line .title {
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.info-line {
-    display: flex;
-    margin: 1rem;
-}
-
-.intro__textarea {
-    border: none;
-    font-size: 1rem;
-    font-family: 'Roboto';
-    line-height: 1rem;
-    resize: none;
-}
-
-.user__item--content {
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-}
-.user__item--content h3{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.content__item--class,
-.content__item--exp,
-.content__item--achieve {
-    border: 1px solid gray;
-    margin-bottom: 3rem;
-    border-radius: 2rem;
-    padding-left: 2rem;
-}
-
-.btn-editcontent {
-    font-size: 1rem;
-    width: 8rem;
-    margin: 1rem;
-    margin-left: 25rem;
-}
-button{
-    background-color: #E0FDFF;}
-
-#bio{
-    padding: 0 15%;
-}
-
-/* Edit pop-up */
-
-.profile-edit {
-    /* Hidden by default */
-    display: none;
-    /* Stay in place */
-    position: fixed; 
-    /* Sit on top */
-    /* Location of the box */
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    /* Full width */
-    width: 100%; 
-    /* Full height */
-    height: 100%; 
-    /* Enable scroll if needed */
-    overflow: auto;
-    /* Fallback color */ 
-    background-color: rgb(0,0,0); 
-     /* Black w/ opacity */
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  /* Modal Content */
-  .edit-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .user-click{
-      position: relative;
-      top: -4rem;
-      left: 20rem;
-  }
-  .btn-follow, .btn-register{
-      width: 10rem;
-      font-size: 1rem;
-      margin-right: 7rem;
-  }
-  @media screen and (max-width: 600px) {
-    .user-name{
-        padding-top: 2rem;
-        }
-    .user-click{
-        top: -1rem;
-        left: 20rem;
+    /* Profile header */
+    
+    .profile {
+        display: block;
     }
-}
+    
+    .cover-image {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 2rem;
+        max-height: 20vw;
+    }
+    
+    .user-info {
+        display: flex;
+        height: 10rem;
+        position: relative;
+        transform: translateY(-40%);
+    }
+    
+    .user-avatar {
+        margin-left: 10%;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+    
+    .tieude {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 1rem;
+        background-color: #0077C0;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .user-name h1 {
+        font-size: 2rem;
+    }
+    
+    .user-name {
+        /* padding-top: -2rem; */
+        margin-top: -0.7rem;
+    }
+    
+    .name {
+        font-weight: bold;
+    }
+    /* Upload cover image */
+    
+    .btn-cover {
+        position: absolute;
+        overflow: hidden;
+        display: inline-block;
+        right: 10%;
+    }
+    
+    .btn-cover input {
+        position: absolute;
+        opacity: 0;
+        z-index: 0;
+    }
+    
+    .btn-cover button {
+        height: 2rem;
+        font-size: 1rem;
+    }
+    /* Upload avatar image */
+    
+    .btn-avatar {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        right: 5rem;
+        top: 7rem;
+        z-index: 3;
+    }
+    
+    .btn-avatar input {
+        position: absolute;
+        opacity: 0;
+        z-index: 0;
+    }
+    
+    .btn-avatar button {
+        border: none;
+        background: white;
+        font-size: 1.4rem;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+    }
+    /* Body */
+    
+    .user-container {
+        display: flex;
+        margin: 0 7.5%;
+    }
+    
+    .user__item--intro {
+        border: 1px solid grey;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 3rem;
+        height: fit-content;
+    }
+    
+    .user__item--intro h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    #user-bio {
+        text-align: center;
+    }
+    
+    .btn-editinfo {
+        width: 20rem;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        font-size: 1rem;
+    }
+    
+    .information {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    
+    .info-line .title {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    
+    .info-line {
+        display: flex;
+        margin: 1rem;
+    }
+    
+    .intro__textarea {
+        border: none;
+        font-size: 1rem;
+        font-family: 'Roboto';
+        line-height: 1rem;
+        resize: none;
+    }
+    
+    .user__item--content {
+        flex-basis: 60%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    
+    .user__item--content h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .content__item--class,
+    .content__item--exp,
+    .content__item--achieve {
+        border: 1px solid gray;
+        margin-bottom: 3rem;
+        border-radius: 2rem;
+        padding-left: 2rem;
+    }
+    
+    .btn-editcontent {
+        font-size: 1rem;
+        width: 8rem;
+        margin: 1rem;
+        margin-left: 25rem;
+    }
+    
+    button {
+        background-color: #E0FDFF;
+    }
+    
+    #bio {
+        padding: 0 15%;
+    }
+    /* Edit pop-up */
+    
+    .profile-edit {
+        /* Hidden by default */
+        display: none;
+        /* Stay in place */
+        position: fixed;
+        /* Sit on top */
+        /* Location of the box */
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        /* Full width */
+        width: 100%;
+        /* Full height */
+        height: 100%;
+        /* Enable scroll if needed */
+        overflow: auto;
+        /* Fallback color */
+        background-color: rgb(0, 0, 0);
+        /* Black w/ opacity */
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    /* Modal Content */
+    
+    .edit-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .user-click {
+        position: relative;
+        top: -4rem;
+        left: 20rem;
+        margin-bottom: 0;
+    }
+    
+    .btn-follow,
+    .btn-register {
+        width: 12rem;
+        height: 2rem;
+        font-size: 1rem;
+        margin-right: 5rem;
+        padding-bottom: 0;
+    }
+    
+    .line {
+        width: 75%;
+        background: #867878;
+        height: 0.5px;
+        margin-top: -2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .edit-content #gender {
+        margin-left: 2.2rem;
+    }
+    
+    .edit-content #dob,
+    #oldschool {
+        margin-left: 1.5rem;
+    }
+    
+    .edit-content #school {
+        margin-left: 1.5rem;
+    }
+    
+    .edit-content #major {
+        margin-left: 2.2rem;
+    }
+    
+    .edit-content #school,
+    #major {
+        width: 50%;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .user-name {
+            /* padding-top: -2rem; */
+            margin-top: -2rem;
+        }
+        .user-click {
+            top: -2rem;
+            left: 20rem;
+        }
+        .line {
+            margin-top: -1rem;
+        }
+    }

@@ -50,60 +50,64 @@
     </script> -->
 
     <script>
-        function openEdit(){
-// Get the modal
-var profile = document.getElementById("myProfile");
-        
-        // Get the button that opens the modal
-        var edit = document.getElementById("btn-edit");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks the button, open the modal 
-        edit.onclick = function() {
-            profile.style.display = "block";
+        function openEdit() {
+            // Get the modal
+            var profile = document.getElementById("myProfile");
+
+            // Get the button that opens the modal
+            var edit = document.getElementById("btn-edit");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            edit.onclick = function() {
+                profile.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                profile.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == profile) {
+                    profile.style.display = "none";
+                }
+            }
         }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            profile.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == profile) {
-            profile.style.display = "none";
-          }
-        }
-        }
-        
-        </script> 
+    </script>
 </head>
+
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
-     <!-- Header -->
-     <div w3-include-html="../Athene_header_footer/Header.html" style="position: fixed; z-index: 1;"></div>
+    <!-- Header -->
+    <div w3-include-html="../Athene_header_footer/Header.html" style="position: fixed; z-index: 1;"></div>
     <script async>
         w3.includeHTML();
     </script>
-     <!-- Body  -->
-     <div class="profile">
+    <!-- Body  -->
+    <div class="profile">
         <img class="cover-image" src="../Images/ProfileTutor/background.png" id="cover-image">
         <div class="user-info">
             <img class="user-avatar" src="../Images/ProfileTutor/user_ava.jpg" id="user-avatar">
-            <div class="user-name" ng-repeat="x in profiles">
+            <div ng-repeat="x in profiles">
                 <label class="btn-avatar">
                     <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
                     <button><i class='fa fa-camera'></i> </button>
                 </label>
-                <div class="name">{{x.Name}}</div>
-                <div>{{x.Followers}}</div>
+                <div class="user-name">
+                    <h1>{{x.Name}}</h1>
+                    <p style="margin-top: -5px;">{{x.Followers}}</p>
+                </div>
             </div>
             <label class="btn-cover">
                 <input type="file" name="cover-image" accept="image/*" onchange="loadCover(event)">
                 <button> <i class='fa fa-camera'></i> Chỉnh sửa ảnh bìa</button>
             </label>
         </div>
+
+        <hr class="line" />
         <!-- User content -->
         <div class="user-container" ng-repeat="x in profiles">
             <!-- Left item -->
@@ -134,15 +138,15 @@ var profile = document.getElementById("myProfile");
                         <div class="title">Đã học tại:&nbsp </div>{{x.c3}}
                     </div>
                 </div>
-                
+
                 <button class="btn-editinfo" id="btn-edit" onclick="openEdit();">Chỉnh sửa thông tin cá nhân</button><br>
                 <!-- Test Edit Pop-up -->
                 <div id="myProfile" class="profile-edit">
-                   
+
                     <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
                             <div class="title">Giới tính:&nbsp </div>
-                            <input type="text" id="oldschool" value="{{x.Gender}}">
+                            <input type="text" id="gender" value="{{x.Gender}}">
                         </div>
                         <div class="info-line">
                             <div class="title">Ngày sinh:&nbsp </div>
@@ -162,7 +166,7 @@ var profile = document.getElementById("myProfile");
                         </div>
                         <button class="btn-editinfo">Lưu</button>
                     </div>
-                </div> 
+                </div>
                 <button class="btn-editinfo">Thêm thông tin chú ý</button>
                 <br>
             </div>
@@ -237,4 +241,5 @@ var profile = document.getElementById("myProfile");
         w3.includeHTML();
     </script>
 </body>
+
 </html>
