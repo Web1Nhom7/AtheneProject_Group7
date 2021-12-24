@@ -132,12 +132,12 @@
                     <div class="info-line">
                         <div class="title">Đã học tại:&nbsp </div>{{x.c3}}
                     </div>
+                    <button class="btn-editinfo" id="btn-edit" onclick="openEdit();">Chỉnh sửa thông tin cá nhân</button>
                 </div>
-
-                <button class="btn-editinfo" id="btn-edit" onclick="openEdit();">Chỉnh sửa thông tin cá nhân</button><br>
+                
+ 
                 <!-- Test Edit Pop-up -->
                 <div id="myProfile" class="profile-edit">
-
                     <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
                             <div class="title">Giới tính:&nbsp </div>
@@ -159,45 +159,9 @@
                             <div class="title"> Chuyên ngành:&nbsp </div>
                             <input type="text" id="major" value="{{x.major}}">
                         </div>
-                        <button class="btn-editinfo">Lưu</button>
                     </div>
                 </div>
-                <button class="btn-editinfo">Thêm thông tin chú ý</button>
-                <br>
             </div>
-            <!-- Right item -->
-            <div class="user__item--content">
-                <!-- Register class -->
-                <div class="content__item--class">
-                    <div class="tieude">
-                        Lớp đang đăng kí
-                    </div>
-                    <div class="info-line">
-                        <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title">Môn dạy: &nbsp </div>{{x.Subject}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title"> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
-                    </div>
-                    <div class="info-line">
-                        <div class="title"> Mô tả thêm: &nbsp </div>{{x.More}}
-                    </div>
-                    <button class="btn-editcontent">Chỉnh sửa</button>
-                </div>
                 <!-- Experience -->
                 <div class="content__item--exp">
                     <div class="tieude">
@@ -208,11 +172,9 @@
                     </div>
                     <div class="info-line">
                         {{x.Exps[0].Exp2}}
-                    </div>
-                    <button class="btn-editcontent">Chỉnh sửa</button>
-                </div>
+                    </div>                              
                 <!-- Achievement -->
-                <div class="content__item--achieve">
+                
                     <div class="tieude">
                         Thành tích đạt được
                     </div>
@@ -225,10 +187,42 @@
                     <div class="info-line">
                         {{x.Achievements[0].Achievements3}}
                     </div>
-                    <button class="btn-editcontent">Chỉnh sửa</button>
-                </div>
-            </div>
+                    <button class="btn-editcontent">Chỉnh sửa</button>   
         </div>
+    </div>
+     <!-- Right item -->
+     <div class="user__item--content">
+      <!-- Register class -->
+      <div class="content__item--class">
+          <div class="tieude">
+              Lớp đang đăng kí
+          </div>
+          <div class="info-line">
+              <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
+          </div>
+          <div class="info-line">
+              <div class="title">Môn dạy: &nbsp </div>{{x.Subject}}
+          </div>
+          <div class="info-line">
+              <div class="title">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
+          </div>
+          <div class="info-line">
+              <div class="title">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
+          </div>
+          <div class="info-line">
+              <div class="title">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
+          </div>
+          <div class="info-line">
+              <div class="title">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
+          </div>
+          <div class="info-line">
+              <div class="title"> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
+          </div>
+          <div class="info-line">
+              <div class="title"> Mô tả thêm: &nbsp </div>{{x.More}}
+          </div>
+          <button class="btn-editcontent">Chỉnh sửa</button>
+      </div>
     </div>
     <!-- Footer -->
     <div w3-include-html="../Athene_header_footer/Footer.html"></div>
