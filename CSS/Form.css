@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto';
 }
+
 .form-container {
     width: 40%;
     margin: 0 auto;
@@ -137,5 +138,17 @@ button,
     #tp,
     #quan {
         width: 100%;
+    }
+    #quan {
+        width: 102%;
+    }
+    #cccd {
+        width: 150%;
+    }
+    #dob {
+        width: 100%;
+    }
+    #pass {
+        width: 99%;
     }
 }
