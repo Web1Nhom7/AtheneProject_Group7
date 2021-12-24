@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up For Learner</title>
     <link rel="stylesheet" href="../CSS/Form.css">
-    <script src="../Js/Validation.js"></script>
+    <script src="../Js/Register_Val.js"></script>
     <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Favicon_Nobackgr.png">
+
 </head>
 
 <body>
@@ -46,8 +47,8 @@
                 </div>
                 <div class="form-line">
                     <label for="gender">Giới tính: </label>
-                    <span><input type="radio" name="gender" id="gender nam" value="0" required>Nam</span>
-                    <span><input type="radio" name="gender" id="gender nu" value="1" required>Nữ</span>
+                    <span><input type="radio" name="gender" id="nam" value="0" required>Nam</span>
+                    <span><input type="radio" name="gender" id="nu" value="1" required>Nữ</span>
                 </div>
                 <div class="form-line">
                     <div class="flex-item">
@@ -101,15 +102,12 @@
                 <div class="form-line flex-item">
                     <!-- <button value="Quay về" class="Return"><a href="#">Quay lại</a></button>
                 <button class="Next" value="Tiếp theo" type="submit" name="submit"><a href="#">Tiếp theo</a></button> -->
-                    <input type="reset" value="Quay lại" class="submit"><span><a href="../AtheneMain_HTML/HomePage.html" target="blank"></a></span>
+                    <input type="reset" value="Quay lại" class="submit"><span><a href="../AtheneMain_HTML/HomePage.html" ></a></span>
                     <input type="submit" value="Hoàn tất" class="submit" onclick="submitFormLearner()">
                 </div>
             </div>
         </form>
     </div>
-
-    <script src="../Js/Register.js"></script>
-
 </body>
 
 </html>

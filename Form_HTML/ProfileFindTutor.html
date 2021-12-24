@@ -23,8 +23,8 @@
             <div class="form-line">
                 <label for="jobs">Nghề nghiệp:</label>
                 <span class="checkbox">
-                <span><input type="checkbox" name="jobs" value="giaovien" id="jobs"> Giáo viên</span>
-                <span><input type="checkbox" name="jobs" value="sinhvien" id="jobs"> Sinh viên</span> </span>
+                <span><input type="checkbox" name="jobs" value="giaovien" id="gv"> Giáo viên</span>
+                <span><input type="checkbox" name="jobs" value="sinhvien" id="sv"> Sinh viên</span> </span>
             </div>
             <div class="form-line flex-item">
                 <label class="lb-title" for="class">Lớp dạy:</label>
@@ -34,8 +34,8 @@
             </div>
             <div class="form-line ">
                 <label for="gender">Giới tính:</label>
-                <span><input type="checkbox" name="gender" id="gender nam" value="0"> Nam</span>
-                <span><input type="checkbox" name="gender" id="gender nu" value="1"> Nữ</span>
+                <span><input type="checkbox" name="gender" id="nam" value="0"> Nam</span>
+                <span><input type="checkbox" name="gender" id="nu" value="1"> Nữ</span>
             </div>
             <div class="form-line">
                 <div class="flex-item">
@@ -93,7 +93,7 @@
                 <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" class="ipbox txt-info"></textarea>
             </div>
             <div class="form-line" style="text-align: right;">
-                <input type="submit" value="Hoàn tất" class="submit" onclick="return valJob(),valGioitinh(), Submit()">
+                <input type="submit" value="Hoàn tất" class="submit" onclick="return valJobs(), valGender(), Submit()">
             </div>
         </form>
     </div>

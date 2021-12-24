@@ -23,9 +23,9 @@
             <hr/>
             <div class="form-line">
                 <label for="level">Cấp học:</label>
-                <span class="checkbox"> <span ><input type="checkbox" name="level" id="level" value="cap1"> Cấp I</span>
-                <span> <input type="checkbox" name="level" id="level" value="cap2"> Cấp II</span>
-                <span> <input type="checkbox" name="level" id="level" value="cap3"> Cấp III</span> </span>
+                <span class="checkbox"> <span ><input type="checkbox" class="level" name="level" id="cap1" value="cap1"> Cấp I</span>
+                <span> <input type="checkbox" class="level" name="level" id="cap2" value="cap2"> Cấp II</span>
+                <span> <input type="checkbox" class="level" name="level" id="cap3" value="cap3"> Cấp III</span> </span>
             </div>
             <div class="form-line flex-item">
                 <label class="lb-title" for="subject">Môn dạy:</label>
@@ -33,8 +33,8 @@
             </div>
             <div class="form-line ">
                 <label for="gender">Giới tính:</label>
-                <span><input type="checkbox" name="gender" id="gender nam" value="0"> Nam</span>
-                <span><input type="checkbox" name="gender"  id="gender nu"  value="1"> Nữ</span>
+                <span><input type="checkbox" name="gender" id="nam" value="0"> Nam</span>
+                <span><input type="checkbox" name="gender"  id="nu"  value="1"> Nữ</span>
             </div>
             <div class="form-line">
                 <div class="flex-item">
@@ -63,44 +63,6 @@
             </div>
         </form>
     </div>
-    <!-- <script>
-        function submitForm(level, monhoc, gender, diachi, time, salary, schedule, mota) {
-
-            level = document.getElementById("level").value;
-            monhoc = document.getElementById("subject").value;
-            diachi = document.getElementById("khuvuc").value;
-            time = document.getElementById("time").value;
-            salary = document.getElementById("luong").value;
-            schedule = document.getElementById("schedule").value;
-            mota = document.getElementById("descrip").value;
-
-            var user = new Object();
-
-
-            user.level = level;
-            user.subject = monhoc;
-            user.gender = gender == "0" ? "Nam" : "Nữ";
-
-            user.address = diachi + ";" + "TP.HCM";
-            user.time = time;
-            user.salary = salary;
-            user.schedule = schedule;
-            user.mota = mota;
-
-            if (typeof(Storage) !== undefined) {
-
-                // window.location.href = "./AtheneMain_HTML/HomePage.html";
-
-                localStorage.setItem('listFindStudent', JSON.stringify(user));
-                alert("Đăng ký thành công!");
-                return true;
-
-            } else {
-                alert("Bạn chưa đăng nhập!");
-                return false;
-            }
-        }
-    </script> -->
 </body>
 
 </html>
