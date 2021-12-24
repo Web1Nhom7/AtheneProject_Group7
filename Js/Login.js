@@ -1,3 +1,64 @@
+function checkVal() {
+    var phone = document.getElementById("sodt");
+    var phone_error = document.getElementById("phoneError");
+    var phone_error1 = document.getElementById("phoneError1");
+
+    var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
+
+    if (phone.value !== '') {
+        if (vnRegex.test(phone.value) == false) {
+            phone.style.border = "2px solid red";
+            phone_error.style.display = 'block';
+            phone_error1.style.display = 'none';
+            phone.focus();
+            return false;
+
+        }
+    } else {
+
+        phone.style.border = "2px solid red";
+        phone_error.style.display = 'none';
+        phone_error1.style.display = 'block';
+        phone.focus();
+        return false;
+
+    }
+}
+
+function checkPhoneVal() {
+    var phone = document.getElementById("sodt");
+    var phone_error = document.getElementById("phoneError");
+    var phone_error1 = document.getElementById("phoneError1");
+    var pass = document.getElementById("pass");
+
+    var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
+
+    if (phone.value !== '') {
+        if (vnRegex.test(phone.value) == true) {
+            phone.style.border = "2px solid green";
+            phone_error.style.display = "none";
+            phone_error1.style.display = "none";
+            pass.focus();
+            return true;
+        }
+    }
+}
+
+function checkPassVal() {
+    var pass = document.getElementById("pass");
+    var pass_error = document.getElementById("passError");
+
+    if (pass.value.length >= 8) {
+        pass.style.border = "2px solid green";
+        pass_error.style.display = "none";
+        return true;
+    } else {
+        pass.style.border = "2px solid white";
+    }
+
+}
+
+
 function Login(sodt, pass) {
     sodt = document.getElementById("sodt").value;
     pass = document.getElementById("pass").value;
@@ -5,31 +66,33 @@ function Login(sodt, pass) {
     var user = new Object();
     user.phone = sodt;
     user.password = pass;
+
     var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
 
-    if (typeof(Storage) !== undefined) {
-        for (var i = 0; i < listCustomer.length; i++) {
-            if (user.phone == listCustomer[i].phone && user.password == listCustomer[i].password) {
-                window.location.href = "../AtheneMain_HTML/HomePage.html";
+    if (sodt == "" || pass == "") {
+        return alert("Vui lòng nhập số điện thoại và mật khẩu");
+    } else {
 
-                // window.location.href = "./Form_HTML/ProfileFindStudent.html";
+        if (typeof(Storage) !== undefined) {
+            for (var i = 0; i < listCustomer.length; i++) {
+                if (user.phone == listCustomer[i].phone && user.password == listCustomer[i].password) {
+                    window.location.href = "../AtheneMain_HTML/HomePage.html";
 
-                sessionStorage.setItem("userLogin", JSON.stringify(user));
-                // sessionStorage.setItem("usename", user.phone);
-                // sessionStorage.setItem("password", user.password);
-                sessionLogin(sodt, pass);
-                alert("Đăng nhập thành công!");
-                return true;
+                    sessionStorage.setItem("userLogin", JSON.stringify(user));
 
-            } else {
-                alert("Tên hoặc mật khẩu chưa đúng. Vui lòng nhập lại!");
-                document.getElementById("sodt").value = "";
-                document.getElementById("pass").value = "";
-                return false;
+                    sessionLogin(sodt, pass);
+                    alert("Đăng nhập thành công!");
+                    return true;
+
+                } else {
+                    alert("Tên hoặc mật khẩu chưa đúng. Vui lòng nhập lại!");
+                    document.getElementById("sodt").value = "";
+                    document.getElementById("pass").value = "";
+                    return false;
+                }
             }
-        }
-    } else { alert("Bạn chưa có tài khoản!"); }
-
+        } else { alert("Bạn chưa có tài khoản!"); }
+    }
 }
 
 function sessionLogin(sodt, pass) {
