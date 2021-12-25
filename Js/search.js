@@ -102,14 +102,17 @@ function myFunctionFortudent(arr) {
             '<div><i class="fa fa-map-marker profile-icon"> &nbsp </i>' +  arr[i].Direct + '</div>' +
             '<p><i class = "fa fa-user profile-icon"> &nbsp </i>' +  arr[i].Gender +
             '</p></div>' +
+            //Khung 
             '<div class="profile__item--center">' +
-            '<p> Môn học: <span class = "text-spacing">' + arr[i].Subject +
-            '</span></p>' + '<p> Lớp dạy: <span class = "text-spacing">' + arr[i].class +
-            '</span></p>' +
-            '<p> Học phí: <span class = "text-spacing">' + arr[i].Fee +
-            '</span></p>' +
-            '<p> Học vấn: <span class = "text-spacing">' + arr[i].Education +
-            '<span></p></div>' +
+            '<div class="profile-line"><div class="profile-oj"> Môn học: &nbsp </div>' + arr[i].Subject +
+            '</div>' +
+            '<div class="profile-line"><div class="profile-oj"> Lớp dạy: &nbsp </div>' + arr[i].class +
+            '</div>' +
+            '<div class="profile-line"><div class="profile-oj"> Học phí: &nbsp </div>' + arr[i].Fee +
+            '</div>' + 
+            '<div class="profile-line"><div class="profile-oj"> Học vấn: &nbsp </div>' + arr[i].Education +
+            '</div></div>' +
+
             '<div class="profile__item--below">' +
             '<button class="profile__button btn-profile" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>' +
             '<div id="myConfirmation" class="confirmation">' +
@@ -191,14 +194,14 @@ function myFunctionForTutor(arr) {
             '<div><i class="fa fa-map-marker profile-icon">&nbsp</i>' + arr[i].Direct + '</div>' +
             '<p><i class = "fa fa-user profile-icon">&nbsp </i>' + arr[i].Gender +
             '</p></div>' +
-            '<div class="profile__item--center">' +
-            '<p> Trình độ: <span class = "text-spacing">' + arr[i].Education +
-            '</span></p>' + '<p> Môn đăng ký: <span class = "text-spacing">' + arr[i].Subject +
-            '</span></p>' +
-            '<p> Mức lương: <span class = "text-spacing">' + arr[i].Fee +
-            '</span></p>' +
-            '<p> Yêu cầu: <span class = "text-spacing">' + arr[i].Request +
-            '</span></p></div>' +
+            '<div class="profile__item--center">' +'<div class="profile-line"><div class="profile-oj">Trình độ: &nbsp </div>' + arr[i].Education +
+            '</div>' +
+            '<div class="profile-line"><div class="profile-oj">Môn đăng ký: &nbsp </div>' + arr[i].Subject +
+            '</div>' +
+            '<div class="profile-line"><div class="profile-oj">Mức lương: &nbsp </div>' + arr[i].Fee +
+            '</div>' +
+            '<div class="profile-line"><div class="profile-oj">Yêu cầu: &nbsp </div>' + arr[i].Request +
+            '</div></div>' +
             '<div class="profile__item--below">' +
             '<button class="profile__button" id="btn-confirm" onclick="openConfirmation()">Đăng ký nhận lớp</button>' +
             '<div id="myConfirmation" class="confirmation">' +
