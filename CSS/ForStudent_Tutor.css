@@ -196,6 +196,9 @@
           height: 2.8rem;
           font-size: 1.3rem;
       }
+      .profile-oj{
+        min-width: 13rem;
+    }
   }
   /* Pop up */
   
