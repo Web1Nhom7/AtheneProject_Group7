@@ -8,4 +8,4 @@ app.controller("ProfileController", function($scope, $http) {
     }, function myError(respone) {
         $scope.dataError = respone.statusText
     })
-})
+});
