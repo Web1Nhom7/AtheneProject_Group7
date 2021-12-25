@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="../Js/Header-user.js"></script>
 </head>
 <style>
     /* Header */
@@ -118,8 +119,7 @@
     .user-box {
         width: 5rem;
         background-color: white;
-        border-radius
-        : 1rem;
+        border-radius: 1rem;
         height: 2rem;
         margin-top: 0.5rem;
     }
@@ -280,7 +280,7 @@
                 </div>
             </div>
 
-            <script>
+            <!-- <script>
                 function myNotification() {
                     document.getElementById("myNoti").classList.toggle("noti-show");
                 }
@@ -296,7 +296,7 @@
                         }
                     }
                 }
-            </script>
+            </script> -->
             <div class="drop-down">
                 <button onclick="myMenu()" class="btn-dropdown"><i class="	fa fa-chevron-circle-down"></i></button>
                 <div id="myDropdown" class="menu-content">
@@ -306,7 +306,7 @@
                 </div>
             </div>
 
-            <script>
+            <!-- <script>
                 function myMenu() {
                     document.getElementById("myDropdown").classList.toggle("dropdown-show");
                 }
@@ -327,13 +327,13 @@
             <script>
                 function Logout() {
                     if (typeof(Storage) !== undefined) {
+                        window.location.href = "../AtheneMain_HTML/HomePage.html";
                         sessionStorage.removeItem("userLogin");
                         localStorage.removeItem("sessionLogin");
-                        alert("Đăng xuất thành công!");
+                        return alert("Đăng xuất thành công!");
                     }
-                    return window.location.href = "../AtheneMain_HTML/HomePage.html";
                 }
-            </script>
+            </script> -->
 
         </div>
     </div>
