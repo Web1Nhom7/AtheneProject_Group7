@@ -99,8 +99,8 @@ function myFunctionFortudent(arr) {
             '<img class="avatar" src="' + arr[i].Ava + '">' +
             '<div class="profile__item--right">' +
             '<div class = "profile-name">' + arr[i].Name + '</div>' +
-            '<div><i class="fa fa-map-marker profile-icon"></i>' + arr[i].Direct + '</div>' +
-            '<p><i class = "fa fa-user profile-icon"> </i>' + arr[i].Gender +
+            '<div><i class="fa fa-map-marker profile-icon"> &nbsp </i>' +  arr[i].Direct + '</div>' +
+            '<p><i class = "fa fa-user profile-icon"> &nbsp </i>' +  arr[i].Gender +
             '</p></div>' +
             '<div class="profile__item--center">' +
             '<p> Môn học: <span class = "text-spacing">' + arr[i].Subject +
@@ -188,8 +188,8 @@ function myFunctionForTutor(arr) {
             '<img class="avatar" src="' + arr[i].Ava + '">' +
             '<div class="profile__item--right">' +
             '<div class = "profile-name">' + arr[i].Name + '</div>' +
-            '<div><i class="fa fa-map-marker profile-icon"></i>' + arr[i].Direct + '</div>' +
-            '<p><i class = "fa fa-user profile-icon"> </i>' + arr[i].Gender +
+            '<div><i class="fa fa-map-marker profile-icon">&nbsp</i>' + arr[i].Direct + '</div>' +
+            '<p><i class = "fa fa-user profile-icon">&nbsp </i>' + arr[i].Gender +
             '</p></div>' +
             '<div class="profile__item--center">' +
             '<p> Trình độ: <span class = "text-spacing">' + arr[i].Education +
@@ -238,4 +238,30 @@ function searchForTutor() {
 
     tongHop = quan_sel + level_sel + gender_sel + caphoc_sel + monhoc_sel;
     filterSelection(tongHop)
+}
+
+
+//-------Open popup----
+function openConfirmation() {
+    var confirmation = document.getElementById("myConfirmation");
+    var confirm = document.getElementById("btn-confirm");
+    var shut_down = document.getElementsByClassName("close")[0];
+    confirm.onclick = function() {
+        confirmation.style.display = "block";
+    }
+    shut_down.onclick = function() {
+        confirmation.style.display = "none";
+    }
+
+}
+
+function clickYes() {
+    var confirmation = document.getElementById("myConfirmation");
+    confirmation.style.display = "none";
+    alert("Bạn đã đăng ký thành công");
+}
+
+function clickNo() {
+    var confirmation = document.getElementById("myConfirmation");
+    confirmation.style.display = "none";
 }

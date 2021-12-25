@@ -1,81 +1,3 @@
-function checkVal() {
-    var phone = document.getElementById("sodt");
-
-    var phone_error = document.getElementById("phoneError");
-    var phone_error1 = document.getElementById("phoneError1");
-
-    var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
-
-    if (phone.value !== '') {
-        if (vnRegex.test(phone.value) == false) {
-            phone.style.border = "2px solid red";
-            phone.style.outline = "none";
-            phone_error.style.display = 'block';
-            phone_error1.style.display = 'none';
-            // phone.focus();
-            return false;
-
-        }
-    } else {
-
-        phone.style.border = "2px solid red";
-        phone.style.outline = "none";
-        phone_error.style.display = 'none';
-        phone_error1.style.display = 'block';
-        // phone.focus();
-        return false;
-
-    }
-
-    var pass = document.getElementById("pass");
-    var pass_error = document.getElementById("passError");
-
-    if (pass.value.length < 8) {
-        pass.style.border = "2px solid red";
-        pass.style.outline = "none";
-        pass_error.style.display = "block";
-        // pass.focus();
-        return false;
-    }
-
-
-    var repass = document.getElementById("repass");
-    var pass_error1 = document.getElementById("passError1");
-    if (repass.value !== pass.value) {
-        repass.style.border = "2px solid red";
-        repass.style.outline = "none";
-        pass_error1.style.display = "block";
-        return false;
-    }
-
-
-
-    var cccd = document.getElementById("cccd");
-    var cccdError = document.getElementById("cccdError");
-    var cccdError1 = document.getElementById("cccdError1");
-    var vnRegex1 = /((00|01|02|03|04|05|06|07|08|09)+[0-9]{10}\b)/g;
-
-    if (cccd.value !== '') {
-        if (vnRegex1.test(cccd.value) == false) {
-            cccd.style.border = "2px solid red";
-            cccd.style.outline = "none";
-            cccdError.style.display = 'block';
-            cccdError1.style.display = 'none';
-            return false;
-
-        }
-    } else {
-
-        cccd.style.border = "2px solid red";
-        cccd.style.outline = "none";
-        cccdError.style.display = 'none';
-        cccdError1.style.display = 'block';
-        return false;
-
-    }
-}
-
-
 function checkPhoneVal() {
     var phone = document.getElementById("sodt");
     var phone_error = document.getElementById("phoneError");
@@ -85,10 +7,17 @@ function checkPhoneVal() {
     var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
 
     if (phone.value !== '') {
-        if (vnRegex.test(phone.value) == true) {
+        if (vnRegex.test(phone.value) == false) {
+            phone.style.border = "2px solid red";
+            phone.style.outline = "none";
+            phone_error.style.display = 'block';
+            phone_error1.style.display = 'none';
+            return false;
+
+        } else {
             phone.style.border = "1.7px solid black";
             phone_error.style.display = "none";
-            phone_error1.style.display = "none";
+            phone_error1.style.display = 'none';
             pass.focus();
             return true;
         }
@@ -99,9 +28,17 @@ function checkPassVal() {
     var pass = document.getElementById("pass");
     var pass_error = document.getElementById("passError");
 
-    if (pass.value.length >= 8) {
+    var repass = document.getElementById("repass");
+
+    if (pass.value.length < 8) {
+        pass.style.border = "2px solid red";
+        pass.style.outline = "none";
+        pass_error.style.display = "block"
+        return false;
+    } else if (pass.value.length >= 8) {
         pass.style.border = "1.7px solid black";
         pass_error.style.display = "none";
+        repass.focus();
         return true;
     }
 }
@@ -110,10 +47,16 @@ function confirmPass() {
     var repass = document.getElementById("repass");
     var pass = document.getElementById("pass");
     var pass_error1 = document.getElementById("passError1");
+
     if (repass.value === pass.value) {
         repass.style.border = "1.7px solid black";
         pass_error1.style.display = "none";
         return true;
+    } else if (repass.value !== pass.value) {
+        repass.style.border = "2px solid red";
+        repass.style.outline = "none";
+        pass_error1.style.display = "block";
+        return false;
     }
 }
 
@@ -127,27 +70,17 @@ function checkCCCD() {
         if (vnRegex1.test(cccd.value) == true) {
             cccd.style.border = "1.7px solid black";
             cccdError.style.display = "none";
-            cccdError1.style.display = "none";
-            cccd.focus();
+            cccdError1.style.display = 'none';
             return true;
-        } else
-        if (vnRegex1.test(cccd.value) == false) {
+        } else {
             cccd.style.border = "2px solid red";
             cccd.style.outline = "none";
             cccdError.style.display = 'block';
             cccdError1.style.display = 'none';
             return false;
-
         }
-    } else {
-
-        cccd.style.border = "2px solid red";
-        cccd.style.outline = "none";
-        cccdError.style.display = 'none';
-        cccdError1.style.display = 'block';
-        return false;
-
     }
+
 }
 
 function submitFormLearner() {
@@ -187,29 +120,36 @@ function submitFormLearner() {
     user.ngayCapCCCD = date;
 
     if (user.name == "" || user.phone == "" || user.password == "" || user.birthday == "" || user.gender == " " || user.address == "" || user.CCCD == "" || user.ngayCapCCCD == "") {
-        return alert("Vui lòng điền đầy đủ thông tin!");
+        alert("Vui lòng điền đầy đủ thông tin!");
+        var phone_error1 = document.getElementById("phoneError1");
+        phone_error1.style.display = 'block';
+        var cccdError1 = document.getElementById("cccdError1");
+        cccdError1.style.display = 'block';
+        return false;
     } else {
-        user.id = createIDCustomer();
+        if (kiemTraSDT(user.phone) == true && kiemTraCCCD(user.CCCD) == true && kiemTraPass(user.password) == true) {
+            user.id = createIDCustomer();
 
-        var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
-        if (listCustomer == null) {
-            listCustomer = new Array();
-        }
+            var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
+            if (listCustomer == null) {
+                listCustomer = new Array();
+            }
 
-        if (checkCustomerExist(listCustomer, sodt) == false) {
-            listCustomer.push(user);
+            if (checkCustomerExist(listCustomer, sodt) == false) {
+                listCustomer.push(user);
 
-            // window.location.href = "../Login.html ";
+                // window.location.href = "../Login.html ";
 
-            localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
-            //    localStorage.setItem('listLearner', JSON.stringify(listCustomer));
+                localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
+                //    localStorage.setItem('listLearner', JSON.stringify(listCustomer));
 
-            alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
-            return true;
-        } else {
-            alert("Khách hàng đã tồn tại!");
-            return false;
-        }
+                alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
+                return true;
+            } else {
+                alert("Khách hàng đã tồn tại!");
+                return false;
+            }
+        } else { return alert("Số điện thoại hoặc mật khẩu hoặc CCCD không đúng định dạng!"); }
 
     }
 
@@ -265,29 +205,36 @@ function submitFormTutor() {
     user.degree = degree;
 
     if (user.name == "" || user.phone == "" || user.password == "" || user.birthday == "" || user.gender == " " || user.address == "" || user.CCCD == "" || user.ngayCapCCCD == "") {
-        return alert("Vui lòng điền đầy đủ thông tin!");
+        alert("Vui lòng điền đầy đủ thông tin!");
+        var phone_error1 = document.getElementById("phoneError1");
+        phone_error1.style.display = 'block';
+        var cccdError1 = document.getElementById("cccdError1");
+        cccdError1.style.display = 'block';
+        return false;
     } else {
-        user.id = createIDCustomer();
+        if (kiemTraSDT(user.phone) == true && kiemTraCCCD(user.CCCD) == true && kiemTraPass(user.password) == true) {
+            user.id = createIDCustomer();
 
-        var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
-        if (listCustomer == null) {
-            listCustomer = new Array();
-        }
+            var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
+            if (listCustomer == null) {
+                listCustomer = new Array();
+            }
 
-        if (checkCustomerExist(listCustomer, sodt) == false) {
-            listCustomer.push(user);
+            if (checkCustomerExist(listCustomer, sodt) == false) {
+                listCustomer.push(user);
 
-            // window.location.href = "../Login.html ";
+                // window.location.href = "../Login.html ";
 
-            localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
-            //    localStorage.setItem('listTutor', JSON.stringify(listCustomer));
+                localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
+                //    localStorage.setItem('listTutor', JSON.stringify(listCustomer));
 
-            alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
-            return true;
-        } else {
-            alert("Khách hàng đã tồn tại!");
-            return false;
-        }
+                alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
+                return true;
+            } else {
+                alert("Khách hàng đã tồn tại!");
+                return false;
+            }
+        } else { return alert("Số điện thoại hoặc mật khẩu hoặc CCCD không đúng định dạng!"); }
 
     }
 
@@ -311,4 +258,33 @@ function createIDCustomer() {
     id = id.getTime();
     id = Math.random().toString().substring(2, 4) + '_' + id.toString();
     return id;
+}
+
+function kiemTraSDT(sdt) {
+    var kq = false;
+    var vnRegex = /((09|03|07|08|05)+[0-9]{8}\b)/g;
+    sdt = document.getElementById("sodt").value;
+    if (sdt.length == 10 && vnRegex.test(sdt) == true) {
+        kq = true;
+    }
+    return kq;
+}
+
+function kiemTraPass(matKhau) {
+    var kq = false;
+    matKhau = document.getElementById("pass").value;
+    if (matKhau.length >= 8) {
+        kq = true;
+    }
+    return kq;
+}
+
+function kiemTraCCCD(cccd) {
+    var kq = false;
+    var vnRegex1 = /((00|01|02|03|04|05|06|07|08|09)+[0-9]{10}\b)/g;
+    cccd = document.getElementById("cccd").value;
+    if (cccd.length == 12 && vnRegex1.test(cccd) == true) {
+        kq = true;
+    }
+    return kq;
 }
