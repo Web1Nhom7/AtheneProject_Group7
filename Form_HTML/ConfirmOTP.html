@@ -118,6 +118,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -185,22 +186,44 @@
 
 
     </div>
+
     <script>
         function Submit() {
-            if (typeof(Storage) !== undefined) {
-                var so1 = document.getElementById("number1").value;
-                var so2 = document.getElementById("number2").value;
-                var so3 = document.getElementById("number3").value;
-                var so4 = document.getElementById("number4").value;
+            var xmlhttp = new XMLHttpRequest();
+            var url = "../Data/Confirm.json";
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var check = JSON.parse(this.responseText);
+                    myConfirm(check);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
 
-                if (so1 === "1" && so2 === "1" && so3 === "1" && so4 === "1") {
+        }
+
+        function myConfirm(arr) {
+
+            var so1 = document.getElementById("number1").value;
+            var so2 = document.getElementById("number2").value;
+            var so3 = document.getElementById("number3").value;
+            var so4 = document.getElementById("number4").value;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (so1 == arr[i].so1 && so2 == arr[i].so2 && so3 == arr[i].so3 && so4 == arr[i].so4) {
                     window.location.href = "../AtheneMain_HTML/HomePage.html";
 
                     var number = JSON.stringify(so1) + ";" +
                         JSON.stringify(so2) + ";" + JSON.stringify(so3) + ";" + JSON.stringify(so4);
                     sessionStorage.setItem("numberOTP", number);
+                    return true;
                 } else {
-                    alert("Mã OTP sai rồi!")
+                    alert("Mã OTP sai rồi." + "\n" + "Vui lòng nhập lại mã OTP!");
+                    document.getElementById("number1").value = "";
+                    document.getElementById("number2").value = "";
+                    document.getElementById("number3").value = "";
+                    document.getElementById("number4").value = "";
+                    return false;
                 }
             }
         }
