@@ -27,33 +27,33 @@
         xmlhttp.send();
     </script>
     <script>
-        function openConfirmation() {
-            var confirmation = document.getElementById("myConfirmation");
-            // var confirm = document.getElementById("btn-confirm");
-            var confirm = document.getElementsByClassName("profile__button");
+        // function openConfirmation() {
+        //     var confirmation = document.getElementById("myConfirmation");
+        //     // var confirm = document.getElementById("btn-confirm");
+        //     var confirm = document.getElementsByClassName("profile__button");
             
-            var shut_down = document.getElementsByClassName("close")[0];
-            for ( var i = 0, l = confirm.length; i < l; i++ ){
-                confirm[i].onclick = function() {
-                confirmation.style.display = "block";
-            }
-            }          
-            shut_down.onclick = function() {
-                confirmation.style.display = "none";
-            }
+        //     var shut_down = document.getElementsByClassName("close")[0];
+        //     for ( var i = 0, l = confirm.length; i < l; i++ ){
+        //         confirm[i].onclick = function() {
+        //         confirmation.style.display = "block";
+        //     }
+        //     }          
+        //     shut_down.onclick = function() {
+        //         confirmation.style.display = "none";
+        //     }
 
-        }
+        // }
 
-        function clickYes() {
-            var confirmation = document.getElementById("myConfirmation");
-            confirmation.style.display = "none";
-            alert("Bạn đã đăng ký thành công");
-        }
+        // function clickYes() {
+        //     var confirmation = document.getElementById("myConfirmation");
+        //     confirmation.style.display = "none";
+        //     alert("Bạn đã đăng ký thành công");
+        // }
 
-        function clickNo() {
-            var confirmation = document.getElementById("myConfirmation");
-            confirmation.style.display = "none";
-        }
+        // function clickNo() {
+        //     var confirmation = document.getElementById("myConfirmation");
+        //     confirmation.style.display = "none";
+        // }
     </script>
 </head>
 

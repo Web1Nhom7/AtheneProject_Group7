@@ -244,11 +244,15 @@ function searchForTutor() {
 //-------Open popup----
 function openConfirmation() {
     var confirmation = document.getElementById("myConfirmation");
-    var confirm = document.getElementById("btn-confirm");
+    // var confirm = document.getElementById("btn-confirm");
+    var confirm = document.getElementsByClassName("profile__button");
+    
     var shut_down = document.getElementsByClassName("close")[0];
-    confirm.onclick = function() {
+    for ( var i = 0, l = confirm.length; i < l; i++ ){
+        confirm[i].onclick = function() {
         confirmation.style.display = "block";
     }
+    }          
     shut_down.onclick = function() {
         confirmation.style.display = "none";
     }
