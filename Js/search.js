@@ -239,3 +239,29 @@ function searchForTutor() {
     tongHop = quan_sel + level_sel + gender_sel + caphoc_sel + monhoc_sel;
     filterSelection(tongHop)
 }
+
+
+//-------Open popup----
+function openConfirmation() {
+    var confirmation = document.getElementById("myConfirmation");
+    var confirm = document.getElementById("btn-confirm");
+    var shut_down = document.getElementsByClassName("close")[0];
+    confirm.onclick = function() {
+        confirmation.style.display = "block";
+    }
+    shut_down.onclick = function() {
+        confirmation.style.display = "none";
+    }
+
+}
+
+function clickYes() {
+    var confirmation = document.getElementById("myConfirmation");
+    confirmation.style.display = "none";
+    alert("Bạn đã đăng ký thành công");
+}
+
+function clickNo() {
+    var confirmation = document.getElementById("myConfirmation");
+    confirmation.style.display = "none";
+}
