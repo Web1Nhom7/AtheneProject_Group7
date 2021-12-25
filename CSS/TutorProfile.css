@@ -44,7 +44,9 @@
     /* padding-top: -2rem; */
     margin-top: -0.7rem;
 }
-
+.user-responsive{
+    margin-top: 3rem;
+}
 .name {
     font-weight: bold;
 }
@@ -287,6 +289,9 @@ button {
     }
     .line {
         margin-top: -1rem;
+    }
+    .user-responsive{
+        margin-top: 3rem;
     }
 }
 .confirmation {
