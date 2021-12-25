@@ -12,67 +12,8 @@
     <script src="../Js/Header.js"></script>
     <script src="../Js/angular.min.js"></script>
     <script src="../Js/ProfileRender.js"></script>
-    <script>
-        var loadCover = function(event) {
-            var cover = document.getElementById('cover-image');
-            cover.src = URL.createObjectURL(event.target.files[0]);
-            cover.onload = function() {
-                URL.revokeObjectURL(cover.src)
-            }
-        };
-    </script>
-    <script>
-        var loadAvatar = function(event) {
-            var avatar = document.getElementById('user-avatar');
-            avatar.src = URL.createObjectURL(event.target.files[0]);
-            avatar.onload = function() {
-                URL.revokeObjectURL(avatar.src)
-            }
-        };
-    </script>
-    <!-- Edit pop-up -->
-    <!-- <script>
-        let app=angular.module('Edit',[]);
-        app.controller('myCtrl', function($scope,$rootScope){
-            class Tutor{
-                constructor(Bio,Gender,dob,Education,majoy,c1,c2,c3){
-                    this.Bio=Bio;
-                    this.Gender=Gender;
-                    this.dob=dob;
-                    this.Education=Education;
-                    this.majoy=majoy;
-                    this.c1=c1;
-                    this.c2=c2;
-                    this.c3=c3;
-                }
-            }
-        })
-    </script> -->
+    <script src="../Js/TutorProfile.js"></script>
 
-    <script>
-        function openEdit() {
-            // Get the modal
-            var profile = document.getElementById("myProfile");
-            // Get the button that opens the modal
-            var edit = document.getElementById("btn-edit");
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            // When the user clicks the button, open the modal 
-            edit.onclick = function() {
-                profile.style.display = "block";
-            }
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                profile.style.display = "none";
-            }
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == profile) {
-                    profile.style.display = "none";
-                }
-            }
-        }
-    </script>
 </head>
 
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
@@ -89,7 +30,7 @@
             <div ng-repeat="x in profiles">
                 <label class="btn-avatar">
                     <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
-                    <button><i class='fa fa-camera'></i> </button>
+                    <!-- <button><i class='fa fa-camera'></i> </button> -->
                 </label>
                 <div class="user-name">
                     <h1>{{x.Name}}</h1>
@@ -99,106 +40,116 @@
         </div>
         <div class="user-click">
             <button class="btn-follow">Theo dõi</button>
-            <button class="btn-register">Đăng ký</button>
+            <button class="btn-register" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>
         </div>
-
-        <hr class="line" />
+        <!-- <div id="myConfirmation" class="confirmation">
+            <div class="confirmation-content">
+                <span class="close">&times;</span>
+                <p>Bạn chắc chắn muốn gửi yêu cầu đăng ký lớp tới gia sư này?</p>
+                <div class="confirm-container">
+                    <button id="btn-yes" onclick="clickYes()" class="confirm-btn">Có</button>
+                    <button onclick="clickNo()" class="confirm-btn">Không</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <hr class=" line " />
         <!-- User content -->
-        <div class="user-container" ng-repeat="x in profiles">
+        <div class="user-container " ng-repeat="x in profiles ">
             <!-- Left item -->
-            <div class="user__item--intro">
-                <div class="tieude">
+            <div class="user__item--intro ">
+                <div class="tieude ">
                     Giới thiệu
                 </div>
-                <div id="bio">{{x.Bio}}</div>
-                <div class="tieude">
+                <div id="bio ">{{x.Bio}}</div>
+                <div class="tieude ">
                     Thông tin cá nhân
                 </div>
-                <div class="information">
-                    <div class="info-line">
-                        <div class="title">Giới tính: &nbsp</div>
+                <div class="information ">
+                    <div class="info-line ">
+                        <div class="title ">Giới tính: &nbsp</div>
                         <div>{{x.Gender}}</div>
                     </div>
-                    <div class="info-line">
-                        <div class="title">Ngày sinh: &nbsp</div>
+                    <div class="info-line ">
+                        <div class="title ">Ngày sinh: &nbsp</div>
                         <div>{{x.dob}}</div>
                     </div>
-                    <div class="info-line">
-                        <div class="title"> Sinh viên trường: </div>{{x.Education}}
+                    <div class="info-line ">
+                        <div class="title "> Sinh viên trường: </div>{{x.Education}}
                     </div>
-                    <div class="info-line">
-                        <div class="title"> Chuyên ngành:&nbsp </div>{{x.major}}
+                    <div class="info-line ">
+                        <div class="title "> Chuyên ngành:&nbsp </div>{{x.major}}
                     </div>
-                    <div class="info-line">
-                        <div class="title">Đã học tại:&nbsp </div>{{x.c3}}
+                    <div class="info-line ">
+                        <div class="title ">Đã học tại:&nbsp </div>{{x.c3}}
                     </div>
                 </div>
             </div>
-                <!-- Experience -->
-                <div class="content__item--exp">
-                    <div class="tieude">
-                        Kinh nghiệm làm việc
-                    </div>
-                    <div class="info-line">
-                        {{x.Exps[0].Exp1}}
-                    </div>
-                    <div class="info-line">
-                        {{x.Exps[0].Exp2}}
-                    </div>                              
+            <!-- Experience -->
+            <div class="content__item--exp ">
+                <div class="tieude ">
+                    Kinh nghiệm làm việc
+                </div>
+                <div class="info-line ">
+                    {{x.Exps[0].Exp1}}
+                </div>
+                <div class="info-line ">
+                    {{x.Exps[0].Exp2}}
+                </div>
                 <!-- Achievement -->
-                
-                    <div class="tieude">
-                        Thành tích đạt được
-                    </div>
-                    <div class="info-line">
-                        {{x.Achievements[0].Achievements1}}
-                    </div>
-                    <div class="info-line">
-                        {{x.Achievements[0].Achievements2}}
-                    </div>
-                    <div class="info-line">
-                        {{x.Achievements[0].Achievements3}}
-                    </div> 
+
+                <div class="tieude ">
+                    Thành tích đạt được
+                </div>
+                <div class="info-line ">
+                    {{x.Achievements[0].Achievements1}}
+                </div>
+                <div class="info-line ">
+                    {{x.Achievements[0].Achievements2}}
+                </div>
+                <div class="info-line ">
+                    {{x.Achievements[0].Achievements3}}
+                </div>
+            </div>
         </div>
-    </div>
-     <!-- Right item -->
-     <div class="user__item--content">
-      <!-- Register class -->
-      <div class="content__item--class">
-          <div class="tieude">
-              Lớp đang đăng kí
-          </div>
-          <div class="info-line">
-              <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
-          </div>
-          <div class="info-line">
-              <div class="title">Môn dạy: &nbsp </div>{{x.Subject}}
-          </div>
-          <div class="info-line">
-              <div class="title">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
-          </div>
-          <div class="info-line">
-              <div class="title">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
-          </div>
-          <div class="info-line">
-              <div class="title">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
-          </div>
-          <div class="info-line">
-              <div class="title">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
-          </div>
-          <div class="info-line">
-              <div class="title"> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
-          </div>
-          <div class="info-line">
-              <div class="title"> Mô tả thêm: &nbsp </div>{{x.More}}
-          </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <div w3-include-html="../Athene_header_footer/Footer.html"></div>
-    <script>
-        w3.includeHTML();
-    </script>
+        <!-- Right item -->
+        <div class="user__item--content " ng-repeat="x in profiles ">
+            <!-- Register class -->
+            <div class="content__item--class ">
+                <div class="tieude ">
+                    Lớp đang đăng kí
+                </div>
+                <div class="info-line ">
+                    <div class="title ">Cấp dạy:&nbsp </div>{{x.class}}
+                </div>
+                <div class="info-line ">
+                    <div class="title ">Môn dạy: &nbsp </div>{{x.Subject}}
+                </div>
+                <div class="info-line ">
+                    <div class="title ">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
+                </div>
+                <div class="info-line ">
+                    <div class="title ">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
+                </div>
+                <div class="info-line ">
+                    <div class="title ">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
+                </div>
+                <div class="info-line ">
+                    <div class="title ">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
+                </div>
+                <div class="info-line ">
+                    <div class="title "> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
+                </div>
+                <div class="info-line ">
+                    <div class="title "> Mô tả thêm: &nbsp </div>{{x.More}}
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div w3-include-html="../Athene_header_footer/Footer.html "></div>
+        <script>
+            w3.includeHTML();
+        </script>
 </body>
 
 </html>
