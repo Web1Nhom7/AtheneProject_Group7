@@ -135,7 +135,10 @@ button,
     width: 98%;
 }
 
-#svt {
+#svt,
+#chuyennganh,
+#exp,
+#degree {
     width: 97.5%;
 }
 
@@ -168,7 +171,7 @@ button,
         width: 100%;
     }
     #pass {
-        width: 99%;
+        width: 100%;
     }
     #descrip {
         width: 99%;
@@ -177,14 +180,16 @@ button,
     #repass {
         width: 99%;
     }
-    #svt {
-        width: 98%;
+    #svt,
+    #chuyennganh,
+    #exp,
+    #degree {
+        width: 99%;
     }
 }
 
-@media screen and (max-width:300px) {
-    #cccd {
-        width: 150%;
-        margin: 0;
+@media screen and (max-width:250px) {
+    #pass {
+        width: 95%;
     }
 }
