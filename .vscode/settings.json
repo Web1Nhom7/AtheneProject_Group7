@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/d6ae506c-a2ee-4ae8-bd2c-25fe718dedd9/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/atheneee",
+    "appService.deploySubpath": "."
+}
