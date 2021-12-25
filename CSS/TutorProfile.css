@@ -231,15 +231,16 @@ button {
 
 .user-click {
     position: relative;
-    top: -4rem;
-    left: 20rem;
+    left: 54%;
+    top: -8vw;
     margin-bottom: 0;
+    width: fit-content;
 }
 
 .btn-follow,
 .btn-register {
     width: 12rem;
-    height: 2rem;
+    height: 2.5rem;
     font-size: 1rem;
     margin-right: 5rem;
     padding-bottom: 0;
@@ -276,10 +277,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-    .user-click {
-        top: -2rem;
-        left: 20rem;
-    }
     .line {
         margin-top: -1rem;
     }

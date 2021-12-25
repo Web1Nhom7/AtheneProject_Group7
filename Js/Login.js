@@ -76,7 +76,8 @@ function Login(sodt, pass) {
         if (typeof(Storage) !== undefined) {
             for (var i = 0; i < listCustomer.length; i++) {
                 if (user.phone == listCustomer[i].phone && user.password == listCustomer[i].password) {
-                    window.location.href = "../AtheneMain_HTML/HomePage.html";
+                    // window.location.href = "../AtheneMain_HTML/HomePage.html";
+                    window.location.href = "../AtheneMain_HTML/HomePage-user.html";
 
                     sessionStorage.setItem("userLogin", JSON.stringify(user));
 
