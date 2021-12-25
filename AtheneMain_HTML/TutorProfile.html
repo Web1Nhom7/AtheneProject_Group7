@@ -101,21 +101,21 @@
                 </div>
                 <div class="information">
                     <div class="info-line">
-                        <div class="title">Giới tính: &nbsp</div>
+                        <div class="subtitle">Giới tính: &nbsp</div>
                         <div>{{x.Gender}}</div>
                     </div>
                     <div class="info-line">
-                        <div class="title">Ngày sinh: &nbsp</div>
+                        <div class="subtitle">Ngày sinh: &nbsp</div>
                         <div>{{x.dob}}</div>
                     </div>
                     <div class="info-line">
-                        <div class="title"> Sinh viên trường: </div>{{x.Education}}
+                        <div class="subtitle"> Sinh viên trường: </div>{{x.Education}}
                     </div>
                     <div class="info-line">
-                        <div class="title"> Chuyên ngành:&nbsp </div>{{x.major}}
+                        <div class="subtitle"> Chuyên ngành:&nbsp </div>{{x.major}}
                     </div>
                     <div class="info-line">
-                        <div class="title">Đã học tại:&nbsp </div>{{x.c3}}
+                        <div class="subtitle">Đã học tại:&nbsp </div>{{x.c3}}
                     </div>
                     <button class="btn-editinfo" id="btn-edit" onclick="openEdit();">Chỉnh sửa thông tin cá nhân</button>
                 </div>
@@ -125,23 +125,23 @@
                 <div id="myProfile" class="profile-edit">
                     <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
-                            <div class="title">Giới tính:&nbsp </div>
+                            <div class="subtitle">Giới tính:&nbsp </div>
                             <input type="text" ng-model="x.Gender">
                         </div>
                         <div class="info-line">
-                            <div class="title">Ngày sinh:&nbsp </div>
+                            <div class="subtitle">Ngày sinh:&nbsp </div>
                             <input type="text" id="dob" ng-model="x.dob">
                         </div>
                         <div class="info-line">
-                            <div class="title">Đã học tại:&nbsp </div>
+                            <div class="subtitle">Đã học tại:&nbsp </div>
                             <input type="text" id="oldschool" ng-model="x.c3">
                         </div>
                         <div class="info-line">
-                            <div class="title"> Sinh viên trường: </div>
+                            <div class="subtitle"> Sinh viên trường: </div>
                             <input type="text" id="school" ng-model="x.Education">
                         </div>
                         <div class="info-line">
-                            <div class="title"> Chuyên ngành:&nbsp </div>
+                            <div class="subtitle"> Chuyên ngành:&nbsp </div>
                             <input type="text" id="major" ng-model="x.major">
                         </div>
                         <div class="info-line" style="position:relative; left:90%">
@@ -186,28 +186,28 @@
                     Lớp đang đăng kí
                 </div>
                 <div class="info-line">
-                    <div class="title">Cấp dạy:&nbsp </div>{{x.class}}
+                    <div class="subtitle">Cấp dạy:&nbsp </div>{{x.class}}
                 </div>
                 <div class="info-line">
-                    <div class="title">Môn dạy: &nbsp </div>{{x.Subject}}
+                    <div class="subtitle">Môn dạy: &nbsp </div>{{x.Subject}}
                 </div>
                 <div class="info-line">
-                    <div class="title">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
+                    <div class="subtitle">Giới tính học viên: &nbsp </div>{{x.LearnerGender}}
                 </div>
                 <div class="info-line">
-                    <div class="title">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
+                    <div class="subtitle">Địa điểm dạy: &nbsp </div>{{x.TeachDi}}
                 </div>
                 <div class="info-line">
-                    <div class="title">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
+                    <div class="subtitle">Thời gian dạy: &nbsp </div>{{x.TeachingTime}}
                 </div>
                 <div class="info-line">
-                    <div class="title">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
+                    <div class="subtitle">Mức lương mong muốn: &nbsp </div>{{x.Fee}}
                 </div>
                 <div class="info-line">
-                    <div class="title"> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
+                    <div class="subtitle"> Lịch học dự kiến: &nbsp </div>{{x.TimeTable}}
                 </div>
                 <div class="info-line">
-                    <div class="title"> Mô tả thêm: &nbsp </div>{{x.More}}
+                    <div class="subtitle"> Mô tả thêm: &nbsp </div>{{x.More}}
                 </div>
                 <button class="btn-editcontent">Chỉnh sửa</button>
             </div>
