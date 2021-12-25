@@ -28,8 +28,6 @@ function checkPassVal() {
     var pass = document.getElementById("pass");
     var pass_error = document.getElementById("passError");
 
-    var repass = document.getElementById("repass");
-
     if (pass.value.length < 8) {
         pass.style.border = "2px solid red";
         pass.style.outline = "none";
@@ -38,7 +36,6 @@ function checkPassVal() {
     } else if (pass.value.length >= 8) {
         pass.style.border = "1.7px solid black";
         pass_error.style.display = "none";
-        repass.focus();
         return true;
     }
 }
@@ -138,12 +135,10 @@ function submitFormLearner() {
             if (checkCustomerExist(listCustomer, sodt) == false) {
                 listCustomer.push(user);
 
-                // window.location.href = "../Login.html ";
-
                 localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
-                //    localStorage.setItem('listLearner', JSON.stringify(listCustomer));
 
                 alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
+                window.location.href = "../AtheneMain_HTML/HomePage.html";
                 return true;
             } else {
                 alert("Khách hàng đã tồn tại!");
@@ -223,12 +218,11 @@ function submitFormTutor() {
             if (checkCustomerExist(listCustomer, sodt) == false) {
                 listCustomer.push(user);
 
-                // window.location.href = "../Login.html ";
-
                 localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
-                //    localStorage.setItem('listTutor', JSON.stringify(listCustomer));
+
 
                 alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
+                window.location.href = "../AtheneMain_HTML/HomePage.html";
                 return true;
             } else {
                 alert("Khách hàng đã tồn tại!");
