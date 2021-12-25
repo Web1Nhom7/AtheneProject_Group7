@@ -12,9 +12,9 @@
     },
     {
         "Name": "Trương Vy Á",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nu1.jpg",
         "Direct": "Quận 6",
-        "Gender": "Nam",
+        "Gender": "Nữ",
         "Subject": "Báo bài",
         "Fee": "2.8 triệu/1 khóa (3 tháng)",
         "Education": "Trường Đại học Kinh tế ",
@@ -23,9 +23,9 @@
     },
     {
         "Name": "Trương Hằng",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nam1.png",
         "Direct": "Quận Tân Bình",
-        "Gender": "Nữ",
+        "Gender": "Nam",
         "Subject": "Văn - Sử - Địa",
         "Fee": "3.2 triệu/1 khóa (3 tháng)",
         "Education": "Giáo viên",
@@ -34,7 +34,7 @@
     },
     {
         "Name": "Trịnh Phàm",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nam2.jpg",
         "Direct": "Huyện Bình Chánh",
         "Gender": "Nam",
         "Subject": "Văn - Hóa",
@@ -45,7 +45,7 @@
 
     }, {
         "Name": "Lộ Ngôn Chi",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nam3.jpg",
         "Direct": "Quận Gò Vấp",
         "Gender": "Nam",
         "Subject": "Ngoại ngữ",
@@ -55,7 +55,7 @@
         "Level": "Giáo viên"
     }, {
         "Name": "Nguyễn Giang Nhan",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nu2.jpg",
         "Direct": "Thành phố Thủ Đức",
         "Gender": "Nữ",
         "Subject": "Toán - Lý - Hóa",
@@ -65,7 +65,7 @@
         "Level": "Giáo viên"
     }, {
         "Name": "Nguyễn Bảo Hân",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nu3.jpg",
         "Direct": "Huyện Nhà Bè",
         "Gender": "Nữ",
         "Subject": "Toán - Lý - Hóa",
@@ -75,7 +75,7 @@
         "Level": "Giáo viên"
     }, {
         "Name": "Lý Thừa Ngân",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nam4.jpg",
         "Direct": "Quận 4",
         "Gender": "Nam",
         "Subject": "Báo bài",
@@ -85,7 +85,7 @@
         "Level": "Sinh viên"
     }, {
         "Name": "Nguyễn Kim",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nu4.jpg",
         "Direct": "Huyện Củ Chi",
         "Gender": "Nữ",
         "Subject": "Văn",
@@ -95,7 +95,7 @@
         "Level": "Giáo viên"
     }, {
         "Name": "Trần Trịnh Ngọc Bội",
-        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Ava": "../Images/ForStudent/nu5.jpg",
         "Direct": "Quận 12",
         "Gender": "Nữ",
         "Subject": "Toán",

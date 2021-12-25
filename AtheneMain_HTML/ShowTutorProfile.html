@@ -13,6 +13,8 @@
     <script src="../Js/angular.min.js"></script>
     <script src="../Js/ProfileRender.js"></script>
     <script src="../Js/TutorProfile.js"></script>
+    <script src="../Js/search.js"></script>
+
 
 </head>
 
@@ -32,7 +34,7 @@
                     <input type="file" name="avatar-image" accept="image/*" onchange="loadAvatar(event)">
                     <!-- <button><i class='fa fa-camera'></i> </button> -->
                 </label>
-                <div class="user-name">
+                <div class=" user-responsive">
                     <h1>{{x.Name}}</h1>
                     <p style="margin-top: -5px;">{{x.Followers}}</p>
                 </div>
@@ -40,7 +42,19 @@
         </div>
         <div class="user-click">
             <button class="btn-follow">Theo dõi</button>
-            <button class="btn-register" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>
+            <button class="btn-register profile__button" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>
+        </div>
+        <div id="myConfirmation" class="confirmation">
+            <div class="confirmation-content">
+                <span class="close">&times;</span>
+                <p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>
+                <div class="confirm-container">
+                    <button id="btn-yes" onclick="clickYes()" class="confirm-btn">Có</button>
+                    <button onclick="clickNo()" class="confirm-btn">Không</button>
+
+                    </button>
+                </div>
+            </div>
         </div>
         <!-- <div id="myConfirmation" class="confirmation">
             <div class="confirmation-content">

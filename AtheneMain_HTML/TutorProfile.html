@@ -17,52 +17,48 @@
     <!-- Edit pop-up -->
     <script>
         function saveEditInfo() {
-            let app = angular.module('Edit', []);
-            app.controller('myCtrl', function($scope, $rootScope) {
-                class Tutor {
-                    constructor(Bio, Gender, dob, Education, majoy, c1, c2, c3) {
-                        this.Bio = Bio;
-                        this.Gender = Gender;
-                        this.dob = dob;
-                        this.Education = Education;
-                        this.majoy = majoy;
-                        this.c1 = c1;
-                        this.c2 = c2;
-                        this.c3 = c3;
-                    }
-                }
-            })
+            // let app = angular.module('Edit', []);
+            // app.controller('myCtrl', function($scope, $rootScope) {
+            //     class Tutor {
+            //         constructor(Bio, Gender, dob, Education, majoy, c1, c2, c3) {
+            //             this.Bio = Bio;
+            //             this.Gender = Gender;
+            //             this.dob = dob;
+            //             this.Education = Education;
+            //             this.majoy = majoy;
+            //             this.c1 = c1;
+            //             this.c2 = c2;
+            //             this.c3 = c3;
+            //         }
+            //     }
+            // })
+            
         }
     </script>
     <script>
         function openEdit() {
-            // Get the modal
             var profile = document.getElementById("myProfile");
-            // Get the button that opens the modal
             var edit = document.getElementById("btn-edit");
-            // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
-            // When the user clicks the button, open the modal 
+
             edit.onclick = function() {
                     profile.style.display = "block";
                 }
-                // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
                     profile.style.display = "none";
                 }
-                // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == profile) {
-                    profile.style.display = "none";
-                }
+            var save=document.getElementById("saveInfo");
+            save.onclick=function(){
+                profile.style.display = "none";
             }
+            
         }
     </script>
 </head>
 
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
     <!-- Header -->
-    <div w3-include-html="../Athene_header_footer/Header.html" style="position: fixed; z-index: 1;"></div>
+    <div w3-include-html="../Athene_header_footer/Header-user.html" style="position: fixed; z-index: 1;"></div>
     <script async>
         w3.includeHTML();
     </script>
@@ -78,7 +74,7 @@
                 </label>
                 <div class="user-name">
                     <h1>{{x.Name}}</h1>
-                    <p style="margin-top: -5px;">{{x.Followers}}</p>
+                    <p >{{x.Followers}}</p>
                 </div>
             </div>
             <label class="btn-cover">
@@ -102,7 +98,7 @@
                 <div class="information">
                     <div class="info-line">
                         <div class="subtitle">Giới tính: &nbsp</div>
-                        <div>{{x.Gender}}</div>
+                        <div id="sex">{{x.Gender}}</div>
                     </div>
                     <div class="info-line">
                         <div class="subtitle">Ngày sinh: &nbsp</div>
@@ -121,31 +117,31 @@
                 </div>
 
 
-                <!-- Test Edit Pop-up -->
+                <!--  Edit Pop-up -->
                 <div id="myProfile" class="profile-edit">
                     <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
                             <div class="subtitle">Giới tính:&nbsp </div>
-                            <input type="text" ng-model="x.Gender">
+                            <input class="edit__input" id="gender" type="text"  ng-model="x.Gender">
                         </div>
                         <div class="info-line">
                             <div class="subtitle">Ngày sinh:&nbsp </div>
-                            <input type="text" id="dob" ng-model="x.dob">
+                            <input class="edit__input" type="text" id="dob" ng-model="x.dob">
                         </div>
                         <div class="info-line">
                             <div class="subtitle">Đã học tại:&nbsp </div>
-                            <input type="text" id="oldschool" ng-model="x.c3">
+                            <input class="edit__input"type="text" id="oldschool" ng-model="x.c3">
                         </div>
                         <div class="info-line">
                             <div class="subtitle"> Sinh viên trường: </div>
-                            <input type="text" id="school" ng-model="x.Education">
+                            <input class="edit__input"type="text" id="school" ng-model="x.Education">
                         </div>
                         <div class="info-line">
                             <div class="subtitle"> Chuyên ngành:&nbsp </div>
-                            <input type="text" id="major" ng-model="x.major">
+                            <input class="edit__input"type="text" id="major" ng-model="x.major">
                         </div>
                         <div class="info-line" style="position:relative; left:90%">
-                            <button onclick="saveEditInfo()">Lưu</button>
+                            <button id="saveInfo" onclick="saveEditInfo()">Lưu</button>
                         </div>
                     </div>
                 </div>
