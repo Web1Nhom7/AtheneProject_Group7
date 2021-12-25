@@ -187,24 +187,15 @@ button {
 /* Edit pop-up */
 
 .profile-edit {
-    /* Hidden by default */
     display: none;
-    /* Stay in place */
     position: fixed;
-    /* Sit on top */
-    /* Location of the box */
-    padding-top: 100px;
+    padding-top: 5rem;
     left: 0;
     top: 0;
-    /* Full width */
     width: 100%;
-    /* Full height */
     height: 100%;
-    /* Enable scroll if needed */
     overflow: auto;
-    /* Fallback color */
     background-color: rgb(0, 0, 0);
-    /* Black w/ opacity */
     background-color: rgba(0, 0, 0, 0.4);
 }
 /* Modal Content */
@@ -212,12 +203,18 @@ button {
 .edit-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #888;
-    width: 60%;
+    width: 65%;
 }
 /* The Close Button */
-
+.edit__input{
+    width: 80%;
+    font-size: 1.2rem;
+}
+#saveInfo{
+    font-size: 1.3rem;
+}
 .close {
     color: #aaaaaa;
     float: right;
@@ -279,10 +276,6 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-    .user-name {
-        /* padding-top: -2rem; */
-        margin-top: -2rem;
-    }
     .user-click {
         top: -2rem;
         left: 20rem;
