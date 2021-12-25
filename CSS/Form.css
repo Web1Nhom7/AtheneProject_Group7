@@ -122,6 +122,23 @@ button,
     padding-left: 10px;
 }
 
+#descrip {
+    width: 97%;
+}
+
+#sodt,
+#repass {
+    width: 97.5%;
+}
+
+#dob {
+    width: 98%;
+}
+
+#svt {
+    width: 97.5%;
+}
+
 @media screen and (max-width:600px) {
     .flex-item,
     .txtbox {
@@ -144,11 +161,30 @@ button,
     }
     #cccd {
         width: 150%;
+        margin-right: -5px;
+        margin-left: 5px;
     }
     #dob {
         width: 100%;
     }
     #pass {
         width: 99%;
+    }
+    #descrip {
+        width: 99%;
+    }
+    #sodt,
+    #repass {
+        width: 99%;
+    }
+    #svt {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    #cccd {
+        width: 150%;
+        margin: 0;
     }
 }
