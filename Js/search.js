@@ -99,8 +99,8 @@ function myFunctionFortudent(arr) {
             '<img class="avatar" src="' + arr[i].Ava + '">' +
             '<div class="profile__item--right">' +
             '<div class = "profile-name">' + arr[i].Name + '</div>' +
-            '<div><i class="fa fa-map-marker profile-icon"></i>' + arr[i].Direct + '</div>' +
-            '<p><i class = "fa fa-user profile-icon"> </i>' + arr[i].Gender +
+            '<div><i class="fa fa-map-marker profile-icon"> &nbsp </i>' +  arr[i].Direct + '</div>' +
+            '<p><i class = "fa fa-user profile-icon"> &nbsp </i>' +  arr[i].Gender +
             '</p></div>' +
             '<div class="profile__item--center">' +
             '<p> Môn học: <span class = "text-spacing">' + arr[i].Subject +
@@ -188,8 +188,8 @@ function myFunctionForTutor(arr) {
             '<img class="avatar" src="' + arr[i].Ava + '">' +
             '<div class="profile__item--right">' +
             '<div class = "profile-name">' + arr[i].Name + '</div>' +
-            '<div><i class="fa fa-map-marker profile-icon"></i>' + arr[i].Direct + '</div>' +
-            '<p><i class = "fa fa-user profile-icon"> </i>' + arr[i].Gender +
+            '<div><i class="fa fa-map-marker profile-icon">&nbsp</i>' + arr[i].Direct + '</div>' +
+            '<p><i class = "fa fa-user profile-icon">&nbsp </i>' + arr[i].Gender +
             '</p></div>' +
             '<div class="profile__item--center">' +
             '<p> Trình độ: <span class = "text-spacing">' + arr[i].Education +

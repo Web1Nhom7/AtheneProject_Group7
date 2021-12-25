@@ -63,14 +63,16 @@
       flex-wrap: wrap;
       margin-top: 2rem;
       justify-content: center;
+
   }
   
   .profile__item {
-      flex-basis: 30%;
+      flex-basis: 40%;
       background-color: #E0FDFF;
       padding-top: 1rem;
       margin: 2rem;
       display: none;
+
   }
   
   .avatar {
