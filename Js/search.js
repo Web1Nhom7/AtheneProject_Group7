@@ -198,18 +198,17 @@ function myFunctionForTutor(arr) {
             '<p> Mức lương: <span class = "text-spacing">' + arr[i].Fee +
             '</span></p>' +
             '<p> Yêu cầu: <span class = "text-spacing">' + arr[i].Request +
-            '<span></p></div>' +
+            '</span></p></div>' +
             '<div class="profile__item--below">' +
-            '<button class="profile__button btn-profile" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>' +
+            '<button class="profile__button" id="btn-confirm" onclick="openConfirmation()">Đăng ký nhận lớp</button>' +
             '<div id="myConfirmation" class="confirmation">' +
             '<div class="confirmation-content">' +
             '<span class="close">&times;</span>' +
-            '<p>Bạn chắc chắn muốn gửi yêu cầu tạo lớp tới gia sư này?</p>' +
+            '<p>Bạn chắc chắn muốn nhận lớp dạy này chứ?</p>' +
             '<div class="confirm-container">' +
             '<button id="btn-yes" onclick="clickYes()" class="confirm-btn">Có</button>' +
             '<button onclick="clickNo()" class="confirm-btn">Không</button>' +
             '</div>' + '</div>' + '</div>' +
-            '<a href = "./ShowTutorProfile.html"><button class = "profile__button btn-profile"> Xem profile </button></a>' +
             '</div>' + '</div>' + '</div>';
     }
     document.getElementById("list_profile").innerHTML = div;
