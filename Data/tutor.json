@@ -5,7 +5,10 @@
         "Gender": "Nữ",
         "Subject": "Toán",
         "Fee": "2 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Tài chính Marketing "
+        "Education": "Trường Đại học Tài chính Marketing ",
+        "class": "Lớp 7",
+        "Level": "Sinh viên"
+
     },
     {
         "Name": "Trương Vy Á",
@@ -14,24 +17,91 @@
         "Gender": "Nam",
         "Subject": "Báo bài",
         "Fee": "2.8 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Kinh tế "
+        "Education": "Trường Đại học Kinh tế ",
+        "class": "Lớp 4",
+        "Level": "Sinh viên"
     },
     {
         "Name": "Trương Hằng",
         "Ava": "../Images/ForStudent/user_ava.jpg",
         "Direct": "Quận Tân Bình",
         "Gender": "Nữ",
-        "Subject": "Luyện thi đại học",
+        "Subject": "Văn - Sử - Địa",
         "Fee": "3.2 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Bách Khoa"
+        "Education": "Giáo viên",
+        "class": "Luyện thi đại học",
+        "Level": "Giáo viên"
     },
     {
         "Name": "Trịnh Phàm",
         "Ava": "../Images/ForStudent/user_ava.jpg",
-        "Direct": "Quận Bình Chánh",
+        "Direct": "Huyện Bình Chánh",
         "Gender": "Nam",
         "Subject": "Văn - Hóa",
         "Fee": "2.5 triệu/1 khóa (3 tháng)",
-        "Education": "Trường Đại học Văn Lang"
+        "Education": "Trường Đại học Văn Lang",
+        "class": "Lớp 9",
+        "Level": "Sinh viên"
+
+    }, {
+        "Name": "Lộ Ngôn Chi",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận Gò Vấp",
+        "Gender": "Nam",
+        "Subject": "Ngoại ngữ",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Giáo viên",
+        "class": "Lớp 12",
+        "Level": "Giáo viên"
+    }, {
+        "Name": "Nguyễn Giang Nhan",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Thành phố Thủ Đức",
+        "Gender": "Nữ",
+        "Subject": "Toán - Lý - Hóa",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Giáo viên",
+        "class": "Luyện thi đại học",
+        "Level": "Giáo viên"
+    }, {
+        "Name": "Nguyễn Bảo Hân",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Huyện Nhà Bè",
+        "Gender": "Nữ",
+        "Subject": "Toán - Lý - Hóa",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Giáo viên",
+        "class": "Lớp 11",
+        "Level": "Giáo viên"
+    }, {
+        "Name": "Lý Thừa Ngân",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận 4",
+        "Gender": "Nam",
+        "Subject": "Báo bài",
+        "Fee": "2.5 triệu/1 khóa (3 tháng)",
+        "Education": "Trường Đại học Ngân Hàng",
+        "class": "Lớp 8",
+        "Level": "Sinh viên"
+    }, {
+        "Name": "Nguyễn Kim",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Huyện Củ Chi",
+        "Gender": "Nữ",
+        "Subject": "Văn",
+        "Fee": "3 triệu/1 khóa (3 tháng)",
+        "Education": "Giáo viên",
+        "class": "Lớp 12",
+        "Level": "Giáo viên"
+    }, {
+        "Name": "Trần Trịnh Ngọc Bội",
+        "Ava": "../Images/ForStudent/user_ava.jpg",
+        "Direct": "Quận 12",
+        "Gender": "Nữ",
+        "Subject": "Toán",
+        "Fee": "2 triệu/1 khóa (3 tháng)",
+        "Education": "Giáo viên",
+        "class": "Lớp 10",
+        "Level": "Giáo viên"
     }
 ]

@@ -11,24 +11,23 @@
     <link rel="stylesheet" href="../CSS/ForStudent_Tutor.css">
     <script src="../Js/Header.js"></script>
     <script src="../Js/angular.min.js"></script>
+    <script src="../Js/search.js"></script>
 
     <script>
-        var app = angular.module("AngularApp", [])
-        app.controller("TutorrController", function($scope, $http) {
-            $http({
-                method: "GET",
-                url: "../Data/Learner.json"
-            }).then(function mySucces(respone) {
-                $scope.tutors = respone.data
-            }, function myError(respone) {
-                $scope.dataError = respone.statusText
-            })
-
-        })
+        var xmlhttp = new XMLHttpRequest();
+        var url = "../Data/Learner.json";
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myData = JSON.parse(this.responseText);
+                myFunctionForTutor(myData);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
     </script>
 </head>
 
-<body ng-app="AngularApp" ng-controller="TutorrController">
+<body>
     <!-- Header -->
     <div w3-include-html="../Athene_header_footer/Header.html"></div>
     <script async>
@@ -49,44 +48,43 @@
         </div>
         <div class="filter__item">
             <div class="filter-spacing"><select class="filter-selection" id="district" name="district">
-                    <option >Quận/Huyện</option>
-                    <option value="quan1">Quận 1</option>
-                    <option value="quan2">Quận 2</option>
-                    <option value="quan3">Quận 3</option>
-                    <option value="quan4">Quận 4</option>
-                    <option value="quan5">Quận 5</option>
-                    <option value="quan6">Quận 6</option>
-                    <option value="quan7">Quận 7</option>
-                    <option value="quan8">Quận 8</option>
-                    <option value="quan9">Quận 9</option>
-                    <option value="quan10">Quận 10</option>
-                    <option value="quan11">Quận 11</option>
-                    <option value="quan12">Quận 12</option>
-                    <option value="quanbtan">Quận Bình Tân</option>
-                    <option value="quantb">Quận Tân Bình</option>
-                    <option value="quantp">Quận Tân Phú</option>
-                    <option value="quangv">Quận Gò Vấp</option>
-                    <option value="quanbt">Quận Bình Thạnh</option>
-                    <option value="quanpn">Quận Phú Nhuận</option>
-                    <option value="huyenbc">Huyện Bình Chánh</option>
-                    <option value="huyencg">Huyện Cần Giờ</option>
-                    <option value="huyencc">Huyện Củ Chi</option>
-                    <option value="huyenhm">Huyện Hóc Môn</option>
-                    <option value="huyenhm">Huyện Nhà Bè</option>
+                <option value="quanhuyen">Quận/Huyện</option>
+                <option value="thanhphothuduc">Thành phố Thủ Đức</option>
+                <option value="quan1">Quận 1</option>
+                <option value="quan3">Quận 3</option>
+                <option value="quan4">Quận 4</option>
+                <option value="quan5">Quận 5</option>
+                <option value="quan6">Quận 6</option>
+                <option value="quan7">Quận 7</option>
+                <option value="quan8">Quận 8</option>
+                <option value="quan10">Quận 10</option>
+                <option value="quan11">Quận 11</option>
+                <option value="quan12">Quận 12</option>
+                <option value="quanbinhthanh">Quận Bình Thạnh</option>
+                <option value="quanbinhtan">Quận Bình Tân</option>
+                <option value="quangovap"> Quận Gò Vấp</option>
+                <option value="quanphunhuan">Quận Phú Nhuận</option>
+                <option value="quantanbinh">Quận Tân Bình</option>
+                <option value="quantanphu">Quận Tân Phú</option>
+                <option value="huyenbinhchanh">Huyện Bình Chánh</option>
+                <option value="huyencangio">Huyện Cần Giờ</option>
+                <option value="huyencuchi">Huyện Củ Chi</option>
+                <option value="huyenhocmon">Huyện Hóc Môn</option>
+                <option value="huyennhabe">Huyện Nhà Bè</option>
                 </select>
             </div>
-            <div><select class="filter-selection" id="class" name="class">
-                    <option >Cấp học</option>
-                    <option value="primary">Tiểu học</option>
-                    <option value="secondary">Trung học cơ sở</option>
-                    <option value="highschool">Trung học phổ thông</option>
-                    <option value="others">Khác</option>
+            <div><select class="filter-selection" id="caphoc" name="class">
+                    <option value="caphoc">Cấp học</option>
+                    <option value="tieuhoc">Tiểu học</option>
+                    <option value="trunghoccoso">Trung học cơ sở</option>
+                    <option value="trunghocphothong">Trung học phổ thông</option>
+                    <option value="khac">Khác</option>
                 </select>
             </div>
         </div>
         <div class="filter__item">
             <div class="filter-spacing"><select class="filter-selection" id="level" name="level">
-                    <option >Trình độ</option>
+                    <option value="trinhdo" >Trình độ</option>
                     <option value="lop1">Lớp 1</option>
                     <option value="lop2">Lớp 2</option>
                     <option value="lop3">Lớp 3</option>
@@ -99,11 +97,11 @@
                     <option value="lop10">Lớp 10</option>
                     <option value="lop11">Lớp 11</option>
                     <option value="lop12">Lớp 12</option>
-                    <option value="ltdh">Luyện thi đại học</option>
+                    <option value="luyenthidaihoc">Luyện thi đại học</option>
                 </select>
             </div>
             <div><select class="filter-selection" id="subject" name="subject">
-                    <option >Môn học</option>
+                    <option value="monhoc" >Môn học</option>
                     <option value="toan">Toán</option>
                     <option value="ly">Lý</option>
                     <option value="hoa">Hóa</option>
@@ -118,21 +116,21 @@
         </div>
         <div class="filter__item">
             <div class="filter-spacing"><select class="filter-selection" id="gender" name="gender">
-                <option>Giới tính</option>
+                <option value="gioitinh">Giới tính</option>
                 <option value="nam"> Nam</option>
                 <option value="nu"> Nữ</option>
-                <option value="cahai">Cả hai</option>
+               
             </select>
             </div>
             <div class="search-container">
-                <input class="filter-search" type="text" ng-model='Name' placeholder="Tìm kiếm">
+                <input onclick="searchForTutor()" class="filter-search" type="button" value="Tìm kiếm">
                 <i class="fa fa-search"></i>
             </div>
         </div>
     </div>
 
-    <div class="profile-container">
-        <div class="profile__item" ng-repeat="x in tutors| filter:Name|orderBy:sortType:sortReverse">
+    <div class="profile-container" id="list_profile">
+        <!-- <div class="profile__item" ng-repeat="x in tutors| filter:Name|orderBy:sortType:sortReverse">
             <div>
                 <img class="avatar" src="../Images/ForTutor/HuongHamChi.jpg">
                 <div class="profile__item--right">
@@ -150,7 +148,7 @@
                     <button class="profile__button" onclick="dangKy()">Đăng ký nhận lớp</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Previous, Next page-->
@@ -168,6 +166,7 @@
             return alert("Đăng ký hoàn tất!");
         }
     </script>
+
 </body>
 
 </html>

@@ -1,37 +1,89 @@
 [{
         "Name": "Hướng Hàm Chi",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
         "Direct": "Quận Bình Thạnh",
         "Gender": "Nữ",
-        "Subject": "Anh văn giao tiếp",
+        "Subject": "Ngoại ngữ",
         "Fee": "3 triệu/1 khóa (3 tháng)",
         "Request": "Không",
-        "Education": "Lớp 6"
+        "Education": "Lớp 6",
+        "Caphoc": "Trung học cơ sở"
     },
     {
         "Name": "Triệu Vy",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
         "Direct": "Quận 6",
         "Gender": "Nữ",
         "Subject": "Toán - Văn - Anh",
         "Fee": "2 triệu/1 khóa (3 tháng)",
         "Request": "Gia sư kiên nhẫn",
-        "Education": "Lớp 8"
+        "Education": "Lớp 8",
+        "Caphoc": "Trung học cơ sở"
     },
     {
         "Name": "Trần Tấn",
-        "Direct": "Quận 6",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Direct": "Quận 3",
         "Gender": "Nam",
         "Subject": "Báo bài",
         "Fee": "2.3 triệu/1 khóa (3 tháng)",
         "Request": "Gia sư nam",
-        "Education": "Lớp 3"
+        "Education": "Lớp 3",
+        "Caphoc": "Tiểu học"
     },
     {
         "Name": "Nguyễn An Vũ",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
         "Direct": "Quận 7",
         "Gender": "Nam",
         "Subject": "Luyện thi đại học",
         "Fee": "3 triệu/1 khóa (3 tháng)",
         "Request": "Giáo viên",
-        "Education": "Lớp 12"
+        "Education": "Lớp 12",
+        "Caphoc": "Trung học phổ thông"
+    },
+    {
+        "Name": "Nguyễn Tiến",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Direct": "Thành phố Thủ Đức",
+        "Gender": "Nam",
+        "Subject": "Toán",
+        "Fee": "3 triệu/1 khóa (3 tháng)",
+        "Request": "Không",
+        "Education": "Lớp 9",
+        "Caphoc": "Trung học cơ sở"
+    },
+    {
+        "Name": "Triệu Lộ Tư",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Direct": "Huyện Hóc Môn",
+        "Gender": "Nữ",
+        "Subject": "Toán - Lý - Anh",
+        "Fee": "2 triệu/1 khóa (3 tháng)",
+        "Request": "Gia sư kiên nhẫn",
+        "Education": "Lớp 10",
+        "Caphoc": "Trung học phổ thông"
+    },
+    {
+        "Name": "Trần Hòa Đồng",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Direct": "Quận Tân Bình",
+        "Gender": "Nam",
+        "Subject": "Báo bài",
+        "Fee": "2.3 triệu/1 khóa (3 tháng)",
+        "Request": "Gia sư nam",
+        "Education": "Lớp 1",
+        "Caphoc": "Tiểu học"
+    },
+    {
+        "Name": "Nguyễn Thị Xuyến",
+        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Direct": "Quận 12",
+        "Gender": "Nam",
+        "Subject": "Luyện thi đại học",
+        "Fee": "3 triệu/1 khóa (3 tháng)",
+        "Request": "Giáo viên",
+        "Education": "Lớp 12",
+        "Caphoc": "Trung học phổ thông"
     }
 ]

@@ -8,6 +8,10 @@
       margin-top: 3rem;
   }
   
+  .show {
+      display: block !important;
+  }
+  
   .filter__item {
       flex-direction: row;
   }
@@ -66,6 +70,7 @@
       background-color: #E0FDFF;
       padding-top: 1rem;
       margin: 2rem;
+      display: none;
   }
   
   .avatar {
