@@ -133,12 +133,12 @@ function submitFormLearner() {
             }
 
             if (checkCustomerExist(listCustomer, sodt) == false) {
+                window.location.href = "../AtheneMain_HTML/HomePage.html";
                 listCustomer.push(user);
 
                 localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
 
                 alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
-                window.location.href = "../AtheneMain_HTML/HomePage.html";
                 return true;
             } else {
                 alert("Khách hàng đã tồn tại!");
@@ -207,7 +207,9 @@ function submitFormTutor() {
         cccdError1.style.display = 'block';
         return false;
     } else {
+
         if (kiemTraSDT(user.phone) == true && kiemTraCCCD(user.CCCD) == true && kiemTraPass(user.password) == true) {
+
             user.id = createIDCustomer();
 
             var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
@@ -218,11 +220,12 @@ function submitFormTutor() {
             if (checkCustomerExist(listCustomer, sodt) == false) {
                 listCustomer.push(user);
 
+                window.location.href = "../AtheneMain_HTML/HomePage.html";
+
                 localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
 
 
                 alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
-                window.location.href = "../AtheneMain_HTML/HomePage.html";
                 return true;
             } else {
                 alert("Khách hàng đã tồn tại!");
