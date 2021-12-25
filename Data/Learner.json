@@ -11,7 +11,7 @@
     },
     {
         "Name": "Triệu Vy",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Ava": "../Images/ForTutor/nuaodai.jpeg",
         "Direct": "Quận 6",
         "Gender": "Nữ",
         "Subject": "Toán - Văn - Anh",
@@ -22,7 +22,7 @@
     },
     {
         "Name": "Trần Tấn",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Ava": "../Images/ForTutor/nam1.jpg",
         "Direct": "Quận 3",
         "Gender": "Nam",
         "Subject": "Báo bài",
@@ -33,7 +33,7 @@
     },
     {
         "Name": "Nguyễn An Vũ",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Ava": "../Images/ForTutor/nam2.png",
         "Direct": "Quận 7",
         "Gender": "Nam",
         "Subject": "Luyện thi đại học",
@@ -44,7 +44,7 @@
     },
     {
         "Name": "Nguyễn Tiến",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Ava": "../Images/ForTutor/nam3.png",
         "Direct": "Thành phố Thủ Đức",
         "Gender": "Nam",
         "Subject": "Toán",
@@ -55,7 +55,7 @@
     },
     {
         "Name": "Triệu Lộ Tư",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Ava": "../Images/ForTutor/trieulotu.jpg",
         "Direct": "Huyện Hóc Môn",
         "Gender": "Nữ",
         "Subject": "Toán - Lý - Anh",
@@ -66,7 +66,7 @@
     },
     {
         "Name": "Trần Hòa Đồng",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Ava": "../Images/ForTutor/nam4.jpg",
         "Direct": "Quận Tân Bình",
         "Gender": "Nam",
         "Subject": "Báo bài",
@@ -76,8 +76,8 @@
         "Caphoc": "Tiểu học"
     },
     {
-        "Name": "Nguyễn Thị Xuyến",
-        "Ava": "../Images/ForTutor/HuongHamChi.jpg",
+        "Name": "Nguyễn Văn Xuyến",
+        "Ava": "../Images/ForTutor/nam5.jpg",
         "Direct": "Quận 12",
         "Gender": "Nam",
         "Subject": "Luyện thi đại học",
