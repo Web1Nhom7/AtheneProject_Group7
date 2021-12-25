@@ -31,7 +31,7 @@
         };
     </script>
     <!-- Edit pop-up -->
-    <!-- <script>
+    <script>
         let app=angular.module('Edit',[]);
         app.controller('myCtrl', function($scope,$rootScope){
             class Tutor{
@@ -47,7 +47,7 @@
                 }
             }
         })
-    </script> -->
+    </script>
 
     <script>
         function openEdit() {
@@ -141,23 +141,26 @@
                     <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
                             <div class="title">Giới tính:&nbsp </div>
-                            <input type="text" id="gender" value="{{x.Gender}}">
+                            <input type="text" ng-model="x.Gender">
                         </div>
                         <div class="info-line">
                             <div class="title">Ngày sinh:&nbsp </div>
-                            <input type="text" id="dob" value="{{x.dob}}">
+                            <input type="text" id="dob" ng-model="x.dob">
                         </div>
                         <div class="info-line">
                             <div class="title">Đã học tại:&nbsp </div>
-                            <input type="text" id="oldschool" value="{{x.c3}}">
+                            <input type="text" id="oldschool" ng-model="x.c3">
                         </div>
                         <div class="info-line">
                             <div class="title"> Sinh viên trường: </div>
-                            <input type="text" id="school" value="{{x.Education}}">
+                            <input type="text" id="school" ng-model="x.Education">
                         </div>
                         <div class="info-line">
                             <div class="title"> Chuyên ngành:&nbsp </div>
-                            <input type="text" id="major" value="{{x.major}}">
+                            <input type="text" id="major" ng-model="x.major">
+                        </div>
+                        <div class="info-line" style="position:relative; left:90%">
+                            <button onclick="saveEditInfo()">Lưu</button>
                         </div>
                     </div>
                 </div>
