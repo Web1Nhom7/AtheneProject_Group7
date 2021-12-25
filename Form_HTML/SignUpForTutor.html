@@ -24,18 +24,18 @@
                 </div>
             </div>
             <div class="form-line">
-                <input autocomplete="off" type="number" class="ipbox" name="sodt" id="sodt" placeholder="Số điện thoại (bắt buộc)" oninput="checkPhoneVal()" onblur="checkVal()" required>
+                <input autocomplete="off" type="number" class="ipbox" name="sodt" id="sodt" placeholder="Số điện thoại (bắt buộc)" oninput="checkPhoneVal()" required>
                 <div id="phoneError">Số điện thoại không đúng định dạng!</div>
                 <div id="phoneError1">Hãy điền số điện thoại!</div>
             </div>
             <div class="form-line">
                 <div class="flex-item">
-                    <input type="password" id="pass" name="password" class="ipbox" placeholder="Mật khẩu" required oninput="checkPassVal()" onblur="checkVal()">
+                    <input type="password" id="pass" name="password" class="ipbox" placeholder="Mật khẩu" required oninput="checkPassVal()">
                     <div id="passError">Mật khẩu tối thiểu 8 ký tự!</div>
 
                 </div>
                 <div>
-                    <input type="password" class="ipbox" placeholder="Xác nhận" name="repass" id="repass" required oninput="confirmPass()" onblur="checkVal()">
+                    <input type="password" class="ipbox" placeholder="Xác nhận" name="repass" id="repass" required oninput="confirmPass()">
                     <div id="passError1">Mật khẩu chưa khớp!</div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
             <div class="form-line flex-item-add">
                 <div id="edit-item">
                     <label for="cccd" class="lb-title">Số CCCD: </label>
-                    <input class="ipbox" type="number" name="cccd" id="cccd" required oninput="checkCCCD()" onblur="checkVal()">
+                    <input class="ipbox" type="number" name="cccd" id="cccd" required oninput="checkCCCD()">
                 </div>
                 <div>
                     <div id="cccdError"> Số CCCD không hợp lệ</div>
@@ -118,86 +118,6 @@
             </div>
         </form>
     </div>
-    <script>
-        // function submitForm(ho, ten, sodt, pass, dob, gender, sonha, duong, phuong, quan, tp, cccd, date, svt, majors, exp, degree) {
-
-        //     ho = document.getElementById("ho").value;
-        //     ten = document.getElementById("ten").value;
-        //     sodt = document.getElementById("sodt").value;
-        //     pass = document.getElementById("pass").value;
-        //     dob = document.getElementById("dob").value;
-        //     sonha = document.getElementById("sonha").value;
-        //     duong = document.getElementById("duong").value;
-        //     phuong = document.getElementById("phuong").value;
-        //     quan = document.getElementById("quan").value;
-        //     cccd = document.getElementById("cccd").value;
-        //     date = document.getElementById("ngaycap").value;
-
-        //     svt = document.getElementById("svt").value;
-        //     majors = document.getElementById("chuyennganh").value;
-        //     exp = document.getElementById("exp").value;
-        //     degree = document.getElementById("degree").value;
-
-        //     var user = new Object();
-        //     user.name = ho + ' ' + ten;
-        //     user.phone = sodt;
-        //     user.password = pass;
-        //     user.birthday = dob;
-        //     user.gender = gender == "0" ? "nam" : "nữ";
-        //     user.address = sonha + ";" + duong + ";" + phuong + ";" + quan + ";" + "TP.HCM";
-        //     user.CCCD = cccd;
-        //     user.ngayCapCCCD = date;
-        //     user.id = createIDCustomer();
-
-        //     user.trinhDo = svt;
-        //     user.majors = majors;
-        //     user.exp = exp;
-        //     user.degree = degree;
-
-
-        //     var listCustomer = JSON.parse(localStorage.getItem('listCustomer'));
-        //     if (listCustomer == null) {
-        //         listCustomer = new Array();
-        //     }
-
-        //     if (checkCustomerExist(listCustomer, sodt) == false) {
-        //         listCustomer.push(user);
-
-        //         // window.location.href = "../Login.html ";
-
-        //         localStorage.setItem('listCustomer', JSON.stringify(listCustomer));
-
-        //         alert("Đăng ký thành công!" + "\n" + "Hãy đăng nhập vào website.");
-        //         return true;
-        //     } else {
-        //         alert("Khách hàng đã tồn tại!");
-        //         return false;
-        //     }
-
-
-
-        // }
-
-
-
-        // function checkCustomerExist(listCustomer, sodt) {
-        //     var kq = false;
-        //     for (var i = 0; i < listCustomer.length; i++) {
-        //         if (sodt == listCustomer[i].phone) {
-        //             kq = true;
-        //             break;
-        //         }
-        //     }
-        //     return kq;
-        // }
-
-        // function createIDCustomer() {
-        //     var id = new Date();
-        //     id = id.getTime();
-        //     id = Math.random().toString().substring(2, 6) + '_' + id.toString();
-        //     return id;
-        // }
-    </script>
 </body>
 
 </html>
