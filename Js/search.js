@@ -99,8 +99,8 @@ function myFunctionFortudent(arr) {
             '<img class="avatar" src="' + arr[i].Ava + '">' +
             '<div class="profile__item--right">' +
             '<div class = "profile-name">' + arr[i].Name + '</div>' +
-            '<div><i class="fa fa-map-marker profile-icon"> &nbsp </i>' +  arr[i].Direct + '</div>' +
-            '<p><i class = "fa fa-user profile-icon"> &nbsp </i>' +  arr[i].Gender +
+            '<div><i class="fa fa-map-marker profile-icon"> &nbsp </i>' + arr[i].Direct + '</div>' +
+            '<p><i class = "fa fa-user profile-icon"> &nbsp </i>' + arr[i].Gender +
             '</p></div>' +
             //Khung 
             '<div class="profile__item--center">' +
@@ -109,12 +109,10 @@ function myFunctionFortudent(arr) {
             '<div class="profile-line"><div class="profile-oj"> Lớp dạy: &nbsp </div>' + arr[i].class +
             '</div>' +
             '<div class="profile-line"><div class="profile-oj"> Học phí: &nbsp </div>' + arr[i].Fee +
-            '</div>' + 
+            '</div>' +
             '<div class="profile-line"><div class="profile-oj"> Học vấn: &nbsp </div>' + arr[i].Education +
-            '</div></div>' +
-
-            '<div class="profile__item--below">' +
-            '<button class="profile__button btn-profile" id="btn-confirm" onclick="openConfirmation()">Đăng ký</button>' +
+            '</div></div>' + '<div class="profile__item--below">' +
+            '<button class="profile__button btn-profile" id="btn-confirm" onclick="kiemTraLogin(), openConfirmation()">Đăng ký</button>' +
             '<div id="myConfirmation" class="confirmation">' +
             '<div class="confirmation-content">' +
             '<span class="close">&times;</span>' +
@@ -194,7 +192,7 @@ function myFunctionForTutor(arr) {
             '<div><i class="fa fa-map-marker profile-icon">&nbsp</i>' + arr[i].Direct + '</div>' +
             '<p><i class = "fa fa-user profile-icon">&nbsp </i>' + arr[i].Gender +
             '</p></div>' +
-            '<div class="profile__item--center">' +'<div class="profile-line"><div class="profile-oj">Trình độ: &nbsp </div>' + arr[i].Education +
+            '<div class="profile__item--center">' + '<div class="profile-line"><div class="profile-oj">Trình độ: &nbsp </div>' + arr[i].Education +
             '</div>' +
             '<div class="profile-line"><div class="profile-oj">Môn đăng ký: &nbsp </div>' + arr[i].Subject +
             '</div>' +
@@ -203,7 +201,7 @@ function myFunctionForTutor(arr) {
             '<div class="profile-line"><div class="profile-oj">Yêu cầu: &nbsp </div>' + arr[i].Request +
             '</div></div>' +
             '<div class="profile__item--below">' +
-            '<button class="profile__button" id="btn-confirm" onclick="openConfirmation()">Đăng ký nhận lớp</button>' +
+            '<button class="profile__button" id="btn-confirm" onclick="kiemTraLogin(), openConfirmation()">Đăng ký nhận lớp</button>' +
             '<div id="myConfirmation" class="confirmation">' +
             '<div class="confirmation-content">' +
             '<span class="close">&times;</span>' +
@@ -249,13 +247,13 @@ function openConfirmation() {
     var confirmation = document.getElementById("myConfirmation");
     // var confirm = document.getElementById("btn-confirm");
     var confirm = document.getElementsByClassName("profile__button");
-    
+
     var shut_down = document.getElementsByClassName("close")[0];
-    for ( var i = 0, l = confirm.length; i < l; i++ ){
+    for (var i = 0, l = confirm.length; i < l; i++) {
         confirm[i].onclick = function() {
-        confirmation.style.display = "block";
+            confirmation.style.display = "block";
+        }
     }
-    }          
     shut_down.onclick = function() {
         confirmation.style.display = "none";
     }
