@@ -89,7 +89,7 @@
 }
 
 .inner-padding {
-    padding: 0 2rem 1rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .number {
@@ -221,4 +221,26 @@
     .strength-container p {
         display: none;
     }
+    .title{
+     font-size: 2.5rem;
+    }
+    .user-flow,.company__item--left,.us__item--right{
+    font-size: 1.8rem;
+    }
+    .userflow-title,.title-color{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .us__item--right{
+        margin: 1rem;
+        line-height: 3rem;
+    }
+    #company-photo{
+        height: 30rem;
+        margin-right: -2rem;
+    }
+    #us-photo{
+        height: 30rem;
+    }
+   
 }
