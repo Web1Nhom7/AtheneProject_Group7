@@ -178,7 +178,7 @@ button,
     }
     #sodt,
     #repass {
-        width: 99%;
+        width: 100%;
     }
     #svt,
     #chuyennganh,
@@ -186,10 +186,14 @@ button,
     #degree {
         width: 99%;
     }
-}
-
-@media screen and (max-width:250px) {
-    #pass {
-        width: 95%;
+    #hoantat {
+        margin-left: 55%;
+    }
+    #dob {
+        width: 101%;
+    }
+    #ho,
+    #ten {
+        width: 100%;
     }
 }
