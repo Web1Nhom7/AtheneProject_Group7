@@ -212,7 +212,7 @@
             for (let i = 0; i < arr.length; i++) {
                 if (so1 == arr[i].so1 && so2 == arr[i].so2 && so3 == arr[i].so3 && so4 == arr[i].so4) {
                     window.location.href = "../index.html";
-
+                    alert("Vui lòng đăng nhập lại!");
                     var number = JSON.stringify(so1) + ";" +
                         JSON.stringify(so2) + ";" + JSON.stringify(so3) + ";" + JSON.stringify(so4);
                     sessionStorage.setItem("numberOTP", number);
