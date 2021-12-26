@@ -56,7 +56,6 @@
     overflow: hidden;
     display: inline-block;
     right: 10%;
-    
 }
 
 .btn-cover input {
@@ -105,11 +104,12 @@
 
 .user__item--intro {
     border: 1px solid grey;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 1rem;
     height: fit-content;
     width: 70%;
+    position: relative;
 }
 
 .user__item--intro h2 {
@@ -122,10 +122,11 @@
 }
 
 .btn-editinfo {
-    position: relative;
-    left: 55%;
+    position: absolute;
     display: block;
     font-size: 1rem;
+    right: 10%;
+    bottom: 3%;
 }
 
 .information {
@@ -166,23 +167,24 @@
     border: 1px solid gray;
     border-radius: 1rem;
     width: 100%;
+    position: relative;
 }
 .content__item--exp{
     margin-left: 3rem;
 }
 .btn-editcontent  {
+    position: absolute;
+    display: block;
     font-size: 1rem;
-    width: 8rem;
-    margin: 1rem;
-    position: relative;
-    
+    right: 10%;
+    bottom: 3%;
+    /* position: absolute; */
+    /* right: 5%; */
 }
-.content__item--exp .btn-editcontent {
-    right: -70%;
-}
-.content__item--class .btn-editcontent {
-    right: -80%;
-}
+
+/* .content__item--class .btn-editcontent {
+    bottom: -2%;
+} */
  button {
     background-color: #E0FDFF;
 }
