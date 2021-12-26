@@ -376,3 +376,16 @@
         padding-bottom: 3rem;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .info-line{
+        font-size: 10px;
+    }
+    .tieude{
+        font-size: 12px;
+        padding: 3px;
+    }
+    #bio{
+        font-size: 10px;
+    }
+}
