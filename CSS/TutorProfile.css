@@ -41,7 +41,6 @@
 }
 
 .user-name {
-    /* padding-top: -2rem; */
     margin-top: -0.7rem;
 }
 .user-responsive{
@@ -108,10 +107,9 @@
     border: 1px solid grey;
     padding: 0.5rem;
     text-align: center;
-    border-radius: 3rem;
+    border-radius: 1rem;
     height: fit-content;
-    width: 100%;
-    
+    width: 70%;
 }
 
 .user__item--intro h2 {
@@ -143,7 +141,7 @@
 
 .info-line {
     display: flex;
-    margin: 1rem;
+    margin: 1rem 2rem;
 }
 
 .intro__textarea {
@@ -155,9 +153,8 @@
 }
 
 .user__item--content {
-    margin: 3rem;
+    margin: 3% 7.5%;
     width: 85%;
-    margin-left: 5rem;
 }
 
 .user__item--content h3 {
@@ -168,19 +165,25 @@
 .content__item--class,
 .content__item--exp {
     border: 1px solid gray;
-    margin: 0rem 3rem;
-    border-radius: 2rem;
-    padding-left: 2rem;
-    flex: 1;
+    border-radius: 1rem;
+    width: 100%;
 }
-
-.btn-editcontent {
+.content__item--exp{
+    margin-left: 3rem;
+}
+.btn-editcontent  {
     font-size: 1rem;
     width: 8rem;
     margin: 1rem;
-    margin-left: 25rem;
+    position: relative;
+    
 }
-
+.content__item--exp .btn-editcontent {
+    right: -70%;
+}
+.content__item--class .btn-editcontent {
+    right: -80%;
+}
  button {
     background-color: #E0FDFF;
 }
@@ -281,25 +284,37 @@
 }
 
 @media screen and (max-width: 600px) {
-    .line {
+    /* .line {
         margin-top: -1rem;
-    }
-    .user-responsive{
+    } */
+    /* .user-responsive{
         margin-top: 3rem;
-    }
+    } */
     .user-container {
         flex-direction: column;
     }
-    
-    .user__item--intro {
-        width: 90%;
-        margin-left: 3rem;
-        margin-bottom: 2.5rem;  
+    .content__item--exp{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .user__item--intro{
+        width: 100%;
+        padding: 0;
     }
     .btn-cover button {
         height: 2.3rem;
         font-size: 1rem;
         width: 15rem;
+    }
+    .tieude{
+        text-align: left;
+        padding-left: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+    .content__item--exp,.content__item--class,.user__item--intro{
+        border: none;
     }
 }
 /* Pop up */
