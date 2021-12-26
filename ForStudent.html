@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Student</title>
-    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Favicon_Nobackgr.png">
+    <link rel="icon" type="image/x-icon" href="./Images/ForAll/Header/Logo.png">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <link rel="stylesheet" href="../CSS/ForStudent_Tutor.css">
+    <link rel="stylesheet" href="./CSS/ForStudent_Tutor.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="../Js/Header.js"></script>
-    <script src="../Js/angular.min.js"></script>
-    <script src="../Js/search.js"></script>
-    <script src="../Js/checkLogin.js"></script>
+    <script src="./Js/Header.js"></script>
+    <script src="./Js/angular.min.js"></script>
+    <script src="./Js/search.js"></script>
+    <script src="./Js/checkLogin.js"></script>
 
     <script>
         var xmlhttp = new XMLHttpRequest();
-        var url = "../Data/tutor.json";
+        var url = "./Data/tutor.json";
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myData = JSON.parse(this.responseText);
@@ -75,34 +75,34 @@
             </div>
 
         </div>
-        <div class="filter__item ">
-            <div class="filter-spacing "><select class="filter-selection " id="district " name="district ">
+        <div class="filter__item">
+            <div class="filter-spacing"><select class="filter-selection" id="district" name="district">
                 <option value="quanhuyen ">Quận/Huyện</option>
                 <option value="thanhphothuduc ">Thành phố Thủ Đức</option>
-                <option value="quan1 ">Quận 1</option>
-                <option value="quan3 ">Quận 3</option>
-                <option value="quan4 ">Quận 4</option>
-                <option value="quan5 ">Quận 5</option>
-                <option value="quan6 ">Quận 6</option>
-                <option value="quan7 ">Quận 7</option>
-                <option value="quan8 ">Quận 8</option>
-                <option value="quan10 ">Quận 10</option>
-                <option value="quan11 ">Quận 11</option>
-                <option value="quan12 ">Quận 12</option>
-                <option value="quanbinhthanh ">Quận Bình Thạnh</option>
-                <option value="quanbinhtan ">Quận Bình Tân</option>
-                <option value="quangovap "> Quận Gò Vấp</option>
-                <option value="quanphunhuan ">Quận Phú Nhuận</option>
-                <option value="quantanbinh ">Quận Tân Bình</option>
-                <option value="quantanphu ">Quận Tân Phú</option>
-                <option value="huyenbinhchanh ">Huyện Bình Chánh</option>
-                <option value="huyencangio ">Huyện Cần Giờ</option>
-                <option value="huyencuchi ">Huyện Củ Chi</option>
-                <option value="huyenhocmon ">Huyện Hóc Môn</option>
-                <option value="huyennhabe ">Huyện Nhà Bè</option>
+                <option value="quan1">Quận 1</option>
+                <option value="quan3">Quận 3</option>
+                <option value="quan4">Quận 4</option>
+                <option value="quan5">Quận 5</option>
+                <option value="quan6">Quận 6</option>
+                <option value="quan7">Quận 7</option>
+                <option value="quan8">Quận 8</option>
+                <option value="quan10">Quận 10</option>
+                <option value="quan11">Quận 11</option>
+                <option value="quan12">Quận 12</option>
+                <option value="quanbinhthanh">Quận Bình Thạnh</option>
+                <option value="quanbinhtan">Quận Bình Tân</option>
+                <option value="quangovap"> Quận Gò Vấp</option>
+                <option value="quanphunhuan">Quận Phú Nhuận</option>
+                <option value="quantanbinh">Quận Tân Bình</option>
+                <option value="quantanphu">Quận Tân Phú</option>
+                <option value="huyenbinhchanh">Huyện Bình Chánh</option>
+                <option value="huyencangio">Huyện Cần Giờ</option>
+                <option value="huyencuchi">Huyện Củ Chi</option>
+                <option value="huyenhocmon">Huyện Hóc Môn</option>
+                <option value="huyennhabe">Huyện Nhà Bè</option>
                 </select>
             </div>
-            <div><select class="filter-selection " id="class " name="class ">
+            <div><select class="filter-selection" id="class" name="class">
                     <option value="lophoc " >Lớp học</option>
                     <option value="lop1 ">Lớp 1</option>
                     <option value="lop2 ">Lớp 2</option>
@@ -120,49 +120,49 @@
                 </select>
             </div>
         </div>
-        <div class="filter__item ">
-            <div class="filter-spacing "><select class="filter-selection " id="level " name="level ">
-                    <option value="trinhdo " >Trình độ</option>
-                    <option value="sinhvien ">Sinh viên</option>
-                    <option value="giaovien ">Giáo viên</option>
+        <div class="filter__item">
+            <div class="filter-spacing"><select class="filter-selection" id="level" name="level">
+                    <option value="trinhdo" >Trình độ</option>
+                    <option value="sinhvien">Sinh viên</option>
+                    <option value="giaovien">Giáo viên</option>
                 </select>
             </div>
-            <div><select class="filter-selection " id="subject " name="subject ">
-                    <option value="monhoc " >Môn học</option>
-                    <option value="toan ">Toán</option>
-                    <option value="ly ">Lý</option>
-                    <option value="hoa ">Hóa</option>
-                    <option value="van ">Văn</option>
-                    <option value="su ">Sử</option>
-                    <option value="dia ">Địa</option>
-                    <option value="ngoaingu ">Ngoại ngữ</option>
-                    <option value="baobai ">Báo bài</option>
-                    <option value="khac ">Khác</option>
+            <div><select class="filter-selection" id="subject" name="subject">
+                    <option value="monhoc" >Môn học</option>
+                    <option value="toan">Toán</option>
+                    <option value="ly">Lý</option>
+                    <option value="hoa">Hóa</option>
+                    <option value="van">Văn</option>
+                    <option value="su">Sử</option>
+                    <option value="dia">Địa</option>
+                    <option value="ngoaingu">Ngoại ngữ</option>
+                    <option value="baobai">Báo bài</option>
+                    <option value="khac">Khác</option>
                 </select>
             </div>
         </div>
-        <div class="filter__item ">
-            <div class="filter-spacing "><select class="filter-selection " id="gender " name="gender ">
-                <option value="gioitinh ">Giới tính</option>
-                <option value="nam ">Nam</option>
-                <option value="nu ">Nữ</option>
+        <div class="filter__item">
+            <div class="filter-spacing"><select class="filter-selection" id="gender" name="gender">
+                <option value="gioitinh">Giới tính</option>
+                <option value="nam">Nam</option>
+                <option value="nu">Nữ</option>
             </select>
             </div>
-            <div class="search-container ">
-                <input onclick="searchForStudent() " class="filter-search " type="button " value="Tìm kiếm ">
-                <i class="fa fa-search "></i>
+            <div class="search-container">
+                <input onclick="searchForStudent()" class="filter-search" type="button" value="Tìm kiếm">
+                <i class="fa fa-search"></i>
             </div>
         </div>
     </div>
 
-    <div class="profile-container " id="list_profile ">
+    <div class="profile-container" id="list_profile">
     </div>
     <!-- Previous, Next page-->
-    <div class="transfer-page ">
-        <a href="# "><i class="fa fa-long-arrow-left "></i>&ensp;Trang trước</a>&emsp;&emsp;<a href="# ">Trang sau&ensp;<i class="fa fa-long-arrow-right "></i></a>
+    <div class="transfer-page">
+        <a href="# "><i class="fa fa-long-arrow-left"></i>&ensp;Trang trước</a>&emsp;&emsp;<a href="#">Trang sau&ensp;<i class="fa fa-long-arrow-right"></i></a>
     </div>
     <!-- Footer -->
-    <div w3-include-html="../Athene_header_footer/Footer.html "></div>
+    <div w3-include-html="../Athene_header_footer/Footer.html"></div>
     <script>
         w3.includeHTML();
     </script>

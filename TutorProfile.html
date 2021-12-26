@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutor Profile</title>
-    <link rel="stylesheet" href="../CSS/TutorProfile.css">
-    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Favicon_Nobackgr.png">
+    <link rel="stylesheet" href="./CSS/TutorProfile.css">
+    <link rel="icon" type="image/x-icon" href="./Images/ForAll/Header/Logo.png">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="../Js/Header.js"></script>
-    <script src="../Js/angular.min.js"></script>
-    <script src="../Js/ProfileRender.js"></script>
-    <script src="../Js/TutorProfile.js"></script>
+    <script src="./Js/Header.js"></script>
+    <script src="./Js/angular.min.js"></script>
+    <script src="./Js/ProfileRender.js"></script>
+    <script src="./Js/TutorProfile.js"></script>
 
     <!-- Edit pop-up -->
     <script>
@@ -32,7 +32,7 @@
             //         }
             //     }
             // })
-            
+
         }
     </script>
     <script>
@@ -42,23 +42,23 @@
             var span = document.getElementsByClassName("close")[0];
 
             edit.onclick = function() {
-                    profile.style.display = "block";
-                }
+                profile.style.display = "block";
+            }
             span.onclick = function() {
-                    profile.style.display = "none";
-                }
-            var save=document.getElementById("saveInfo");
-            save.onclick=function(){
                 profile.style.display = "none";
             }
-            
+            var save = document.getElementById("saveInfo");
+            save.onclick = function() {
+                profile.style.display = "none";
+            }
+
         }
     </script>
 </head>
 
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
     <!-- Header -->
-    <div w3-include-html="../Athene_header_footer/Header-user.html" style="position: fixed; z-index: 1;"></div>
+    <div w3-include-html="./Athene_header_footer/Header-user.html" style="position: fixed; z-index: 1;"></div>
     <script async>
         w3.includeHTML();
     </script>
@@ -74,7 +74,7 @@
                 </label>
                 <div class="user-name">
                     <h1>{{x.Name}}</h1>
-                    <p >{{x.Followers}}</p>
+                    <p>{{x.Followers}}</p>
                 </div>
             </div>
             <label class="btn-cover">
@@ -122,7 +122,7 @@
                     <div class="edit-content"> <span class="close">&times;</span>
                         <div class="info-line">
                             <div class="subtitle">Giới tính:&nbsp </div>
-                            <input class="edit__input" id="gender" type="text"  ng-model="x.Gender">
+                            <input class="edit__input" id="gender" type="text" ng-model="x.Gender">
                         </div>
                         <div class="info-line">
                             <div class="subtitle">Ngày sinh:&nbsp </div>
@@ -130,15 +130,15 @@
                         </div>
                         <div class="info-line">
                             <div class="subtitle">Đã học tại:&nbsp </div>
-                            <input class="edit__input"type="text" id="oldschool" ng-model="x.c3">
+                            <input class="edit__input" type="text" id="oldschool" ng-model="x.c3">
                         </div>
                         <div class="info-line">
                             <div class="subtitle"> Sinh viên trường: </div>
-                            <input class="edit__input"type="text" id="school" ng-model="x.Education">
+                            <input class="edit__input" type="text" id="school" ng-model="x.Education">
                         </div>
                         <div class="info-line">
                             <div class="subtitle"> Chuyên ngành:&nbsp </div>
-                            <input class="edit__input"type="text" id="major" ng-model="x.major">
+                            <input class="edit__input" type="text" id="major" ng-model="x.major">
                         </div>
                         <div class="info-line" style="position:relative; left:90%">
                             <button id="saveInfo" onclick="saveEditInfo()">Lưu</button>
@@ -209,7 +209,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <div w3-include-html="../Athene_header_footer/Footer.html"></div>
+        <div w3-include-html="./Athene_header_footer/Footer.html"></div>
         <script>
             w3.includeHTML();
         </script>
