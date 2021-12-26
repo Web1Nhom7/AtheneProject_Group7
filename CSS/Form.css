@@ -7,9 +7,11 @@ body {
     margin: 0 auto;
     min-width: 350px;
 }
-
+input{
+    padding: 0;
+}
 .form-line {
-    margin: 10px 0;
+    margin: 0.5rem 0;
 }
 
 .ipbox {
@@ -17,21 +19,17 @@ body {
     margin-top: 10px;
     height: 1.5rem;
     background-color: #D9F1F1;
-    width: 99%;
+    width: 100%;
 }
 
 select.ipbox {
     height: 1.85rem;
 }
-
+#pass,#repass,#ho,#ten{
+    width: 48%;
+}
 .flex-item {
     display: flex;
-    justify-content: space-between;
-}
-
-.flex-item-add {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -62,9 +60,9 @@ select.ipbox {
     width: 40%;
 }
 
-input {
+/* input {
     margin-right: 5px;
-}
+} */
 
 .lb-title {
     line-height: 1.5rem;
@@ -72,15 +70,6 @@ input {
     margin-top: 10px;
 }
 
-.level {
-    margin-left: 10px;
-}
-
-#ngaycap,
-#cccd,
-#pass {
-    width: 100%;
-}
 
 label {
     font-weight: bolder;
@@ -122,44 +111,47 @@ button,
     padding-left: 10px;
 }
 
-#descrip {
+/* #descrip {
     width: 97%;
-}
+} */
 
-#sodt,
+/* #sodt,
 #repass {
     width: 97.5%;
-}
+} */
 
-#dob {
+/* #dob {
     width: 98%;
-}
+} */
 
-#svt,
+/* #svt,
 #chuyennganh,
 #exp,
 #degree {
     width: 97.5%;
-}
+} */
 
 @media screen and (max-width:600px) {
     .flex-item,
     .txtbox {
         display: block;
     }
-    .checkbox {
+    /* .checkbox {
         display: flex;
         flex-direction: row;
         margin-top: 0.5rem;
-    }
+    } */
     #sonha,
     #duong,
     #phuong,
     #tp,
-    #quan {
+    #quan,#pass,#repass,#ho,#ten {
         width: 100%;
     }
-    #quan {
+    .flex-button{
+        display: flex;
+    }
+    /* #quan {
         width: 102%;
     }
     #cccd {
@@ -195,5 +187,5 @@ button,
     #ho,
     #ten {
         width: 100%;
-    }
+    } */
 }
