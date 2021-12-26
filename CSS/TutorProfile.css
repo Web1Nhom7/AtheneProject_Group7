@@ -125,7 +125,7 @@
     position: absolute;
     display: block;
     font-size: 1rem;
-    right: 10%;
+    left: 90%;
     bottom: 3%;
 }
 
@@ -168,6 +168,7 @@
     border-radius: 1rem;
     width: 100%;
     position: relative;
+    padding: 1rem 0 2rem 0;
 }
 .content__item--exp{
     margin-left: 3rem;
@@ -176,7 +177,7 @@
     position: absolute;
     display: block;
     font-size: 1rem;
-    right: 10%;
+    left: 90%;
     bottom: 3%;
     /* position: absolute; */
     /* right: 5%; */
