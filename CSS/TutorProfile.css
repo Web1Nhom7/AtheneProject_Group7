@@ -123,9 +123,8 @@
 
 .btn-editinfo {
     position: absolute;
-    display: block;
     font-size: 1rem;
-    left: 90%;
+    right: 2rem;
     bottom: 3%;
 }
 
@@ -177,10 +176,8 @@
     position: absolute;
     display: block;
     font-size: 1rem;
-    left: 90%;
-    bottom: 3%;
-    /* position: absolute; */
-    /* right: 5%; */
+    right: 2rem;
+    bottom: 1rem;
 }
 
 /* .content__item--class .btn-editcontent {
