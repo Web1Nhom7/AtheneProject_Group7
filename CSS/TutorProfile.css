@@ -315,6 +315,12 @@
         white-space: nowrap;
     }
 }
+@media screen and (max-width: 400px) {
+    .athene {
+        line-height: 2rem;
+    }
+}
+
 /* Pop up */
 .confirmation {
     display: none;
