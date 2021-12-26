@@ -283,24 +283,6 @@
                     <p>Chào mừng bạn đăng nhập thành công</p>
                 </div>
             </div>
-
-            <!-- <script>
-                function myNotification() {
-                    document.getElementById("myNoti").classList.toggle("noti-show");
-                }
-                window.onclick = function(event) {
-                    if (!event.target.matches('.btn-noti')) {
-                        var dropdowns = document.getElementsByClassName("noti-content");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                            if (openDropdown.classList.contains('noti-show')) {
-                                openDropdown.classList.remove('noti-show');
-                            }
-                        }
-                    }
-                }
-            </script> -->
             <div class="drop-down">
                 <button onclick="myMenu()" class="btn-dropdown"><i class="	fa fa-chevron-circle-down"></i></button>
                 <div id="myDropdown" class="menu-content">
@@ -309,36 +291,6 @@
                     <a href="#" onclick="Logout()">Đăng xuất</a>
                 </div>
             </div>
-
-            <!-- <script>
-                function myMenu() {
-                    document.getElementById("myDropdown").classList.toggle("dropdown-show");
-                }
-                window.onclick = function(event) {
-                    if (!event.target.matches('.btn-dropdown')) {
-                        var dropdowns = document.getElementsByClassName("menu-content");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                            if (openDropdown.classList.contains('dropdown-show')) {
-                                openDropdown.classList.remove('dropdown-show');
-                            }
-                        }
-                    }
-                }
-            </script>
-
-            <script>
-                function Logout() {
-                    if (typeof(Storage) !== undefined) {
-                        window.location.href = "../AtheneMain_HTML/HomePage.html";
-                        sessionStorage.removeItem("userLogin");
-                        localStorage.removeItem("sessionLogin");
-                        return alert("Đăng xuất thành công!");
-                    }
-                }
-            </script> -->
-
         </div>
     </div>
 </body>
