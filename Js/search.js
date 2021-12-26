@@ -102,7 +102,6 @@ function myFunctionFortudent(arr) {
             '<div><i class="fa fa-map-marker profile-icon"> &nbsp </i>' + arr[i].Direct + '</div>' +
             '<p><i class = "fa fa-user profile-icon"> &nbsp </i>' + arr[i].Gender +
             '</p></div>' +
-            //Khung 
             '<div class="profile__item--center">' +
             '<div class="profile-line"><div class="profile-oj"> Môn học: &nbsp </div>' + arr[i].Subject +
             '</div>' +
