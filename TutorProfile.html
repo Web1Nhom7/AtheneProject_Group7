@@ -15,26 +15,7 @@
     <script src="./Js/TutorProfile.js"></script>
     <script src="./Js/Header-user.js"></script>
     <!-- Edit pop-up -->
-    <script>
-        function saveEditInfo() {
-            // let app = angular.module('Edit', []);
-            // app.controller('myCtrl', function($scope, $rootScope) {
-            //     class Tutor {
-            //         constructor(Bio, Gender, dob, Education, majoy, c1, c2, c3) {
-            //             this.Bio = Bio;
-            //             this.Gender = Gender;
-            //             this.dob = dob;
-            //             this.Education = Education;
-            //             this.majoy = majoy;
-            //             this.c1 = c1;
-            //             this.c2 = c2;
-            //             this.c3 = c3;
-            //         }
-            //     }
-            // })
 
-        }
-    </script>
     <script>
         function openEdit() {
             var profile = document.getElementById("myProfile");
@@ -55,6 +36,37 @@
         }
     </script>
 </head>
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "101563828997234");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v12.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <body ng-app="AngularApp" ng-controller="ProfileController" style="position: relative; width: 100%;">
     <!-- Header -->
@@ -117,9 +129,9 @@
                 </div>
 
 
-                
+
             </div>
-            
+
             <!-- Experience -->
             <div class="content__item--exp">
                 <div class="tieude">
@@ -211,11 +223,11 @@
             </div>
         </div>
     </div>
-        <!-- Footer -->
-        <div w3-include-html="./Athene_header_footer/Footer.html"></div>
-        <script>
-            w3.includeHTML();
-        </script>
+    <!-- Footer -->
+    <div w3-include-html="./Athene_header_footer/Footer.html"></div>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>

@@ -117,7 +117,7 @@ function submitForm() {
         if (typeof(Storage) !== undefined) {
             listFindStudent.push(user);
 
-            // window.location.href = "./AtheneMain_HTML/HomePage.html";
+            window.location.href = "./index.html";
 
             localStorage.setItem('listFindStudent', JSON.stringify(listFindStudent));
             alert("Đăng ký thành công!");
@@ -197,7 +197,7 @@ function Submit() {
         if (typeof(Storage) !== undefined) {
             listFindTutor.push(user);
 
-            // window.location.href = "./AtheneMain_HTML/HomePage.html";
+            window.location.href = "./index.html";
 
             localStorage.setItem('listFindTutor', JSON.stringify(listFindTutor));
             alert("Đăng ký thành công!");
