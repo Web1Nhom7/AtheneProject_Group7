@@ -279,44 +279,6 @@
     width: 50%;
 }
 
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 600px) {
-    .user-container {
-        flex-direction: column;
-    }
-    .content__item--exp{
-        width: 100%;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-    .user__item--intro{
-        width: 100%;
-        padding: 0;
-    }
-    .btn-cover button {
-        height: 2.3rem;
-        font-size: 1rem;
-        width: 15rem;
-    }
-    .tieude{
-        text-align: left;
-        padding-left: 2rem;
-        height: 2rem;
-        line-height: 2rem;
-        border-radius: 0;
-    }
-    .btn-editcontent,.btn-editinfo{
-        left: 80%;
-        white-space: nowrap;
-    }
-}
-@media screen and (max-width: 400px) {
-    .athene {
-        line-height: 3rem;
-    }
-}
->>>>>>> 32aa4c42b0767275afe033a9480c0bcaf14fbe32
 
 /* Pop up */
 .confirmation {
