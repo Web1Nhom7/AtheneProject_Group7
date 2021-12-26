@@ -63,7 +63,6 @@
       flex-wrap: wrap;
       margin-top: 2rem;
       justify-content: center;
-
   }
   
   .profile__item {
@@ -72,7 +71,6 @@
       padding-top: 1rem;
       margin: 2rem;
       display: none;
-
   }
   
   .avatar {
@@ -96,7 +94,6 @@
   .profile__item--center {
       margin: 2rem;
   }
-
   
   .profile__item--below {
       display: flex;
@@ -135,13 +132,22 @@
   .transfer-page a:hover {
       color: blue;
   }
-  .profile-line{
+  
+  .profile-line {
       display: flex;
       margin: 0.5rem;
   }
-  .profile-oj{
+  
+  .profile-oj {
       min-width: 7rem;
   }
+  
+  #btn_dangki {
+      border: none;
+      background-color: transparent;
+      margin-left: -0.2rem;
+  }
+  
   @media screen and (max-width: 860px) {
       .filter-container {
           font-size: 1.5rem;
@@ -187,6 +193,9 @@
       .btn-profile {
           width: 16rem;
       }
+      #btn_dangki {
+          margin-left: -0.7rem;
+      }
   }
   
   @media screen and (max-width: 600px) {
@@ -196,9 +205,9 @@
           height: 2.8rem;
           font-size: 1.3rem;
       }
-      .profile-oj{
-        min-width: 13rem;
-    }
+      .profile-oj {
+          min-width: 13rem;
+      }
   }
   /* Pop up */
   
