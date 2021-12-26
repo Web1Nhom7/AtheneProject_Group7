@@ -56,7 +56,6 @@
     overflow: hidden;
     display: inline-block;
     right: 10%;
-    
 }
 
 .btn-cover input {
@@ -105,11 +104,12 @@
 
 .user__item--intro {
     border: 1px solid grey;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 1rem;
     height: fit-content;
     width: 70%;
+    position: relative;
 }
 
 .user__item--intro h2 {
@@ -122,11 +122,10 @@
 }
 
 .btn-editinfo {
-    width: 20rem;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
+    position: absolute;
     font-size: 1rem;
+    right: 2rem;
+    bottom: 3%;
 }
 
 .information {
@@ -167,23 +166,20 @@
     border: 1px solid gray;
     border-radius: 1rem;
     width: 100%;
+    position: relative;
+    padding: 1rem 0 2rem 0;
 }
 .content__item--exp{
     margin-left: 3rem;
 }
 .btn-editcontent  {
+    position: absolute;
+    display: block;
     font-size: 1rem;
-    width: 8rem;
-    margin: 1rem;
-    position: relative;
-    
+    right: 2rem;
+    bottom: 1rem;
 }
-.content__item--exp .btn-editcontent {
-    right: -70%;
-}
-.content__item--class .btn-editcontent {
-    right: -80%;
-}
+
  button {
     background-color: #E0FDFF;
 }
@@ -283,41 +279,13 @@
     width: 50%;
 }
 
-@media screen and (max-width: 600px) {
-    /* .line {
-        margin-top: -1rem;
-    } */
-    /* .user-responsive{
-        margin-top: 3rem;
-    } */
-    .user-container {
-        flex-direction: column;
+@media screen and (max-width: 400px) {
+    .athene {
+        line-height: 3rem;
     }
-    .content__item--exp{
-        width: 100%;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-    .user__item--intro{
-        width: 100%;
-        padding: 0;
-    }
-    .btn-cover button {
-        height: 2.3rem;
-        font-size: 1rem;
-        width: 15rem;
-    }
-    .tieude{
-        text-align: left;
-        padding-left: 2rem;
-        height: 2rem;
-        line-height: 2rem;
-        border-radius: 0;
-    }
-    /* .content__item--exp,.content__item--class,.user__item--intro{
-        border: none;
-    } */
 }
+
+
 /* Pop up */
 .confirmation {
     display: none;
@@ -373,4 +341,38 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .user-container {
+        flex-direction: column;
+    }
+    .content__item--exp{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .user__item--intro{
+        width: 100%;
+        padding: 0;
+    }
+    .btn-cover button {
+        height: 2.3rem;
+        font-size: 1rem;
+        width: 15rem;
+    }
+    .tieude{
+        text-align: left;
+        padding-left: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 0;
+    }
+    .btn-editcontent,.btn-editinfo{
+        left: 80%;
+        white-space: nowrap;
+    }
+    .content__item--class{
+        padding-bottom: 3rem;
+    }
 }
