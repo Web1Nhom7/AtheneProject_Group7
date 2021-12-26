@@ -193,6 +193,9 @@
       .btn-profile {
           width: 16rem;
       }
+      #btn_dangki {
+          margin-left: -0.7rem;
+      }
   }
   
   @media screen and (max-width: 600px) {
