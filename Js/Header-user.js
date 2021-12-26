@@ -34,7 +34,7 @@ window.onclick = function(event) {
 
 function Logout() {
     if (typeof(Storage) !== undefined) {
-        window.location.href = "../AtheneMain_HTML/HomePage.html";
+        window.location.href = "./index.html";
         sessionStorage.removeItem("userLogin");
         localStorage.removeItem("sessionLogin");
         return alert("Đăng xuất thành công!");
