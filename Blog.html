@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Images/ForAll/Header/Logo.png">
+    <title>Blog</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- <link rel="stylesheet" href="../CSS/Blog.css"> -->
+    <link rel="stylesheet" href="./CSS/Blog.css">
+    <script src="./Js/Header.js"></script>
+    <script src="./Js/Login.js"></script>
+    <script>
+        function LoadDataBlog() {
+            var loadData = document.getElementById("blog1").innerText;
+            document.getElementsByClassName("blog-right").innerHTML = loadData;
+        }
+    </script>
+</head>
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "101563828997234");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v12.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<body>
+    <!-- Header -->
+    <div w3-include-html="../Athene_header_footer/Header.html"></div>
+    <script async>
+        w3.includeHTML();
+    </script>
+    <img id="image-header" src="../Images/Blog/banner_blog.jpg" alt="Lỗi">
+    <div class="blog-body">
+        <!-- Left Menu -->
+        <div class="blog-left">
+            <h4 class="left-title">Bài viết mới nhất</h4>
+            <ul>
+                <li><a id="blog1" href="../Data/Blog_1.html" target="hienthi">Lợi ích của việc trở thành gia sư</a></li>
+                <br>
+                <li><a href="../Data/Blog_2.html" target="hienthi">Một số phương pháp học tập hiểu quả</a></li>
+                <br>
+                <li><a href="../Data/Blog_3.html" target="hienthi">Phương pháp học tốt Toán - Lý - Hóa</a></li>
+                <br>
+                <li><a href="../Data/Blog_4.html" target="hienthi">Tìm gia sư có thật sự cần thiết không</a></li>
+                <br>
+                <li><a href="../Data/Blog_5.html" target="hienthi">Nên giảng dạy thế nào cho học sinh lười học</a></li>
+            </ul>
+        </div>
+        <!-- Right Content -->
+        <div class="blog-right">
+            <iframe allowfullscreen src="../Data/Blog-main.html" frameborder="0" name="hienthi" style="height: 800px; width: 100%;"></iframe>
+        </div>
+        <!-- Mat thanh cuon laf scrolling=no -->
+    </div>
+    <!-- Footer -->
+    <div w3-include-html="../Athene_header_footer/Footer.html"></div>
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+
+</html>
