@@ -123,9 +123,8 @@
 
 .btn-editinfo {
     position: absolute;
-    display: block;
     font-size: 1rem;
-    right: 10%;
+    right: 2rem;
     bottom: 3%;
 }
 
@@ -168,6 +167,7 @@
     border-radius: 1rem;
     width: 100%;
     position: relative;
+    padding: 1rem 0 2rem 0;
 }
 .content__item--exp{
     margin-left: 3rem;
@@ -176,15 +176,10 @@
     position: absolute;
     display: block;
     font-size: 1rem;
-    right: 10%;
-    bottom: 3%;
-    /* position: absolute; */
-    /* right: 5%; */
+    right: 2rem;
+    bottom: 1rem;
 }
 
-/* .content__item--class .btn-editcontent {
-    bottom: -2%;
-} */
  button {
     background-color: #E0FDFF;
 }
@@ -284,36 +279,13 @@
     width: 50%;
 }
 
-@media screen and (max-width: 600px) {
-    .user-container {
-        flex-direction: column;
-    }
-    .content__item--exp{
-        width: 100%;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-    .user__item--intro{
-        width: 100%;
-        padding: 0;
-    }
-    .btn-cover button {
-        height: 2.3rem;
-        font-size: 1rem;
-        width: 15rem;
-    }
-    .tieude{
-        text-align: left;
-        padding-left: 2rem;
-        height: 2rem;
-        line-height: 2rem;
-        border-radius: 0;
-    }
-    .btn-editcontent,.btn-editinfo{
-        left: 80%;
-        white-space: nowrap;
+@media screen and (max-width: 400px) {
+    .athene {
+        line-height: 3rem;
     }
 }
+
+
 /* Pop up */
 .confirmation {
     display: none;
@@ -369,4 +341,38 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .user-container {
+        flex-direction: column;
+    }
+    .content__item--exp{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .user__item--intro{
+        width: 100%;
+        padding: 0;
+    }
+    .btn-cover button {
+        height: 2.3rem;
+        font-size: 1rem;
+        width: 15rem;
+    }
+    .tieude{
+        text-align: left;
+        padding-left: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 0;
+    }
+    .btn-editcontent,.btn-editinfo{
+        left: 80%;
+        white-space: nowrap;
+    }
+    .content__item--class{
+        padding-bottom: 3rem;
+    }
 }
