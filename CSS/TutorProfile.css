@@ -122,9 +122,8 @@
 }
 
 .btn-editinfo {
-    width: 20rem;
-    margin-right: auto;
-    margin-left: auto;
+    position: relative;
+    left: 55%;
     display: block;
     font-size: 1rem;
 }
@@ -284,12 +283,6 @@
 }
 
 @media screen and (max-width: 600px) {
-    /* .line {
-        margin-top: -1rem;
-    } */
-    /* .user-responsive{
-        margin-top: 3rem;
-    } */
     .user-container {
         flex-direction: column;
     }
@@ -314,9 +307,10 @@
         line-height: 2rem;
         border-radius: 0;
     }
-    /* .content__item--exp,.content__item--class,.user__item--intro{
-        border: none;
-    } */
+    .btn-editcontent,.btn-editinfo{
+        left: 80%;
+        white-space: nowrap;
+    }
 }
 /* Pop up */
 .confirmation {
