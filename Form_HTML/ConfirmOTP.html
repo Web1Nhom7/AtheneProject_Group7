@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận mã OTP</title>
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Favicon_Nobackgr.png">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Favicon_Nobackgr.png">
+    <style>
+        body {
+            font-family: 'Roboto';
+            font-size: 1.3vw;
+            margin-top: 3rem;
+        }
+        
+        .container {
+            margin: 0 auto;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+            width: 26rem;
+            height: 30rem;
+            text-align: center;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+        }
+        
+        h2,
+        .resendOTP {
+            color: #636262;
+        }
+        
+        .resendOTP button {
+            background: none;
+            border: none;
+            color: #FF7E06;
+        }
+        
+        #confirm {
+            color: white;
+            border: none;
+            background-color: #093BBA;
+            width: 40%;
+            height: 2.7rem;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .number {
+            width: 3rem;
+            height: 2.5rem;
+            margin: 0 1rem;
+            border: 1.5px solid black;
+            background-color: #EAF7F7;
+            text-align: center;
+            font-size: 2rem;
+            white-space: nowrap;
+            justify-content: space-between;
+        }
+        
+        #number-error {
+            color: red;
+            display: none;
+        }
+        
+        @media screen and (max-width:992px) {
+            .container {
+                width: 22rem;
+                height: 25rem;
+                padding-top: 2.5px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .number {
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.3rem;
+            }
+            p,
+            .resendOTP {
+                font-size: 1rem;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            .container {
+                width: 18rem;
+                height: 22rem;
+                padding-top: 1px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+            .number {
+                width: 1.8rem;
+                height: 1.8rem;
+                font-size: 1.3rem;
+            }
+            p,
+            .resendOTP {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Xác thực mã OTP</h1>
+        <img src="../Images/ForAll/Header/Logo.png">
+        <h2>Mã xác thực đã được gửi qua SĐT <br/> <span>090*******</span></h2>
+        <p><b>Nhập mã OTP</b></p>
+
+        <div>
+            <input class="number" id="number1" type="number" name="number" oninput="number_check()">
+            <input class="number" id="number2" type="number" name="number" oninput="number_check()">
+            <input class="number" id="number3" type="number" name="number" oninput="number_check()">
+            <input class="number" id="number4" type="number" name="number" oninput="number_check()">
+            <p id="number-error">Mời bạn nhập giá trị từ 0-9</p>
+        </div>
+        <script>
+            function number_check() {
+                var so1 = document.getElementById("number1").value;
+                var so2 = document.getElementById("number2").value;
+                var so3 = document.getElementById("number3").value;
+                var so4 = document.getElementById("number4").value;
+
+                var error = document.getElementById("number-error");
+
+                if (so1 >= 0 && so1 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number1") = "";
+                    so1.focus();
+
+                }
+
+                if (so2 >= 0 && so2 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number2") = "";
+                    so2.focus();
+
+                }
+                if (so3 >= 0 && so3 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number3") = "";
+                    so3.focus();
+
+                }
+
+                if (so4 >= 0 && so4 <= 9) {
+                    error.style.display = "none";
+                } else {
+                    error.style.display = "block";
+                    document.getElementById("number4") = "";
+                    so4.focus();
+
+                }
+            }
+        </script>
+        <p class="resendOTP">Bạn chưa nhận được mã?<button type="button">Gửi lại OTP</button>
+        </p>
+        <button type="submit" id="confirm" onclick="Submit()">Xác nhận</button>
+
+
+    </div>
+
+    <script>
+        function Submit() {
+            var xmlhttp = new XMLHttpRequest();
+            var url = "../Data/Confirm.json";
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var check = JSON.parse(this.responseText);
+                    myConfirm(check);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+        }
+
+        function myConfirm(arr) {
+
+            var so1 = document.getElementById("number1").value;
+            var so2 = document.getElementById("number2").value;
+            var so3 = document.getElementById("number3").value;
+            var so4 = document.getElementById("number4").value;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (so1 == arr[i].so1 && so2 == arr[i].so2 && so3 == arr[i].so3 && so4 == arr[i].so4) {
+                    window.location.href = "../index.html";
+                    alert("Vui lòng đăng nhập lại!");
+                    var number = JSON.stringify(so1) + ";" +
+                        JSON.stringify(so2) + ";" + JSON.stringify(so3) + ";" + JSON.stringify(so4);
+                    sessionStorage.setItem("numberOTP", number);
+                    return true;
+                } else {
+                    alert("Mã OTP sai rồi." + "\n" + "Vui lòng nhập lại mã OTP!");
+                    document.getElementById("number1").value = "";
+                    document.getElementById("number2").value = "";
+                    document.getElementById("number3").value = "";
+                    document.getElementById("number4").value = "";
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

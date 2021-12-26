@@ -1,0 +1,75 @@
+.blog-right {
+    margin: 0 1.5rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.blog-right h3 {
+    color: orangered;
+}
+
+.blog-right h4 {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.blog-left {
+    margin-top: 1rem;
+    background-color: lightgoldenrodyellow;
+}
+
+li {
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+a:visited {
+    color: darkcyan;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+
+/* image blog */
+
+.kichthuoc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 40%;
+}
+
+.size {
+    font-size: 1.2rem;
+    color: lightseagreen;
+}
+
+@media only screen and (max-width: 860px) {
+    li,
+    p {
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+    }
+    .size {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+}

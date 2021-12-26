@@ -1,0 +1,245 @@
+/* Banner */
+.mySlides {
+    display: none;
+}
+
+.banner-image {
+    height: 25rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0.1rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.disappear {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0;
+    animation-name: fade;
+    animation-duration: 0;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* User flow CSS */
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.userflow-title{
+    font-size: 1.3rem;
+}
+.user-flow {
+    display: flex;
+    text-align: center;
+    color: white;
+}
+
+.user__item-left {
+    background-color: #3EB8D7;
+    flex: 1;
+}
+
+.user__item-middle {
+    background-color: #0392CE;
+    flex: 1;
+}
+
+.user__item-right {
+    background-color: #3065B5;
+    flex: 1;
+}
+
+.inner-padding {
+    padding: 1rem 2rem;
+}
+
+.number {
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+    font-size: 17px;
+    width: 30px;
+    margin: 0.5rem auto 0 auto;
+}
+
+/* Our company CSS */
+
+.our-company {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.company__item--left {
+    flex: 6;
+}
+
+#vision {
+    margin-left: 5rem;
+}
+
+#mission {
+    margin-left: 15rem;
+}
+
+#core-value {
+    margin-left: 25rem;
+}
+
+#company-photo {
+    height: 16rem;
+    padding: 0 6rem 2rem ;
+    min-height: 120px;
+}
+
+.title-color {
+    color: #00008B;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Our Strength */
+.strength-title{
+    font-size: 1.7rem;
+}
+.our-strength {
+    background-color: #0077C0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    
+}
+
+.strength-content {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.strength-container {
+    text-align: center;
+    flex: 1;
+    margin: 1rem;
+}
+.strength__item--inside{
+    width: 25%;
+}
+.icon-container {
+    border-radius: 50%;
+    background-color: #A1BCE5;
+    width: 5rem;
+    height: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.strength-icon {
+    height: 3rem;
+    margin: 20%;
+    min-height: 30px;
+}
+
+/* About us CSS */
+
+.about-us {
+    display: flex;
+    margin-right: 5rem;
+    line-height: 2rem;
+}
+
+#us-photo {
+    height: 15rem;
+    margin: 0.5rem 3rem;
+    min-height: 120px;
+}
+
+.about-us span {
+    color: red;
+}
+
+#button-position {
+    text-align: right;
+}
+
+.about-us button {
+    background-color: #093BBA;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    #mission,
+    #vision,
+    #core-value {
+        margin: 2rem;
+    }
+    .company__item--left p {
+        margin: 1rem 1rem 1rem 0;
+    }
+    .strength-container p {
+        display: none;
+    }
+    .title{
+     font-size: 2.5rem;
+    }
+    .user-flow,.company__item--left,.us__item--right{
+    font-size: 1.8rem;
+    }
+    .userflow-title,.title-color{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .us__item--right{
+        margin: 1rem;
+        line-height: 3rem;
+    }
+    #company-photo{
+        height: 30rem;
+    }
+    #us-photo{
+        height: 30rem;
+    }
+   
+}

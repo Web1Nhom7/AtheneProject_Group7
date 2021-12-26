@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    /* Footer */   
+    .footer-content {
+        width: 100%;
+        display: flex;
+        background: #0077C0;
+        color: white;
+    }
+    
+    .footer__item--left {
+        margin-left: 6rem;
+        margin-right: 4rem;
+    }
+    
+    .logo-display {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .ministry-logo {
+        width: 6rem;
+    }
+    
+    .footer__item--middle {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    #about-us {
+        font-size: 1rem;
+    }
+    
+    .footer__item--middle a {
+        text-decoration: none;
+        color: white;
+        margin-left: 3rem;
+        padding-bottom: 1rem;
+    }
+    
+    .footer__item--middle a:hover {
+        text-decoration: underline;
+    }
+    
+    .footer__item--right {
+        margin-top: 1rem;
+        margin-left: 6rem;
+    }
+    
+    .text-bold {
+        font-weight: bold;
+    }
+    
+    #payment-logo {
+        width: 13rem;
+        padding-left: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-logo {
+        margin: 0.5rem;
+    }
+    
+    #download {
+        display: flex;
+    }
+    /* QR code - GG store - IOS store */
+    
+    .download-photo {
+        height: 4rem;
+        margin: 0 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    #footer-responsive {
+        display: none;
+        color: white;
+    }
+    
+    .footer-icon {
+        font-size: 1.5rem;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .footer-content {
+            display: none;
+        }
+        #footer-responsive {
+            display: block;
+            background-color: #0077C0;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<body>
+    <!-- Footer -->
+    <div class="footer-content">
+        <!-- Left item -->
+        <div class="footer__item--left">
+            <div class="athene ">ATHENE</div>
+            <p><i class="material-icons footer-icon">&#xe0c8;</i> 90 Nam Kỳ Khởi Nghĩa, Phường 9, Quận 1, TP.HCM</p>
+            <p><i class="material-icons footer-icon">&#xe8a8;</i> 0392737622</p>
+            <p><i class="material-icons footer-icon">&#xe0e1;</i> cskh@hotro.athene.vn</p>
+            <div class="logo-display">
+                <img class="ministry-logo" src="../Images/ForAll/Footer/Blue.png" alt="Chứng nhận của Bộ Công Thương">
+                <img class="ministry-logo" src="../Images/ForAll/Footer/Red.png" alt="Chứng nhận của Bộ Công Thương">
+            </div>
+            <p>@2021 - Bản quyền thuộc về Công ty TNHH Athene</p>
+        </div>
+        <!-- Middle item -->
+        <div class="footer__item--middle">
+            <p id="our-rules" class="text-bold">Về Athene</p>
+            <a href="../index.html">Trung tâm trợ giúp</a>
+            <a href="./Data/Terms.html">Điều khoản sử dụng</a>
+            <a href="../index.html">Hướng dẫn thanh toán</a>
+            <a href="../index.html">Chăm sóc khách hàng</a>
+            <a href="./Data/Policy.html">Chính sách bảo mật</a>
+            <a href="../Blog.html">Góc chia sẻ</a>
+        </div>
+        <!-- Right item -->
+        <div class="footer__item--right">
+            <p class="text-bold">Thanh toán</p>
+            <img id="payment-logo" src="../Images/ForAll/Footer/payment.jpg" alt="Payment Method">
+            <p class="text-bold">Liên hệ</p>
+            <div class="logo-display">
+                <img class="contact-logo" style="height:2rem" src="../Images/ForAll/Footer/Logo_Facebook.png" alt="Facebook">
+                <img class="contact-logo" style="height:1.9rem" src="../Images/ForAll/Footer/Logo_Gmail.png" alt="Gmail">
+                <img class="contact-logo" style="height:2rem" src="../Images/ForAll/Footer/Logo_Zalo.png" alt="Zalo">
+            </div>
+            <p class="text-bold">Tải app Athene ngay</p>
+            <div id="download">
+                <img class="download-photo" src="../Images/ForAll/Footer/QRCode.png" alt="QR Code">
+                <img class="download-photo" src="../Images/ForAll/Footer/Download.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footer-responsive">@2021 - Bản quyền thuộc về Công ty TNHH Athene</div>
+</body>
+
+</html>

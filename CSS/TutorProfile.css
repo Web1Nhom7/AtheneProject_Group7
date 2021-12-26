@@ -1,0 +1,391 @@
+  /* Profile header */
+  
+  .profile {
+    display: block;
+}
+
+.cover-image {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 2rem;
+    max-height: 20vw;
+}
+
+.user-info {
+    display: flex;
+    height: 10rem;
+    position: relative;
+    transform: translateY(-40%);
+}
+
+.user-avatar {
+    margin-left: 10%;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.tieude {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
+    background-color: #0077C0;
+    border-radius: 10px;
+    color: white;
+}
+
+.user-name h1 {
+    font-size: 2rem;
+}
+
+.user-name {
+    margin-top: -0.7rem;
+}
+.user-responsive{
+    margin-top: 3rem;
+}
+.name {
+    font-weight: bold;
+}
+/* Upload cover image */
+
+.btn-cover {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    right: 10%;
+}
+
+.btn-cover input {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+   
+}
+
+.btn-cover button {
+    height: 2.3rem;
+    font-size: 1rem;
+    width: 12rem;
+}
+/* Upload avatar image */
+
+.btn-avatar {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    right: 5rem;
+    top: 7rem;
+    z-index: 3;
+}
+
+.btn-avatar input {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+}
+
+.btn-avatar button {
+    border: none;
+    background: white;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+/* Body */
+
+.user-container {
+    display: flex;
+    margin: 0 7.5%;
+}
+
+.user__item--intro {
+    border: 1px solid grey;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    height: fit-content;
+    width: 70%;
+    position: relative;
+}
+
+.user__item--intro h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#user-bio {
+    text-align: center;
+}
+
+.btn-editinfo {
+    position: absolute;
+    font-size: 1rem;
+    right: 2rem;
+    bottom: 3%;
+}
+
+.information {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+ .subtitle {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.info-line {
+    display: flex;
+    margin: 1rem 2rem;
+}
+
+.intro__textarea {
+    border: none;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    line-height: 1rem;
+    resize: none;
+}
+
+.user__item--content {
+    margin: 3% 7.5%;
+    width: 85%;
+}
+
+.user__item--content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content__item--class,
+.content__item--exp {
+    border: 1px solid gray;
+    border-radius: 1rem;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0 2rem 0;
+}
+.content__item--exp{
+    margin-left: 3rem;
+}
+.btn-editcontent  {
+    position: absolute;
+    display: block;
+    font-size: 1rem;
+    right: 2rem;
+    bottom: 1rem;
+}
+
+ button {
+    background-color: #E0FDFF;
+}
+
+#bio {
+    padding: 0 15%;
+}
+/* Edit pop-up */
+
+.profile-edit {
+    display: none;
+    position: fixed;
+    padding-top: 5rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* Modal Content */
+
+.edit-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 65%;
+}
+/* The Close Button */
+.edit__input{
+    width: 80%;
+    font-size: 1.2rem;
+}
+#saveInfo{
+    font-size: 1.3rem;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user-click {
+    position: relative;
+    left: 54%;
+    top: -8vw;
+    margin-bottom: 0;
+    width: fit-content;
+}
+
+.btn-follow,
+.btn-register {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    margin-right: 5rem;
+    padding-bottom: 0;
+}
+
+.line {
+    width: 75%;
+    background: #867878;
+    height: 0.5px;
+    margin-top: -2rem;
+    margin-bottom: 2.5rem;
+}
+
+.edit-content #gender {
+    margin-left: 2.2rem;
+}
+
+.edit-content #dob,
+#oldschool {
+    margin-left: 1.5rem;
+}
+
+.edit-content #school {
+    margin-left: 1.5rem;
+}
+
+.edit-content #major {
+    margin-left: 2.2rem;
+}
+
+.edit-content #school,
+#major {
+    width: 50%;
+}
+
+@media screen and (max-width: 400px) {
+    .athene {
+        line-height: 3rem;
+    }
+}
+
+
+/* Pop up */
+.confirmation {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.confirmation-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.confirm-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.confirm-btn {
+    width: 6rem;
+    height: 2rem;
+    background-color: #0077C0;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2rem;
+    margin: -1rem 0;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .user-container {
+        flex-direction: column;
+    }
+    .content__item--exp{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .user__item--intro{
+        width: 100%;
+        padding: 0;
+    }
+    .btn-cover button {
+        height: 2.3rem;
+        font-size: 1rem;
+        width: 15rem;
+    }
+    .tieude{
+        text-align: left;
+        padding-left: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 0;
+    }
+    .btn-editcontent,.btn-editinfo{
+        left: 80%;
+        white-space: nowrap;
+    }
+    .content__item--class{
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info-line{
+        font-size: 10px;
+    }
+    .tieude{
+        font-size: 12px;
+        padding: 3px;
+    }
+    #bio{
+        font-size: 10px;
+    }
+}

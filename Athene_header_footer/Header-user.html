@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../CSS/HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="../Js/Header-user.js"></script>
+</head>
+<style>
+    /* Header */
+    
+    html,
+    body {
+        font-family: 'Roboto';
+        margin: 0 auto;
+        font-size: 1.3vw;
+    }
+    
+    .header-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        background: #0077C0;
+        /*Neo header khi cuộn trang*/
+        position: fixed;
+        top: 0;
+    }
+    
+    .header__item--left {
+        display: flex;
+        flex-basis: 20%;
+    }
+    
+    #logo {
+        height: 3rem;
+        margin: auto 1rem;
+    }
+    
+    .athene {
+        color: white;
+        font-size: 1.5rem;
+        display: inline;
+        line-height: 3rem;
+    }
+    /*Left responsive*/
+    
+    @media screen and (max-width: 600px) {
+        #logo {
+            display: none;
+        }
+    }
+    /*Middle item*/
+    
+    .header__item--middle {
+        overflow: hidden;
+        flex-basis: 60%;
+    }
+    
+    .header__item--middle a {
+        display: block;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding-right: 1.5rem;
+        display: inline;
+        line-height: 3rem;
+    }
+    
+    .header__item--middle a:hover {
+        color: orange;
+    }
+    
+    .header__item--middle .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .header__item--middle a {
+            display: none;
+        }
+        .header__item--middle a.icon {
+            float: left;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .header__item--middle.responsive {
+            position: relative;
+            padding-top: 4rem;
+        }
+        .header__item--middle.responsive .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .header__item--middle.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    .header__item--right {
+        display: flex;
+        flex-basis: 25%;
+        flex-wrap: nowrap;
+    }
+    
+    .user-box {
+        width: 5rem;
+        background-color: white;
+        border-radius: 1rem;
+        height: 2rem;
+        margin-right: 1rem;
+        margin-top: 0.3rem;
+    }
+    
+    .user-box:hover {
+        background-color: paleturquoise;
+    }
+    
+    .user-box a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .user-icon {
+        height: 2rem;
+        border-radius: 50%;
+    }
+    
+    .name {
+        margin-top: -1.8rem;
+        margin-left: 2.5rem;
+        display: flex;
+        font-size: 1rem;
+    }
+    /* Notification */
+    
+    .btn-noti,
+    .btn-dropdown {
+        margin: 0.5rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        background-color: #0077C0;
+        color: white;
+    }
+    
+    .notificaton,
+    .drop-down {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .btn-dropdown:hover,
+    .btn-noti:hover {
+        background-color: #3065B5;
+    }
+    
+    .noti-content,
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        overflow: auto;
+        z-index: 1;
+        min-width: 8rem;
+    }
+    
+    .noti-content a {
+        color: black;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .noti-show,
+    .dropdown-show {
+        display: block;
+    }
+    /* Drop-down menu */
+    
+    .menu-content a {
+        color: black;
+        padding: 0.5rem 0.2rem;
+        font-size: 1rem;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .drop-down a:hover {
+        background-color: #ddd;
+    }
+    /* Responsive header */
+    
+    @media screen and (max-width: 600px) {
+        #signUp-button {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .header__item--left {
+            order: 2;
+            flex-basis: 40%;
+        }
+        .header__item--middle {
+            order: 1;
+        }
+        .header__item--right {
+            order: 3;
+        }
+        .athene {
+            font-size: 3rem;
+        }
+        .header__item--right input {
+            width: 10rem;
+            height: 2.5rem;
+        }
+        .header__item--middle .icon {
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <!--Header content-->
+    <div class="header-content">
+        <!--Item left-->
+        <div class="header__item--left">
+            <img id="logo" src="../Images/ForAll/Header/Logo.png" alt="Logo" />
+            <div class="athene">ATHENE</div>
+        </div>
+        <!--Item middle - Navigation menu-->
+        <div class="header__item--middle" id="myNavigation">
+            <a href="../index.html">Trang chủ</a>
+            <a href="../ForStudent.html">Tìm gia sư</a>
+            <a href="../ForTutor.html">Trở thành gia sư</a>
+            <a href="../Blog.html">Blog</a>
+            <a href="../IntroPage.html">Giới thiệu</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            function myFunction() {
+                var nav = document.getElementById("myNavigation");
+                if (nav.className === "header__item--middle") {
+                    nav.className += " responsive";
+                } else {
+                    nav.className = "header__item--middle";
+                }
+            }
+        </script>
+
+        <!--Item right-->
+        <div class="header__item--right">
+            <div class="user-box">
+                <a href="">
+                    <img class="user-icon" src="../Images/ForTutor/HuongHamChi.jpg" alt="">
+                    <label class="name">Chi</label>
+                </a>
+            </div>
+            <div class="notificaton">
+                <button onclick="myNotification()" class="btn-noti"><i class="fa fa-bell"></i></button>
+                <div id="myNoti" class="noti-content">
+                    <p>Chào mừng bạn đăng nhập thành công</p>
+                </div>
+            </div>
+            <div class="drop-down">
+                <button onclick="myMenu()" class="btn-dropdown"><i class="	fa fa-chevron-circle-down"></i></button>
+                <div id="myDropdown" class="menu-content">
+                    <a href="../TutorProfile.html">Xem trang cá nhân</a>
+                    <a href="../Data/Policy.html">Trung tâm trợ giúp</a>
+                    <a href="../Data/Terms.html">Điều khoản sử dụng</a>
+                    <a href="#" onclick="Logout()">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

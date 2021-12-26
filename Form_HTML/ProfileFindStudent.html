@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Find Student</title>
+    <link rel="stylesheet" href="../CSS/Form.css">
+    <script src="../Js/ProfileFind.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="../Images/ForAll/Header/Logo.png">
+</head>
+
+<body>
+    <div class="form-container">
+        <form id="form" name="forms">
+            <caption>
+                <h2>HỒ SƠ ĐĂNG KÝ TÌM HỌC VIÊN</h2>
+                <div> Học viên bạn đang tìm kiếm ra sao?</div>
+            </caption>
+            <hr/>
+            <div class="form-line">
+                <label for="level">Cấp học:</label>
+                <span class="checkbox"> <span ><input type="checkbox" class="level" name="level" id="cap1" value="cap1"> Cấp I</span>
+                <span> <input type="checkbox" class="level" name="level" id="cap2" value="cap2"> Cấp II</span>
+                <span> <input type="checkbox" class="level" name="level" id="cap3" value="cap3"> Cấp III</span> </span>
+            </div>
+            <div class="form-line flex-item">
+                <label class="lb-title" for="subject">Môn dạy:</label>
+                <input class="ipbox " type="text" name="subject" id="subject" required>
+            </div>
+            <div class="form-line ">
+                <label for="gender">Giới tính:</label>
+                <span><input type="checkbox" name="gender" id="nam" value="0"> Nam</span>
+                <span><input type="checkbox" name="gender"  id="nu"  value="1"> Nữ</span>
+            </div>
+            <div class="form-line flex-item">
+                    <label class="lb-title" for="address">Địa điểm dạy:</label>
+                    <input class="ipbox" type="text" name="address" id="khuvuc" placeholder="Khu vực bạn có thể dạy" required>
+                    <input class="ipbox" type="text" id="thanhpho" name="address" placeholder="TP. Hồ Chí Minh" readonly>
+                </div>
+                <div class="form-line flex-item">
+                    <label class="lb-title" for="time">Thời gian dạy:</label>
+                    <input class="ipbox" type="text" name="time" id="time" placeholder="VD: 1h30 phút/1 buổi học" required>
+                </div>
+                <div class="form-line flex-item">
+                    <label class="lb-title" for="salary">Mức lương đề xuất:</label>
+                    <input class="ipbox" type="text" id="luong" name="salary" placeholder="VNĐ" onkeypress="return isNumber(event)" required>
+                </div>
+                <div class="form-line flex-item">
+                    <label class="lb-title" for="schedule">Lịch học dự kiến:</label>
+                    <input class="ipbox" type="text" name="schedule" id="schedule" placeholder="VD: Thứ 7, Chủ nhật mỗi tuần" required>
+                </div>
+                <div class="form-line flex-item">
+                    <textarea name="descrip" id="descrip" cols="82" rows="10" placeholder="Mô tả thêm" itemid="mota" class="ipbox txt-info"></textarea>
+                </div>
+                <div class="form-line" style="text-align: right;">
+                    <input type="submit" value="Hoàn tất" class="submit" onclick="return valLevel(), valGender(),submitForm()">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

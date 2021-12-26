@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto';
+}
+
+.form-container {
+    width: 40%;
+    margin: 0 auto;
+    min-width: 350px;
+}
+input{
+    padding: 0;
+}
+.form-line {
+    margin: 0.5rem 0;
+}
+
+.ipbox {
+    border: solid black 1.7px;
+    margin-top: 10px;
+    height: 1.5rem;
+    background-color: #D9F1F1;
+    width: 100%;
+}
+
+select.ipbox {
+    height: 1.85rem;
+}
+#pass,#repass,#ho,#ten{
+    width: 48%;
+}
+.flex-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+#edit-item {
+    display: flex;
+}
+
+#phoneError,
+#phoneError1,
+#passError,
+#passError1,
+#cccdError,
+#cccdError1 {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    display: none;
+}
+
+#phuong,
+#quan,
+#tp{
+    width: 30%;
+}
+#khuvuc,#thanhpho{
+    width: 35%;
+}
+#sonha,
+#duong{
+    width: 40%;
+}
+#sonhast,
+#duongst{
+    width: 35%;
+}
+
+.lb-title {
+    line-height: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+label {
+    font-weight: bolder;
+    text-align: left;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+a,
+.submit {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+button,
+.submit {
+    border: none;
+    margin: 10px 0;
+    background: none;
+}
+
+.txt-info {
+    min-height: 100px;
+    font-family: Roboto;
+}
+
+#luong::placeholder {
+    text-align: right;
+}
+
+ ::placeholder {
+    color: black;
+    padding-left: 10px;
+}
+
+@media screen and (max-width:600px) {
+    .flex-item,
+    .txtbox {
+        display: block;
+    }
+    #sonha,
+    #duong,
+    #phuong,
+    #tp,
+    #quan,
+    #pass,
+    #repass,
+    #ho,
+    #ten,
+    #khuvuc,
+    #thanhpho,
+    #sonhast,
+    #duongst {
+        width: 100%;
+    }
+    .flex-button{
+        display: flex;
+    }
+}
