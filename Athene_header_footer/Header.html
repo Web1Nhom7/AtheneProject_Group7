@@ -353,7 +353,19 @@
         width: 11rem;
         font-size: 1.2rem;
         height: fit-content;
+        border: none;
+        margin-top: 0.2rem;
     }
+    }
+    @media screen and (max-width: 300px) {
+       
+        .login .login-content {
+            margin-top: -3rem;
+        }
+        .linkSignUp{
+            margin-top: -1rem;
+        }
+     
     }
 </style>
 </head>
@@ -388,7 +400,7 @@
             <div id="myLogin" class="login">
                 <span class="close-login">&times;</span>
                 <p class="popup-title log-in">ĐĂNG NHẬP</p>
-                <hr>
+                <hr class="underline">
                 <div class="login-content">
                     <label class="form__label">Số điện thoại:</label> <br>
                     <input type="tel" name="sodt" id="sodt" class="form__input" required onblur="checkVal()" oninput="checkPhoneVal()">
