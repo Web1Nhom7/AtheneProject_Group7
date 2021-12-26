@@ -57,17 +57,20 @@
     overflow: hidden;
     display: inline-block;
     right: 10%;
+    
 }
 
 .btn-cover input {
     position: absolute;
     opacity: 0;
     z-index: 0;
+   
 }
 
 .btn-cover button {
-    height: 2rem;
+    height: 2.3rem;
     font-size: 1rem;
+    width: 12rem;
 }
 /* Upload avatar image */
 
@@ -107,7 +110,8 @@
     text-align: center;
     border-radius: 3rem;
     height: fit-content;
-
+    width: 100%;
+    
 }
 
 .user__item--intro h2 {
@@ -283,7 +287,18 @@ button {
     .user-responsive{
         margin-top: 3rem;
     }
+    .user-container {
+        flex-direction: column;
+    }
+    
+    .user__item--intro {
+        width: 90%;
+        margin-left: 3rem;
+        margin-bottom: 2.5rem;
+        
+    }
 }
+/* Pop up */
 .confirmation {
     display: none;
     position: fixed;
