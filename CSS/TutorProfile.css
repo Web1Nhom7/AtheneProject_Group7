@@ -312,11 +312,7 @@
         white-space: nowrap;
     }
 }
-@media screen and (max-width: 400px) {
-    .athene {
-        line-height: 3rem;
-    }
-}
+
 
 /* Pop up */
 .confirmation {
