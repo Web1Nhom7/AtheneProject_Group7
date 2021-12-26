@@ -51,18 +51,20 @@ select.ipbox {
 
 #phuong,
 #quan,
-#tp {
+#tp{
     width: 30%;
 }
-
+#khuvuc,#thanhpho{
+    width: 35%;
+}
 #sonha,
-#duong {
+#duong{
     width: 40%;
 }
-
-/* input {
-    margin-right: 5px;
-} */
+#sonhast,
+#duongst{
+    width: 35%;
+}
 
 .lb-title {
     line-height: 1.5rem;
@@ -111,81 +113,27 @@ button,
     padding-left: 10px;
 }
 
-/* #descrip {
-    width: 97%;
-} */
-
-/* #sodt,
-#repass {
-    width: 97.5%;
-} */
-
-/* #dob {
-    width: 98%;
-} */
-
-/* #svt,
-#chuyennganh,
-#exp,
-#degree {
-    width: 97.5%;
-} */
-
 @media screen and (max-width:600px) {
     .flex-item,
     .txtbox {
         display: block;
     }
-    /* .checkbox {
-        display: flex;
-        flex-direction: row;
-        margin-top: 0.5rem;
-    } */
     #sonha,
     #duong,
     #phuong,
     #tp,
-    #quan,#pass,#repass,#ho,#ten {
+    #quan,
+    #pass,
+    #repass,
+    #ho,
+    #ten,
+    #khuvuc,
+    #thanhpho,
+    #sonhast,
+    #duongst {
         width: 100%;
     }
     .flex-button{
         display: flex;
     }
-    /* #quan {
-        width: 102%;
-    }
-    #cccd {
-        width: 150%;
-        margin-right: -5px;
-        margin-left: 5px;
-    }
-    #dob {
-        width: 100%;
-    }
-    #pass {
-        width: 100%;
-    }
-    #descrip {
-        width: 99%;
-    }
-    #sodt,
-    #repass {
-        width: 100%;
-    }
-    #svt,
-    #chuyennganh,
-    #exp,
-    #degree {
-        width: 99%;
-    }
-    #hoantat {
-        margin-left: 55%;
-    }
-    #dob {
-        width: 101%;
-    }
-    #ho,
-    #ten {
-        width: 100%;
-    } */
 }
